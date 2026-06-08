@@ -2,7 +2,7 @@
 name = "spatialworld-carla"
 version = "0.1.0"
 description = "SpatialWorld carla uv environment."
-requires-python = ">=3.10"
+requires-python = "==3.12.*"
 dependencies = [
     "spatialworld",
     "numpy>=1.26.0",

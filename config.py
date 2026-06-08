@@ -26,6 +26,25 @@ def load_config(config_path: str | Path | None = None, **overrides: Any) -> Conf
     elif "virtualhome" in parts:
         from configs.virtualhome.load_config import load_config as loader
 
+    # Fallback: try to infer environment type from config file content
+    # (handles temp files created by benchmark scripts)
+    if loader is None:
+        try:
+            import yaml
+            with open(config_path, "r", encoding="utf-8") as f:
+                data = yaml.safe_load(f) or {}
+            env_type = (data.get("env") or {}).get("type")
+            if env_type == "carla":
+                from configs.carla.load_config import load_config as loader
+            elif env_type == "ai2thor":
+                from configs.ai2thor.load_config import load_config as loader
+            elif env_type == "procthor":
+                from configs.procthor.load_config import load_config as loader
+            elif env_type == "virtualhome":
+                from configs.virtualhome.load_config import load_config as loader
+        except Exception:
+            pass
+
     if loader is not None:
         return loader(str(config_path), **overrides)
 

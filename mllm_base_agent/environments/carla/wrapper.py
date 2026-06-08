@@ -678,14 +678,24 @@ class WalkerEnvWrapper(BaseEnv):
     @staticmethod
     def _snap_walk_distance(value) -> float:
         """   /replay              {2.5, 5.0, 10.0}        """
-        from envs.carla.step_sizes import resolve_step_distance
+        try:
+            from envs.carla.step_sizes import resolve_step_distance
+        except ModuleNotFoundError:
+            from mllm_base_agent.environments.carla.step_sizes import (
+                resolve_step_distance,
+            )
 
         return resolve_step_distance(value)
 
     @staticmethod
     def _snap_turn_degrees(value) -> float:
         """   /replay              {30.0, 90.0}        """
-        from envs.carla.step_sizes import resolve_turn_degrees
+        try:
+            from envs.carla.step_sizes import resolve_turn_degrees
+        except ModuleNotFoundError:
+            from mllm_base_agent.environments.carla.step_sizes import (
+                resolve_turn_degrees,
+            )
 
         return resolve_turn_degrees(value)
 

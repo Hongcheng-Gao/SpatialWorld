@@ -127,6 +127,10 @@ def _build_messages(state: AgentState, image_url: str) -> list:
             vh_objects = env.get_scene_interactable_object_types()
         except Exception:
             vh_objects = None
+    success_criteria_block = state.get(
+        'success_criteria_block',
+        'Complete the task according to the instruction. Use EndTask(DONE) only after confirming success.',
+    )
     prompt = get_system_prompt(
         env_type,
         enable_summary=enable_summary,
@@ -134,7 +138,10 @@ def _build_messages(state: AgentState, image_url: str) -> list:
         input_modality=input_modality,
         navigation_mode=navigation_mode,
         virtualhome_interactable_object_types=vh_objects,
-    ).format(task_prompt=state.get('task_prompt', 'Complete the task.'))
+    ).format(
+        task_prompt=state.get('task_prompt', 'Complete the task.'),
+        success_criteria_block=success_criteria_block,
+    )
     messages = [SystemMessage(content=prompt)]
     long_term_summary = state.get('long_term_summary', '')
     history = (state.get('short_term_history', []) or [])[-MODEL_HISTORY_TURNS:]
@@ -412,11 +419,6 @@ def evaluate_node(state: AgentState) -> AgentState:
     if int(state.get('step_count', 0) or 0) >= int(state.get('max_steps', 30) or 30):
         state['success'] = False
         state['fail_reason'] = f"Reached maximum step limit ({state.get('max_steps')} steps)"
-        state['should_continue'] = False
-        return state
-    if _count_consecutive_failures(state) >= 4:
-        state['success'] = False
-        state['fail_reason'] = 'Consecutive action failures, determined as unable to complete'
         state['should_continue'] = False
         return state
     state['should_continue'] = True

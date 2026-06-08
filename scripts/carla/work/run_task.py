@@ -5,6 +5,7 @@ Automatically identifies environment type (AI2-THOR or CARLA) from configuration
 
 import os
 import sys
+import json
 import argparse
 import inspect
 from pathlib import Path
@@ -125,7 +126,12 @@ def apply_init_coordinates(env, init_data: dict) -> int:
             and hasattr(env, "walker")
             and getattr(env, "walker")
         ):
-            from envs.carla.init_snap import snap_init_location_z
+            try:
+                from envs.carla.init_snap import snap_init_location_z
+            except ModuleNotFoundError:
+                from mllm_base_agent.environments.carla.init_snap import (
+                    snap_init_location_z,
+                )
 
             snapped = snap_init_location_z(env.world, location, carla)
             if abs(snapped.z - location.z) > 1e-3:
@@ -701,6 +707,18 @@ Example usage:
             task_description = augment_carla_vehicle_task_prompt(
                 task_description, env_type, executor_type
             )
+            success_conditions = task_config.get("success_conditions") or task_config.get(
+                "success_condition"
+            )
+            if success_conditions:
+                success_criteria_block = json.dumps(
+                    success_conditions, ensure_ascii=False, indent=2
+                )
+            else:
+                success_criteria_block = (
+                    "Complete the task according to the instruction and call "
+                    "EndTask(DONE) only after visually confirming success."
+                )
 
             # Both AI2-THOR and CARLA need scene/map in reset for task-specific scenes
             observation = env.reset(task_description, scene=task_scene)
@@ -772,6 +790,7 @@ Example usage:
                 "executor_type": executor_type,
                 "input_modality": input_modality,
                 "goal_image_path": goal_image_path,
+                "success_criteria_block": success_criteria_block,
                 "consecutive_missing_action_steps": 0,
             }
 
