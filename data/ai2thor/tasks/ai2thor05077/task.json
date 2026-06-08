@@ -1,0 +1,34 @@
+{
+  "task_id": "ai2thor05077",
+  "task_name": "Break the plate",
+  "instruction": "Please help me with this task in the scene: break the plate.",
+  "golden_actions": {
+    "steps": 7,
+    "actions": [
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveRight(0.5)",
+      "BreakObject(Plate)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan17",
+  "target_object_types": [
+    "Plate"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Plate",
+      "state": "isBroken",
+      "value": true
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "Please help me with this task in the scene: break the plate.",
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3"
+}

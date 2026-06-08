@@ -1,0 +1,34 @@
+{
+  "task_id": "ai2thor05079",
+  "task_name": "Turn on the coffeemachine.",
+  "instruction": "I'm starting breakfast now, so please turn on the coffee machine for me.",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveRight(1.0)",
+      "MoveAhead(1.0)",
+      "ToggleObjectOn(CoffeeMachine)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan18",
+  "target_object_types": [
+    "Pan",
+    "CoffeeMachine"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "CoffeeMachine",
+      "state": "isToggled",
+      "value": true
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "I'm starting breakfast now, so please turn on the coffee machine for me.",
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3"
+}

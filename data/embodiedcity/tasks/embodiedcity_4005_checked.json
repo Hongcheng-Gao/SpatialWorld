@@ -1,0 +1,71 @@
+{
+  "id": "embodiedcity_4005",
+  "instruction": "I need to observe the traffic conditions at this intersection. Help me move to the center of the crossroads.",
+  "start": [
+    6923.037109375,
+    -3642.01806640625,
+    -19.36527442932129
+  ],
+  "start_yaw": -171.56,
+  "end": [
+    6894.15234375,
+    -3639.4736328125,
+    -10.574508666992188
+  ],
+  "end_yaw": 170.82201408606252,
+  "check_status": "Qualified",
+  "check_comment": "the height is not clear",
+  "check_time": "2026-05-12 13:05:47",
+  "trajectory": [
+    {
+      "x": 6923.04,
+      "y": -3642.02,
+      "z": -19.32,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 6923.04,
+      "y": -3642.02,
+      "z": -9.28,
+      "action": "Down",
+      "granularity": "Large"
+    },
+    {
+      "x": 6913.15,
+      "y": -3643.49,
+      "z": -9.19,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6903.25,
+      "y": -3644.95,
+      "z": -9.1,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6903.25,
+      "y": -3644.95,
+      "z": -9.01,
+      "action": "Yaw Left",
+      "granularity": "Medium"
+    },
+    {
+      "x": 6893.95,
+      "y": -3641.28,
+      "z": -8.92,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6893.95,
+      "y": -3641.28,
+      "z": -8.92,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 6
+}

@@ -1,0 +1,50 @@
+env:
+  type: ai2thor
+  width: 800
+  height: 600
+  field_of_view: 60
+  grid_size: 0.25
+  render_depth: false
+  render_instance_segmentation: false
+  text_state_mode: first_person
+  visibility_distance: 1.5
+  platform: null    # headless
+
+max_steps: 30
+
+context_management:
+  enable_long_term_summary: false
+  short_term_history_window_size: 49
+
+model:
+  vlm:
+    provider: chat
+    model_name: GLM-4.5V
+    temperature: 1.0
+    top_p: 0.9
+    max_tokens: 4098
+    base_url: null
+    api_key: null
+
+logging:
+  stdout_verbose: true
+  save_step_images: true
+
+actions:
+  move_small_magnitude: 0.25
+  move_medium_magnitude: 0.5
+  move_large_magnitude: 1
+  move_ahead_magnitude: 0.5
+  move_back_magnitude: 0.5
+  move_left_magnitude: 0.5
+  move_right_magnitude: 0.5
+  rotate_degrees: 90
+
+reward:
+  success_reward: 10.0
+  step_success_bonus: 0.1
+  step_failure_penalty: -0.05
+
+experiment:
+  num_episodes: 1
+  output_dir: outputs

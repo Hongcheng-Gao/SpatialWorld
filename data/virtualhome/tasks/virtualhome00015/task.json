@@ -1,0 +1,32 @@
+{
+  "task_id": "virtualhome00015",
+  "task_name": "Pick up the mouse.",
+  "instruction": "I can't find my mouse. Can you see it? It should be by the computer. Pick it up for me if you find it.",
+  "golden_actions": {
+    "steps": 7,
+    "actions": [
+      "TurnRight(small)",
+      "WalkForward(large)",
+      "TurnLeft(normal)",
+      "LookDown",
+      "WalkForward(medium)",
+      "TurnLeft(small)",
+      "Grab(mouse)",
+      "Done"
+    ]
+  },
+  "scene": "15",
+  "target_object_types": [
+    "mouse"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "mouse",
+      "state": "isPickedUp"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I can't find my mouse. Can you see it? It should be by the computer. Pick it up for me if you find it.",
+  "max_steps": 36
+}

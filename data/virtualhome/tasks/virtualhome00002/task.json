@@ -1,0 +1,30 @@
+{
+  "task_id": "virtualhome00002",
+  "task_name": "Can't find my keyboard. Help me locate and show it?",
+  "instruction": "I can't find my keyboard. Could you help me locate it and pick it up to show me?",
+  "golden_actions": {
+    "steps": 4,
+    "actions": [
+      "WalkForward(large)",
+      "LookDown",
+      "WalkForward(small)",
+      "Grab(keyboard)",
+      "Done"
+    ]
+  },
+  "scene": "6",
+  "target_object_types": [
+    "keyboard"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "keyboard",
+      "state": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I can't find my keyboard. Could you help me locate it and pick it up to show me?",
+  "max_steps": 33
+}

@@ -1,0 +1,39 @@
+{
+  "task_id": "ai2thor04228",
+  "task_name": "Sleep - phone off and clean bed",
+  "instruction": "I want to sleep now. Please turn off my phone, then clean the bed.",
+  "golden_actions": {
+    "steps": 4,
+    "actions": [
+      "MoveAhead(1)",
+      "CleanObject(Bed)",
+      "ToggleObjectOff(CellPhone)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan321",
+  "target_object_types": [
+    "CellPhone",
+    "Bed"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Bed",
+      "state": "isDirty",
+      "value": false
+    },
+    {
+      "type": "object_state",
+      "object_type": "CellPhone",
+      "state": "isToggled",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to sleep now. Please turn off my phone, then clean the bed.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

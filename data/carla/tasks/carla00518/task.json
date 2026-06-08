@@ -1,0 +1,50 @@
+{
+  "task_id": "carla00518",
+  "task_name": "Walk toward the streetlight opposite the house with the yellow roof.",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "walker",
+  "instruction": "Please walk to Walk toward the streetlight opposite the house with the yellow roof. You can turn and move in any direction.",
+  "golden_actions": {
+    "steps": 7,
+    "actions": [
+      "TurnLeft(degrees=90)",
+      "TurnLeft(degrees=90)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "TurnRight(degrees=90)",
+      "WalkForward(distance=10)",
+      "Done"
+    ]
+  },
+  "scene": "Town02",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "polygon_area",
+    "target_polygon": [
+      [
+        151.63349863505505,
+        194.71304321289057,
+        0.3208787441253662
+      ],
+      [
+        151.6334991455078,
+        190.87960809581267,
+        0.3208787441253662
+      ],
+      [
+        152.07270864033558,
+        190.87960815429693,
+        0.3208787441253662
+      ],
+      [
+        152.0727081298828,
+        194.71304327137483,
+        0.3208787441253662
+      ]
+    ],
+    "threshold_label": "loose"
+  },
+  "max_steps": 50
+}

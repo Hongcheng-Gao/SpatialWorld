@@ -1,0 +1,92 @@
+{
+  "id": "embodiedcity_5008",
+  "instruction": "I need to conduct a transaction at Huaxia Bank. Please guide me to a spot 10 meters in front of the nearest bank sign and confirm the location of the ATM.",
+  "start": [
+    6149.87890625,
+    -3588.962890625,
+    -27.058542251586914
+  ],
+  "start_yaw": 6.4,
+  "end": [
+    6218.82177734375,
+    -3579.77734375,
+    -15.211774826049805
+  ],
+  "end_yaw": -4.837729287484472,
+  "check_status": "Qualified",
+  "check_comment": "OK",
+  "check_time": "2026-05-12 12:53:12",
+  "trajectory": [
+    {
+      "x": 6149.88,
+      "y": -3588.96,
+      "z": -27.01,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 6159.82,
+      "y": -3587.85,
+      "z": -26.97,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6169.75,
+      "y": -3586.73,
+      "z": -26.94,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6179.69,
+      "y": -3585.62,
+      "z": -26.92,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6189.63,
+      "y": -3584.5,
+      "z": -26.91,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6199.57,
+      "y": -3583.39,
+      "z": -26.89,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6209.5,
+      "y": -3582.27,
+      "z": -26.88,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6219.44,
+      "y": -3581.16,
+      "z": -26.88,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6219.44,
+      "y": -3581.16,
+      "z": -16.84,
+      "action": "Down",
+      "granularity": "Large"
+    },
+    {
+      "x": 6219.44,
+      "y": -3581.16,
+      "z": -16.84,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 9
+}

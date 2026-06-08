@@ -1,0 +1,43 @@
+{
+  "task_id": "ai2thor05533",
+  "task_name": "Please turn off the light and turn on the floor lamp.",
+  "instruction": "The sunlight is so bright today—there's no need for the big wall light in the room, so go ahead and switch it off. Just turn on the floor lamp next to the sofa instead.",
+  "golden_actions": {
+    "steps": 8,
+    "actions": [
+      "ToggleObjectOff(LightSwitch)",
+      "MoveBack(0.25)",
+      "MoveLeft(1.0)",
+      "MoveLeft(1.0)",
+      "MoveLeft(0.25)",
+      "RotateLeft(90)",
+      "ToggleObjectOn(FloorLamp)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan220",
+  "target_object_types": [
+    "LightSwitch",
+    "FloorLamp"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "LightSwitch",
+      "state": "isToggled",
+      "value": false
+    },
+    {
+      "type": "object_state",
+      "object_type": "FloorLamp",
+      "state": "isToggled",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "The sunlight is so bright today—there's no need for the big wall light in the room, so go ahead and switch it off. Just turn on the floor lamp next to the sofa instead.",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

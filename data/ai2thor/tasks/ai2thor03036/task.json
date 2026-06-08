@@ -1,0 +1,53 @@
+{
+  "task_id": "ai2thor03036",
+  "task_name": "Cook sliced green",
+  "instruction": "I want to slice the green in the refrigerator, then take one slice and put it in the pan, remembering to close the refrigerator door.",
+  "golden_actions": {
+    "steps": 11,
+    "actions": [
+      "MoveAhead(0.5)",
+      "MoveRight(1)",
+      "OpenObject(Fridge)",
+      "SliceObject(Lettuce)",
+      "PickupObject(LettuceSliced)",
+      "CloseObject(Fridge)",
+      "RotateLeft(90)",
+      "MoveAhead(1)",
+      "MoveAhead(0.5)",
+      "PutObject(Pan)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan22",
+  "target_object_types": [
+    "Fridge",
+    "Lettuce",
+    "LettuceSliced",
+    "Pan"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "LettuceSliced",
+      "receptacle_type": "Pan"
+    },
+    {
+      "type": "object_state",
+      "object_type": "Lettuce",
+      "state": "isSliced",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Fridge",
+      "state": "isOpen",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to slice the green in the refrigerator, then take one slice and put it in the pan, remembering to close the refrigerator door.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

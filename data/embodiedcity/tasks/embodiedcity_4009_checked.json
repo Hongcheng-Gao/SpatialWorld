@@ -1,0 +1,50 @@
+{
+  "id": "embodiedcity_4009",
+  "instruction": "My friend lives in the building in front of the drone but can't find the entrance. Help me move to the residential building entrance to confirm the location.",
+  "start": [
+    7718.62158203125,
+    -3534.791748046875,
+    -4.607700347900391
+  ],
+  "start_yaw": 90.57,
+  "end": [
+    7718.62158203125,
+    -3529.166748046875,
+    -0.3915991485118866
+  ],
+  "end_yaw": 90.56939581428955,
+  "check_status": "Qualified",
+  "check_comment": "ok",
+  "check_time": "2026-05-12 13:11:05",
+  "trajectory": [
+    {
+      "x": 7718.62,
+      "y": -3534.79,
+      "z": -4.54,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 7718.62,
+      "y": -3534.79,
+      "z": -2.04,
+      "action": "Down",
+      "granularity": "Small"
+    },
+    {
+      "x": 7718.57,
+      "y": -3529.79,
+      "z": -1.97,
+      "action": "Forward",
+      "granularity": "Medium"
+    },
+    {
+      "x": 7718.57,
+      "y": -3529.79,
+      "z": -1.97,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 3
+}

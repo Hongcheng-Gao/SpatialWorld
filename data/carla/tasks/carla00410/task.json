@@ -1,0 +1,49 @@
+{
+  "task_id": "carla00410",
+  "task_name": "Red box shop? Walk to it. Go to the second office hallway ahead and wait.",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "walker",
+  "instruction": "See the two office hallways ahead? Walk to the second one—I need to wait for someone there.",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=5)",
+      "Done"
+    ]
+  },
+  "scene": "Town05",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "polygon_area",
+    "target_polygon": [
+      [
+        52.81722819471997,
+        14.451830007368326,
+        6.3279290199279785
+      ],
+      [
+        52.81719970703125,
+        0.18923616409301847,
+        6.3279290199279785
+      ],
+      [
+        52.865808609479245,
+        0.18923606700301487,
+        6.3279290199279785
+      ],
+      [
+        52.86583709716797,
+        14.45182991027832,
+        6.3279290199279785
+      ]
+    ],
+    "threshold_label": "medium"
+  },
+  "max_steps": 50
+}

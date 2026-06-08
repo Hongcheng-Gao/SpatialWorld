@@ -1,0 +1,49 @@
+{
+  "task_id": "ai2thor05008",
+  "task_name": "Open the book and pick up the cell phone and turn it on",
+  "instruction": "I want to read and check my phone, so please open the book gently so it stays open and then pick up the cell phone carefully and hold it securely and turn on the cell phone and wait until you can tell it's powered on.",
+  "golden_actions": {
+    "steps": 8,
+    "actions": [
+      "RotateLeft(90)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "OpenObject(Book)",
+      "MoveBack(0.25)",
+      "PickupObject(CellPhone)",
+      "ToggleObjectOn(CellPhone)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan308",
+  "target_object_types": [
+    "Book",
+    "CellPhone",
+    "Cellphone"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Book",
+      "field": "isOpen",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "CellPhone",
+      "field": "isToggled",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "CellPhone",
+      "field": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "I want to read and check my phone, so please open the book gently so it stays open and then pick up the cell phone carefully and hold it securely and turn on the cell phone and wait until you can tell it's powered on.",
+  "Evaluation_Type": "Conditional",
+  "Category": "Study and Work",
+  "Level": "Level3"
+}

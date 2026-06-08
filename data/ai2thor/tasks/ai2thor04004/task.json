@@ -1,0 +1,51 @@
+{
+  "task_id": "ai2thor04004",
+  "task_name": "Move book to desk",
+  "instruction": "Please move the book from the side table next to the window to the desk next to the bed on the right.",
+  "golden_actions": {
+    "steps": 16,
+    "actions": [
+      "MoveAhead(0.25)",
+      "MoveLeft(0.5)",
+      "MoveAhead(0.25)",
+      "PickupObject(Book)",
+      "MoveBack(0.25)",
+      "MoveRight(0.5)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.5)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveLeft(0.25)",
+      "MoveAhead(0.25)",
+      "PutObject(Desk)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan303",
+  "target_object_types": [
+    "Book",
+    "Desk",
+    "SideTable"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Book",
+      "receptacle_type": "Desk"
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Book",
+      "receptacle_type": "SideTable",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "Please move the book from the side table next to the window to the desk next to the bed on the right.",
+  "max_steps": 30,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

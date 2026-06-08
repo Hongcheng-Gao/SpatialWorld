@@ -1,0 +1,51 @@
+{
+  "task_id": "ai2thor03067",
+  "task_name": "Dispose old potatoe",
+  "instruction": "This potato has been in the refrigerator for a long time. Please take it out and throw it in the trash. Remember to close the refrigerator door.",
+  "golden_actions": {
+    "steps": 16,
+    "actions": [
+      "RotateLeft(90)",
+      "MoveLeft(0.25)",
+      "MoveAhead(0.25)",
+      "MoveLeft(0.25)",
+      "OpenObject(Fridge)",
+      "PickupObject(Potato)",
+      "CloseObject(Fridge)",
+      "RotateRight(90)",
+      "MoveAhead(0.5)",
+      "MoveRight(0.5)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.5)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.5)",
+      "PutObject(GarbageCan)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan28",
+  "target_object_types": [
+    "Fridge",
+    "GarbageCan",
+    "Potato"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Fridge",
+      "state": "isOpen",
+      "value": false
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Potato",
+      "receptacle_type": "GarbageCan"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "This potato has been in the refrigerator for a long time. Please take it out and throw it in the trash. Remember to close the refrigerator door.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

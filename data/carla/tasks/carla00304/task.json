@@ -1,0 +1,68 @@
+{
+  "task_id": "carla00304",
+  "task_name": "Drive to the traffic light",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "vehicle",
+  "instruction": "Please continue straight ahead until you reach the traffic light shown in the image.",
+  "golden_actions": {
+    "steps": 25,
+    "actions": [
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "Stop",
+      "Stop",
+      "Stop",
+      "FollowLane(distance=10)",
+      "Done"
+    ]
+  },
+  "scene": "Town01",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "polygon_area",
+    "target_polygon": [
+      [
+        106.06397937177084,
+        324.3360290527296,
+        0.10324215888977051
+      ],
+      [
+        106.06398010254384,
+        324.22402881024743,
+        0.10324215888977051
+      ],
+      [
+        106.17598034502603,
+        324.2240295410204,
+        0.10324215888977051
+      ],
+      [
+        106.17597961425304,
+        324.33602978350257,
+        0.10324215888977051
+      ]
+    ],
+    "threshold_label": "medium"
+  },
+  "max_steps": 30
+}

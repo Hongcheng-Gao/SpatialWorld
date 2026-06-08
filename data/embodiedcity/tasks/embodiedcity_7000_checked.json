@@ -1,0 +1,50 @@
+{
+  "id": "embodiedcity_7000",
+  "instruction": "Designate the left edge of the blue-roofed structure in front of you as your landing point to secure a better vantage point, and navigate to that location.",
+  "start": [
+    7781.04541015625,
+    -3569.066162109375,
+    -1.458287000656128
+  ],
+  "start_yaw": -61.06,
+  "end": [
+    7786.7880859375,
+    -3580.854736328125,
+    -7.0836591720581055
+  ],
+  "end_yaw": -60.1454161666457,
+  "check_status": "Qualified",
+  "check_comment": "OK",
+  "check_time": "2026-05-12 10:22:03",
+  "trajectory": [
+    {
+      "x": 7781.05,
+      "y": -3569.07,
+      "z": -1.24,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 7781.05,
+      "y": -3569.07,
+      "z": -6.24,
+      "action": "Up",
+      "granularity": "Medium"
+    },
+    {
+      "x": 7785.88,
+      "y": -3577.82,
+      "z": -6.15,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7785.88,
+      "y": -3577.82,
+      "z": -6.15,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 3
+}

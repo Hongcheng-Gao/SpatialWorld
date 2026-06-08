@@ -1,0 +1,10 @@
+{
+  "scene": "FloorPlan329",
+  "actions": [
+    "MoveBack(0.25)",
+    "LookDown",
+    "MoveLeft(0.5)",
+    "OpenObject(Book)",
+    "Done"
+  ]
+}

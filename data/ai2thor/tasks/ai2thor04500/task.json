@@ -1,0 +1,34 @@
+{
+  "task_id": "ai2thor04500",
+  "task_name": "Pick up laptop from sofa",
+  "instruction": "I'm going to start working now. Please bring me the laptop from the sofa.",
+  "golden_actions": {
+    "steps": 7,
+    "actions": [
+      "MoveAhead(1)",
+      "MoveAhead(1)",
+      "RotateLeft(90)",
+      "MoveRight(1)",
+      "MoveAhead(0.25)",
+      "PickupObject(Laptop)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan202",
+  "target_object_types": [
+    "Laptop"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Laptop",
+      "field": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "OR",
+  "target_description": "I'm going to start working now. Please bring me the laptop from the sofa.",
+  "max_steps": 30,
+  "Category": "Study and Work",
+  "Level": "Level3"
+}

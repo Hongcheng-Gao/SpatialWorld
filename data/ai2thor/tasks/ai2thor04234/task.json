@@ -1,0 +1,48 @@
+{
+  "task_id": "ai2thor04234",
+  "task_name": "Break window with keychain",
+  "instruction": "I'm trapped outside. Please take the keychain and break the window.",
+  "golden_actions": {
+    "steps": 13,
+    "actions": [
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveLeft(1.0)",
+      "MoveLeft(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "PickupObject(KeyChain)",
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveAhead(0.5)",
+      "RotateRight(90)",
+      "BreakObject(Window)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan322",
+  "target_object_types": [
+    "KeyChain",
+    "Window"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Window",
+      "state": "isBroken",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "KeyChain",
+      "state": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm trapped outside. Please take the keychain and break the window.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

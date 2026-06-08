@@ -1,0 +1,22 @@
+{
+  "task_id": "procthor00003",
+  "task_name": "Move TeddyBear from Bedroom to Bathroom",
+  "instruction": "Move the TeddyBear from the bed in the bedroom to the bathroom.",
+  "scene_index": 100,
+  "target_object_types": [
+    "TeddyBear"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_room",
+      "object_type": "TeddyBear",
+      "room_type": "Bathroom"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "Move the TeddyBear from the bed in the bedroom to the bathroom.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Bedroom/Bathroom)",
+  "Level": "Level2 Navigation"
+}

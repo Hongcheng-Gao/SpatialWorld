@@ -1,0 +1,52 @@
+{
+  "task_id": "procthor705",
+  "task_name": "Bring Sponge, Stand by Toilet",
+  "instruction": "I want to clean the toilet. Please pick up a dish sponge and stand next to the toilet while I wait.",
+  "golden_actions": {
+    "steps": 14,
+    "actions": [
+      "LookDown",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "RotateLeft(90)",
+      "MoveAhead(0.5)",
+      "PickupObject(DishSponge)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "Done"
+    ]
+  },
+  "scene_index": 221,
+  "target_object_types": [
+    "DishSponge",
+    "Toilet"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "DishSponge",
+      "state": "isPickedUp",
+      "value": true
+    },
+    {
+      "type": "agent_in_room",
+      "room_type": "Bathroom"
+    },
+    {
+      "type": "agent_near_object",
+      "object_type": "Toilet",
+      "distance": 1.5
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to clean the toilet. Please pick up a dish sponge and stand next to the toilet while I wait.",
+  "max_steps": 38,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

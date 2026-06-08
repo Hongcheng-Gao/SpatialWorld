@@ -1,0 +1,54 @@
+{
+  "task_id": "ai2thor03002",
+  "task_name": "Put bread in toaster",
+  "instruction": "I'm hungry, so I want to put a slice of bread into the toaster that's already turned on.",
+  "golden_actions": {
+    "steps": 13,
+    "actions": [
+      "MoveAhead(1)",
+      "MoveAhead(0.5)",
+      "RotateRight(90)",
+      "MoveAhead(0.25)",
+      "SliceObject(Bread)",
+      "PickupObject(BreadSliced)",
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveLeft(0.25)",
+      "MoveAhead(0.5)",
+      "PutObject(Toaster)",
+      "ToggleObjectOn(Toaster)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan11",
+  "target_object_types": [
+    "Bread",
+    "BreadSliced",
+    "Toaster"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "BreadSliced",
+      "receptacle_type": "Toaster"
+    },
+    {
+      "type": "object_state",
+      "object_type": "Bread",
+      "state": "isSliced",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Toaster",
+      "state": "isToggled",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm hungry, so I want to put a slice of bread into the toaster that's already turned on.",
+  "max_steps": 30,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

@@ -1,0 +1,38 @@
+{
+  "task_id": "ai2thor03007",
+  "task_name": "Slice vegetables",
+  "instruction": "I'm about to start cooking. Please slice all the vegetables in front of you.",
+  "golden_actions": {
+    "steps": 3,
+    "actions": [
+      "SliceObject(Tomato)",
+      "SliceObject(Lettuce)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan12",
+  "target_object_types": [
+    "Tomato",
+    "Lettuce"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Tomato",
+      "state": "isSliced",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Lettuce",
+      "state": "isSliced",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm about to start cooking. Please slice all the vegetables in front of you.",
+  "max_steps": 30,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level2 Interaction"
+}

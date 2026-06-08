@@ -1,0 +1,48 @@
+{
+  "task_id": "ai2thor05526",
+  "task_name": "Put the book on the table onto the bed, then open it",
+  "instruction": "I'd like to read in bed for a while—please take the book from the desk, put it on the bed, and open it",
+  "golden_actions": {
+    "steps": 7,
+    "actions": [
+      "PickupObject(Book)",
+      "MoveBack(0.75)",
+      "MoveLeft(1.0)",
+      "RotateRight(180)",
+      "PutObject(Bed)",
+      "OpenObject(Book)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan319",
+  "target_object_types": [
+    "Bed",
+    "Book",
+    "Dresser"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Book",
+      "receptacle_type": "Dresser",
+      "value": false
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Book",
+      "receptacle_type": "Bed"
+    },
+    {
+      "type": "object_state",
+      "object_type": "Book",
+      "field": "isOpen",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'd like to read in bed for a while—please take the book from the desk, put it on the bed, and open it",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "Study and Work",
+  "Level": "Level3"
+}

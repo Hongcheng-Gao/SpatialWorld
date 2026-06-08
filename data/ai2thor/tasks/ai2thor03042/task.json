@@ -1,0 +1,54 @@
+{
+  "task_id": "ai2thor03042",
+  "task_name": "Move clean utensils",
+  "instruction": "I have washed the spoon and fork; please remove them from the sink and place them on the countertop.",
+  "golden_actions": {
+    "steps": 7,
+    "actions": [
+      "MoveRight(1)",
+      "MoveAhead(0.5)",
+      "PickupObject(Spoon)",
+      "PutObject(CounterTop)",
+      "PickupObject(Fork)",
+      "PutObject(CounterTop)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan23",
+  "target_object_types": [
+    "CounterTop",
+    "Fork",
+    "SinkBasin",
+    "Spoon"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Spoon",
+      "receptacle_type": "CounterTop"
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Fork",
+      "receptacle_type": "CounterTop"
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Fork",
+      "receptacle_type": "SinkBasin",
+      "value": false
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Fork",
+      "receptacle_type": "SinkBasin",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I have washed the spoon and fork; please remove them from the sink and place them on the countertop.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

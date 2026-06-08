@@ -1,0 +1,57 @@
+{
+  "id": "embodiedcity_4006",
+  "instruction": "I want to check if the traffic light in front of the drone is working properly. Help me fly closer to that green signal light to take a look.",
+  "start": [
+    6896.21240234375,
+    -3635.292724609375,
+    -11.171629905700684
+  ],
+  "start_yaw": 17.64,
+  "end": [
+    6919.59375,
+    -3627.86279296875,
+    -8.11313533782959
+  ],
+  "end_yaw": 17.642678688322313,
+  "check_status": "Qualified",
+  "check_comment": "which signal light",
+  "check_time": "2026-05-12 13:06:10",
+  "trajectory": [
+    {
+      "x": 6896.21,
+      "y": -3635.29,
+      "z": -11.09,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 6905.74,
+      "y": -3632.26,
+      "z": -11.1,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6915.27,
+      "y": -3629.23,
+      "z": -11.01,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6920.04,
+      "y": -3627.72,
+      "z": -10.92,
+      "action": "Forward",
+      "granularity": "Medium"
+    },
+    {
+      "x": 6920.04,
+      "y": -3627.72,
+      "z": -10.92,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 4
+}

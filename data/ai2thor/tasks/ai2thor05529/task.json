@@ -1,0 +1,43 @@
+{
+  "task_id": "ai2thor05529",
+  "task_name": "Take the tissues and place them on the table",
+  "instruction": "I'd like to work at the other desk. Please take the tissues next to the laptop and put them beside the newspaper on that desk",
+  "golden_actions": {
+    "steps": 8,
+    "actions": [
+      "PickupObject(TissueBox)",
+      "MoveBack(1.0)",
+      "MoveBack(1.0)",
+      "MoveBack(0.5)",
+      "MoveLeft(1.0)",
+      "RotateRight(180)",
+      "PutObject(SideTable)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan219",
+  "target_object_types": [
+    "Cabinet",
+    "SideTable",
+    "TissueBox"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "TissueBox",
+      "receptacle_type": "Cabinet",
+      "value": false
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "TissueBox",
+      "receptacle_type": "SideTable"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'd like to work at the other desk. Please take the tissues next to the laptop and put them beside the newspaper on that desk",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

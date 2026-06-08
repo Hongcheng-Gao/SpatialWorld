@@ -1,0 +1,33 @@
+{
+  "task_id": "ai2thor05061",
+  "task_name": "Turn on the laptop on the sofa",
+  "instruction": "I'm settling in on the sofa, so please turn on the laptop on the sofa and wait until you can tell it's powered on.",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "RotateRight(90)",
+      "MoveLeft(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "ToggleObjectOn(Laptop)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan220",
+  "target_object_types": [
+    "Laptop"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Laptop",
+      "state": "isToggled",
+      "value": true
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "I'm settling in on the sofa, so please turn on the laptop on the sofa and wait until you can tell it's powered on.",
+  "Evaluation_Type": "Conditional",
+  "Category": "Study and Work",
+  "Level": "Level3"
+}

@@ -1,0 +1,33 @@
+{
+  "task_id": "carla00417",
+  "task_name": "Go to the utility pole.",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "walker",
+  "instruction": "Can you see the utility pole in the image? Walk underneath it",
+  "golden_actions": {
+    "steps": 7,
+    "actions": [
+      "WalkForward(distance=10)",
+      "TurnLeft(degrees=30)",
+      "TurnRight(degrees=30)",
+      "WalkForward(distance=10)",
+      "TurnLeft(degrees=30)",
+      "WalkForward(distance=2.5)",
+      "Done"
+    ]
+  },
+  "scene": "Town02",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "distance_to_waypoint",
+    "target_location": [
+      23.9,
+      180.8,
+      1.3
+    ],
+    "threshold_label": "strict"
+  },
+  "max_steps": 50
+}

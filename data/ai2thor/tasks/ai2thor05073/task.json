@@ -1,0 +1,32 @@
+{
+  "task_id": "ai2thor05073",
+  "task_name": "Turn on the microwave",
+  "instruction": "My lunch has gotten cold, so please turn on the microwave to warm it up.",
+  "golden_actions": {
+    "steps": 5,
+    "actions": [
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "ToggleObjectOn(Microwave)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan20",
+  "target_object_types": [
+    "Microwave"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Microwave",
+      "state": "isToggled",
+      "value": true
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "My lunch has gotten cold, so please turn on the microwave to warm it up.",
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3"
+}

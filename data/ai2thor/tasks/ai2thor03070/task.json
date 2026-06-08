@@ -1,0 +1,49 @@
+{
+  "task_id": "ai2thor03070",
+  "task_name": "Store potato",
+  "instruction": "I've just entered the kitchen. Please turn on the kitchen light and put the potato I'm holding into the refrigerator. Remember to close the refrigerator door afterwards.",
+  "golden_actions": {
+    "steps": 8,
+    "actions": [
+      "ToggleObjectOn(LightSwitch)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveLeft(0.25)",
+      "OpenObject(Fridge)",
+      "PutObject(Fridge)",
+      "CloseObject(Fridge)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan29",
+  "target_object_types": [
+    "LightSwitch",
+    "Fridge",
+    "Potato"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Potato",
+      "receptacle_type": "Fridge"
+    },
+    {
+      "type": "object_state",
+      "object_type": "Fridge",
+      "state": "isOpen",
+      "value": false
+    },
+    {
+      "type": "object_state",
+      "object_type": "LightSwitch",
+      "state": "isToggled",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I've just entered the kitchen. Please turn on the kitchen light and put the potato I'm holding into the refrigerator. Remember to close the refrigerator door afterwards.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

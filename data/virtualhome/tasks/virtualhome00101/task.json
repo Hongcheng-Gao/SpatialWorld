@@ -1,0 +1,28 @@
+{
+  "task_id": "virtualhome00101",
+  "task_name": "open the microwave",
+  "instruction": "I'd like to heat up some food. Please open the microwave door.",
+  "golden_actions": {
+    "steps": 3,
+    "actions": [
+      "WalkForward(medium)",
+      "Open(microwave)",
+      "Done"
+    ]
+  },
+  "scene": "0",
+  "target_object_types": [
+    "microwave"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "microwave",
+      "state": "isOpen",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'd like to heat up some food. Please open the microwave door.",
+  "max_steps": 16
+}

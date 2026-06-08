@@ -1,0 +1,44 @@
+{
+  "task_id": "ai2thor04006",
+  "task_name": "Move pencil to side table",
+  "instruction": "Please move the pencil from the desk on the right to the side table by the window.",
+  "golden_actions": {
+    "steps": 9,
+    "actions": [
+      "MoveAhead(0.5)",
+      "PickupObject(Pencil)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "MoveLeft(1.0)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "PutObject(SideTable)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan303",
+  "target_object_types": [
+    "Desk",
+    "Pencil",
+    "SideTable"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Pencil",
+      "receptacle_type": "SideTable"
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Pencil",
+      "receptacle_type": "Desk",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "Please move the pencil from the desk on the right to the side table by the window.",
+  "max_steps": 30,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

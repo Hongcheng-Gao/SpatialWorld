@@ -1,0 +1,34 @@
+{
+  "task_id": "ai2thor04235",
+  "task_name": "Throw the pen into the trash can.",
+  "instruction": "My pen is broken. Please throw the pen into the trash can.",
+  "golden_actions": {
+    "steps": 5,
+    "actions": [
+      "PickupObject(Pen)",
+      "RotateRight(90)",
+      "MoveAhead(0.5)",
+      "PutObject(GarbageCan)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan330",
+  "target_object_types": [
+    "Pen",
+    "GarbageCan"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Pen",
+      "receptacle_type": "GarbageCan",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "My pen is broken. Please throw the pen into the trash can.",
+  "max_steps": 30,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

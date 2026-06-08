@@ -1,0 +1,33 @@
+{
+  "task_id": "ai2thor05076",
+  "task_name": "Slice the lettuce",
+  "instruction": "I'm about to cook, so please slice the lettuce as instructed and keep the pieces together.",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "RotateRight(90)",
+      "MoveRight(1.0)",
+      "MoveRight(0.5)",
+      "MoveAhead(0.5)",
+      "SliceObject(Lettuce)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan17",
+  "target_object_types": [
+    "Lettuce"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Lettuce",
+      "state": "isSliced",
+      "value": true
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "I'm about to cook, so please slice the lettuce as instructed and keep the pieces together.",
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3"
+}

@@ -1,0 +1,32 @@
+{
+  "task_id": "virtualhome00012",
+  "task_name": "Turn on the faucet.",
+  "instruction": "I want to wash my face. Help me turn on the faucet.",
+  "golden_actions": {
+    "steps": 7,
+    "actions": [
+      "TurnLeft(small)",
+      "WalkForward(medium)",
+      "LookDown",
+      "WalkForward(small)",
+      "TurnLeft(small)",
+      "SwitchOn(faucet)",
+      "Done"
+    ]
+  },
+  "scene": "6",
+  "target_object_types": [
+    "faucet"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "faucet",
+      "state": "isToggled",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to wash my face. Help me turn on the faucet.",
+  "max_steps": 21
+}

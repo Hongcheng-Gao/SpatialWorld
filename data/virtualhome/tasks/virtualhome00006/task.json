@@ -1,0 +1,29 @@
+{
+  "task_id": "virtualhome00006",
+  "task_name": "Turn off the desk lamp.",
+  "instruction": "I'm going to sleep. Could you turn off the desk lamp? It's a bit too bright.",
+  "golden_actions": {
+    "steps": 4,
+    "actions": [
+      "TurnRight(small)",
+      "WalkForward(medium)",
+      "SwitchOff(tablelamp)",
+      "Done"
+    ]
+  },
+  "scene": "6",
+  "target_object_types": [
+    "tablelamp"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "tablelamp",
+      "state": "isToggled",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm going to sleep. Could you turn off the desk lamp? It's a bit too bright.",
+  "max_steps": 18
+}

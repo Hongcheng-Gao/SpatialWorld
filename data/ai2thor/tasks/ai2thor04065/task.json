@@ -1,0 +1,39 @@
+{
+  "task_id": "ai2thor04065",
+  "task_name": "Get water in bowl",
+  "instruction": "I want to drink water. Please pick up the bowl and fill it with water.",
+  "golden_actions": {
+    "steps": 4,
+    "actions": [
+      "MoveAhead(0.5)",
+      "PickupObject(Bowl)",
+      "FillObjectWithLiquid(Bowl, water)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan214",
+  "target_object_types": [
+    "Bowl"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Bowl",
+      "state": "isPickedUp",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Bowl",
+      "state": "isFilledWithLiquid",
+      "value": true,
+      "liquid": "water"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to drink water. Please pick up the bowl and fill it with water.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level2 Interaction"
+}

@@ -1,0 +1,46 @@
+{
+  "task_id": "carla00318",
+  "task_name": "Drive to the tree",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "vehicle",
+  "instruction": "Please drive to the tree marked with red box,which is in front of the house ahead.",
+  "golden_actions": {
+    "steps": 3,
+    "actions": [
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "Done"
+    ]
+  },
+  "scene": "Town03",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "polygon_area",
+    "target_polygon": [
+      [
+        89.54901881977416,
+        141.47831680252563,
+        0.131256103515625
+      ],
+      [
+        89.94722168333396,
+        146.02975447815484,
+        0.131256103515625
+      ],
+      [
+        84.94713596538209,
+        146.46720932052125,
+        0.131256103515625
+      ],
+      [
+        84.54893310182229,
+        141.91577164489203,
+        0.131256103515625
+      ]
+    ],
+    "threshold_label": "loose"
+  },
+  "max_steps": 30
+}

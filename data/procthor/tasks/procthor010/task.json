@@ -1,0 +1,54 @@
+{
+  "task_id": "procthor010",
+  "task_name": "Bring Basketball, Wait by TV Cabinet",
+  "instruction": "I need your help to pick up the basketball from the bedroom floor and wait for me by the TV cabinet.",
+  "golden_actions": {
+    "steps": 16,
+    "actions": [
+      "LookDown",
+      "MoveLeft(0.5)",
+      "MoveAhead(0.25)",
+      "PickupObject(BasketBall)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "RotateRight(90)",
+      "MoveAhead(0.5)",
+      "RotateRight(90)",
+      "MoveAhead(0.25)",
+      "Done"
+    ]
+  },
+  "scene_index": 122,
+  "target_object_types": [
+    "BasketBall",
+    "TVStand"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "BasketBall",
+      "state": "isPickedUp",
+      "value": true
+    },
+    {
+      "type": "agent_in_room",
+      "room_type": "LivingRoom"
+    },
+    {
+      "type": "agent_near_object",
+      "object_type": "TVStand",
+      "distance": 1.5
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I need your help to pick up the basketball from the bedroom floor and wait for me by the TV cabinet.",
+  "max_steps": 42,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

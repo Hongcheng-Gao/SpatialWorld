@@ -1,0 +1,40 @@
+{
+  "task_id": "ai2thor04050",
+  "task_name": "Smash vase and statue",
+  "instruction": "I don't like the vase and statue on your left. Please smash them both.",
+  "golden_actions": {
+    "steps": 5,
+    "actions": [
+      "RotateLeft(90)",
+      "MoveAhead(0.5)",
+      "BreakObject(Vase)",
+      "BreakObject(Statue)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan211",
+  "target_object_types": [
+    "Vase",
+    "Statue"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Vase",
+      "state": "isBroken",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Statue",
+      "state": "isBroken",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I don't like the vase and statue on your left. Please smash them both.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level2 Interaction"
+}

@@ -1,0 +1,71 @@
+{
+  "id": "embodiedcity_7006",
+  "instruction": "Locate the pink tree ahead to capture a scenic view and coordinate a flight to its overhead position.",
+  "start": [
+    6466.62451171875,
+    -3978.748291015625,
+    -10.414677619934082
+  ],
+  "start_yaw": -12.52,
+  "end": [
+    6501.9306640625,
+    -3974.936279296875,
+    -16.48621940612793
+  ],
+  "end_yaw": -10.996852593375838,
+  "check_status": "Qualified",
+  "check_comment": "1",
+  "check_time": "2026-05-12 10:26:57",
+  "trajectory": [
+    {
+      "x": 6491.93,
+      "y": -3974.94,
+      "z": -6.29,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 6476.39,
+      "y": -3980.92,
+      "z": -10.32,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6486.15,
+      "y": -3983.08,
+      "z": -10.29,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6488.32,
+      "y": -3973.32,
+      "z": -10.24,
+      "action": "Right",
+      "granularity": "Large"
+    },
+    {
+      "x": 6498.08,
+      "y": -3975.49,
+      "z": -10.19,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6498.08,
+      "y": -3975.49,
+      "z": -15.14,
+      "action": "Up",
+      "granularity": "Medium"
+    },
+    {
+      "x": 6498.08,
+      "y": -3975.49,
+      "z": -15.14,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 6
+}

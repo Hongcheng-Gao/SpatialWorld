@@ -1,0 +1,48 @@
+{
+  "task_id": "procthor214",
+  "task_name": "Deliver apple to bedroom",
+  "instruction": "I would like to have some fruit before I go to sleep. Please pick up the apple and carry it to the bedroom.",
+  "golden_actions": {
+    "steps": 21,
+    "actions": [
+      "LookDown",
+      "MoveLeft(1.0)",
+      "MoveLeft(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "PickupObject(Apple)",
+      "RotateRight(90)",
+      "MoveRight(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveLeft(1.0)",
+      "MoveLeft(1.0)",
+      "Done"
+    ]
+  },
+  "scene_index": 343,
+  "target_object_types": [
+    "Apple"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_room",
+      "object_type": "Apple",
+      "room_type": "Bedroom"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I would like to have some fruit before I go to sleep. Please pick up the apple and carry it to the bedroom.",
+  "max_steps": 52,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

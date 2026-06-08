@@ -1,0 +1,69 @@
+{
+  "task_id": "procthor014",
+  "task_name": "Bring Candle, Wait by Fridge",
+  "instruction": "I need you to get me a candle and wait for me next to the refrigerator.",
+  "golden_actions": {
+    "steps": 35,
+    "actions": [
+      "RotateLeft(90)",
+      "LookDown",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveRight(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "MoveLeft(0.25)",
+      "MoveAhead(1.0)",
+      "RotateLeft(90)",
+      "MoveAhead(0.5)",
+      "PickupObject(Candle)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "RotateLeft(90)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.5)",
+      "MoveAhead(0.5)",
+      "MoveRight(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveLeft(0.5)",
+      "MoveLeft(0.25)",
+      "MoveAhead(0.25)",
+      "MoveLeft(0.5)",
+      "MoveLeft(0.25)",
+      "MoveAhead(0.25)",
+      "MoveLeft(0.25)",
+      "MoveAhead(0.5)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.5)",
+      "Done"
+    ]
+  },
+  "scene_index": 122,
+  "target_object_types": [
+    "Candle",
+    "Fridge"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Candle",
+      "state": "isPickedUp",
+      "value": true
+    },
+    {
+      "type": "agent_near_object",
+      "object_type": "Fridge",
+      "distance": 1.5
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I need you to get me a candle and wait for me next to the refrigerator.",
+  "max_steps": 80,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

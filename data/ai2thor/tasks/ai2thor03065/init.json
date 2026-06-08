@@ -1,0 +1,13 @@
+{
+  "scene": "FloorPlan28",
+  "actions": [
+    "MoveAhead(0.5)",
+    "MoveAhead(0.25)",
+    "MoveRight(1.0)",
+    "MoveAhead(0.5)",
+    "LookDown",
+    "DirtyObject(Mug)",
+    "MoveBack(0.25)",
+    "Done"
+  ]
+}

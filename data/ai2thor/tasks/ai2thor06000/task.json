@@ -1,0 +1,44 @@
+{
+  "task_id": "ai2thor06000",
+  "task_name": "Bring a pencil from the bedside drawer",
+  "instruction": "I'm getting ready to draw. Could you take a pencil from the drawer next to the bed and place the pencil on the desk for me?",
+  "golden_actions": {
+    "steps": 9,
+    "actions": [
+      "PickupObject(Pencil)",
+      "RotateLeft(180)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "MoveLeft(0.25)",
+      "MoveAhead(1.0)",
+      "RotateRight(90)",
+      "PutObject(Desk)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan301",
+  "target_object_types": [
+    "Pencil",
+    "Desk",
+    "Drawer"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Pencil",
+      "receptacle_type": "Desk"
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Pencil",
+      "receptacle_type": "Drawer",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm getting ready to draw. Could you take a pencil from the drawer next to the bed and place the pencil on the desk for me?",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "Entertainment (Game/Sports)",
+  "Level": "Level3"
+}

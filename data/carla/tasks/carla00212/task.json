@@ -1,0 +1,54 @@
+{
+  "task_id": "carla00212",
+  "task_name": "Walk to the HighwayLight_multiple.",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "walker",
+  "instruction": "Walk to the HighwayLight_multiple.You can turn and move in any direction.",
+  "golden_actions": {
+    "steps": 11,
+    "actions": [
+      "TurnLeft(degrees=90)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "TurnLeft(degrees=30)",
+      "TurnLeft(degrees=30)",
+      "WalkForward(distance=5)",
+      "WalkForward(distance=2.5)",
+      "Done"
+    ]
+  },
+  "scene": "Town03",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "polygon_area",
+    "target_polygon": [
+      [
+        -29.655776977539062,
+        -2.724567174911499,
+        0.0899667739868164
+      ],
+      [
+        -27.2879638671875,
+        -2.724567174911499,
+        0.0899667739868164
+      ],
+      [
+        -27.2879638671875,
+        -0.3567523956298828,
+        0.0899667739868164
+      ],
+      [
+        -29.655776977539062,
+        -0.3567523956298828,
+        0.0899667739868164
+      ]
+    ],
+    "threshold_label": "medium"
+  },
+  "max_steps": 50
+}

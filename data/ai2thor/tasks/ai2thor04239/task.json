@@ -1,0 +1,40 @@
+{
+  "task_id": "ai2thor04239",
+  "task_name": "Move to the window and break it if it is intact.",
+  "instruction": "Please walk to the window, and if the window is intact, break it.",
+  "golden_actions": {
+    "steps": 12,
+    "actions": [
+      "MoveAhead(0.5)",
+      "RotateRight(90)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "BreakObject(Window)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan330",
+  "target_object_types": [
+    "Window"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Window",
+      "state": "isBroken",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "Please walk to the window, and if the window is intact, break it.",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

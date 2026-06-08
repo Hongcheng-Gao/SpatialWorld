@@ -1,0 +1,41 @@
+{
+  "task_id": "ai2thor05520",
+  "task_name": "Pour water into the cup and then pick up the baseball.",
+  "instruction": "I'm about to start working out—please fill the cup with water and then pick up the baseball bat",
+  "golden_actions": {
+    "steps": 5,
+    "actions": [
+      "FillObjectWithLiquid(Mug, water)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.75)",
+      "PickupObject(BaseballBat)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan315",
+  "target_object_types": [
+    "Mug",
+    "BaseballBat"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Mug",
+      "state": "isFilledWithLiquid",
+      "value": true,
+      "liquid": "water"
+    },
+    {
+      "type": "object_state",
+      "object_type": "BaseballBat",
+      "state": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm about to start working out—please fill the cup with water and then pick up the baseball bat",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "Entertainment",
+  "Level": "Level3"
+}

@@ -1,0 +1,42 @@
+{
+  "task_id": "ai2thor05030",
+  "task_name": "Move the book to the desk",
+  "instruction": "I'm putting things where they belong, so please pick up the book, carry it over, and set it down on the desk neatly.",
+  "golden_actions": {
+    "steps": 7,
+    "actions": [
+      "MoveAhead(0.5)",
+      "PickupObject(Book)",
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "PutObject(Desk)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan314",
+  "target_object_types": [
+    "Book",
+    "Desk",
+    "SideTable"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Book",
+      "receptacle_type": "Desk",
+      "value": true
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Book",
+      "receptacle_type": "SideTable",
+      "value": false
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "I'm putting things where they belong, so please pick up the book, carry it over, and set it down on the desk neatly.",
+  "Evaluation_Type": "Conditional",
+  "Category": "Study and Work",
+  "Level": "Level3"
+}

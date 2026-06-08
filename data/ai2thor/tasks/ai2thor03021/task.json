@@ -1,0 +1,98 @@
+{
+  "task_id": "ai2thor03021",
+  "task_name": "Take vegetables out of fridge",
+  "instruction": "I'm going to start cooking now, please take all the vegetables out of the refrigerator and put them on the counter.",
+  "golden_actions": {
+    "steps": 30,
+    "actions": [
+      "OpenObject(Fridge)",
+      "PickupObject(Potato)",
+      "MoveBack(1)",
+      "MoveBack(0.25)",
+      "MoveLeft(0.5)",
+      "MoveLeft(1)",
+      "MoveAhead(0.5)",
+      "PutObject(CounterTop)",
+      "MoveBack(0.5)",
+      "MoveRight(1)",
+      "MoveRight(0.5)",
+      "MoveAhead(1)",
+      "PickupObject(Tomato)",
+      "MoveBack(1)",
+      "MoveLeft(1)",
+      "MoveLeft(0.5)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "PutObject(CounterTop)",
+      "MoveBack(1)",
+      "MoveRight(1)",
+      "MoveRight(0.5)",
+      "MoveAhead(1)",
+      "PickupObject(Lettuce)",
+      "MoveBack(1)",
+      "MoveLeft(1)",
+      "MoveLeft(1)",
+      "MoveAhead(1)",
+      "PutObject(CounterTop)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan15",
+  "target_object_types": [
+    "Egg",
+    "Fridge",
+    "Lettuce",
+    "Potato",
+    "Tomato"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Tomato",
+      "receptacle_type": "Fridge",
+      "value": false
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Potato",
+      "receptacle_type": "Fridge",
+      "value": false
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Lettuce",
+      "receptacle_type": "Fridge",
+      "value": false
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Egg",
+      "receptacle_type": "Fridge",
+      "value": true
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Tomato",
+      "receptacle_type": "CounterTop",
+      "value": true
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Potato",
+      "receptacle_type": "CounterTop",
+      "value": true
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Lettuce",
+      "receptacle_type": "CounterTop",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm going to start cooking now, please take all the vegetables out of the refrigerator and put them on the counter.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "embodiedcity_2005",
+  "instruction": "Please move to the first lamppost on your right.",
+  "start": [
+    7795.8427734375,
+    -3680.618896484375,
+    -1.1545196771621704
+  ],
+  "start_yaw": 85.01,
+  "end": [
+    7795.53076171875,
+    -3667.366943359375,
+    -1.3123736381530762
+  ],
+  "end_yaw": 103.78875338657036,
+  "check_status": "Qualified",
+  "check_comment": "ok",
+  "check_time": "2026-05-12 12:45:10",
+  "trajectory": [
+    {
+      "x": 7795.84,
+      "y": -3680.62,
+      "z": -1.1,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 7796.71,
+      "y": -3670.66,
+      "z": -1.09,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7796.71,
+      "y": -3670.66,
+      "z": -1.09,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 2
+}

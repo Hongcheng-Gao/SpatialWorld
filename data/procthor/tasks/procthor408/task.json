@@ -1,0 +1,51 @@
+{
+  "task_id": "procthor408",
+  "task_name": "Wine Bottle Delivery to Bedroom",
+  "instruction": "I'd like to have some wine. Please go to the kitchen, get the wine bottle, and bring it to the bedroom.",
+  "golden_actions": {
+    "steps": 24,
+    "actions": [
+      "RotateRight(90)",
+      "LookDown",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "MoveRight(1.0)",
+      "MoveRight(1.0)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "PickupObject(WineBottle)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "RotateLeft(90)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "RotateRight(90)",
+      "MoveLeft(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "Done"
+    ]
+  },
+  "scene_index": 406,
+  "target_object_types": [
+    "WineBottle"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_room",
+      "object_type": "WineBottle",
+      "room_type": "Bedroom"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'd like to have some wine. Please go to the kitchen, get the wine bottle, and bring it to the bedroom.",
+  "max_steps": 58,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

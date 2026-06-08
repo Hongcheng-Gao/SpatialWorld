@@ -1,0 +1,260 @@
+{
+  "id": "embodiedcity_8005",
+  "instruction": "Please fly to the tree furthest down the column to the right of the pink trees on your right.",
+  "start": [
+    7277.16748046875,
+    -4143.2431640625,
+    -25.886974334716797
+  ],
+  "start_yaw": -158.21,
+  "end": [
+    7292.45166015625,
+    -4350.51708984375,
+    -0.6226344704627991
+  ],
+  "end_yaw": -31.707911573996558,
+  "check_status": "Qualified",
+  "check_comment": "ok",
+  "check_time": "2026-05-12 09:51:11",
+  "trajectory": [
+    {
+      "x": 7277.17,
+      "y": -4143.24,
+      "z": -25.82,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 7277.17,
+      "y": -4143.24,
+      "z": -25.82,
+      "action": "Yaw Right",
+      "granularity": "Large"
+    },
+    {
+      "x": 7267.88,
+      "y": -4146.96,
+      "z": -25.73,
+      "action": "Left",
+      "granularity": "Large"
+    },
+    {
+      "x": 7271.59,
+      "y": -4156.24,
+      "z": -25.72,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7275.31,
+      "y": -4165.53,
+      "z": -25.7,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7279.02,
+      "y": -4174.81,
+      "z": -25.69,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7282.73,
+      "y": -4184.1,
+      "z": -25.68,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7286.44,
+      "y": -4193.38,
+      "z": -25.68,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7290.15,
+      "y": -4202.67,
+      "z": -25.67,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7293.87,
+      "y": -4211.95,
+      "z": -25.66,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7284.58,
+      "y": -4215.67,
+      "z": -25.66,
+      "action": "Left",
+      "granularity": "Large"
+    },
+    {
+      "x": 7275.29,
+      "y": -4219.38,
+      "z": -25.65,
+      "action": "Left",
+      "granularity": "Large"
+    },
+    {
+      "x": 7266.01,
+      "y": -4223.09,
+      "z": -25.65,
+      "action": "Left",
+      "granularity": "Large"
+    },
+    {
+      "x": 7256.72,
+      "y": -4226.8,
+      "z": -25.65,
+      "action": "Left",
+      "granularity": "Large"
+    },
+    {
+      "x": 7260.43,
+      "y": -4236.09,
+      "z": -25.65,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7264.15,
+      "y": -4245.37,
+      "z": -25.64,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7267.86,
+      "y": -4254.66,
+      "z": -25.64,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7271.57,
+      "y": -4263.94,
+      "z": -25.64,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7275.28,
+      "y": -4273.23,
+      "z": -25.64,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7278.99,
+      "y": -4282.52,
+      "z": -25.64,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7282.71,
+      "y": -4291.8,
+      "z": -25.64,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7286.42,
+      "y": -4301.09,
+      "z": -25.64,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7290.13,
+      "y": -4310.37,
+      "z": -25.63,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7293.84,
+      "y": -4319.66,
+      "z": -25.63,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7293.84,
+      "y": -4319.66,
+      "z": -20.61,
+      "action": "Down",
+      "granularity": "Medium"
+    },
+    {
+      "x": 7293.84,
+      "y": -4319.66,
+      "z": -15.58,
+      "action": "Down",
+      "granularity": "Medium"
+    },
+    {
+      "x": 7293.84,
+      "y": -4319.66,
+      "z": -10.56,
+      "action": "Down",
+      "granularity": "Medium"
+    },
+    {
+      "x": 7293.84,
+      "y": -4319.66,
+      "z": -5.54,
+      "action": "Down",
+      "granularity": "Medium"
+    },
+    {
+      "x": 7293.84,
+      "y": -4319.66,
+      "z": -5.52,
+      "action": "Yaw Left",
+      "granularity": "Medium"
+    },
+    {
+      "x": 7292.41,
+      "y": -4329.56,
+      "z": -5.51,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7290.99,
+      "y": -4339.45,
+      "z": -5.47,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7289.56,
+      "y": -4349.35,
+      "z": -5.43,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7289.56,
+      "y": -4349.35,
+      "z": -0.39,
+      "action": "Down",
+      "granularity": "Medium"
+    },
+    {
+      "x": 7289.56,
+      "y": -4349.35,
+      "z": -0.39,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 33
+}

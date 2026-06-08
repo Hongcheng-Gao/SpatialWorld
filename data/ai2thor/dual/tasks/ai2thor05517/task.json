@@ -1,0 +1,40 @@
+{
+  "task_id": "ai2thor05517",
+  "task_name": "Straighten up the bed and then turn on the laptop.",
+  "instruction": "I just woke up and I’m ready to get to work—you help me tidy the bed first, then use the laptop to start working and get it booted up.",
+  "golden_actions": {
+    "steps": 5,
+    "actions": [
+      "CleanObject(Bed)",
+      "RotateRight(90)",
+      "MoveRight(1.0)",
+      "ToggleObjectOn(Laptop)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan308",
+  "target_object_types": [
+    "Bed",
+    "Laptop"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Bed",
+      "field": "isDirty",
+      "value": false
+    },
+    {
+      "type": "object_state",
+      "object_type": "Laptop",
+      "field": "isToggled",
+      "value": true
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "I just woke up and I’m ready to get to work—you help me tidy the bed first, then use the laptop to start working and get it booted up.",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "Study and Work",
+  "Level": "Level3"
+}

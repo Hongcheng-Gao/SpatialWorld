@@ -1,0 +1,47 @@
+{
+  "task_id": "ai2thor03025",
+  "task_name": "Organize soap bottle",
+  "instruction": "I need to tidy up the counter now. Please put the soap bottle in front of me on the shelf next to the window.",
+  "golden_actions": {
+    "steps": 11,
+    "actions": [
+      "MoveAhead(0.25)",
+      "MoveRight(0.25)",
+      "PickupObject(SoapBottle)",
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveRight(0.25)",
+      "MoveAhead(1)",
+      "MoveAhead(1)",
+      "MoveAhead(1)",
+      "PutObject(Shelf)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan20",
+  "target_object_types": [
+    "CounterTop",
+    "Shelf",
+    "SoapBottle"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "SoapBottle",
+      "receptacle_type": "Shelf",
+      "value": true
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "SoapBottle",
+      "receptacle_type": "CounterTop",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I need to tidy up the counter now. Please put the soap bottle in front of me on the shelf next to the window.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

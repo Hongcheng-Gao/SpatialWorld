@@ -1,0 +1,26 @@
+{
+  "scene": "FloorPlan215",
+  "actions": [
+    "RotateRight(90)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveRight(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveRight(0.25)",
+    "MoveAhead(0.25)",
+    "MoveRight(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveRight(0.25)",
+    "RotateRight(90)",
+    "MoveLeft(0.25)",
+    "MoveBack(0.25)",
+    "MoveLeft(0.25)",
+    "MoveLeft(0.25)",
+    "MoveLeft(0.25)",
+    "MoveLeft(0.5)",
+    "ToggleObjectOn(Television)",
+    "Done"
+  ]
+}

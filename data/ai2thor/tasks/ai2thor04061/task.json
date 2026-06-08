@@ -1,0 +1,36 @@
+{
+  "task_id": "ai2thor04061",
+  "task_name": "Water indoor plants",
+  "instruction": "Please fill my indoor plants with water.",
+  "golden_actions": {
+    "steps": 7,
+    "actions": [
+      "MoveRight(0.25)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.25)",
+      "MoveRight(0.5)",
+      "FillObjectWithLiquid(HousePlant, water)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan213",
+  "target_object_types": [
+    "HousePlant"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "HousePlant",
+      "state": "isFilledWithLiquid",
+      "value": true,
+      "liquid": "water"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "Please fill my indoor plants with water.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

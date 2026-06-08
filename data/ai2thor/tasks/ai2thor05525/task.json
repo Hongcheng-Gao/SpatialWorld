@@ -1,0 +1,38 @@
+{
+  "task_id": "ai2thor05525",
+  "task_name": "Put the book on the table onto the armchair",
+  "instruction": "I'd like to take a break and read for a while in the armchair—could you place the book on it?",
+  "golden_actions": {
+    "steps": 3,
+    "actions": [
+      "PickupObject(Book)",
+      "PutObject(ArmChair)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan318",
+  "target_object_types": [
+    "ArmChair",
+    "Book",
+    "Desk"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Book",
+      "receptacle_type": "Desk",
+      "value": false
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Book",
+      "receptacle_type": "ArmChair"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'd like to take a break and read for a while in the armchair—could you place the book on it?",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "Study and Work",
+  "Level": "Level3"
+}

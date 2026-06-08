@@ -1,0 +1,30 @@
+{
+  "task_id": "ai2thor04224",
+  "task_name": "Pick up tennisracket",
+  "instruction": "I'm about to exercise, please pick up this tennisracket for me.",
+  "golden_actions": {
+    "steps": 2,
+    "actions": [
+      "PickupObject(TennisRacket)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan320",
+  "target_object_types": [
+    "TennisRacket"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "TennisRacket",
+      "state": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm about to exercise, please pick up this tennisracket for me.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Entertainment (Game/Sports)",
+  "Level": "Level3 Hybrid"
+}

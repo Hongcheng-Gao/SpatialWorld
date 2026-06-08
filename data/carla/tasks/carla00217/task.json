@@ -1,0 +1,40 @@
+{
+  "task_id": "carla00217",
+  "task_name": "Walk to the target point.",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "walker",
+  "instruction": "Walk to the position marked by the red line in the screenshot.You can turn and move in any direction.",
+  "golden_actions": {
+    "steps": 14,
+    "actions": [
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "TurnLeft(degrees=90)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "TurnRight(degrees=90)",
+      "WalkForward(distance=10)",
+      "Done"
+    ]
+  },
+  "scene": "Town03",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "distance_to_waypoint",
+    "target_location": [
+      116.7,
+      -88.5,
+      9.1
+    ],
+    "threshold_label": "medium"
+  },
+  "max_steps": 50
+}

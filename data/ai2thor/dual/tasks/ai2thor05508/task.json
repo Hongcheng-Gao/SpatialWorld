@@ -1,0 +1,40 @@
+{
+  "task_id": "ai2thor05508",
+  "task_name": "Grab the pillow and clean the bed",
+  "instruction": "It's such a lovely day; I feel like tidying up my bed. First I'll pick up my pillow, then give the whole bed a good clean—so I can sleep nice and sound tonight.",
+  "golden_actions": {
+    "steps": 5,
+    "actions": [
+      "MoveAhead(1.0)",
+      "MoveRight(0.5)",
+      "PickupObject(Pillow)",
+      "CleanObject(Bed)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan304",
+  "target_object_types": [
+    "Pillow",
+    "Bed"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Pillow",
+      "field": "isPickedUp",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Bed",
+      "field": "isDirty",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "It's such a lovely day; I feel like tidying up my bed. First I'll pick up my pillow, then give the whole bed a good clean—so I can sleep nice and sound tonight.",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

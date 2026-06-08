@@ -1,0 +1,56 @@
+{
+  "task_id": "ai2thor04104",
+  "task_name": "Organize - card and keychain",
+  "instruction": "I need to tidy up the room. Please put my credit card and keychain in the box.",
+  "golden_actions": {
+    "steps": 22,
+    "actions": [
+      "MoveLeft(0.25)",
+      "PickupObject(CreditCard)",
+      "LookUp",
+      "LookUp",
+      "MoveLeft(0.5)",
+      "PutObject(Box)",
+      "LookDown",
+      "LookDown",
+      "MoveRight(0.5)",
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveAhead(0.25)",
+      "PickupObject(KeyChain)",
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "LookUp",
+      "LookUp",
+      "MoveLeft(0.25)",
+      "MoveAhead(0.25)",
+      "MoveLeft(0.25)",
+      "PutObject(Box)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan310",
+  "target_object_types": [
+    "Box",
+    "CreditCard",
+    "KeyChain"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "CreditCard",
+      "receptacle_type": "Box"
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "KeyChain",
+      "receptacle_type": "Box"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I need to tidy up the room. Please put my credit card and keychain in the box.",
+  "max_steps": 60,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

@@ -1,0 +1,30 @@
+{
+  "task_id": "ai2thor05554",
+  "task_name": "Take a hand towel from the hand-towel holder so I can dry them",
+  "instruction": "I've finished using the toilet and washing my hands—please take a hand towel from the hand-towel holder so I can dry them.",
+  "golden_actions": {
+    "steps": 2,
+    "actions": [
+      "PickupObject(HandTowel)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan422",
+  "target_object_types": [
+    "HandTowel"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "HandTowel",
+      "field": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I've finished using the toilet and washing my hands—please take a hand towel from the hand-towel holder so I can dry them.",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

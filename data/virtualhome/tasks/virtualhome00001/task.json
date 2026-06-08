@@ -1,0 +1,35 @@
+{
+  "task_id": "virtualhome00001",
+  "task_name": "Please open the microwave and fridge.",
+  "instruction": "I want to eat something. Please open the microwave and refrigerator doors. I'd like to heat something up.",
+  "golden_actions": {
+    "steps": 3,
+    "actions": [
+      "Open(microwave)",
+      "Open(fridge)",
+      "Done"
+    ]
+  },
+  "scene": "6",
+  "target_object_types": [
+    "microwave",
+    "fridge"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "microwave",
+      "state": "isOpen",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "fridge",
+      "state": "isOpen",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to eat something. Please open the microwave and refrigerator doors. I'd like to heat something up.",
+  "max_steps": 15
+}

@@ -1,0 +1,33 @@
+{
+  "task_id": "ai2thor05046",
+  "task_name": "Make the bowl dirty",
+  "instruction": "I'm preparing the scene, so please in the simulation, make the bowl dirty so its state changes to 'dirty'.",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "RotateRight(90)",
+      "MoveRight(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "DirtyObject(Bowl)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan316",
+  "target_object_types": [
+    "Bowl"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Bowl",
+      "state": "isDirty",
+      "value": true
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "I'm preparing the scene, so please in the simulation, make the bowl dirty so its state changes to 'dirty'.",
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3"
+}

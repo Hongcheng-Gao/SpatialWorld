@@ -1,0 +1,52 @@
+{
+  "task_id": "ai2thor03012",
+  "task_name": "Crack and cook egg",
+  "instruction": "I'm very hungry now. Please put the egg on my right into the pan, crack it, and cook it.",
+  "golden_actions": {
+    "steps": 11,
+    "actions": [
+      "RotateRight(90)",
+      "MoveLeft(0.5)",
+      "MoveAhead(0.5)",
+      "PickupObject(Egg)",
+      "RotateLeft(90)",
+      "MoveLeft(0.5)",
+      "MoveAhead(0.5)",
+      "PutObject(Pan)",
+      "BreakObject(Egg)",
+      "CookObject(EggCracked)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan13",
+  "target_object_types": [
+    "Egg",
+    "EggCracked",
+    "Pan"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "EggCracked",
+      "receptacle_type": "Pan"
+    },
+    {
+      "type": "object_state",
+      "object_type": "Egg",
+      "state": "isBroken",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "EggCracked",
+      "state": "isCooked",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm very hungry now. Please put the egg on my right into the pan, crack it, and cook it.",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

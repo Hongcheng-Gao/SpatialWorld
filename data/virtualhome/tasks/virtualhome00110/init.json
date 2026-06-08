@@ -1,0 +1,89 @@
+{
+  "scene": 0,
+  "character_position": [
+    -6.099928,
+    0.00199552625,
+    -7.80751562
+  ],
+  "character_rotation": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+  ],
+  "character_yaw_degrees": 0.0,
+  "camera_pitch": 0,
+  "recorded_user_actions": [
+    {
+      "step": 1,
+      "action_type": "navigation",
+      "action_name": "LookUp"
+    },
+    {
+      "step": 2,
+      "action_type": "navigation",
+      "action_name": "LookDown"
+    },
+    {
+      "step": 3,
+      "action_type": "navigation",
+      "action_name": "TurnRight",
+      "turn_modifier": "normal",
+      "turn_degrees": 90.0
+    },
+    {
+      "step": 4,
+      "action_type": "navigation",
+      "action_name": "TurnRight",
+      "turn_modifier": "small",
+      "turn_degrees": 30.0
+    },
+    {
+      "step": 5,
+      "action_type": "navigation",
+      "action_name": "WalkForward",
+      "granularity": "medium"
+    },
+    {
+      "step": 6,
+      "action_type": "navigation",
+      "action_name": "TurnLeft",
+      "turn_modifier": "normal",
+      "turn_degrees": 90.0
+    },
+    {
+      "step": 7,
+      "action_type": "navigation",
+      "action_name": "TurnRight",
+      "turn_modifier": "normal",
+      "turn_degrees": 90.0
+    },
+    {
+      "step": 8,
+      "action_type": "navigation",
+      "action_name": "WalkForward",
+      "granularity": "medium"
+    },
+    {
+      "step": 9,
+      "action_type": "navigation",
+      "action_name": "TurnLeft",
+      "turn_modifier": "small",
+      "turn_degrees": 30.0
+    },
+    {
+      "step": 10,
+      "action_type": "navigation",
+      "action_name": "TurnLeft",
+      "turn_modifier": "small",
+      "turn_degrees": 30.0
+    },
+    {
+      "step": 11,
+      "action_type": "navigation",
+      "action_name": "TurnLeft",
+      "turn_modifier": "small",
+      "turn_degrees": 30.0
+    }
+  ]
+}

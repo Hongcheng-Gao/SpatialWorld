@@ -1,0 +1,30 @@
+{
+  "task_id": "ai2thor05550",
+  "task_name": "Lift the toilet seat",
+  "instruction": "I need to use the toilet. Could you lift the seat for me? Thanks.",
+  "golden_actions": {
+    "steps": 2,
+    "actions": [
+      "OpenObject(Toilet)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan426",
+  "target_object_types": [
+    "Toilet"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Toilet",
+      "field": "isOpen",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I need to use the toilet. Could you lift the seat for me? Thanks.",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

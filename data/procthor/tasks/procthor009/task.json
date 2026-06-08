@@ -1,0 +1,65 @@
+{
+  "task_id": "procthor009",
+  "task_name": "Get Spoon, Wait by Sofa",
+  "instruction": "I need a spoon. Please pick up the spoon and stand near the sofa.",
+  "golden_actions": {
+    "steps": 31,
+    "actions": [
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveRight(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveLeft(0.5)",
+      "MoveAhead(1.0)",
+      "LookDown",
+      "PickupObject(Ladle)",
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "Done"
+    ]
+  },
+  "scene_index": 110,
+  "target_object_types": [
+    "Ladle",
+    "Sofa"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Ladle",
+      "state": "isPickedUp",
+      "value": true
+    },
+    {
+      "type": "agent_near_object",
+      "object_type": "Sofa",
+      "distance": 1.5
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I need a spoon. Please pick up the spoon and stand near the sofa.",
+  "max_steps": 72,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

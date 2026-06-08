@@ -1,0 +1,54 @@
+{
+  "task_id": "procthor618",
+  "task_name": "Clean the bedroom",
+  "instruction": "I want to clean my bedroom. Please navigate to the bedroom and fetch the baseball bat from the floor and place it on the dresser.",
+  "golden_actions": {
+    "steps": 22,
+    "actions": [
+      "MoveAhead(0.25)",
+      "RotateLeft(90)",
+      "MoveRight(0.5)",
+      "MoveAhead(1.0)",
+      "RotateRight(90)",
+      "MoveLeft(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "LookDown",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "PickupObject(BaseballBat)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "PutObject(Dresser)",
+      "MoveBack(0.25)",
+      "Done"
+    ]
+  },
+  "scene_index": 18,
+  "target_object_types": [
+    "BaseballBat",
+    "Dresser"
+  ],
+  "success_conditions": [
+    {
+      "type": "agent_in_room",
+      "room_type": "Bedroom"
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "BaseballBat",
+      "receptacle_type": "Dresser"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to clean my bedroom. Please navigate to the bedroom and fetch the baseball bat from the floor and place it on the dresser.",
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid",
+  "max_steps": 54
+}

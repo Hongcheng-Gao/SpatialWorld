@@ -1,0 +1,73 @@
+{
+  "task_id": "ai2thor03009",
+  "task_name": "Clean mug and cup, store in fridge, close door",
+  "instruction": "I'm going to clean the kitchen now. Please clean the dirty mug and cup in front of you and put them in the refrigerator. Remember to close the refrigerator door.",
+  "golden_actions": {
+    "steps": 21,
+    "actions": [
+      "CleanObject(Cup)",
+      "CleanObject(Mug)",
+      "PickupObject(Cup)",
+      "RotateRight(90)",
+      "MoveAhead(1)",
+      "RotateRight(90)",
+      "MoveAhead(0.5)",
+      "OpenObject(Fridge)",
+      "PutObject(Fridge)",
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveAhead(0.5)",
+      "MoveLeft(1)",
+      "PickupObject(Mug)",
+      "RotateRight(90)",
+      "MoveAhead(1)",
+      "RotateRight(90)",
+      "MoveAhead(0.5)",
+      "PutObject(Fridge)",
+      "CloseObject(Fridge)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan12",
+  "target_object_types": [
+    "Cup",
+    "Mug",
+    "Fridge"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Cup",
+      "state": "isDirty",
+      "value": false
+    },
+    {
+      "type": "object_state",
+      "object_type": "Fridge",
+      "state": "isOpen",
+      "value": false
+    },
+    {
+      "type": "object_state",
+      "object_type": "Mug",
+      "state": "isDirty",
+      "value": false
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Mug",
+      "receptacle_type": "Fridge"
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Cup",
+      "receptacle_type": "Fridge"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm going to clean the kitchen now. Please clean the dirty mug and cup in front of you and put them in the refrigerator. Remember to close the refrigerator door.",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

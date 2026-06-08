@@ -1,0 +1,41 @@
+{
+  "task_id": "ai2thor05516",
+  "task_name": "Throw the pen into the trash",
+  "instruction": "I have ended my friendship and I no longer want the pencil or the fountain pen he gave me. I have already thrown the pencil into the trash. Could you throw the fountain pen into the trash for me?",
+  "golden_actions": {
+    "steps": 5,
+    "actions": [
+      "MoveLeft(1.0)",
+      "PickupObject(Pen)",
+      "MoveRight(0.5)",
+      "PutObject(GarbageCan)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan308",
+  "target_object_types": [
+    "Desk",
+    "GarbageCan",
+    "Pen"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Pen",
+      "receptacle_type": "GarbageCan",
+      "value": true
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Pen",
+      "receptacle_type": "Desk",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I have ended my friendship and I no longer want the pencil or the fountain pen he gave me. I have already thrown the pencil into the trash. Could you throw the fountain pen into the trash for me?",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

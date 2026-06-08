@@ -1,0 +1,39 @@
+{
+  "task_id": "ai2thor05573",
+  "task_name": "Please throw the rag in the trash",
+  "instruction": "I don't need this rag anymore. Please throw it in the trash.",
+  "golden_actions": {
+    "steps": 4,
+    "actions": [
+      "PickupObject(Cloth)",
+      "MoveLeft(0.75)",
+      "PutObject(GarbageCan)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan409",
+  "target_object_types": [
+    "Cloth",
+    "GarbageCan",
+    "CounterTop"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Cloth",
+      "receptacle_type": "CounterTop",
+      "value": false
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Cloth",
+      "receptacle_type": "GarbageCan"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I don't need this rag anymore. Please throw it in the trash.",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

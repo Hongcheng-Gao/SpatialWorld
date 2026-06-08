@@ -1,0 +1,64 @@
+{
+  "id": "embodiedcity_7002",
+  "instruction": "Locate the Xi'an Noodle Restaurant sign to confirm the destination, then execute a flight to its frontal position.",
+  "start": [
+    5740.80810546875,
+    -3557.45458984375,
+    -1.5223220586776733
+  ],
+  "start_yaw": 5.2,
+  "end": [
+    5744.60546875,
+    -3575.96484375,
+    -5.9507904052734375
+  ],
+  "end_yaw": -8.866357095462917,
+  "check_status": "Qualified",
+  "check_comment": "OK",
+  "check_time": "2026-05-12 10:23:06",
+  "trajectory": [
+    {
+      "x": 5740.81,
+      "y": -3557.45,
+      "z": -6.18,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 5740.81,
+      "y": -3557.45,
+      "z": -1.44,
+      "action": "Yaw Left",
+      "granularity": "Large"
+    },
+    {
+      "x": 5740.81,
+      "y": -3557.45,
+      "z": -6.35,
+      "action": "Up",
+      "granularity": "Medium"
+    },
+    {
+      "x": 5741.71,
+      "y": -3567.41,
+      "z": -6.28,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5742.62,
+      "y": -3577.37,
+      "z": -6.21,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5742.62,
+      "y": -3577.37,
+      "z": -6.21,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 5
+}

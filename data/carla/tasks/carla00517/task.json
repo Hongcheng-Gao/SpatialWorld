@@ -1,0 +1,49 @@
+{
+  "task_id": "carla00517",
+  "task_name": "Walk to the area near the yellow-roofed bungalow.",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "walker",
+  "instruction": "Walk to the area near the yellow-roofed bungalow. You can turn and move in any direction.",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "TurnRight(degrees=90)",
+      "TurnRight(degrees=90)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "Done"
+    ]
+  },
+  "scene": "Town02",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "polygon_area",
+    "target_polygon": [
+      [
+        132.69491577148438,
+        164.6818389892578,
+        0.2806274890899658
+      ],
+      [
+        149.7267002239075,
+        164.6819197838736,
+        0.2806274890899658
+      ],
+      [
+        149.72665405273438,
+        174.4149627685547,
+        0.2806274890899658
+      ],
+      [
+        132.69486960031125,
+        174.4148819739389,
+        0.2806274890899658
+      ]
+    ],
+    "threshold_label": "loose"
+  },
+  "max_steps": 50
+}

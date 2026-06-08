@@ -1,0 +1,69 @@
+{
+  "task_id": "procthor116",
+  "task_name": "Pick up laptop, then go to kitchen",
+  "instruction": "As my robot, please pick up the laptop from my bedroom and bring it to the kitchen because I need to use it there.",
+  "golden_actions": {
+    "steps": 37,
+    "actions": [
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveLeft(1.0)",
+      "MoveLeft(1.0)",
+      "MoveLeft(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveRight(1.0)",
+      "MoveRight(1.0)",
+      "MoveAhead(1.0)",
+      "MoveRight(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "PickupObject(Laptop)",
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveRight(1.0)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "MoveRight(1.0)",
+      "MoveRight(0.5)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "MoveLeft(0.25)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "MoveLeft(1.0)",
+      "MoveLeft(1.0)",
+      "MoveLeft(0.5)",
+      "MoveLeft(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "Done"
+    ]
+  },
+  "scene_index": 31,
+  "target_object_types": [
+    "Laptop"
+  ],
+  "success_conditions": [
+    {
+      "type": "agent_in_room",
+      "room_type": "Kitchen"
+    },
+    {
+      "type": "object_state",
+      "object_type": "Laptop",
+      "state": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "As my robot, please pick up the laptop from my bedroom and bring it to the kitchen because I need to use it there.",
+  "max_steps": 84,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level1 Navigation"
+}

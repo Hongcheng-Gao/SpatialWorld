@@ -1,0 +1,52 @@
+{
+  "task_id": "procthor219",
+  "task_name": "Fill cup and transport to bedroom",
+  "instruction": "I am feeling thirsty and want some water before I go to sleep. Please fill the cup with water and then carry it to the bedroom for me.",
+  "golden_actions": {
+    "steps": 18,
+    "actions": [
+      "RotateRight(90)",
+      "MoveLeft(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveLeft(0.5)",
+      "FillObjectWithLiquid(Cup, water)",
+      "PickupObject(Cup)",
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "Done"
+    ]
+  },
+  "scene_index": 411,
+  "target_object_types": [
+    "Cup"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_room",
+      "object_type": "Cup",
+      "room_type": "Bedroom"
+    },
+    {
+      "type": "object_state",
+      "object_type": "Cup",
+      "field": "isFilledWithLiquid",
+      "value": true,
+      "liquid": "water"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I am feeling thirsty and want some water before I go to sleep. Please fill the cup with water and then carry it to the bedroom for me.",
+  "max_steps": 46,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

@@ -1,0 +1,37 @@
+{
+  "task_id": "ai2thor04229",
+  "task_name": "Open and start laptop",
+  "instruction": "I'm going to start working now. Please open my laptop and start it.",
+  "golden_actions": {
+    "steps": 3,
+    "actions": [
+      "OpenObject(Laptop)",
+      "ToggleObjectOn(Laptop)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan321",
+  "target_object_types": [
+    "Laptop"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Laptop",
+      "state": "isOpen",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Laptop",
+      "state": "isToggled",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm going to start working now. Please open my laptop and start it.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Study and Work",
+  "Level": "Level2 Interaction"
+}

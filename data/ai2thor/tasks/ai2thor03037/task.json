@@ -1,0 +1,41 @@
+{
+  "task_id": "ai2thor03037",
+  "task_name": "Turn off empty microwave",
+  "instruction": "The microwave is empty, but it's still on. Turn it off, and then open the microwave door.",
+  "golden_actions": {
+    "steps": 7,
+    "actions": [
+      "RotateRight(90)",
+      "MoveLeft(1)",
+      "MoveAhead(0.25)",
+      "MoveLeft(0.25)",
+      "ToggleObjectOff(Microwave)",
+      "OpenObject(Microwave)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan22",
+  "target_object_types": [
+    "Microwave"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Microwave",
+      "state": "isToggled",
+      "value": false
+    },
+    {
+      "type": "object_state",
+      "object_type": "Microwave",
+      "state": "isOpen",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "The microwave is empty, but it's still on. Turn it off, and then open the microwave door.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

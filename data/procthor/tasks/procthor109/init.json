@@ -1,0 +1,16 @@
+{
+  "scene_index": 15,
+  "actions": [
+    "LookDown",
+    "MoveLeft(0.25)",
+    "MoveLeft(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveLeft(0.25)",
+    "MoveLeft(0.25)",
+    "MoveAhead(0.25)",
+    "Done"
+  ]
+}

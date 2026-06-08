@@ -1,0 +1,29 @@
+{
+  "task_id": "virtualhome00020",
+  "task_name": "Find my toothbrush and pick it up.",
+  "instruction": "I'm brushing my teeth, but I can't find my toothbrush. Can you help me look for it and pick it up?",
+  "golden_actions": {
+    "steps": 4,
+    "actions": [
+      "WalkForward(medium)",
+      "LookDown",
+      "Grab(toothbrush)",
+      "Done"
+    ]
+  },
+  "scene": "20",
+  "target_object_types": [
+    "toothbrush"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "toothbrush",
+      "state": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm brushing my teeth, but I can't find my toothbrush. Can you help me look for it and pick it up?",
+  "max_steps": 18
+}

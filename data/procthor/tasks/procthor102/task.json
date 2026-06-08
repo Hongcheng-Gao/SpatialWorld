@@ -1,0 +1,51 @@
+{
+  "task_id": "procthor102",
+  "task_name": "Turn on computer screen, wait by dining table",
+  "instruction": "Could you go and turn on the computer screen in the room? I want to check if it's damaged. Then please wait for me near any of the dining tables in the bedroom.",
+  "golden_actions": {
+    "steps": 13,
+    "actions": [
+      "MoveRight(0.5)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "RotateLeft(90)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "LookDown",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "OpenObject(Laptop)",
+      "Done"
+    ]
+  },
+  "scene_index": 4,
+  "target_object_types": [
+    "Laptop",
+    "DiningTable"
+  ],
+  "success_conditions": [
+    {
+      "type": "agent_in_room",
+      "room_type": "Bedroom"
+    },
+    {
+      "type": "agent_near_object",
+      "object_type": "DiningTable",
+      "distance": 1.33
+    },
+    {
+      "type": "object_state",
+      "object_type": "Laptop",
+      "state": "isOpen",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "Could you go and turn on the computer screen in the room? I want to check if it's damaged. Then please wait for me near any of the dining tables in the bedroom.",
+  "max_steps": 36,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level1 Navigation"
+}

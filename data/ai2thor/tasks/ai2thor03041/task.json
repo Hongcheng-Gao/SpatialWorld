@@ -1,0 +1,49 @@
+{
+  "task_id": "ai2thor03041",
+  "task_name": "Clean and close kitchen",
+  "instruction": "Please clean the pan and bowl for me, then turn off the light; I'm getting ready to leave.",
+  "golden_actions": {
+    "steps": 7,
+    "actions": [
+      "CleanObject(Pan)",
+      "CleanObject(Bowl)",
+      "RotateRight(90)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "ToggleObjectOff(LightSwitch)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan23",
+  "target_object_types": [
+    "Pan",
+    "Bowl",
+    "LightSwitch"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "LightSwitch",
+      "state": "isToggled",
+      "value": false
+    },
+    {
+      "type": "object_state",
+      "object_type": "Bowl",
+      "state": "isDirty",
+      "value": false
+    },
+    {
+      "type": "object_state",
+      "object_type": "Pan",
+      "state": "isDirty",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "Please clean the pan and bowl for me, then turn off the light; I'm getting ready to leave.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

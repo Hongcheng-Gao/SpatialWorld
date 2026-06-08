@@ -1,0 +1,47 @@
+{
+  "task_id": "ai2thor04037",
+  "task_name": "Prepare for study",
+  "instruction": "I'm going to study now. Please take a pen to the desk on the right and open the book.",
+  "golden_actions": {
+    "steps": 12,
+    "actions": [
+      "PickupObject(Pen)",
+      "RotateRight(90)",
+      "MoveRight(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveLeft(0.25)",
+      "MoveAhead(0.25)",
+      "PutObject(Desk)",
+      "MoveAhead(0.25)",
+      "OpenObject(Book)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan323",
+  "target_object_types": [
+    "Book",
+    "Desk",
+    "Pen"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Pen",
+      "receptacle_type": "Desk"
+    },
+    {
+      "type": "object_state",
+      "object_type": "Book",
+      "state": "isOpen",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm going to study now. Please take a pen to the desk on the right and open the book.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Study and Work",
+  "Level": "Level3 Hybrid"
+}

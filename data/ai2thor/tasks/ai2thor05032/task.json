@@ -1,0 +1,43 @@
+{
+  "task_id": "ai2thor05032",
+  "task_name": "Break the mirror and fill the mug with water",
+  "instruction": "I'm running a quick test, so please in the simulation, break the mirror using the provided interaction and then fill the mug with water until it shows it's filled, then keep it steady.",
+  "golden_actions": {
+    "steps": 7,
+    "actions": [
+      "MoveRight(0.5)",
+      "MoveAhead(0.25)",
+      "BreakObject(Mirror)",
+      "RotateRight(90)",
+      "MoveAhead(0.5)",
+      "FillObjectWithLiquid(Mug,water)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan315",
+  "target_object_types": [
+    "Mirror",
+    "Mug",
+    "Water"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Mirror",
+      "field": "isBroken",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Mug",
+      "state": "isFilledWithLiquid",
+      "value": true,
+      "liquid": "Water"
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "I'm running a quick test, so please in the simulation, break the mirror using the provided interaction and then fill the mug with water until it shows it's filled, then keep it steady.",
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3"
+}

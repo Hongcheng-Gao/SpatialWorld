@@ -1,0 +1,41 @@
+{
+  "task_id": "ai2thor03063",
+  "task_name": "Prepare soup pot",
+  "instruction": "I need to make the soup first. Please put the ladle into the pot, and then add water.",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "RotateLeft(90)",
+      "RotateLeft(90)",
+      "PickupObject(Ladle)",
+      "PutObject(Pot)",
+      "FillObjectWithLiquid(Pot, water)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan27",
+  "target_object_types": [
+    "Ladle",
+    "Pot"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Ladle",
+      "receptacle_type": "Pot"
+    },
+    {
+      "type": "object_state",
+      "object_type": "Pot",
+      "state": "isFilledWithLiquid",
+      "value": true,
+      "liquid": "water"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I need to make the soup first. Please put the ladle into the pot, and then add water.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

@@ -1,0 +1,44 @@
+{
+  "task_id": "ai2thor05531",
+  "task_name": "Please turn off the light and turn on the TV.",
+  "instruction": "It's a bright and sunny afternoon; I'm going to turn off the wall light in the room, switch on the TV, and enjoy the rest of the day",
+  "golden_actions": {
+    "steps": 9,
+    "actions": [
+      "ToggleObjectOff(LightSwitch)",
+      "RotateLeft(180)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "ToggleObjectOn(Television)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan220",
+  "target_object_types": [
+    "LightSwitch",
+    "Television"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "LightSwitch",
+      "field": "isToggled",
+      "value": false
+    },
+    {
+      "type": "object_state",
+      "object_type": "Television",
+      "field": "isToggled",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "It's a bright and sunny afternoon; I'm going to turn off the wall light in the room, switch on the TV, and enjoy the rest of the day",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

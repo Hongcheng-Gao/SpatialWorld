@@ -1,0 +1,49 @@
+{
+  "task_id": "virtualhome00115",
+  "task_name": "Turn on a computer and pick up a cup from the table.",
+  "instruction": "I'm about to play a game. Please turn on a computer and pick up a cup from the table.",
+  "golden_actions": {
+    "steps": 10,
+    "actions": [
+      "LookDown",
+      "TurnLeft(small)",
+      "WalkForward(medium)",
+      "WalkForward(small)",
+      "TurnRight(small)",
+      "LookDown",
+      "WalkForward(small)",
+      "SwitchOn(computer)",
+      "Grab(mug)",
+      "Done"
+    ]
+  },
+  "scene": "0",
+  "target_object_types": [
+    "computer",
+    "mug",
+    "desk"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "mug",
+      "state": "isPickedUp",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "computer",
+      "state": "isToggled",
+      "value": true
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "mug",
+      "receptacle_type": "desk",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm about to play a game. Please turn on a computer and pick up a cup from the table.",
+  "max_steps": 25
+}

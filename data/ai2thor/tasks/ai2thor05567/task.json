@@ -1,0 +1,45 @@
+{
+  "task_id": "ai2thor05567",
+  "task_name": "Please put the cell phone on the chair",
+  "instruction": "Could you please take my phone from the dining table and put it on the chair? I left it there after finishing my meal.",
+  "golden_actions": {
+    "steps": 9,
+    "actions": [
+      "PickupObject(CellPhone)",
+      "MoveRight(1.0)",
+      "MoveBack(1.0)",
+      "MoveBack(1.0)",
+      "MoveBack(1.0)",
+      "MoveBack(0.5)",
+      "RotateRight(180)",
+      "PutObject(Chair)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan218",
+  "target_object_types": [
+    "CellPhone",
+    "DiningTable",
+    "Chair"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "CellPhone",
+      "receptacle_type": "DiningTable",
+      "value": false
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "CellPhone",
+      "receptacle_type": "Chair",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "Could you please take my phone from the dining table and put it on the chair? I left it there after finishing my meal.",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

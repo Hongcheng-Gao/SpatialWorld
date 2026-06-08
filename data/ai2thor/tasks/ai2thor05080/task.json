@@ -1,0 +1,34 @@
+{
+  "task_id": "ai2thor05080",
+  "task_name": "Fill the cup with coffee",
+  "instruction": "I'm feeling a bit sleepy; could you fill the cup with coffee to help me wake up?",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveLeft(1.0)",
+      "MoveAhead(0.5)",
+      "FillObjectWithLiquid(Cup, coffee)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan20",
+  "target_object_types": [
+    "Cup"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Cup",
+      "state": "isFilledWithLiquid",
+      "value": true,
+      "liquid": "coffee"
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "I'm feeling a bit sleepy; could you fill the cup with coffee to help me wake up?",
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3"
+}

@@ -1,0 +1,71 @@
+{
+  "id": "embodiedcity_7008",
+  "instruction": "Spot the nearby circular flower bed and descend to land on it.",
+  "start": [
+    7773.68505859375,
+    -3539.80322265625,
+    -4.518198490142822
+  ],
+  "start_yaw": 16.29,
+  "end": [
+    7769.0390625,
+    -3567.93798828125,
+    -2.344097137451172
+  ],
+  "end_yaw": 20.834172231281123,
+  "check_status": "Qualified",
+  "check_comment": "ok",
+  "check_time": "2026-05-12 10:28:04",
+  "trajectory": [
+    {
+      "x": 7768.89,
+      "y": -3541.21,
+      "z": -4.35,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 7773.69,
+      "y": -3539.8,
+      "z": -4.45,
+      "action": "Yaw Left",
+      "granularity": "Large"
+    },
+    {
+      "x": 7773.69,
+      "y": -3539.8,
+      "z": -4.4,
+      "action": "Yaw Left",
+      "granularity": "Medium"
+    },
+    {
+      "x": 7771.31,
+      "y": -3549.52,
+      "z": -4.37,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7768.94,
+      "y": -3559.23,
+      "z": -4.36,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7767.76,
+      "y": -3564.09,
+      "z": -4.33,
+      "action": "Forward",
+      "granularity": "Medium"
+    },
+    {
+      "x": 7767.76,
+      "y": -3564.09,
+      "z": -4.33,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 6
+}

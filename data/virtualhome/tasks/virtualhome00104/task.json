@@ -1,0 +1,37 @@
+{
+  "task_id": "virtualhome00104",
+  "task_name": "Place the salmon in the refrigerator.",
+  "instruction": "I need to tidy up the kitchen. Please open the refrigerator door and put the salmon inside, but do not close the refrigerator door.",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "WalkForward(medium)",
+      "Grab(salmon)",
+      "TurnLeft(small)",
+      "Open(fridge)",
+      "PutIn(salmon, fridge)",
+      "Done"
+    ]
+  },
+  "scene": "0",
+  "target_object_types": [
+    "fridge"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "fridge",
+      "state": "isOpen",
+      "value": true
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "salmon",
+      "receptacle_type": "fridge",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I need to tidy up the kitchen. Please open the refrigerator door and put the salmon inside, but do not close the refrigerator door.",
+  "max_steps": 19
+}

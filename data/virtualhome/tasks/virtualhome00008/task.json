@@ -1,0 +1,37 @@
+{
+  "task_id": "virtualhome00008",
+  "task_name": "Turn on the computer.",
+  "instruction": "I'm starting work now. Could you walk over to my computer and turn it on?",
+  "golden_actions": {
+    "steps": 13,
+    "actions": [
+      "WalkForward(large)",
+      "TurnRight(small)",
+      "WalkForward(large)",
+      "TurnLeft(small)",
+      "TurnLeft(small)",
+      "WalkForward(large)",
+      "LookDown",
+      "TurnRight(normal)",
+      "WalkForward(small)",
+      "TurnLeft(normal)",
+      "LookDown",
+      "SwitchOn(computer)",
+      "Done"
+    ]
+  },
+  "scene": "6",
+  "target_object_types": [
+    "computer"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "computer",
+      "state": "isToggled"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm starting work now. Could you walk over to my computer and turn it on?",
+  "max_steps": 34
+}

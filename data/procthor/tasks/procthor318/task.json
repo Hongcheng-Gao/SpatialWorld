@@ -1,0 +1,45 @@
+{
+  "task_id": "procthor318",
+  "task_name": "Turn On DeskLamp, Wait by DiningTable.",
+  "instruction": "I want to work. Please get the phone from the bed for me, then wait beside the bed.",
+  "golden_actions": {
+    "steps": 7,
+    "actions": [
+      "RotateRight(90)",
+      "MoveLeft(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "LookDown",
+      "PickupObject(CellPhone)",
+      "Done"
+    ]
+  },
+  "scene_index": 94,
+  "target_object_types": [
+    "CellPhone",
+    "Bed"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "CellPhone",
+      "state": "isPickedUp",
+      "value": true
+    },
+    {
+      "type": "agent_in_room",
+      "room_type": "bedroom"
+    },
+    {
+      "type": "agent_near_object",
+      "object_type": "Bed",
+      "distance": 1.5
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to work. Please get the phone from the bed for me, then wait beside the bed.",
+  "max_steps": 24,
+  "Evaluation_Type": "Conditional",
+  "Category": "Study and Work",
+  "Level": "Level3 Hybrid"
+}

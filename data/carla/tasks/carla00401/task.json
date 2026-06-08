@@ -1,0 +1,31 @@
+{
+  "task_id": "carla00401",
+  "task_name": "See the streetlight past the two cars? Walk to it.",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "walker",
+  "instruction": "Do you see the streetlight just beyond the two cars in front of you? Please walk up to the streetlight.",
+  "golden_actions": {
+    "steps": 5,
+    "actions": [
+      "TurnLeft(degrees=30)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=2.5)",
+      "Done"
+    ]
+  },
+  "scene": "Town04",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "distance_to_waypoint",
+    "target_location": [
+      181.9,
+      -314.2,
+      1.2
+    ],
+    "threshold_label": "strict"
+  },
+  "max_steps": 50
+}

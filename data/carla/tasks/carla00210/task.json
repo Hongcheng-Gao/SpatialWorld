@@ -1,0 +1,52 @@
+{
+  "task_id": "carla00210",
+  "task_name": "Walk to the house with the yellow roof.",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "walker",
+  "instruction": "Walk to the house with the yellow roof.You can turn and move in any direction.",
+  "golden_actions": {
+    "steps": 9,
+    "actions": [
+      "TurnLeft(degrees=30)",
+      "WalkForward(distance=10)",
+      "TurnLeft(degrees=30)",
+      "TurnLeft(degrees=30)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "TurnLeft(degrees=30)",
+      "WalkForward(distance=10)",
+      "Done"
+    ]
+  },
+  "scene": "Town01",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "polygon_area",
+    "target_polygon": [
+      [
+        107.01632058854588,
+        222.82734680175798,
+        -0.06000018119812012
+      ],
+      [
+        107.01631927490219,
+        232.69264340310121,
+        -0.06000018119812012
+      ],
+      [
+        98.07065450911037,
+        232.6926422119139,
+        -0.06000018119812012
+      ],
+      [
+        98.07065582275406,
+        222.82734561057066,
+        -0.06000018119812012
+      ]
+    ],
+    "threshold_label": "loose"
+  },
+  "max_steps": 30
+}

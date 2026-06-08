@@ -1,0 +1,11 @@
+{
+  "scene": "FloorPlan28",
+  "actions": [
+    "MoveAhead(1.0)",
+    "MoveAhead(0.25)",
+    "PickupObject(Lettuce)",
+    "LookDown",
+    "PutObject(GarbageCan)",
+    "Done"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "task_id": "ai2thor05543",
+  "task_name": "Lift the lid and put the toilet paper into the toilet paper hanger",
+  "instruction": "I need to use the toilet—please lift the lid and then put the toilet paper into the toilet paper hanger.",
+  "golden_actions": {
+    "steps": 9,
+    "actions": [
+      "OpenObject(Toilet)",
+      "MoveAhead(0.25)",
+      "PickupObject(ToiletPaper)",
+      "MoveBack(0.25)",
+      "MoveLeft(0.75)",
+      "MoveAhead(0.25)",
+      "LookDown(30)",
+      "PutObject(ToiletPaperHanger)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan429",
+  "target_object_types": [
+    "Toilet",
+    "ToiletPaper",
+    "ToiletPaperHanger"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Toilet",
+      "field": "isOpen",
+      "value": true
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "ToiletPaper",
+      "receptacle_type": "ToiletPaperHanger",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I need to use the toilet—please lift the lid and then put the toilet paper into the toilet paper hanger.",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

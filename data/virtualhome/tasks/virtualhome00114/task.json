@@ -1,0 +1,34 @@
+{
+  "task_id": "virtualhome00114",
+  "task_name": "Get a pillow.",
+  "instruction": "I want to rest for a while, please get me a pillow.",
+  "golden_actions": {
+    "steps": 9,
+    "actions": [
+      "TurnLeft(small)",
+      "WalkForward(medium)",
+      "WalkForward(medium)",
+      "TurnRight(small)",
+      "TurnRight(small)",
+      "WalkForward(medium)",
+      "WalkForward(small)",
+      "Grab(pillow)",
+      "Done"
+    ]
+  },
+  "scene": "0",
+  "target_object_types": [
+    "pillow"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "pillow",
+      "state": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to rest for a while, please get me a pillow.",
+  "max_steps": 34
+}

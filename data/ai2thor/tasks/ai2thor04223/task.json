@@ -1,0 +1,55 @@
+{
+  "task_id": "ai2thor04223",
+  "task_name": "Throw pencil and pen in trash",
+  "instruction": "Both the pencil and pen are broken; please throw them in the trash.",
+  "golden_actions": {
+    "steps": 21,
+    "actions": [
+      "MoveRight(1.0)",
+      "PickupObject(Pencil)",
+      "MoveBack(0.25)",
+      "LookDown",
+      "MoveLeft(0.5)",
+      "MoveAhead(0.5)",
+      "MoveLeft(1.0)",
+      "MoveAhead(0.5)",
+      "PutObject(GarbageCan)",
+      "MoveBack(1.0)",
+      "MoveBack(0.25)",
+      "MoveRight(1.0)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.5)",
+      "PickupObject(Pen)",
+      "MoveLeft(1.0)",
+      "MoveLeft(0.5)",
+      "MoveAhead(0.5)",
+      "PutObject(GarbageCan)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan320",
+  "target_object_types": [
+    "Pencil",
+    "Pen",
+    "GarbageCan"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Pencil",
+      "receptacle_type": "GarbageCan"
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Pen",
+      "receptacle_type": "GarbageCan"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "Both the pencil and pen are broken; please throw them in the trash.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

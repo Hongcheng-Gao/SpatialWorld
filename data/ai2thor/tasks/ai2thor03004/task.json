@@ -1,0 +1,37 @@
+{
+  "task_id": "ai2thor03004",
+  "task_name": "Clean pot and place on countertop",
+  "instruction": "I need to clean the kitchen. After cleaning the dirty pot, I need to pick it up.",
+  "golden_actions": {
+    "steps": 3,
+    "actions": [
+      "CleanObject(Pot)",
+      "PickupObject(Pot)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan11",
+  "target_object_types": [
+    "Pot"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Pot",
+      "state": "isDirty",
+      "value": false
+    },
+    {
+      "type": "object_state",
+      "object_type": "Pot",
+      "state": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I need to clean the kitchen. After cleaning the dirty pot, I need to pick it up.",
+  "max_steps": 30,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

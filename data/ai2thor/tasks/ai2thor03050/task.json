@@ -1,0 +1,53 @@
+{
+  "task_id": "ai2thor03050",
+  "task_name": "Move washed produce",
+  "instruction": "I've washed the apple and lettuce; please take them from the sink to the countertop.",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "RotateLeft(90)",
+      "PickupObject(Apple)",
+      "PutObject(CounterTop)",
+      "PickupObject(Lettuce)",
+      "PutObject(CounterTop)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan25",
+  "target_object_types": [
+    "Apple",
+    "CounterTop",
+    "Lettuce",
+    "SinkBasin"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Lettuce",
+      "receptacle_type": "CounterTop"
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Apple",
+      "receptacle_type": "CounterTop"
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Apple",
+      "receptacle_type": "SinkBasin",
+      "value": false
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Lettuce",
+      "receptacle_type": "SinkBasin",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I've washed the apple and lettuce; please take them from the sink to the countertop.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

@@ -1,0 +1,58 @@
+{
+  "task_id": "ai2thor04038",
+  "task_name": "Secure phone for trip",
+  "instruction": "I'm going on a long trip. Please turn off my phone and put it in the safe. Remember to close the safe door.",
+  "golden_actions": {
+    "steps": 18,
+    "actions": [
+      "MoveAhead(0.25)",
+      "ToggleObjectOff(CellPhone)",
+      "PickupObject(CellPhone)",
+      "MoveBack(0.25)",
+      "RotateLeft(90)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "MoveLeft(1.0)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "MoveLeft(0.5)",
+      "MoveAhead(1.0)",
+      "OpenObject(Safe)",
+      "MoveAhead(0.25)",
+      "PutObject(Safe)",
+      "CloseObject(Safe)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan323",
+  "target_object_types": [
+    "CellPhone",
+    "Safe"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "CellPhone",
+      "receptacle_type": "Safe"
+    },
+    {
+      "type": "object_state",
+      "object_type": "CellPhone",
+      "state": "isToggled",
+      "value": false
+    },
+    {
+      "type": "object_state",
+      "object_type": "Safe",
+      "state": "isOpen",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm going on a long trip. Please turn off my phone and put it in the safe. Remember to close the safe door.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

@@ -1,0 +1,295 @@
+﻿# =============================================================================
+# VirtualHome Environment Configuration File
+# Mirrors the structure of configs/ai2thor/config.yaml
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Basic Environment Configuration
+# -----------------------------------------------------------------------------
+env:
+  type: virtualhome # Environment type (used by wrapper factory)
+  scene: 0 # VH scene index (integer 0鈥?9; each index is a different apartment)
+  width: 640 # Camera capture width (pixels)
+  height: 480 # Camera capture height (pixels)
+  require_visible_for_interaction: true
+  text_state_mode: first_person # Text state mode: first_person | omniscient
+  # Connection settings for the running Unity process
+  url: null
+  port: "8080"
+  # VirtualHome backend launch settings. CLI flags still override these.
+  backend_exe: null
+  backend_args: "-windowed -screen-width 960 -screen-height 540"
+  backend_startup_timeout: 90
+  # Platform / display settings
+  # - null: Auto-select (requires an X11 display server on Linux)
+  # - path/to/executable: Path to the VirtualHome Unity executable
+  #   (the wrapper will launch it automatically)
+  platform: null
+  # x_display: ":0"          # X11 display string, e.g. ":0" or ":1"
+
+# -----------------------------------------------------------------------------
+# Agent Runtime Configuration
+# -----------------------------------------------------------------------------
+max_steps: 30 # Maximum steps per episode
+
+# Context management
+context_management:
+  enable_long_term_summary: false
+  short_term_history_window_size: 29
+
+# -----------------------------------------------------------------------------
+# Model Configuration
+# -----------------------------------------------------------------------------
+model:
+  vlm:
+    provider: openai
+    model_name: Gemini-2.5-pro
+    temperature: 1.0
+    top_p: 0.9
+    max_tokens: 4096
+    base_url: null
+    api_key: null
+# -----------------------------------------------------------------------------
+# Logging and Output Configuration
+# -----------------------------------------------------------------------------
+logging:
+  stdout_verbose: true
+  save_step_images: true
+
+# -----------------------------------------------------------------------------
+# Action Parameter Configuration
+# WalkForward: target distance in meters (small/medium/large = 0.25 / 0.5 / 1) is
+# converted to repeated native [WalkForward] steps using walk_forward_base_unit_meters.
+# TurnLeft/TurnRight: default 90掳; TurnLeft(small) = 30掳 (one native VH step).
+# -----------------------------------------------------------------------------
+actions:
+  move_small_magnitude: 0.25
+  move_medium_magnitude: 0.5
+  move_large_magnitude: 1.0
+  walk_forward_base_unit_meters: 0.25
+  vh_turn_step_degrees: 30
+  turn_default_degrees: 90
+  walk_yaw_restore_min_delta_degrees: 30
+  grab_yaw_restore_min_delta_degrees: 20
+  grab_exact_restore_tolerance_degrees: 2
+  grab_yaw_residual_warn_degrees: 8
+  grab_yaw_target_tolerance_degrees: 6
+  grab_yaw_closed_loop_max_turns: 14
+  grab_reset_camera_pose: true
+  init_save_quantize_rotation: true
+  init_save_yaw_step_degrees: 30
+  # Visibility sources are unioned in order. Options: seg_inst, api, fov.
+  # Examples:
+  #   [seg_inst]       -> screenshot instance segmentation only
+  #   [api]            -> Unity get_visible_objects(camera_id) only
+  #   [fov]            -> graph/FOV geometry only
+  #   [seg_inst, api]  -> default union used by strict interaction checks
+  visibility_sources: [seg_inst, api]
+  visible_seg_pixel_threshold: 25
+  # 0 disables the local bbox-surface distance gate; interactions rely on
+  # VirtualHome's Unity-side CLOSE relation only.
+  interaction_distance_meters: 0
+  collision_rollback_enabled: true
+  collision_bbox_shrink_meters: 0.02
+  atomic_walkforward_enabled: true
+  atomic_walkforward_tolerance_meters: 0.05
+
+# -----------------------------------------------------------------------------
+# Reward Function Configuration
+# -----------------------------------------------------------------------------
+reward:
+  success_reward: 10.0
+  step_success_bonus: 0.1
+  step_failure_penalty: -0.05
+
+# -----------------------------------------------------------------------------
+# Experiment Configuration
+# -----------------------------------------------------------------------------
+experiment:
+  num_episodes: 1
+  output_dir: outputs
+
+# =============================================================================
+# Task Presets
+# VirtualHome object class names are lower-case with underscores, e.g.:
+#   microwave, fridge, apple, plate, tv, light, computer, cup, milk, book 鈥?
+# States use the VirtualHome State enum mapped to AI2THOR-compatible field names:
+#   OPEN/CLOSED  -> isOpen
+#   ON/OFF       -> isToggled  (also isOn)
+#   DIRTY/CLEAN  -> isDirty
+#   SITTING      -> isSitting
+#   PLUGGED_IN/OUT -> isPluggedIn
+# Relations used for "object_in_receptacle":
+#   INSIDE / ON  -> parentReceptacles (list of parent class_names)
+# =============================================================================
+task_presets:
+  # ---------------------------------------------------------------------------
+  # Task: Open Fridge
+  # ---------------------------------------------------------------------------
+  open_fridge:
+    scene: 0
+    description: >
+      You are in an apartment kitchen. Please find the fridge, walk up to it,
+      and open its door.
+    target_object_types:
+      - fridge
+    success_condition:
+      type: object_state
+      field: isOpen
+      value: true
+    target_description: Find and open the fridge
+
+  # ---------------------------------------------------------------------------
+  # Task: Open Microwave
+  # ---------------------------------------------------------------------------
+  open_microwave:
+    scene: 0
+    description: >
+      Find the microwave in the kitchen, walk to it, and open the microwave door.
+    target_object_types:
+      - microwave
+    success_condition:
+      type: object_state
+      field: isOpen
+      value: true
+    target_description: Find and open the microwave
+
+  # ---------------------------------------------------------------------------
+  # Task: Turn On TV
+  # ---------------------------------------------------------------------------
+  turn_on_tv:
+    scene: 0
+    description: >
+      Find the television in the living room, approach it, and switch it on.
+    target_object_types:
+      - tv
+    success_condition:
+      type: object_state
+      field: isToggled
+      value: true
+    target_description: Find and turn on the TV
+
+  # ---------------------------------------------------------------------------
+  # Task: Turn On Computer
+  # ---------------------------------------------------------------------------
+  turn_on_computer:
+    scene: 0
+    description: >
+      Find the computer, walk up to it, and switch it on.
+    target_object_types:
+      - computer
+    success_condition:
+      type: object_state
+      field: isToggled
+      value: true
+    target_description: Find and turn on the computer
+
+  # ---------------------------------------------------------------------------
+  # Task: Pick Up Apple
+  # ---------------------------------------------------------------------------
+  pickup_apple:
+    scene: 0
+    description: >
+      Find an apple in the apartment, walk to it, and pick it up.
+    target_object_types:
+      - apple
+    success_condition:
+      type: object_in_hand
+      object_type: apple
+    target_description: Find and pick up the apple
+    max_steps: 25
+
+  # ---------------------------------------------------------------------------
+  # Task: Pick Up Cup
+  # ---------------------------------------------------------------------------
+  pickup_cup:
+    scene: 0
+    description: >
+      Find a cup somewhere in the apartment and pick it up.
+    target_object_types:
+      - cup
+    success_condition:
+      type: object_in_hand
+      object_type: cup
+    target_description: Find and pick up the cup
+    max_steps: 25
+
+  # ---------------------------------------------------------------------------
+  # Task: Put Apple on Plate
+  # ---------------------------------------------------------------------------
+  put_apple_on_plate:
+    scene: 0
+    description: >
+      Find the apple, pick it up, then place it on a plate.
+    target_object_types:
+      - apple
+      - plate
+    success_condition:
+      type: object_in_receptacle
+      object_type: apple
+      receptacle_type: plate
+    target_description: Put the apple on the plate
+    max_steps: 50
+
+  # ---------------------------------------------------------------------------
+  # Task: Put Cup in Microwave
+  # ---------------------------------------------------------------------------
+  put_cup_in_microwave:
+    scene: 0
+    description: >
+      Find a cup, pick it up, then place it inside the microwave.
+    target_object_types:
+      - cup
+      - microwave
+    success_condition:
+      type: object_in_receptacle
+      object_type: cup
+      receptacle_type: microwave
+    target_description: Put the cup inside the microwave
+    max_steps: 50
+
+  # ---------------------------------------------------------------------------
+  # Task: Read a Book
+  # ---------------------------------------------------------------------------
+  read_book:
+    scene: 0
+    description: >
+      Find a book in the apartment, pick it up, and read it.
+    target_object_types:
+      - book
+    success_condition:
+      type: object_in_hand
+      object_type: book
+    target_description: Find and read a book
+    max_steps: 30
+
+  # ---------------------------------------------------------------------------
+  # Task: Drink from Cup
+  # ---------------------------------------------------------------------------
+  drink_from_cup:
+    scene: 0
+    description: >
+      Find a cup, walk to it, pick it up, and then drink from it.
+    target_object_types:
+      - cup
+    success_condition:
+      type: object_in_hand
+      object_type: cup
+    target_description: Find a cup and drink from it
+    max_steps: 30
+
+  # ---------------------------------------------------------------------------
+  # Task: Sit on Sofa
+  # ---------------------------------------------------------------------------
+  sit_on_sofa:
+    scene: 0
+    description: >
+      Find the sofa in the living room, walk to it, and sit down.
+    target_object_types:
+      - sofa
+    success_condition:
+      type: object_state
+      field: isSitting
+      value: true
+    target_description: Find the sofa and sit on it
+    max_steps: 25

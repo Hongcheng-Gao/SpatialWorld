@@ -1,0 +1,31 @@
+{
+  "task_id": "virtualhome00013",
+  "task_name": "Turn off the lights in this room.",
+  "instruction": "I've packed up and I'm ready to head out. Please help me turn off the ceiling light in this room—the switch is by the door.",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "TurnLeft(small)",
+      "WalkForward(large)",
+      "TurnRight(normal)",
+      "LookDown",
+      "SwitchOff(lightswitch)",
+      "Done"
+    ]
+  },
+  "scene": "1",
+  "target_object_types": [
+    "lightswitch"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "lightswitch",
+      "state": "isToggled",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I've packed up and I'm ready to head out. Please help me turn off the ceiling light in this room—the switch is by the door.",
+  "max_steps": 19
+}

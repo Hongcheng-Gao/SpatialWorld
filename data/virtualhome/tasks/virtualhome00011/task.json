@@ -1,0 +1,29 @@
+{
+  "task_id": "virtualhome00011",
+  "task_name": "Clean up the dish bowl and put it on the kitchen table.",
+  "instruction": "I'm done eating. Can you see the dish bowl on the shelf? Pick it up.",
+  "golden_actions": {
+    "steps": 5,
+    "actions": [
+      "WalkForward(large)",
+      "TurnRight(small)",
+      "TurnRight(small)",
+      "WalkForward(small)",
+      "Grab(dishbowl)"
+    ]
+  },
+  "scene": "2",
+  "target_object_types": [
+    "dishbowl"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "dishbowl",
+      "state": "isPickedUp"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm done eating. Can you see the dish bowl on the shelf? Pick it up.",
+  "max_steps": 33
+}

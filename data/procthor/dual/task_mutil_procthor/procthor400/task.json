@@ -1,0 +1,63 @@
+{
+  "task_id": "procthor400",
+  "task_name": "Bread and Box Relocation",
+  "instruction": "I'm a bit hungry. First, please go to the kitchen to get the bread and bring it to the dining table in the bedroom. After that, pick up a box from the dining table and take it back to the kitchen.",
+  "golden_actions": {
+    "steps": 30,
+    "actions": [
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "LookDown",
+      "MoveAhead(0.25)",
+      "MoveLeft(0.5)",
+      "MoveLeft(0.25)",
+      "PickupObject(Bread)",
+      "LookUp",
+      "MoveLeft(1.0)",
+      "MoveLeft(0.5)",
+      "MoveAhead(0.25)",
+      "MoveLeft(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "LookDown",
+      "MoveAhead(1.0)",
+      "MoveLeft(0.25)",
+      "PutObject(DiningTable)",
+      "PickupObject(Box)",
+      "RotateRight(90)",
+      "MoveAhead(0.25)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "Done"
+    ]
+  },
+  "scene_index": 400,
+  "target_object_types": [
+    "Bread",
+    "Box"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_room",
+      "object_type": "Bread",
+      "room_type": "Bedroom"
+    },
+    {
+      "type": "object_in_room",
+      "object_type": "Box",
+      "room_type": "Kitchen"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm a bit hungry. First, please go to the kitchen to get the bread and bring it to the dining table in the bedroom. After that, pick up a box from the dining table and take it back to the kitchen.",
+  "max_steps": 70,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

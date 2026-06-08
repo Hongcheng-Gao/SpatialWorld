@@ -1,0 +1,46 @@
+{
+  "task_id": "ai2thor05007",
+  "task_name": "Turn off the desk lamp and pick up the book and place it on the bed",
+  "instruction": "It's time to power down, so please turn off the desk lamp and confirm it's really off and then pick up the book and place it on the bed.",
+  "golden_actions": {
+    "steps": 11,
+    "actions": [
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "ToggleObjectOff(DeskLamp)",
+      "PickupObject(Book)",
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "PutObject(Bed)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan307",
+  "target_object_types": [
+    "DeskLamp",
+    "Bed",
+    "Book"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Book",
+      "receptacle_type": "Bed",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "DeskLamp",
+      "field": "isToggled",
+      "value": false
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "It's time to power down, so please turn off the desk lamp and confirm it's really off and then pick up the book and place it on the bed.",
+  "Evaluation_Type": "Conditional",
+  "Category": "Study and Work",
+  "Level": "Level3"
+}

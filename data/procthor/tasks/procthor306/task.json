@@ -1,0 +1,46 @@
+{
+  "task_id": "procthor306",
+  "task_name": "Turn On Computer, Wait by Computer",
+  "instruction": "I'm ready to work. Please turn on a computer and wait beside it.",
+  "golden_actions": {
+    "steps": 7,
+    "actions": [
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "LookDown",
+      "MoveAhead(1.0)",
+      "OpenObject(Laptop)",
+      "ToggleObjectOn(Laptop)",
+      "Done"
+    ]
+  },
+  "scene_index": 129,
+  "target_object_types": [
+    "Bed"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Laptop",
+      "state": "isOpen",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Laptop",
+      "state": "isToggled",
+      "value": true
+    },
+    {
+      "type": "agent_near_object",
+      "object_type": "Laptop",
+      "distance": 1.5
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm ready to work. Please turn on a computer and wait beside it.",
+  "max_steps": 24,
+  "Evaluation_Type": "Conditional",
+  "Category": "Study and Work",
+  "Level": "Level3 Hybrid"
+}

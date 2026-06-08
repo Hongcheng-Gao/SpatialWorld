@@ -1,0 +1,35 @@
+{
+  "task_id": "ai2thor05057",
+  "task_name": "Turn off the desk lamp near the sofa",
+  "instruction": "I'm going to take a nap on the couch, so switch off the desk lamp right next to it.",
+  "golden_actions": {
+    "steps": 8,
+    "actions": [
+      "MoveLeft(1.0)",
+      "MoveLeft(1.0)",
+      "MoveLeft(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "ToggleObjectOff(DeskLamp)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan217",
+  "target_object_types": [
+    "DeskLamp"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "DeskLamp",
+      "state": "isToggled",
+      "value": false
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "I'm going to take a nap on the couch, so switch off the desk lamp right next to it.",
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3"
+}

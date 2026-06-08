@@ -1,0 +1,14 @@
+{
+  "scene": "FloorPlan15",
+  "actions": [
+    "RotateRight(90)",
+    "MoveRight(0.5)",
+    "MoveRight(0.5)",
+    "MoveAhead(0.5)",
+    "LookDown",
+    "MoveAhead(0.5)",
+    "ToggleObjectOn(CoffeeMachine)",
+    "LookDown",
+    "Done"
+  ]
+}

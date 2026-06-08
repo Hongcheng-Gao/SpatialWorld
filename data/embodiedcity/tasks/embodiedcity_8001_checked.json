@@ -1,0 +1,190 @@
+{
+  "id": "embodiedcity_8001",
+  "instruction": "Please fly to the maple tree located 10 meters below the cylindrical building.",
+  "start": [
+    5652.23046875,
+    -3449.54052734375,
+    -29.17054557800293
+  ],
+  "start_yaw": 6.84,
+  "end": [
+    5754.67138671875,
+    -3505.2001953125,
+    -4.6031575202941895
+  ],
+  "end_yaw": 1.6062007198995072,
+  "check_status": "Qualified",
+  "check_comment": "Blue cylindrical is too general",
+  "check_time": "2026-05-12 09:47:02",
+  "trajectory": [
+    {
+      "x": 5652.23,
+      "y": -3449.54,
+      "z": -29.11,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 5653.42,
+      "y": -3459.47,
+      "z": -29.11,
+      "action": "Left",
+      "granularity": "Large"
+    },
+    {
+      "x": 5654.61,
+      "y": -3469.4,
+      "z": -29.01,
+      "action": "Left",
+      "granularity": "Large"
+    },
+    {
+      "x": 5655.8,
+      "y": -3479.33,
+      "z": -28.97,
+      "action": "Left",
+      "granularity": "Large"
+    },
+    {
+      "x": 5656.99,
+      "y": -3489.26,
+      "z": -28.95,
+      "action": "Left",
+      "granularity": "Large"
+    },
+    {
+      "x": 5658.18,
+      "y": -3499.19,
+      "z": -28.94,
+      "action": "Left",
+      "granularity": "Large"
+    },
+    {
+      "x": 5659.37,
+      "y": -3509.11,
+      "z": -28.92,
+      "action": "Left",
+      "granularity": "Large"
+    },
+    {
+      "x": 5659.37,
+      "y": -3509.11,
+      "z": -23.92,
+      "action": "Down",
+      "granularity": "Medium"
+    },
+    {
+      "x": 5659.37,
+      "y": -3509.11,
+      "z": -18.92,
+      "action": "Down",
+      "granularity": "Medium"
+    },
+    {
+      "x": 5659.37,
+      "y": -3509.11,
+      "z": -13.91,
+      "action": "Down",
+      "granularity": "Medium"
+    },
+    {
+      "x": 5669.3,
+      "y": -3507.92,
+      "z": -13.89,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5679.23,
+      "y": -3506.73,
+      "z": -13.85,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5689.16,
+      "y": -3505.54,
+      "z": -13.83,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5699.09,
+      "y": -3504.35,
+      "z": -13.82,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5709.02,
+      "y": -3503.16,
+      "z": -13.81,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5718.95,
+      "y": -3501.97,
+      "z": -13.8,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5728.88,
+      "y": -3500.78,
+      "z": -13.8,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5738.8,
+      "y": -3499.59,
+      "z": -13.79,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5738.8,
+      "y": -3499.59,
+      "z": -8.77,
+      "action": "Down",
+      "granularity": "Medium"
+    },
+    {
+      "x": 5738.8,
+      "y": -3499.59,
+      "z": -3.68,
+      "action": "Down",
+      "granularity": "Medium"
+    },
+    {
+      "x": 5748.73,
+      "y": -3498.4,
+      "z": -3.62,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5749.33,
+      "y": -3503.36,
+      "z": -3.53,
+      "action": "Left",
+      "granularity": "Medium"
+    },
+    {
+      "x": 5754.29,
+      "y": -3502.77,
+      "z": -3.44,
+      "action": "Forward",
+      "granularity": "Medium"
+    },
+    {
+      "x": 5754.29,
+      "y": -3502.77,
+      "z": -3.44,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 23
+}

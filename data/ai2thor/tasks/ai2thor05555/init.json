@@ -1,0 +1,12 @@
+{
+  "scene": "FloorPlan402",
+  "actions": [
+    "RotateLeft(90)",
+    "LookDown(30)",
+    "RotateLeft(90)",
+    "MoveRight(1.0)",
+    "MoveAhead(0.25)",
+    "LookDown(30)",
+    "Done"
+  ]
+}

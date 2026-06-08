@@ -1,0 +1,33 @@
+{
+  "task_id": "virtualhome00111",
+  "task_name": "Put the cellphone back on the bed.",
+  "instruction": "I'd like to use my cellphone. Please put it back on the bed.",
+  "golden_actions": {
+    "steps": 8,
+    "actions": [
+      "LookDown",
+      "TurnRight(normal)",
+      "WalkForward(medium)",
+      "LookDown",
+      "Grab(cellphone)",
+      "TurnLeft(normal)",
+      "WalkForward(small)",
+      "Done"
+    ]
+  },
+  "scene": "0",
+  "target_object_types": [
+    "cellphone"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "cellphone",
+      "state": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'd like to use my cellphone. Please put it back on the bed.",
+  "max_steps": 21
+}

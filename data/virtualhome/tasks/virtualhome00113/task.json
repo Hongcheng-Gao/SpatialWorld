@@ -1,0 +1,39 @@
+{
+  "task_id": "virtualhome00113",
+  "task_name": "Put the remote on the coffee table.",
+  "instruction": "I'd like to watch some TV. Please put the remote on the coffee table.",
+  "golden_actions": {
+    "steps": 13,
+    "actions": [
+      "TurnLeft(small)",
+      "WalkForward(medium)",
+      "TurnRight(small)",
+      "Grab(remotecontrol)",
+      "TurnLeft(small)",
+      "WalkForward(medium)",
+      "TurnRight(normal)",
+      "WalkForward(medium)",
+      "TurnLeft(small)",
+      "WalkForward(medium)",
+      "TurnRight(normal)",
+      "PutBack(remotecontrol, coffeetable)",
+      "Done"
+    ]
+  },
+  "scene": "0",
+  "target_object_types": [
+    "remotecontrol",
+    "coffeetable"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "remotecontrol",
+      "receptacle_type": "coffeetable",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'd like to watch some TV. Please put the remote on the coffee table.",
+  "max_steps": 31
+}

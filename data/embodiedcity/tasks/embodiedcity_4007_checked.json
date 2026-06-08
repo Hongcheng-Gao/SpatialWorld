@@ -1,0 +1,64 @@
+{
+  "id": "embodiedcity_4007",
+  "instruction": "My keys might have fallen near the rightmost stone pier. Help me move there and look around carefully.",
+  "start": [
+    7715.50048828125,
+    -3555.872314453125,
+    -11.974377632141113
+  ],
+  "start_yaw": 168.12,
+  "end": [
+    7700.85498046875,
+    -3544.9423828125,
+    -2.252042055130005
+  ],
+  "end_yaw": -175.6053667563512,
+  "check_status": "Qualified",
+  "check_comment": "ok",
+  "check_time": "2026-05-12 13:07:32",
+  "trajectory": [
+    {
+      "x": 7715.5,
+      "y": -3555.87,
+      "z": -11.92,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 7715.5,
+      "y": -3555.87,
+      "z": -1.89,
+      "action": "Down",
+      "granularity": "Large"
+    },
+    {
+      "x": 7715.5,
+      "y": -3555.87,
+      "z": -1.81,
+      "action": "Yaw Left",
+      "granularity": "Medium"
+    },
+    {
+      "x": 7708.06,
+      "y": -3549.2,
+      "z": -1.72,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7700.61,
+      "y": -3542.52,
+      "z": -1.63,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7700.61,
+      "y": -3542.52,
+      "z": -1.63,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 5
+}

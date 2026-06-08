@@ -1,0 +1,11 @@
+{
+  "scene": "FloorPlan24",
+  "actions": [
+    "LookDown",
+    "RotateLeft(90)",
+    "MoveAhead(0.25)",
+    "MoveRight(0.25)",
+    "DirtyObject(Mug)",
+    "Done"
+  ]
+}

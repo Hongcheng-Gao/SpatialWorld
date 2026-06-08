@@ -1,0 +1,66 @@
+{
+  "task_id": "procthor002",
+  "task_name": "Sofa Nap Pillow & Wait",
+  "instruction": "I'd like to take a nap on the sofa. Please bring a pillow and wait for me next to the sofa.",
+  "golden_actions": {
+    "steps": 28,
+    "actions": [
+      "RotateLeft(90)",
+      "RotateLeft(90)",
+      "MoveAhead(0.5)",
+      "MoveRight(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateLeft(90)",
+      "LookDown",
+      "MoveRight(0.25)",
+      "MoveAhead(0.25)",
+      "PickupObject(Pillow)",
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveRight(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveLeft(1.0)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveRight(1.0)",
+      "LookDown",
+      "Done"
+    ]
+  },
+  "scene_index": 100,
+  "target_object_types": [
+    "Sofa",
+    "Pillow"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Pillow",
+      "state": "isPickedUp",
+      "value": true
+    },
+    {
+      "type": "agent_in_room",
+      "room_type": "LivingRoom"
+    },
+    {
+      "type": "agent_near_object",
+      "object_type": "Sofa",
+      "distance": 1.5
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'd like to take a nap on the sofa. Please bring a pillow and wait for me next to the sofa.",
+  "max_steps": 66,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

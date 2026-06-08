@@ -1,0 +1,47 @@
+{
+  "task_id": "carla00511",
+  "task_name": "Walk to the house behind the car.",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "walker",
+  "instruction": "Walk to the house behind the car.You can turn and move in any direction.",
+  "golden_actions": {
+    "steps": 4,
+    "actions": [
+      "TurnLeft(degrees=30)",
+      "TurnLeft(degrees=30)",
+      "WalkForward(distance=10)",
+      "Done"
+    ]
+  },
+  "scene": "Town04",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "polygon_area",
+    "target_polygon": [
+      [
+        160.07955932617188,
+        -336.82562255859375,
+        -0.007568836212158203
+      ],
+      [
+        182.94589233398438,
+        -336.82562255859375,
+        -0.007568836212158203
+      ],
+      [
+        182.94589233398438,
+        -322.20013427734375,
+        -0.007568836212158203
+      ],
+      [
+        160.07955932617188,
+        -322.20013427734375,
+        -0.007568836212158203
+      ]
+    ],
+    "threshold_label": "loose"
+  },
+  "max_steps": 50
+}

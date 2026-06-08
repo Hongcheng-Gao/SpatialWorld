@@ -1,0 +1,27 @@
+{
+  "task_id": "virtualhome00000",
+  "task_name": "open the tv",
+  "instruction": "open the tv",
+  "golden_actions": {
+    "steps": 2,
+    "actions": [
+      "SwitchOn(tv)",
+      "Done"
+    ]
+  },
+  "scene": "0",
+  "target_object_types": [
+    "tv"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "tv",
+      "state": "isToggled",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "open the tv",
+  "max_steps": 13
+}

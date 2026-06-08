@@ -1,0 +1,78 @@
+{
+  "id": "embodiedcity_7009",
+  "instruction": "Aim for the center of the shaded area in the parking lot to avoid direct sunlight, and set the flight path over that area.",
+  "start": [
+    7811.2109375,
+    -3674.533935546875,
+    -9.739453315734863
+  ],
+  "start_yaw": -1.07,
+  "end": [
+    7790.0419921875,
+    -3679.9716796875,
+    -1.7150418758392334
+  ],
+  "end_yaw": -13.327200319302275,
+  "check_status": "Qualified",
+  "check_comment": "1",
+  "check_time": "2026-05-12 10:29:19",
+  "trajectory": [
+    {
+      "x": 7811.21,
+      "y": -3674.53,
+      "z": 0.42,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 7811.21,
+      "y": -3674.53,
+      "z": -4.67,
+      "action": "Down",
+      "granularity": "Medium"
+    },
+    {
+      "x": 7811.21,
+      "y": -3674.53,
+      "z": -4.59,
+      "action": "Yaw Left",
+      "granularity": "Large"
+    },
+    {
+      "x": 7811.21,
+      "y": -3674.53,
+      "z": -4.53,
+      "action": "Yaw Left",
+      "granularity": "Large"
+    },
+    {
+      "x": 7801.21,
+      "y": -3674.35,
+      "z": -4.51,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7791.21,
+      "y": -3674.16,
+      "z": -4.5,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7791.12,
+      "y": -3679.16,
+      "z": -4.49,
+      "action": "Right",
+      "granularity": "Medium"
+    },
+    {
+      "x": 7791.12,
+      "y": -3679.16,
+      "z": -4.49,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 7
+}

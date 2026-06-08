@@ -1,0 +1,43 @@
+{
+  "task_id": "ai2thor05564",
+  "task_name": "Turn off all the lights in the room, including the one over the dining table and the floor lamp",
+  "instruction": "I'm getting sleepy—could you turn off all the lights in the room for me, including the one over the dining table and the floor lamp? Thanks.",
+  "golden_actions": {
+    "steps": 8,
+    "actions": [
+      "ToggleObjectOff(LightSwitch)",
+      "RotateLeft(180)",
+      "MoveAhead(1.0)",
+      "MoveLeft(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "ToggleObjectOff(FloorLamp)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan208",
+  "target_object_types": [
+    "LightSwitch",
+    "FloorLamp"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "LightSwitch",
+      "field": "isToggled",
+      "value": false
+    },
+    {
+      "type": "object_state",
+      "object_type": "FloorLamp",
+      "field": "isToggled",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm getting sleepy—could you turn off all the lights in the room for me, including the one over the dining table and the floor lamp? Thanks.",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

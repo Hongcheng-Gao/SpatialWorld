@@ -1,0 +1,42 @@
+{
+  "task_id": "ai2thor05535",
+  "task_name": "Please fill the house plant with water and pick up the plate.",
+  "instruction": "I'm the housekeeper of this room, and I need to keep it tidy every day. I'd like to water the flowers by the door first, then clear the plates from the dinner table.",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "FillObjectWithLiquid(HousePlant, water)",
+      "MoveLeft(1.0)",
+      "MoveLeft(0.75)",
+      "MoveAhead(0.75)",
+      "PickupObject(Plate)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan201",
+  "target_object_types": [
+    "HousePlant",
+    "Plate"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "HousePlant",
+      "state": "isFilledWithLiquid",
+      "value": true,
+      "liquid": "water"
+    },
+    {
+      "type": "object_state",
+      "object_type": "Plate",
+      "state": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm the housekeeper of this room, and I need to keep it tidy every day. I'd like to water the flowers by the door first, then clear the plates from the dinner table.",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

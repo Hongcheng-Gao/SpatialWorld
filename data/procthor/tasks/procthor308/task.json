@@ -1,0 +1,48 @@
+{
+  "task_id": "procthor308",
+  "task_name": "Pick up Phone, Wait by Sofa",
+  "instruction": "I'm ready to work. Please pick up the phone from the sofa and wait beside the sofa.",
+  "golden_actions": {
+    "steps": 10,
+    "actions": [
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateRight(90)",
+      "LookDown",
+      "MoveAhead(0.5)",
+      "PickupObject(CellPhone)",
+      "Done"
+    ]
+  },
+  "scene_index": 20,
+  "target_object_types": [
+    "CellPhone",
+    "Sofa"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "CellPhone",
+      "state": "isPickedUp",
+      "value": true
+    },
+    {
+      "type": "agent_in_room",
+      "room_type": "LivingRoom"
+    },
+    {
+      "type": "agent_near_object",
+      "object_type": "Sofa",
+      "distance": 1.5
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm ready to work. Please pick up the phone from the sofa and wait beside the sofa.",
+  "max_steps": 30,
+  "Evaluation_Type": "Conditional",
+  "Category": "Study and Work",
+  "Level": "Level3 Hybrid"
+}

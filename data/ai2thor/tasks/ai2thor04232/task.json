@@ -1,0 +1,44 @@
+{
+  "task_id": "ai2thor04232",
+  "task_name": "Shopping - card and light off",
+  "instruction": "I'm going out shopping. Please take my credit card and turn off the light next to the door.",
+  "golden_actions": {
+    "steps": 9,
+    "actions": [
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "MoveLeft(0.25)",
+      "MoveAhead(0.25)",
+      "PickupObject(CreditCard)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "ToggleObjectOff(LightSwitch)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan322",
+  "target_object_types": [
+    "CreditCard",
+    "LightSwitch"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "CreditCard",
+      "state": "isPickedUp",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "LightSwitch",
+      "state": "isToggled",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm going out shopping. Please take my credit card and turn off the light next to the door.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

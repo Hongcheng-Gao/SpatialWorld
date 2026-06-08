@@ -1,0 +1,44 @@
+{
+  "task_id": "procthor313",
+  "task_name": "Turn On CoffeeMachine, Wait by CoffeeMachine",
+  "instruction": "I want to make coffee. Please turn on a coffee machine and wait beside it.",
+  "golden_actions": {
+    "steps": 7,
+    "actions": [
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveRight(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "ToggleObjectOn(CoffeeMachine)",
+      "Done"
+    ]
+  },
+  "scene_index": 73,
+  "target_object_types": [
+    "CoffeeMachine"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "CoffeeMachine",
+      "state": "isToggled",
+      "value": true
+    },
+    {
+      "type": "agent_in_room",
+      "room_type": "Kitchen"
+    },
+    {
+      "type": "agent_near_object",
+      "object_type": "CoffeeMachine",
+      "distance": 1.5
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to make coffee. Please turn on a coffee machine and wait beside it.",
+  "max_steps": 24,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

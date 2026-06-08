@@ -1,0 +1,55 @@
+{
+  "task_id": "procthor617",
+  "task_name": "Take the phone to the countertop",
+  "instruction": "I am cooking and need to check my phone. Please navigate to the sofa in the living room to pick up the phone, then navigate to the kitchen and place it on the countertop.",
+  "golden_actions": {
+    "steps": 23,
+    "actions": [
+      "LookDown",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "PickupObject(CellPhone)",
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveAhead(0.5)",
+      "LookUp",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "RotateLeft(90)",
+      "MoveRight(1.0)",
+      "MoveRight(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.5)",
+      "MoveAhead(0.25)",
+      "LookDown",
+      "PutObject(CounterTop)",
+      "Done"
+    ]
+  },
+  "scene_index": 103,
+  "target_object_types": [
+    "CounterTop",
+    "CellPhone"
+  ],
+  "success_conditions": [
+    {
+      "type": "agent_in_room",
+      "room_type": "Kitchen"
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "CellPhone",
+      "receptacle_type": "CounterTop"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I am cooking and need to check my phone. Please navigate to the sofa in the living room to pick up the phone, then navigate to the kitchen and place it on the countertop.",
+  "max_steps": 56,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

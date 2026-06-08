@@ -1,0 +1,48 @@
+{
+  "task_id": "carla00314",
+  "task_name": "Drive to the last lamp before the intersection",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "vehicle",
+  "instruction": "Please follow the current lane and stop at the streetlight closely framed by the red box, situated immediately before the intersection.",
+  "golden_actions": {
+    "steps": 5,
+    "actions": [
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "Done"
+    ]
+  },
+  "scene": "Town04",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "polygon_area",
+    "target_polygon": [
+      [
+        343.125305175783,
+        -170.88679394636665,
+        -0.050540924072265625
+      ],
+      [
+        343.12529303741354,
+        -178.48326110837905,
+        -0.050540924072265625
+      ],
+      [
+        343.812194824217,
+        -178.4832622059771,
+        -0.050540924072265625
+      ],
+      [
+        343.81220696258646,
+        -170.8867950439647,
+        -0.050540924072265625
+      ]
+    ],
+    "threshold_label": "medium"
+  },
+  "max_steps": 30
+}

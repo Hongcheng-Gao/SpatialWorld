@@ -1,0 +1,72 @@
+{
+  "task_id": "carla00311",
+  "task_name": "Drive to the limit sign",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "vehicle",
+  "instruction": "Please go straight along the current road until you reach the speed limit sign.",
+  "golden_actions": {
+    "steps": 29,
+    "actions": [
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "Done"
+    ]
+  },
+  "scene": "Town04",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "polygon_area",
+    "target_polygon": [
+      [
+        378.0406188964841,
+        -214.07269272590725,
+        -0.12467384338378906
+      ],
+      [
+        377.9627379353309,
+        -214.07269287109395,
+        -0.12467384338378906
+      ],
+      [
+        377.96273803710966,
+        -214.12728896354588,
+        -0.12467384338378906
+      ],
+      [
+        378.04061899826286,
+        -214.12728881835918,
+        -0.12467384338378906
+      ]
+    ],
+    "threshold_label": "loose"
+  },
+  "max_steps": 30
+}

@@ -1,0 +1,33 @@
+{
+  "task_id": "ai2thor05051",
+  "task_name": "Break the vase",
+  "instruction": "Please help me with this task in the scene: break the vase.",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "BreakObject(Vase)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan215",
+  "target_object_types": [
+    "Vase"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Vase",
+      "state": "isBroken",
+      "value": true
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "Please help me with this task in the scene: break the vase.",
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3"
+}

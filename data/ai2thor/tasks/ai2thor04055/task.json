@@ -1,0 +1,41 @@
+{
+  "task_id": "ai2thor04055",
+  "task_name": "Throw tissue box in trash",
+  "instruction": "This tissue box is broken; please throw it in the trash can.",
+  "golden_actions": {
+    "steps": 12,
+    "actions": [
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveLeft(0.5)",
+      "MoveAhead(0.25)",
+      "PickupObject(TissueBox)",
+      "LookDown",
+      "MoveRight(0.25)",
+      "PutObject(GarbageCan)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan212",
+  "target_object_types": [
+    "GarbageCan",
+    "TissueBox"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "TissueBox",
+      "receptacle_type": "GarbageCan",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "This tissue box is broken; please throw it in the trash can.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

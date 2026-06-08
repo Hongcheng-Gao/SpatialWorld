@@ -1,0 +1,30 @@
+{
+  "task_id": "ai2thor05558",
+  "task_name": "Pick up the credit card",
+  "instruction": "I need to go to the bank—could you find my credit card and hand it to me if you locate it?",
+  "golden_actions": {
+    "steps": 2,
+    "actions": [
+      "PickupObject(CreditCard)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan212",
+  "target_object_types": [
+    "CreditCard"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "CreditCard",
+      "field": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I need to go to the bank—could you find my credit card and hand it to me if you locate it?",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

@@ -1,0 +1,42 @@
+{
+  "task_id": "ai2thor05514",
+  "task_name": "Put the pencil into the trash",
+  "instruction": "My pencil is broken and I want to throw it away. Could you help me drop it from the table into the trash can?",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "MoveAhead(1.0)",
+      "PickupObject(Pencil)",
+      "RotateLeft(90)",
+      "MoveAhead(0.5)",
+      "PutObject(GarbageCan)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan307",
+  "target_object_types": [
+    "Desk",
+    "GarbageCan",
+    "Pencil"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Pencil",
+      "receptacle_type": "GarbageCan",
+      "value": true
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Pencil",
+      "receptacle_type": "Desk",
+      "value": false
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "My pencil is broken and I want to throw it away. Could you help me drop it from the table into the trash can?",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

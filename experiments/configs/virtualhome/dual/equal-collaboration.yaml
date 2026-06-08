@@ -1,0 +1,78 @@
+# =============================================================================
+# AI2-THOR Dual Agent Configuration - Equal Collaboration Mode
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Basic Environment Configuration
+# -----------------------------------------------------------------------------
+env:
+  type: ai2thor
+  width: 800
+  height: 600
+  grid_size: 0.25
+  render_depth: false
+  render_instance_segmentation: false
+  text_state_mode: first_person
+  visibility_distance: 1.5
+  platform: null
+
+# -----------------------------------------------------------------------------
+# Agent Runtime Configuration
+# -----------------------------------------------------------------------------
+max_steps: 60  # Total steps for both agents combined
+
+# Context management
+context_management:
+  enable_long_term_summary: false
+  short_term_history_window_size: 5
+
+# -----------------------------------------------------------------------------
+# Dual Agent Specific Configuration
+# -----------------------------------------------------------------------------
+dual_agent:
+  equal_collaboration: true  # Enable equal collaboration mode (both agents are equal partners)
+  collaboration_mode: alternating  # alternating or sequential
+  switch_interval: 3  # Switch agents every N steps in alternating mode
+  max_global_steps: 60  # Total steps for both agents combined
+
+# -----------------------------------------------------------------------------
+# Model Configuration
+# -----------------------------------------------------------------------------
+model:
+  vlm:
+    provider: openai
+    model_name: qwen-vl-max-2025-08-13  # Use your Qwen model
+    temperature: 0.2
+    max_tokens: 2000
+
+# -----------------------------------------------------------------------------
+# Logging and Output Configuration
+# -----------------------------------------------------------------------------
+logging:
+  stdout_verbose: true
+  save_step_images: true
+
+# -----------------------------------------------------------------------------
+# Action Parameter Configuration
+# -----------------------------------------------------------------------------
+actions:
+  move_ahead_magnitude: 0.25
+  move_back_magnitude: 0.25
+  move_left_magnitude: 0.25
+  move_right_magnitude: 0.25
+  rotate_degrees: 90
+
+# -----------------------------------------------------------------------------
+# Reward Function Configuration
+# -----------------------------------------------------------------------------
+reward:
+  success_reward: 10.0
+  step_success_bonus: 0.1
+  step_failure_penalty: -0.05
+
+# -----------------------------------------------------------------------------
+# Experiment Configuration
+# -----------------------------------------------------------------------------
+experiment:
+  num_episodes: 1
+  output_dir: outputs

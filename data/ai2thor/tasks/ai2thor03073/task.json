@@ -1,0 +1,63 @@
+{
+  "task_id": "ai2thor03073",
+  "task_name": "Microwave potato on plate",
+  "instruction": "I want to eat potatoes. Please put this potato on a plate and then put the plate in the microwave.",
+  "golden_actions": {
+    "steps": 21,
+    "actions": [
+      "RotateRight(90)",
+      "MoveLeft(0.5)",
+      "MoveLeft(0.25)",
+      "PickupObject(Potato)",
+      "RotateLeft(90)",
+      "RotateRight(90)",
+      "MoveAhead(0.25)",
+      "PutObject(Plate)",
+      "PickupObject(Plate)",
+      "MoveBack(0.25)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "RotateLeft(90)",
+      "MoveRight(0.5)",
+      "LookUp",
+      "OpenObject(Microwave)",
+      "PutObject(Microwave)",
+      "CloseObject(Microwave)",
+      "ToggleObjectOn(Microwave)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan29",
+  "target_object_types": [
+    "Potato",
+    "Microwave",
+    "Plate"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Potato",
+      "receptacle_type": "Plate",
+      "value": true
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Plate",
+      "receptacle_type": "Microwave",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Microwave",
+      "state": "isToggled",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to eat potatoes. Please put this potato on a plate and then put the plate in the microwave.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

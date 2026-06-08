@@ -1,0 +1,69 @@
+{
+  "task_id": "procthor607",
+  "task_name": "Fetch phone to bedside",
+  "instruction": "I want to relax. Please fetch the phone from the table and navigate to the bedside in the bedroom.",
+  "golden_actions": {
+    "steps": 31,
+    "actions": [
+      "MoveRight(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "RotateLeft(90)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.25)",
+      "RotateRight(90)",
+      "MoveLeft(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "RotateRight(90)",
+      "LookDown",
+      "MoveLeft(0.5)",
+      "MoveAhead(0.25)",
+      "PickupObject(CellPhone)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "MoveLeft(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "RotateRight(90)",
+      "Done"
+    ]
+  },
+  "scene_index": 335,
+  "target_object_types": [
+    "cellphone",
+    "Bed"
+  ],
+  "success_conditions": [
+    {
+      "type": "agent_in_room",
+      "room_type": "bedroom"
+    },
+    {
+      "type": "object_state",
+      "object_type": "CellPhone",
+      "state": "isPickedUp",
+      "value": true
+    },
+    {
+      "type": "agent_near_object",
+      "object_type": "Bed",
+      "distance": 1.5
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to relax. Please fetch the phone from the table and navigate to the bedside in the bedroom.",
+  "max_steps": 72,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

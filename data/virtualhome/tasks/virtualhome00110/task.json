@@ -1,0 +1,30 @@
+{
+  "task_id": "virtualhome00110",
+  "task_name": "Turn on the radio",
+  "instruction": "I want to listen to music. Please turn on the radio for me.",
+  "golden_actions": {
+    "steps": 5,
+    "actions": [
+      "WalkForward(large)",
+      "TurnLeft(small)",
+      "WalkForward(medium)",
+      "SwitchOn(radio)",
+      "Done"
+    ]
+  },
+  "scene": "0",
+  "target_object_types": [
+    "radio"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "radio",
+      "state": "isToggled",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to listen to music. Please turn on the radio for me.",
+  "max_steps": 18
+}

@@ -1,0 +1,15 @@
+{
+  "scene": "FloorPlan320",
+  "actions": [
+    "RotateRight(90)",
+    "RotateRight(90)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.5)",
+    "ToggleObjectOff(DeskLamp)",
+    "LookDown",
+    "Done"
+  ]
+}

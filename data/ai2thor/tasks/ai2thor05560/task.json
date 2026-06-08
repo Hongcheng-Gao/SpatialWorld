@@ -1,0 +1,43 @@
+{
+  "task_id": "ai2thor05560",
+  "task_name": "Find my vase and place it on the side table next to the sofa",
+  "instruction": "Please find the vase that’s sitting on the shelf, pick it up, and set it on the side table next to the sofa.",
+  "golden_actions": {
+    "steps": 7,
+    "actions": [
+      "PickupObject(Vase)",
+      "MoveBack(1.0)",
+      "MoveBack(1.0)",
+      "MoveBack(1.0)",
+      "RotateRight(90)",
+      "PutObject(SideTable)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan214",
+  "target_object_types": [
+    "Vase",
+    "SideTable",
+    "Shelf"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Vase",
+      "receptacle_type": "Shelf",
+      "value": true
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Vase",
+      "receptacle_type": "SideTable",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "Please find the vase that’s sitting on the shelf, pick it up, and set it on the side table next to the sofa.",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

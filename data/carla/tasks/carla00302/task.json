@@ -1,0 +1,51 @@
+{
+  "task_id": "carla00302",
+  "task_name": "Drive to the limit sign",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "vehicle",
+  "instruction": "Please go straight through the traffic lights ahead and pull up next to the speed limit sign.",
+  "golden_actions": {
+    "steps": 8,
+    "actions": [
+      "Stop",
+      "Stop",
+      "Stop",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "Done"
+    ]
+  },
+  "scene": "Town02",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "polygon_area",
+    "target_polygon": [
+      [
+        -9.538933753967285,
+        208.7479705810547,
+        1.8889340162277222
+      ],
+      [
+        -10.221066414227398,
+        208.74797112604344,
+        1.8889340162277222
+      ],
+      [
+        -10.22106647491455,
+        208.67201232910156,
+        1.8889340162277222
+      ],
+      [
+        -9.538933814654438,
+        208.6720117841128,
+        1.8889340162277222
+      ]
+    ],
+    "threshold_label": "medium"
+  },
+  "max_steps": 30
+}

@@ -1,0 +1,22 @@
+{
+  "scene": "FloorPlan23",
+  "actions": [
+    "RotateRight(90)",
+    "RotateRight(90)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "OpenObject(Fridge)",
+    "MoveBack(0.25)",
+    "MoveBack(0.25)",
+    "MoveBack(0.25)",
+    "MoveBack(0.25)",
+    "RotateLeft(90)",
+    "RotateLeft(90)",
+    "LookDown",
+    "Done"
+  ]
+}

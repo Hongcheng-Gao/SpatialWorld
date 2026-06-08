@@ -1,0 +1,54 @@
+{
+  "task_id": "carla00213",
+  "task_name": "Walk to under the billboard.",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "walker",
+  "instruction": "Walk to under the billboard.You can turn and move in any direction.",
+  "golden_actions": {
+    "steps": 11,
+    "actions": [
+      "WalkForward(distance=10)",
+      "TurnLeft(degrees=30)",
+      "TurnLeft(degrees=30)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "TurnLeft(degrees=30)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=5)",
+      "TurnRight(degrees=30)",
+      "WalkForward(distance=5)",
+      "Done"
+    ]
+  },
+  "scene": "Town04",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "polygon_area",
+    "target_polygon": [
+      [
+        190.18319702148438,
+        -365.9443664550781,
+        0.04092884063720703
+      ],
+      [
+        194.16801476313577,
+        -366.2929994836737,
+        0.04092884063720703
+      ],
+      [
+        195.00576782226562,
+        -356.7176208496094,
+        0.04092884063720703
+      ],
+      [
+        191.02095008061423,
+        -356.3689878210138,
+        0.04092884063720703
+      ]
+    ],
+    "threshold_label": "loose"
+  },
+  "max_steps": 50
+}

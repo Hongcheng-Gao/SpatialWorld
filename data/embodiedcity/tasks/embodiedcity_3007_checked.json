@@ -1,0 +1,49 @@
+{
+  "id": "embodiedcity_3007",
+  "instruction": "I need to confirm the entrance to this house. Please move to the doorway of the house ahead.",
+  "start": [
+    7802.27099609375,
+    -3598.021240234375,
+    -4.505221366882324
+  ],
+  "end": [
+    7794.103515625,
+    -3583.213623046875,
+    -1.8892579078674316
+  ],
+  "check_status": "Qualified",
+  "check_comment": "OK",
+  "check_time": "2026-05-12 12:58:54",
+  "trajectory": [
+    {
+      "x": 7799.68,
+      "y": -3588.36,
+      "z": -4.43,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7799.68,
+      "y": -3588.36,
+      "z": -4.34,
+      "action": "Yaw Right",
+      "granularity": "Medium"
+    },
+    {
+      "x": 7796.15,
+      "y": -3584.83,
+      "z": -4.25,
+      "action": "Forward",
+      "granularity": "Medium"
+    },
+    {
+      "x": 7796.15,
+      "y": -3584.83,
+      "z": -4.25,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "start_yaw": 105.0,
+  "golden_actions_count": 4
+}

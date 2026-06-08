@@ -1,0 +1,26 @@
+{
+  "task_id": "virtualhome00003",
+  "task_name": "Turn on the sink please.",
+  "instruction": "Turn on the sink please. I want to wash my face.",
+  "golden_actions": {
+    "steps": 2,
+    "actions": [
+      "SwitchOn(faucet)",
+      "Done"
+    ]
+  },
+  "scene": "6",
+  "target_object_types": [
+    "faucet"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "faucet",
+      "state": "isToggled"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "Turn on the sink please. I want to wash my face.",
+  "max_steps": 13
+}

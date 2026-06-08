@@ -1,0 +1,29 @@
+{
+  "task_id": "virtualhome00018",
+  "task_name": "Open the cabinet.",
+  "instruction": "I'm looking for something. Help me open the cabinet.",
+  "golden_actions": {
+    "steps": 5,
+    "actions": [
+      "TurnRight(small)",
+      "WalkForward(medium)",
+      "TurnLeft(small)",
+      "Open(cabinet)",
+      "Done"
+    ]
+  },
+  "scene": "17",
+  "target_object_types": [
+    "cabinet"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "cabinet",
+      "state": "isOpen"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm looking for something. Help me open the cabinet.",
+  "max_steps": 22
+}

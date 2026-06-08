@@ -1,0 +1,37 @@
+{
+  "task_id": "ai2thor03011",
+  "task_name": "Slice and pick up bread",
+  "instruction": "I'm very hungry now, please slice the bread and pick it up.",
+  "golden_actions": {
+    "steps": 3,
+    "actions": [
+      "SliceObject(Bread)",
+      "PickupObject(Bread)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan13",
+  "target_object_types": [
+    "Bread"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Bread",
+      "state": "isSliced",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Bread",
+      "state": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm very hungry now, please slice the bread and pick it up.",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level2 Interaction"
+}

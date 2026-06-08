@@ -1,0 +1,31 @@
+{
+  "task_id": "ai2thor02763",
+  "task_name": "Pick up tomato from table",
+  "instruction": "I want to check if the tomato is rotten. Please pick up this tomato for me.",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveAhead(1)",
+      "MoveLeft(0.5)",
+      "PickupObject(Tomato)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan22",
+  "target_object_types": [
+    "Tomato"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Tomato",
+      "state": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to check if the tomato is rotten. Please pick up this tomato for me.",
+  "max_steps": 30
+}

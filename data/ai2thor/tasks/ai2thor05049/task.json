@@ -1,0 +1,29 @@
+{
+  "task_id": "ai2thor05049",
+  "task_name": "Pick up the dumbbell.",
+  "instruction": "It's time for my daily exercise; can you pick up the dumbbell from the floor.",
+  "golden_actions": {
+    "steps": 2,
+    "actions": [
+      "PickupObject(Dumbbell)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan320",
+  "target_object_types": [
+    "Dumbbell"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Dumbbell",
+      "state": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "It's time for my daily exercise; can you pick up the dumbbell from the floor.",
+  "Evaluation_Type": "Conditional",
+  "Category": "Entertainment (Game/Sports)",
+  "Level": "Level3"
+}

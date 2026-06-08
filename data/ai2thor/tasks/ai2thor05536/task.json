@@ -1,0 +1,43 @@
+{
+  "task_id": "ai2thor05536",
+  "task_name": "Please pick up the bowl and put it on the dining table.",
+  "instruction": "I'm about to have dinner—please take the bowl from the coffee table and bring it to the dinner table",
+  "golden_actions": {
+    "steps": 8,
+    "actions": [
+      "PickupObject(Bowl)",
+      "MoveBack(0.75)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveLeft(1.0)",
+      "PutObject(DiningTable)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan201",
+  "target_object_types": [
+    "Bowl",
+    "CoffeeTable",
+    "DiningTable"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Bowl",
+      "receptacle_type": "CoffeeTable",
+      "value": false
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Bowl",
+      "receptacle_type": "DiningTable"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm about to have dinner—please take the bowl from the coffee table and bring it to the dinner table",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

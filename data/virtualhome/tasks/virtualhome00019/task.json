@@ -1,0 +1,28 @@
+{
+  "task_id": "virtualhome00019",
+  "task_name": "Turn off the light.",
+  "instruction": "I'm done showering and want a good sleep. Please turn off the light—the switch is by the door. It's the overhead room light",
+  "golden_actions": {
+    "steps": 3,
+    "actions": [
+      "WalkForward(medium)",
+      "SwitchOff(lightswitch)",
+      "Done"
+    ]
+  },
+  "scene": "17",
+  "target_object_types": [
+    "lightswitch"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "lightswitch",
+      "state": "isToggled",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm done showering and want a good sleep. Please turn off the light—the switch is by the door. It's the overhead room light",
+  "max_steps": 18
+}

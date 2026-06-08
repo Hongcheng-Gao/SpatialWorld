@@ -1,0 +1,13 @@
+{
+  "scene": "FloorPlan15",
+  "actions": [
+    "RotateRight(90)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveRight(0.25)",
+    "MoveAhead(0.25)",
+    "DirtyObject(Pot)",
+    "LookDown",
+    "Done"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "task_id": "procthor614",
+  "task_name": "Turn on the faucet",
+  "instruction": "I am going to wash my face. Please navigate to the bathroom and turn on a faucet there.",
+  "golden_actions": {
+    "steps": 19,
+    "actions": [
+      "MoveAhead(0.5)",
+      "LookDown",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "MoveLeft(0.5)",
+      "MoveLeft(0.25)",
+      "MoveAhead(0.25)",
+      "MoveLeft(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "ToggleObjectOn(Faucet)",
+      "Done"
+    ]
+  },
+  "scene_index": 99,
+  "target_object_types": [
+    "Faucet"
+  ],
+  "success_conditions": [
+    {
+      "type": "agent_in_room",
+      "room_type": "bathroom"
+    },
+    {
+      "type": "object_state",
+      "object_type": "Faucet",
+      "state": "isToggled"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I am going to wash my face. Please navigate to the bathroom and turn on a faucet there.",
+  "max_steps": 48,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

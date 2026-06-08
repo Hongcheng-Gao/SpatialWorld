@@ -1,0 +1,49 @@
+{
+  "task_id": "carla00408",
+  "task_name": "Walk to the soccer goal under the Coca-Cola sign.",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "walker",
+  "instruction": "Can you find the soccer goal under the Coca-Cola sign? If so, please walk over there.",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "TurnLeft(degrees=30)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "TurnRight(degrees=30)",
+      "WalkForward(distance=10)",
+      "Done"
+    ]
+  },
+  "scene": "Town05",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "polygon_area",
+    "target_polygon": [
+      [
+        124.3333740234375,
+        45.91349792480469,
+        0.041570305824279785
+      ],
+      [
+        128.3359832763672,
+        45.91349792480469,
+        0.041570305824279785
+      ],
+      [
+        128.3359832763672,
+        46.0279541015625,
+        0.041570305824279785
+      ],
+      [
+        124.3333740234375,
+        46.0279541015625,
+        0.041570305824279785
+      ]
+    ],
+    "threshold_label": "strict"
+  },
+  "max_steps": 50
+}

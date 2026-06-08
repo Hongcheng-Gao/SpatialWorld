@@ -1,0 +1,39 @@
+{
+  "task_id": "ai2thor05063",
+  "task_name": "Clean the pot and slice the tomato",
+  "instruction": "The pot looks a bit dusty, so clean the pot and slice the tomato for the soup.",
+  "golden_actions": {
+    "steps": 5,
+    "actions": [
+      "CleanObject(Pot)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "SliceObject(Tomato)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan15",
+  "target_object_types": [
+    "Pot",
+    "Tomato"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Pot",
+      "state": "isDirty",
+      "value": false
+    },
+    {
+      "type": "object_state",
+      "object_type": "Tomato",
+      "state": "isSliced",
+      "value": true
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "The pot looks a bit dusty, so clean the pot and slice the tomato for the soup.",
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3"
+}

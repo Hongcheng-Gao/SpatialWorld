@@ -1,0 +1,82 @@
+{
+  "task_id": "procthor412",
+  "task_name": "DishSponge Delivery to Bathroom",
+  "instruction": "Please take the DishSponge from the kitchen and throw it into the GarbageCan in the bathroom. I want to clean up the bathroom trash together.",
+  "golden_actions": {
+    "steps": 49,
+    "actions": [
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateLeft(90)",
+      "MoveRight(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateLeft(90)",
+      "MoveAhead(0.5)",
+      "RotateRight(90)",
+      "MoveAhead(0.5)",
+      "MoveLeft(1.0)",
+      "MoveLeft(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "LookDown",
+      "MoveAhead(0.5)",
+      "PickupObject(DishSponge)",
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveLeft(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveRight(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "RotateRight(90)",
+      "PutObject(GarbageCan)",
+      "Done"
+    ]
+  },
+  "scene_index": 407,
+  "target_object_types": [
+    "DishSponge",
+    "GarbageCan"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_room",
+      "object_type": "DishSponge",
+      "room_type": "Bathroom"
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "DishSponge",
+      "receptacle_type": "GarbageCan"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "Please take the DishSponge from the kitchen and throw it into the GarbageCan in the bathroom. I want to clean up the bathroom trash together.",
+  "max_steps": 108,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

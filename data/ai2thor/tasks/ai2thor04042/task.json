@@ -1,0 +1,57 @@
+{
+  "task_id": "ai2thor04042",
+  "task_name": "Prepare to leave - lights off",
+  "instruction": "I'm getting ready to leave. Please hold my keychain and turn off all the lights.",
+  "golden_actions": {
+    "steps": 15,
+    "actions": [
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveRight(0.5)",
+      "MoveAhead(1.0)",
+      "PickupObject(KeyChain)",
+      "MoveBack(0.25)",
+      "RotateLeft(90)",
+      "ToggleObjectOff(DeskLamp)",
+      "MoveLeft(1.0)",
+      "RotateLeft(90)",
+      "MoveAhead(0.5)",
+      "MoveLeft(0.5)",
+      "MoveAhead(0.25)",
+      "ToggleObjectOff(LightSwitch)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan324",
+  "target_object_types": [
+    "LightSwitch",
+    "DeskLamp",
+    "KeyChain"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "KeyChain",
+      "state": "isPickedUp",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "DeskLamp",
+      "state": "isToggled",
+      "value": false
+    },
+    {
+      "type": "object_state",
+      "object_type": "LightSwitch",
+      "state": "isToggled",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm getting ready to leave. Please hold my keychain and turn off all the lights.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

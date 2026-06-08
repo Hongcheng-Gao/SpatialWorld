@@ -1,0 +1,29 @@
+{
+  "task_id": "virtualhome00100",
+  "task_name": "open the fridge",
+  "instruction": "I'd like to find something to eat, please open the refrigerator.",
+  "golden_actions": {
+    "steps": 4,
+    "actions": [
+      "WalkForward(medium)",
+      "TurnLeft(small)",
+      "Open(fridge)",
+      "Done"
+    ]
+  },
+  "scene": "0",
+  "target_object_types": [
+    "fridge"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "fridge",
+      "state": "isOpen",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'd like to find something to eat, please open the refrigerator.",
+  "max_steps": 18
+}

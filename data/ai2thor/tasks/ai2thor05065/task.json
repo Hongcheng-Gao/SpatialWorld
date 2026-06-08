@@ -1,0 +1,30 @@
+{
+  "task_id": "ai2thor05065",
+  "task_name": "Pick up a potato",
+  "instruction": "I'm about to start cooking, could you please pick up a potato for me?",
+  "golden_actions": {
+    "steps": 3,
+    "actions": [
+      "MoveAhead(0.5)",
+      "PickupObject(Potato)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan15",
+  "target_object_types": [
+    "Potato"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Potato",
+      "state": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "I'm about to start cooking, could you please pick up a potato for me?",
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3"
+}

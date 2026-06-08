@@ -1,0 +1,32 @@
+{
+  "scene": "FloorPlan29",
+  "actions": [
+    "MoveRight(0.25)",
+    "PickupObject(Potato)",
+    "RotateRight(90)",
+    "MoveLeft(0.25)",
+    "MoveLeft(0.25)",
+    "MoveLeft(0.25)",
+    "MoveLeft(0.25)",
+    "MoveLeft(0.25)",
+    "MoveLeft(0.25)",
+    "MoveLeft(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveRight(0.25)",
+    "MoveRight(0.25)",
+    "MoveRight(0.25)",
+    "MoveRight(0.25)",
+    "MoveRight(0.25)",
+    "MoveAhead(0.25)",
+    "ToggleObjectOff(LightSwitch)",
+    "LookDown",
+    "Done"
+  ]
+}

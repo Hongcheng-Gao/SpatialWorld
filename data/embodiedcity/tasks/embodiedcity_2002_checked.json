@@ -1,0 +1,71 @@
+{
+  "id": "embodiedcity_2002",
+  "instruction": "I need to find a shaded spot under a tree against the wall to cool off.",
+  "start": [
+    6954.02978515625,
+    -3852.991455078125,
+    -0.41850119829177856
+  ],
+  "start_yaw": -17.02,
+  "end": [
+    6995.302734375,
+    -3860.964111328125,
+    -1.9240473508834839
+  ],
+  "end_yaw": -6.499860132156281,
+  "check_status": "Qualified",
+  "check_comment": "ok",
+  "check_time": "2026-05-12 12:43:13",
+  "trajectory": [
+    {
+      "x": 6954.03,
+      "y": -3852.99,
+      "z": -0.34,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 6963.59,
+      "y": -3855.92,
+      "z": -0.34,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6973.15,
+      "y": -3858.85,
+      "z": -0.34,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6982.72,
+      "y": -3861.77,
+      "z": -0.34,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6982.72,
+      "y": -3861.77,
+      "z": -0.34,
+      "action": "Yaw Right",
+      "granularity": "Medium"
+    },
+    {
+      "x": 6992.46,
+      "y": -3859.53,
+      "z": -0.34,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6992.46,
+      "y": -3859.53,
+      "z": -0.34,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 6
+}

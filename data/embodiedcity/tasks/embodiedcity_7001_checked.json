@@ -1,0 +1,176 @@
+{
+  "id": "embodiedcity_7001",
+  "instruction": "Identify the 'Gong' character on the ICBC building and coordinate a flight path to its overhead position.",
+  "start": [
+    6090.78662109375,
+    -3853.650146484375,
+    -22.1959171295166
+  ],
+  "start_yaw": -12.48,
+  "end": [
+    6221.58837890625,
+    -3849.44189453125,
+    -29.63934898376465
+  ],
+  "end_yaw": 2.4696850406824997,
+  "check_status": "Qualified",
+  "check_comment": "OK",
+  "check_time": "2026-05-12 10:22:30",
+  "trajectory": [
+    {
+      "x": 6090.79,
+      "y": -3853.65,
+      "z": -22.17,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 6100.55,
+      "y": -3855.81,
+      "z": -22.18,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6110.31,
+      "y": -3857.97,
+      "z": -22.15,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6120.08,
+      "y": -3860.13,
+      "z": -22.13,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6129.84,
+      "y": -3862.29,
+      "z": -22.12,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6139.6,
+      "y": -3864.45,
+      "z": -22.11,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6149.37,
+      "y": -3866.62,
+      "z": -22.11,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6151.53,
+      "y": -3856.85,
+      "z": -22.1,
+      "action": "Right",
+      "granularity": "Large"
+    },
+    {
+      "x": 6153.69,
+      "y": -3847.09,
+      "z": -22.1,
+      "action": "Right",
+      "granularity": "Large"
+    },
+    {
+      "x": 6163.45,
+      "y": -3849.25,
+      "z": -22.09,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6173.22,
+      "y": -3851.41,
+      "z": -22.09,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6182.98,
+      "y": -3853.57,
+      "z": -22.09,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6192.75,
+      "y": -3855.73,
+      "z": -22.09,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6194.91,
+      "y": -3845.97,
+      "z": -22.09,
+      "action": "Right",
+      "granularity": "Large"
+    },
+    {
+      "x": 6197.07,
+      "y": -3836.2,
+      "z": -22.08,
+      "action": "Right",
+      "granularity": "Large"
+    },
+    {
+      "x": 6206.83,
+      "y": -3838.37,
+      "z": -22.08,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6216.6,
+      "y": -3840.53,
+      "z": -22.08,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6226.36,
+      "y": -3842.69,
+      "z": -22.08,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6226.36,
+      "y": -3842.69,
+      "z": -27.07,
+      "action": "Up",
+      "granularity": "Medium"
+    },
+    {
+      "x": 6226.36,
+      "y": -3842.69,
+      "z": -32.02,
+      "action": "Up",
+      "granularity": "Medium"
+    },
+    {
+      "x": 6224.2,
+      "y": -3852.45,
+      "z": -31.96,
+      "action": "Left",
+      "granularity": "Large"
+    },
+    {
+      "x": 6224.2,
+      "y": -3852.45,
+      "z": -31.96,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 21
+}

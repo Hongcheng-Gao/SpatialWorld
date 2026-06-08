@@ -1,0 +1,48 @@
+{
+  "task_id": "ai2thor03061",
+  "task_name": "Store washed tomatoe",
+  "instruction": "I've washed this tomato. Please put it in the refrigerator and remember to close the door.",
+  "golden_actions": {
+    "steps": 14,
+    "actions": [
+      "RotateRight(90)",
+      "MoveAhead(1)",
+      "PickupObject(Tomato)",
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveAhead(1)",
+      "MoveAhead(1)",
+      "RotateLeft(90)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.25)",
+      "OpenObject(Fridge)",
+      "PutObject(Fridge)",
+      "CloseObject(Fridge)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan27",
+  "target_object_types": [
+    "Fridge",
+    "Tomato"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Tomato",
+      "receptacle_type": "Fridge"
+    },
+    {
+      "type": "object_state",
+      "object_type": "Fridge",
+      "state": "isOpen",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I've washed this tomato. Please put it in the refrigerator and remember to close the door.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

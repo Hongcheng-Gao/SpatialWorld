@@ -1,0 +1,41 @@
+{
+  "task_id": "ai2thor05547",
+  "task_name": "Open the bathroom door, turn off the lights",
+  "instruction": "I've finished my shower. Please open the bathroom door for me and turn off the lights. Thank you.",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "OpenObject(ShowerDoor)",
+      "MoveBack(0.5)",
+      "MoveLeft(0.5)",
+      "RotateLeft(90)",
+      "ToggleObjectOff(LightSwitch)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan428",
+  "target_object_types": [
+    "ShowerDoor",
+    "LightSwitch"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "ShowerDoor",
+      "field": "isOpen",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "LightSwitch",
+      "field": "isToggled",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I've finished my shower. Please open the bathroom door for me and turn off the lights. Thank you.",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

@@ -1,0 +1,12 @@
+{
+  "scene": "FloorPlan214",
+  "actions": [
+    "MoveLeft(0.25)",
+    "MoveLeft(0.25)",
+    "MoveAhead(0.5)",
+    "LookDown",
+    "DirtyObject(Bowl)",
+    "DirtyObject(Plate)",
+    "Done"
+  ]
+}

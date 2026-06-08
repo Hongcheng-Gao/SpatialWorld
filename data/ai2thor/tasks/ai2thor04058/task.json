@@ -1,0 +1,32 @@
+{
+  "task_id": "ai2thor04058",
+  "task_name": "Turn on laptop",
+  "instruction": "I want to work on the sofa, please turn on my laptop.",
+  "golden_actions": {
+    "steps": 4,
+    "actions": [
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "ToggleObjectOn(Laptop)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan212",
+  "target_object_types": [
+    "Laptop"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Laptop",
+      "state": "isToggled",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to work on the sofa, please turn on my laptop.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Study and Work",
+  "Level": "Level3 Hybrid"
+}

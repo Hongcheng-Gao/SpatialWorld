@@ -1,0 +1,42 @@
+{
+  "task_id": "ai2thor05528",
+  "task_name": "Switch on the TV and laptop",
+  "instruction": "I'd like to work and watch TV at the same time. Could you please help me turn on the laptop and then the TV?",
+  "golden_actions": {
+    "steps": 7,
+    "actions": [
+      "ToggleObjectOn(Laptop)",
+      "RotateRight(180)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "ToggleObjectOn(Television)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan219",
+  "target_object_types": [
+    "Laptop",
+    "Television"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Laptop",
+      "field": "isToggled",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Television",
+      "field": "isToggled",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'd like to work and watch TV at the same time. Could you please help me turn on the laptop and then the TV?",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "Study and Work",
+  "Level": "Level3"
+}

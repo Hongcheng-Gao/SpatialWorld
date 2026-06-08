@@ -1,0 +1,46 @@
+{
+  "task_id": "procthor215",
+  "task_name": "Enhance kitchen decor with book",
+  "instruction": "I want to decorate the kitchen. Please pick up one book and move it to the kitchen.",
+  "golden_actions": {
+    "steps": 19,
+    "actions": [
+      "LookDown",
+      "RotateLeft(90)",
+      "RotateLeft(90)",
+      "MoveRight(1.0)",
+      "MoveRight(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "PickupObject(Book)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveLeft(1.0)",
+      "MoveLeft(1.0)",
+      "MoveLeft(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "Done"
+    ]
+  },
+  "scene_index": 345,
+  "target_object_types": [
+    "Book"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_room",
+      "object_type": "Book",
+      "room_type": "Kitchen"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to decorate the kitchen. Please pick up one book and move it to the kitchen.",
+  "max_steps": 48,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

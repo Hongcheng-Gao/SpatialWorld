@@ -1,0 +1,34 @@
+{
+  "task_id": "ai2thor03030",
+  "task_name": "Turn off kitchen lights",
+  "instruction": "I'm leaving the kitchen, please turn off all the lights.",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "MoveAhead(0.25)",
+      "RotateLeft(90)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.25)",
+      "ToggleObjectOff(LightSwitch)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan21",
+  "target_object_types": [
+    "LightSwitch"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "LightSwitch",
+      "state": "isToggled",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm leaving the kitchen, please turn off all the lights.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

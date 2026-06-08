@@ -1,0 +1,55 @@
+{
+  "task_id": "carla00319",
+  "task_name": "Drive to the final lamppost",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "vehicle",
+  "instruction": "Please keep going straight on this road until you reach the lamppost marked with a red box before the next intersection.",
+  "golden_actions": {
+    "steps": 12,
+    "actions": [
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "Done"
+    ]
+  },
+  "scene": "Town03",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "polygon_area",
+    "target_polygon": [
+      [
+        175.97811889648438,
+        76.13075256347656,
+        0.1498246192932129
+      ],
+      [
+        178.03497314453125,
+        76.13075256347656,
+        0.1498246192932129
+      ],
+      [
+        178.03497314453125,
+        78.43145751953125,
+        0.1498246192932129
+      ],
+      [
+        175.97811889648438,
+        78.43145751953125,
+        0.1498246192932129
+      ]
+    ],
+    "threshold_label": "loose"
+  },
+  "max_steps": 30
+}

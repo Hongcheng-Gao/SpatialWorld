@@ -1,0 +1,56 @@
+{
+  "task_id": "procthor616",
+  "task_name": "Open the faucet",
+  "instruction": "I am going to wash my hands. Please navigate to the bathroom and turn on the faucet there.",
+  "golden_actions": {
+    "steps": 25,
+    "actions": [
+      "MoveLeft(0.5)",
+      "MoveLeft(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveLeft(1)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "MoveLeft(1)",
+      "MoveLeft(1)",
+      "MoveLeft(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "RotateRight(90)",
+      "MoveLeft(0.25)",
+      "MoveLeft(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.25)",
+      "MoveRight(0.5)",
+      "MoveAhead(1.0)",
+      "ToggleObjectOn(Faucet)",
+      "Done"
+    ]
+  },
+  "scene_index": 10,
+  "target_object_types": [
+    "Faucet"
+  ],
+  "success_conditions": [
+    {
+      "type": "agent_in_room",
+      "room_type": "bathroom"
+    },
+    {
+      "type": "object_state",
+      "object_type": "Faucet",
+      "state": "isToggled"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I am going to wash my hands.Please navigate to the bathroom and turn on the faucet there.",
+  "max_steps": 92,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

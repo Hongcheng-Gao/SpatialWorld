@@ -1,0 +1,48 @@
+{
+  "task_id": "ai2thor05070",
+  "task_name": "Move the saltshaker to the diningtable.",
+  "instruction": "The soup is a bit bland, please move the salt shaker to the dining table.",
+  "golden_actions": {
+    "steps": 13,
+    "actions": [
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "PickupObject(SaltShaker)",
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveLeft(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveRight(0.5)",
+      "PutObject(DiningTable)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan16",
+  "target_object_types": [
+    "CounterTop",
+    "DiningTable",
+    "SaltShaker"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "SaltShaker",
+      "receptacle_type": "DiningTable",
+      "value": true
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "SaltShaker",
+      "receptacle_type": "CounterTop",
+      "value": false
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "The soup is a bit bland, please move the salt shaker to the dining table.",
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3"
+}

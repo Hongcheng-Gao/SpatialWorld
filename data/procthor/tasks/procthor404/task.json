@@ -1,0 +1,64 @@
+{
+  "task_id": "procthor404",
+  "task_name": "Dish Sponge Retrieval for Cleaning",
+  "instruction": "I want to clean the desk in the bedroom. Please go to the bathroom, get a dish sponge, and bring it to the bedroom.",
+  "golden_actions": {
+    "steps": 37,
+    "actions": [
+      "MoveRight(1.0)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateLeft(90)",
+      "LookDown",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "MoveRight(1.0)",
+      "MoveAhead(0.25)",
+      "PickupObject(DishSponge)",
+      "RotateLeft(90)",
+      "MoveAhead(0.5)",
+      "MoveLeft(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "RotateLeft(90)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveLeft(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "RotateRight(90)",
+      "MoveLeft(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "Done"
+    ]
+  },
+  "scene_index": 401,
+  "target_object_types": [
+    "DishSponge"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_room",
+      "object_type": "DishSponge",
+      "room_type": "Bedroom"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to clean the desk in the bedroom. Please go to the bathroom, get a dish sponge, and bring it to the bedroom.",
+  "max_steps": 84,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

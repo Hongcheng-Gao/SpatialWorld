@@ -1,0 +1,50 @@
+{
+  "task_id": "ai2thor05071",
+  "task_name": "Move the ladle to the diningtable.",
+  "instruction": "Dinner is served, so please move the ladle to the dining table.",
+  "golden_actions": {
+    "steps": 15,
+    "actions": [
+      "RotateRight(90)",
+      "MoveLeft(1.0)",
+      "MoveAhead(1.0)",
+      "PickupObject(Ladle)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveRight(1.0)",
+      "PutObject(DiningTable)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan16",
+  "target_object_types": [
+    "CounterTop",
+    "DiningTable",
+    "Ladle"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Ladle",
+      "receptacle_type": "DiningTable",
+      "value": true
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Ladle",
+      "receptacle_type": "CounterTop",
+      "value": false
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "Dinner is served, so please move the ladle to the dining table.",
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3"
+}

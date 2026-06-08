@@ -1,0 +1,55 @@
+{
+  "task_id": "ai2thor04043",
+  "task_name": "Phone to bed",
+  "instruction": "I'd like to use my phone in bed for a while. Please turn it on and place it on the bed, and also clean the bed.",
+  "golden_actions": {
+    "steps": 14,
+    "actions": [
+      "RotateLeft(90)",
+      "RotateLeft(90)",
+      "MoveRight(0.5)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "ToggleObjectOn(CellPhone)",
+      "PickupObject(CellPhone)",
+      "MoveBack(0.25)",
+      "RotateRight(90)",
+      "CleanObject(Bed)",
+      "MoveAhead(0.25)",
+      "PutObject(Bed)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan324",
+  "target_object_types": [
+    "CellPhone",
+    "Bed"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "CellPhone",
+      "receptacle_type": "Bed",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "CellPhone",
+      "state": "isToggled",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Bed",
+      "state": "isDirty",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'd like to use my phone in bed for a while. Please turn it on and place it on the bed, and also clean the bed.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

@@ -1,0 +1,50 @@
+{
+  "task_id": "ai2thor05559",
+  "task_name": "Put my watch on the dresser and grab my laptop so I don’t forget it.",
+  "instruction": "I am heading out to work. Could you do me a quick favor? Grab my watch from the side table and set it on the dresser, then bring my laptop along so I do not forget it.",
+  "golden_actions": {
+    "steps": 7,
+    "actions": [
+      "PickupObject(Watch)",
+      "MoveBack(0.5)",
+      "MoveLeft(1.0)",
+      "MoveLeft(1.0)",
+      "PutObject(Dresser)",
+      "PickupObject(Laptop)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan213",
+  "target_object_types": [
+    "Dresser",
+    "Laptop",
+    "SideTable",
+    "Watch"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Laptop",
+      "state": "isPickedUp",
+      "value": true
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Watch",
+      "receptacle_type": "Dresser",
+      "value": true
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Watch",
+      "receptacle_type": "SideTable",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I am heading out to work. Could you do me a quick favor? Grab my watch from the side table and set it on the dresser, then bring my laptop along so I do not forget it.",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

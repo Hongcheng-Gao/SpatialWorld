@@ -1,0 +1,46 @@
+{
+  "task_id": "ai2thor03047",
+  "task_name": "Cook potato in pot",
+  "instruction": "I want to eat a potato. Please put the potato in the pot and cook it.",
+  "golden_actions": {
+    "steps": 12,
+    "actions": [
+      "RotateLeft(90)",
+      "MoveAhead(0.25)",
+      "PickupObject(Potato)",
+      "MoveAhead(0.25)",
+      "RotateLeft(90)",
+      "MoveAhead(0.5)",
+      "MoveRight(0.25)",
+      "MoveBack(0.25)",
+      "MoveRight(0.25)",
+      "PutObject(Pot)",
+      "CookObject(Potato)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan24",
+  "target_object_types": [
+    "Pot",
+    "Potato"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Potato",
+      "state": "isCooked",
+      "value": true
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Potato",
+      "receptacle_type": "Pot"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to eat a potato. Please put the potato in the pot and cook it.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

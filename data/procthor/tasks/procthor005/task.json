@@ -1,0 +1,52 @@
+{
+  "task_id": "procthor005",
+  "task_name": "Get Bowl for Rice",
+  "instruction": "I'm going to serve the rice. Please pick up your plate and stand near the counter.",
+  "golden_actions": {
+    "steps": 18,
+    "actions": [
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateLeft(90)",
+      "MoveAhead(0.5)",
+      "LookDown",
+      "PickupObject(Plate)",
+      "RotateRight(90)",
+      "MoveRight(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "Done"
+    ]
+  },
+  "scene_index": 110,
+  "target_object_types": [
+    "Plate",
+    "CounterTop"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Plate",
+      "state": "isPickedUp",
+      "value": true
+    },
+    {
+      "type": "agent_near_object",
+      "object_type": "CounterTop",
+      "distance": 1.5
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm going to serve the rice. Please pick up your plate and stand near the counter.",
+  "max_steps": 46,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

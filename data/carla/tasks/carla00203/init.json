@@ -1,0 +1,14 @@
+{
+  "scene": "Town04",
+  "weather": "ClearNoon",
+  "initial_location": [
+    248.58949279785156,
+    -307.2780456542969,
+    0.9558485150337219
+  ],
+  "initial_rotation": [
+    0.0,
+    0.0,
+    0.0
+  ]
+}

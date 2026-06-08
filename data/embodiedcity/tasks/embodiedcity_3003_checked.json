@@ -1,0 +1,49 @@
+{
+  "id": "embodiedcity_3003",
+  "instruction": "I want to confirm the location of the road facilities to avoid going the wrong way. Please move to the manhole cover ahead.",
+  "start": [
+    7789.85595703125,
+    -3678.174560546875,
+    -6.834911346435547
+  ],
+  "end": [
+    7798.361328125,
+    -3666.141845703125,
+    -0.8323878645896912
+  ],
+  "check_status": "Qualified",
+  "check_comment": "OK",
+  "check_time": "2026-05-12 12:55:22",
+  "trajectory": [
+    {
+      "x": 7789.86,
+      "y": -3678.17,
+      "z": -6.76,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 7789.86,
+      "y": -3678.17,
+      "z": -1.77,
+      "action": "Down",
+      "granularity": "Medium"
+    },
+    {
+      "x": 7795.94,
+      "y": -3670.24,
+      "z": -1.68,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7795.94,
+      "y": -3670.24,
+      "z": -1.68,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "start_yaw": 52.5,
+  "golden_actions_count": 3
+}

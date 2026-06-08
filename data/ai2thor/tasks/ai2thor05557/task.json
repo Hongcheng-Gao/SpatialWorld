@@ -1,0 +1,46 @@
+{
+  "task_id": "ai2thor05557",
+  "task_name": "Fill the kettle with coffee, then pick it up and place it on the coffee table",
+  "instruction": "I'm about to start work—please fill the kettle with coffee, then pick it up and place it on the coffee table.",
+  "golden_actions": {
+    "steps": 4,
+    "actions": [
+      "FillObjectWithLiquid(WateringCan, coffee)",
+      "PickupObject(WateringCan)",
+      "PutObject(CoffeeTable)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan212",
+  "target_object_types": [
+    "CoffeeTable",
+    "TvStand",
+    "WateringCan"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "WateringCan",
+      "state": "isFilledWithLiquid",
+      "value": true,
+      "liquid": "coffee"
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "WateringCan",
+      "receptacle_type": "TvStand",
+      "value": false
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "WateringCan",
+      "receptacle_type": "CoffeeTable"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm about to start work—please fill the kettle with coffee, then pick it up and place it on the coffee table.",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "Study and Work",
+  "Level": "Level3"
+}

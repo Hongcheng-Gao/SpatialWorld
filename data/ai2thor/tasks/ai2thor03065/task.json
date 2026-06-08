@@ -1,0 +1,53 @@
+{
+  "task_id": "ai2thor03065",
+  "task_name": "Make coffee",
+  "instruction": "I'd like some coffee. Please put a clean mug into the coffee machine and turn it on so the mug is filled with coffee.",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "MoveAhead(0.5)",
+      "CleanObject(Mug)",
+      "PickupObject(Mug)",
+      "PutObject(CoffeeMachine)",
+      "ToggleObjectOn(CoffeeMachine)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan28",
+  "target_object_types": [
+    "CoffeeMachine",
+    "Mug"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "CoffeeMachine",
+      "state": "isToggled",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Mug",
+      "state": "isFilledWithLiquid",
+      "value": true,
+      "liquid": "coffee"
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Mug",
+      "receptacle_type": "CoffeeMachine"
+    },
+    {
+      "type": "object_state",
+      "object_type": "Mug",
+      "state": "isDirty",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'd like some coffee. Please put a clean mug into the coffee machine and turn it on so the mug is filled with coffee.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level2 Interaction"
+}

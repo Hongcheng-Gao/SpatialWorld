@@ -1,0 +1,111 @@
+# Vehicle rgb+attach: scripts/carla/interact_carla.py; walker: rgb_camera_walker like interact_walker.py
+
+api:
+  max_retries: 3
+
+env:
+  type: carla
+  host: null
+  port: 2000
+  timeout: 10.0
+  map: Town01
+  weather: ClearNoon
+  sensors:
+    rgb_camera:
+      width: 640
+      height: 480
+      fov: 90
+      attach:
+        x: 1.5
+        y: 0.0
+        z: 2.4
+        pitch: -10.0
+        yaw: 0.0
+        roll: 0.0
+    rgb_camera_walker:
+      width: 640
+      height: 360
+      fov: 60
+      attach:
+        x: 0.0
+        y: 0.0
+        z: 1.7
+        pitch: 0.0
+        yaw: 0.0
+        roll: 0.0
+    depth_camera:
+      enabled: false
+    lidar:
+      enabled: false
+
+max_steps: 100
+
+context_management:
+  max_trajectory_length: 20
+  enable_auto_truncation: true
+  enable_long_term_summary: false
+  short_term_history_window_size: 29
+
+model:
+  vlm:
+    provider: openai
+    model_name: "Gemini 3-Pro-Preview"
+    temperature: 1.0
+    top_p: 0.9
+    max_tokens: 4096
+    base_url: null
+    api_key: null
+
+logging:
+  stdout_verbose: true
+  save_step_images: true
+  log_level: INFO
+
+actions:
+  throttle_range: [0.0, 1.0]
+  steer_range: [-1.0, 1.0]
+  brake_range: [0.0, 1.0]
+
+reward:
+  success_reward: 10.0
+  step_penalty: -0.01
+  collision_penalty: -1.0
+  lane_invasion_penalty: -0.5
+
+experiment:
+  num_episodes: 1
+  output_dir: outputs
+
+task_presets:
+  navigate_to_waypoint:
+    description: "Navigate to waypoint along the road."
+    max_steps: 100
+    map: Town01
+    waypoint:
+      x: 100.0
+      y: 50.0
+      z: 0.5
+    success_condition:
+      type: distance_to_waypoint
+      threshold: 5.0
+
+  follow_lane:
+    description: "Follow current lane at stable speed."
+    max_steps: 200
+    map: Town01
+    target_speed: 30.0
+    success_condition:
+      type: lane_following
+      min_distance: 500.0
+
+  avoid_obstacles:
+    description: "Reach goal while avoiding obstacles."
+    max_steps: 150
+    map: Town02
+    waypoint:
+      x: 150.0
+      y: 80.0
+      z: 0.5
+    success_condition:
+      type: distance_to_waypoint
+      threshold: 5.0

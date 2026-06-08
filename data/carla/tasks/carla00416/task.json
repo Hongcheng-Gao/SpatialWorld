@@ -1,0 +1,49 @@
+{
+  "task_id": "carla00416",
+  "task_name": "Go to the red-framed street lamp in the park.",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "walker",
+  "instruction": "Can you see the shop inside the red box? Walk over there. I'm a bit hungry.",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "TurnRight(degrees=90)",
+      "TurnRight(degrees=30)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "Done"
+    ]
+  },
+  "scene": "Town02",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "polygon_area",
+    "target_polygon": [
+      [
+        0.7350845856438308,
+        285.5640031982987,
+        -0.7989692687988281
+      ],
+      [
+        -4.586088065873337,
+        254.44228500748022,
+        -0.7989692687988281
+      ],
+      [
+        15.45408135057695,
+        251.01582889805997,
+        -0.7989692687988281
+      ],
+      [
+        20.77525400209412,
+        282.1375470888784,
+        -0.7989692687988281
+      ]
+    ],
+    "threshold_label": "medium"
+  },
+  "max_steps": 50
+}

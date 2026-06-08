@@ -1,0 +1,38 @@
+{
+  "task_id": "ai2thor04222",
+  "task_name": "Work ready - lamp and computer",
+  "instruction": "I need to get ready to work. Please turn on my desk lamp and turn on my computer.",
+  "golden_actions": {
+    "steps": 3,
+    "actions": [
+      "ToggleObjectOn(DeskLamp)",
+      "ToggleObjectOn(Laptop)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan320",
+  "target_object_types": [
+    "DeskLamp",
+    "Laptop"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "DeskLamp",
+      "state": "isToggled",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Laptop",
+      "state": "isToggled",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I need to get ready to work. Please turn on my desk lamp and turn on my computer.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Study and Work",
+  "Level": "Level3 Hybrid"
+}

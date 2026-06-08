@@ -1,0 +1,34 @@
+{
+  "task_id": "ai2thor03008",
+  "task_name": "Put egg in pot",
+  "instruction": "I'm about to cook. Please put the egg in the pot.",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "PickupObject(Egg)",
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveAhead(0.25)",
+      "PutObject(Pot)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan12",
+  "target_object_types": [
+    "Egg",
+    "Pot"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Egg",
+      "receptacle_type": "Pot"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm about to cook. Please put the egg in the pot.",
+  "max_steps": 30,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

@@ -1,0 +1,40 @@
+{
+  "task_id": "virtualhome00119",
+  "task_name": "Get a bottle of dish soap and turn on the faucet.",
+  "instruction": "I want to clean the kitchen. Please get me a bottle of dish soap and then turn on the faucet.",
+  "golden_actions": {
+    "steps": 8,
+    "actions": [
+      "TurnLeft(small)",
+      "WalkForward(small)",
+      "WalkForward(small)",
+      "LookDown",
+      "TurnRight(normal)",
+      "Grab(dishwashingliquid)",
+      "SwitchOn(faucet)",
+      "Done"
+    ]
+  },
+  "scene": "0",
+  "target_object_types": [
+    "dishwashingliquid",
+    "faucet"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "dishwashingliquid",
+      "state": "isPickedUp",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "faucet",
+      "state": "isToggled",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to clean the kitchen. Please get me a bottle of dish soap and then turn on the faucet.",
+  "max_steps": 18
+}

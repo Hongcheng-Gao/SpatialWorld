@@ -1,0 +1,48 @@
+{
+  "task_id": "carla00412",
+  "task_name": "Go to the security booth by the lawn.",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "walker",
+  "instruction": "Walk to the security booth in front of this lawn. I need to find the guard.",
+  "golden_actions": {
+    "steps": 5,
+    "actions": [
+      "WalkForward(distance=5)",
+      "TurnRight(degrees=30)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=2.5)",
+      "Done"
+    ]
+  },
+  "scene": "Town05",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "polygon_area",
+    "target_polygon": [
+      [
+        -63.68436050415039,
+        -67.25613403320312,
+        0.17506587505340576
+      ],
+      [
+        -60.9389762878418,
+        -67.25613403320312,
+        0.17506587505340576
+      ],
+      [
+        -60.9389762878418,
+        -64.94175720214844,
+        0.17506587505340576
+      ],
+      [
+        -63.68436050415039,
+        -64.94175720214844,
+        0.17506587505340576
+      ]
+    ],
+    "threshold_label": "medium"
+  },
+  "max_steps": 50
+}

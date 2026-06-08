@@ -1,0 +1,64 @@
+{
+  "id": "embodiedcity_5007",
+  "instruction": "Please proceed to the very top-left corner of the iron gate to your left.",
+  "start": [
+    7808.08203125,
+    -3596.954833984375,
+    -4.869058132171631
+  ],
+  "start_yaw": 54.91,
+  "end": [
+    7827.166015625,
+    -3602.148193359375,
+    -4.140632629394531
+  ],
+  "end_yaw": 49.190707666275706,
+  "check_status": "Qualified",
+  "check_comment": "OK",
+  "check_time": "2026-05-12 12:52:33",
+  "trajectory": [
+    {
+      "x": 7808.08,
+      "y": -3596.95,
+      "z": -4.81,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 7808.08,
+      "y": -3596.95,
+      "z": -4.8,
+      "action": "Yaw Left",
+      "granularity": "Large"
+    },
+    {
+      "x": 7816.26,
+      "y": -3602.7,
+      "z": -4.71,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7824.45,
+      "y": -3608.45,
+      "z": -4.66,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7827.32,
+      "y": -3604.36,
+      "z": -4.62,
+      "action": "Right",
+      "granularity": "Medium"
+    },
+    {
+      "x": 7827.32,
+      "y": -3604.36,
+      "z": -4.62,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 5
+}

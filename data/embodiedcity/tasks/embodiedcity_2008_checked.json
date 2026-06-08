@@ -1,0 +1,73 @@
+{
+  "id": "embodiedcity_2008",
+  "instruction": "I'm tired from walking around the park, so I want to find a chair to sit on.",
+  "start": [
+    7776.85107421875,
+    -3539.256591796875,
+    -2.920790433883667
+  ],
+  "start_yaw": -94.09,
+  "end": [
+    7754.5029296875,
+    -3563.56396484375,
+    -0.6867200136184692
+  ],
+  "end_yaw": 160.1560218897257,
+  "check_status": "Qualified",
+  "check_comment": "ok",
+  "check_time": "2026-05-12 12:47:47",
+  "trajectory": [
+    {
+      "x": 7776.85,
+      "y": -3539.26,
+      "z": -2.86,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 7776.85,
+      "y": -3539.26,
+      "z": -2.86,
+      "action": "Yaw Left",
+      "granularity": "Medium"
+    },
+    {
+      "x": 7771.25,
+      "y": -3547.54,
+      "z": -2.77,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7765.64,
+      "y": -3555.82,
+      "z": -2.7,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7765.64,
+      "y": -3555.82,
+      "z": -2.62,
+      "action": "Yaw Left",
+      "granularity": "Medium"
+    },
+    {
+      "x": 7756.65,
+      "y": -3560.19,
+      "z": -2.54,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7756.65,
+      "y": -3560.19,
+      "z": -2.54,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "record_start_yaw_actual": -94.09,
+  "record_start_yaw_diff": -0.0,
+  "golden_actions_count": 6
+}

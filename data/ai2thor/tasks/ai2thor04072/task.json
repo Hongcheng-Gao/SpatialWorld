@@ -1,0 +1,47 @@
+{
+  "task_id": "ai2thor04072",
+  "task_name": "Sleep - TV off and pillow",
+  "instruction": "I want to sleep. Please turn off the TV and bring a pillow.",
+  "golden_actions": {
+    "steps": 12,
+    "actions": [
+      "ToggleObjectOff(Television)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "LookDown",
+      "PickupObject(Pillow)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan215",
+  "target_object_types": [
+    "Television",
+    "Pillow"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Pillow",
+      "state": "isPickedUp",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Television",
+      "state": "isToggled",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to sleep. Please turn off the TV and bring a pillow.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

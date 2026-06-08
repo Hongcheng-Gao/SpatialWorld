@@ -1,0 +1,32 @@
+{
+  "task_id": "virtualhome00014",
+  "task_name": "Turn off the ceiling light.",
+  "instruction": "Can you see the ceiling light switch by the door? Please walk over and turn it off. I'm going to sleep.",
+  "golden_actions": {
+    "steps": 7,
+    "actions": [
+      "WalkForward(large)",
+      "TurnLeft(normal)",
+      "LookDown",
+      "TurnRight(small)",
+      "WalkForward(small)",
+      "SwitchOff(lightswitch)",
+      "Done"
+    ]
+  },
+  "scene": "2",
+  "target_object_types": [
+    "lightswitch"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "lightswitch",
+      "state": "isToggled",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "Can you see the ceiling light switch by the door? Please walk over and turn it off. I'm going to sleep.",
+  "max_steps": 25
+}

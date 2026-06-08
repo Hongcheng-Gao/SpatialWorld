@@ -1,0 +1,42 @@
+{
+  "task_id": "procthor608",
+  "task_name": "Turn on the laptop",
+  "instruction": "I want to study. Please move to the living room and turn on a laptop.",
+  "golden_actions": {
+    "steps": 10,
+    "actions": [
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateLeft(90)",
+      "MoveRight(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "ToggleObjectOn(Laptop)",
+      "Done"
+    ]
+  },
+  "scene_index": 333,
+  "target_object_types": [
+    "Laptop"
+  ],
+  "success_conditions": [
+    {
+      "type": "agent_in_room",
+      "room_type": "LivingRoom"
+    },
+    {
+      "type": "object_state",
+      "object_type": "Laptop",
+      "state": "isToggled",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to study. Please move to the living room and turn on a laptop.",
+  "max_steps": 30,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

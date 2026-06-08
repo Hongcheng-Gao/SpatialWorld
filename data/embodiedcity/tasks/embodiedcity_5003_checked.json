@@ -1,0 +1,64 @@
+{
+  "id": "embodiedcity_5003",
+  "instruction": "I heard strange sounds coming from beneath the manhole cover at that nearby T-junction. Go over there and investigate it for me.",
+  "start": [
+    7798.13818359375,
+    -3655.663330078125,
+    -14.41779613494873
+  ],
+  "start_yaw": 78.16,
+  "end": [
+    7798.40771484375,
+    -3664.974609375,
+    -1.1858713626861572
+  ],
+  "end_yaw": -82.99666673224615,
+  "check_status": "Qualified",
+  "check_comment": "OK",
+  "check_time": "2026-05-12 12:49:27",
+  "trajectory": [
+    {
+      "x": 7807.93,
+      "y": -3657.72,
+      "z": -3.98,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 7798.14,
+      "y": -3655.66,
+      "z": -14.33,
+      "action": "Yaw Left",
+      "granularity": "Large"
+    },
+    {
+      "x": 7798.14,
+      "y": -3655.66,
+      "z": -14.26,
+      "action": "Yaw Left",
+      "granularity": "Large"
+    },
+    {
+      "x": 7798.14,
+      "y": -3655.66,
+      "z": -4.18,
+      "action": "Down",
+      "granularity": "Large"
+    },
+    {
+      "x": 7796.09,
+      "y": -3665.45,
+      "z": -4.09,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7796.09,
+      "y": -3665.45,
+      "z": -4.09,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 5
+}

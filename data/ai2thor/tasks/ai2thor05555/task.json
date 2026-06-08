@@ -1,0 +1,40 @@
+{
+  "task_id": "ai2thor05555",
+  "task_name": "Pick up the candle next to the bathtub and place it on the countertop to keep water from splashing onto it",
+  "instruction": "I'm about to start my bath—please pick up the candle next to the bathtub and place it on the countertop to keep water from splashing onto it.",
+  "golden_actions": {
+    "steps": 5,
+    "actions": [
+      "PickupObject(Candle)",
+      "MoveBack(1.0)",
+      "MoveRight(0.75)",
+      "PutObject(CounterTop)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan402",
+  "target_object_types": [
+    "Candle",
+    "CounterTop",
+    "Bathtub"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Candle",
+      "receptacle_type": "CounterTop"
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Candle",
+      "receptacle_type": "Bathtub",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm about to start my bath—please pick up the candle next to the bathtub and place it on the countertop to keep water from splashing onto it.",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

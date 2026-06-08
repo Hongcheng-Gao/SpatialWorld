@@ -1,0 +1,38 @@
+{
+  "task_id": "ai2thor05579",
+  "task_name": "Please get the candle from under the counter and place it up top, then light it",
+  "instruction": "I'm feeling chilly after my shower. First, could you get the candle from under the counter and place it up top? Then, go ahead and light it, please",
+  "golden_actions": {
+    "steps": 4,
+    "actions": [
+      "PickupObject(Candle)",
+      "PutObject(CounterTop)",
+      "ToggleObjectOn(Candle)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan415",
+  "target_object_types": [
+    "Candle",
+    "CounterTop"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Candle",
+      "field": "isToggled",
+      "value": true
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Candle",
+      "receptacle_type": "CounterTop"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm feeling chilly after my shower. First, could you get the candle from under the counter and place it up top? Then, go ahead and light it, please",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

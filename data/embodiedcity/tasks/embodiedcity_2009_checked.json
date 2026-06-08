@@ -1,0 +1,43 @@
+{
+  "id": "embodiedcity_2009",
+  "instruction": "I want to observe the shutters of the building ahead up close as soon as possible.",
+  "start": [
+    7775.75537109375,
+    -3570.104248046875,
+    -2.343334913253784
+  ],
+  "start_yaw": -45.18,
+  "end": [
+    7784.44140625,
+    -3577.010986328125,
+    -1.9770129919052124
+  ],
+  "end_yaw": -4.123992910664181,
+  "check_status": "Qualified",
+  "check_comment": "prompt",
+  "check_time": "2026-05-12 12:48:03",
+  "trajectory": [
+    {
+      "x": 7775.76,
+      "y": -3570.1,
+      "z": -2.27,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 7782.8,
+      "y": -3577.2,
+      "z": -2.28,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7782.8,
+      "y": -3577.2,
+      "z": -2.28,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 2
+}

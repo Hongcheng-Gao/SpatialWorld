@@ -1,0 +1,43 @@
+{
+  "task_id": "ai2thor05538",
+  "task_name": "Please pick up the watch and place it in the box",
+  "instruction": "I'm going to the gym and need to put my watch in the box—please pick up the watch and place it in the box",
+  "golden_actions": {
+    "steps": 7,
+    "actions": [
+      "PickupObject(Watch)",
+      "MoveBack(1.0)",
+      "MoveBack(0.25)",
+      "MoveRight(0.5)",
+      "RotateRight(180)",
+      "PutObject(Box)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan202",
+  "target_object_types": [
+    "Box",
+    "TVStand",
+    "Watch"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Watch",
+      "receptacle_type": "TVStand",
+      "value": false
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Watch",
+      "receptacle_type": "Box",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm going to the gym and need to put my watch in the box—please pick up the watch and place it in the box",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

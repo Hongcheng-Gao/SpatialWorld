@@ -1,0 +1,38 @@
+{
+  "task_id": "ai2thor05011",
+  "task_name": "Turn off the desk lamp",
+  "instruction": "It's not needed right now, so please turn off the desk lamp on the desk and confirm it's really off.",
+  "golden_actions": {
+    "steps": 10,
+    "actions": [
+      "MoveRight(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateRight(90)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "ToggleObjectOff(DeskLamp)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan311",
+  "target_object_types": [
+    "DeskLamp"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "DeskLamp",
+      "field": "isToggled",
+      "value": false
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "It's not needed right now, so please turn off the desk lamp on the desk and confirm it's really off.",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3"
+}

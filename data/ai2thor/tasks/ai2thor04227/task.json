@@ -1,0 +1,44 @@
+{
+  "task_id": "ai2thor04227",
+  "task_name": "Open book on armchair",
+  "instruction": "I'd like to read a book in the armchair. Please open the book and place it on the armchair.",
+  "golden_actions": {
+    "steps": 10,
+    "actions": [
+      "MoveRight(1.0)",
+      "OpenObject(Book)",
+      "PickupObject(Book)",
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveAhead(0.5)",
+      "MoveLeft(1.0)",
+      "LookDown",
+      "PutObject(ArmChair)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan321",
+  "target_object_types": [
+    "ArmChair",
+    "Book"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Book",
+      "receptacle_type": "ArmChair"
+    },
+    {
+      "type": "object_state",
+      "object_type": "Book",
+      "state": "isOpen",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'd like to read a book in the armchair. Please open the book and place it on the armchair.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

@@ -1,0 +1,41 @@
+{
+  "task_id": "ai2thor05551",
+  "task_name": "Take the paper towel from the sink counter and place it on the toilet",
+  "instruction": "I'm in a hurry to use the toilet—could you take the paper towel from the sink counter and place it on the toilet for me?",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "PickupObject(TissueBox)",
+      "MoveLeft(1.0)",
+      "RotateRight(180)",
+      "LookDown(30)",
+      "PutObject(Toilet)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan425",
+  "target_object_types": [
+    "TissueBox",
+    "Toilet",
+    "CounterTop"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "TissueBox",
+      "receptacle_type": "CounterTop",
+      "value": false
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "TissueBox",
+      "receptacle_type": "Toilet"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm in a hurry to use the toilet—could you take the paper towel from the sink counter and place it on the toilet for me?",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

@@ -1,0 +1,39 @@
+{
+  "task_id": "ai2thor05068",
+  "task_name": "Slice the bread and pick up a piece",
+  "instruction": "I'm hungry, so please slice the bread as instructed and keep the pieces together and then pick up one piece.",
+  "golden_actions": {
+    "steps": 4,
+    "actions": [
+      "MoveAhead(1.0)",
+      "SliceObject(Bread)",
+      "PickupObject(Bread)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan16",
+  "target_object_types": [
+    "Bread",
+    "BreadSliced",
+    "StoveKnob"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Bread",
+      "state": "isSliced",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "BreadSliced",
+      "state": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "I'm hungry, so please slice the bread as instructed and keep the pieces together and then pick up one piece.",
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3"
+}

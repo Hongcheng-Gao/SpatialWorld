@@ -1,0 +1,29 @@
+{
+  "task_id": "ai2thor04000",
+  "task_name": "Pick up cell phone",
+  "instruction": "I want to look up information on my phone. Please pick up the cell phone from the desk in the room.",
+  "golden_actions": {
+    "steps": 4,
+    "actions": [
+      "RotateRight(90)",
+      "MoveAhead(0.5)",
+      "PickupObject(CellPhone)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan302",
+  "target_object_types": [
+    "CellPhone"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "CellPhone",
+      "state": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to look up information on my phone. Please pick up the cell phone from the desk in the room.",
+  "max_steps": 30
+}

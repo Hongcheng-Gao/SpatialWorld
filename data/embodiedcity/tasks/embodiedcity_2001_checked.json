@@ -1,0 +1,50 @@
+{
+  "id": "embodiedcity_2001",
+  "instruction": "I have to dump my garbage, let me go find a trash can.",
+  "start": [
+    5738.5986328125,
+    -3566.650146484375,
+    -1.9518271684646606
+  ],
+  "start_yaw": 61.98,
+  "end": [
+    5747.16748046875,
+    -3553.65966796875,
+    -1.6075537204742432
+  ],
+  "end_yaw": -21.597452166692335,
+  "check_status": "Qualified",
+  "check_comment": "ok",
+  "check_time": "2026-05-12 12:40:11",
+  "trajectory": [
+    {
+      "x": 5738.6,
+      "y": -3566.65,
+      "z": -1.87,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 5743.3,
+      "y": -3557.82,
+      "z": -1.89,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5745.64,
+      "y": -3553.41,
+      "z": -1.82,
+      "action": "Forward",
+      "granularity": "Medium"
+    },
+    {
+      "x": 5745.64,
+      "y": -3553.41,
+      "z": -1.82,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 3
+}

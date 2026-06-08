@@ -1,0 +1,77 @@
+{
+  "task_id": "procthor101",
+  "task_name": "Put book in living room, stand by dining table",
+  "instruction": "I left a book in my room. Please pick up a book, place it in the living room, and then stand next to the dining table.",
+  "golden_actions": {
+    "steps": 40,
+    "actions": [
+      "MoveRight(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "RotateLeft(90)",
+      "MoveRight(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "RotateRight(90)",
+      "MoveAhead(0.25)",
+      "LookDown",
+      "MoveAhead(0.25)",
+      "MoveLeft(0.5)",
+      "PickupObject(Book)",
+      "RotateRight(90)",
+      "MoveRight(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "RotateRight(90)",
+      "MoveLeft(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateLeft(90)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "LookDown",
+      "MoveLeft(0.25)",
+      "MoveAhead(0.25)",
+      "PutObject(DiningTable)",
+      "Done"
+    ]
+  },
+  "scene_index": 3,
+  "target_object_types": [
+    "Book",
+    "DiningTable"
+  ],
+  "success_conditions": [
+    {
+      "type": "agent_in_room",
+      "room_type": "LivingRoom"
+    },
+    {
+      "type": "object_in_room",
+      "object_type": "Book",
+      "room_type": "LivingRoom"
+    },
+    {
+      "type": "agent_near_object",
+      "object_type": "DiningTable",
+      "distance": 1.35
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I left a book in my room. Please pick up a book, place it in the living room, and then stand next to the dining table.",
+  "max_steps": 90,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level1 Navigation"
+}

@@ -1,0 +1,49 @@
+{
+  "task_id": "ai2thor05548",
+  "task_name": "Pick up the soap bar, put it on the bathtub, and then open the shower curtain",
+  "instruction": "I'm about to hop in the shower. Could you grab the soap, drop it on the tub, and pull the curtain open for me?",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "PickupObject(SoapBar)",
+      "RotateRight(90)",
+      "PutObject(Bathtub)",
+      "MoveRight(0.5)",
+      "OpenObject(ShowerCurtain)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan427",
+  "target_object_types": [
+    "Bathtub",
+    "CounterTop",
+    "ShowerCurtain",
+    "SoapBar"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "ShowerCurtain",
+      "state": "isOpen",
+      "value": true
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "SoapBar",
+      "receptacle_type": "Bathtub",
+      "value": true
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "SoapBar",
+      "receptacle_type": "CounterTop",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm about to hop in the shower. Could you grab the soap, drop it on the tub, and pull the curtain open for me?",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

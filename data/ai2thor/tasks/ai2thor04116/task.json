@@ -1,0 +1,59 @@
+{
+  "task_id": "ai2thor04116",
+  "task_name": "Heat bread in microwave",
+  "instruction": "I'm hungry, please put the bread slices in the microwave to heat them up.",
+  "golden_actions": {
+    "steps": 18,
+    "actions": [
+      "RotateRight(90)",
+      "LookDown",
+      "MoveAhead(0.5)",
+      "SliceObject(Bread)",
+      "PickupObject(Bread)",
+      "MoveLeft(1.0)",
+      "MoveLeft(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateLeft(90)",
+      "MoveRight(0.5)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.5)",
+      "OpenObject(Microwave)",
+      "PutObject(Microwave)",
+      "CloseObject(Microwave)",
+      "ToggleObjectOn(Microwave)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan6",
+  "target_object_types": [
+    "Bread",
+    "BreadSliced",
+    "Microwave"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Bread",
+      "state": "isSliced",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Microwave",
+      "state": "isToggled",
+      "value": true
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "BreadSliced",
+      "receptacle_type": "Microwave"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm hungry, please put the bread slices in the microwave to heat them up.",
+  "max_steps": 60,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

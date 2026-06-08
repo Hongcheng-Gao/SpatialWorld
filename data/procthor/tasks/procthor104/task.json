@@ -1,0 +1,69 @@
+{
+  "task_id": "procthor104",
+  "task_name": "Bring candle to kitchen, wait by counter",
+  "instruction": "I need a candle for cooking in the kitchen. Please bring one candle from the living room and wait by any counter.",
+  "golden_actions": {
+    "steps": 31,
+    "actions": [
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "MoveRight(1.0)",
+      "MoveRight(1.0)",
+      "MoveRight(1.0)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.5)",
+      "MoveAhead(1.0)",
+      "LookDown",
+      "MoveAhead(0.5)",
+      "PickupObject(Candle)",
+      "RotateLeft(90)",
+      "RotateLeft(90)",
+      "MoveRight(1.0)",
+      "MoveRight(1.0)",
+      "MoveRight(0.5)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveLeft(1.0)",
+      "MoveLeft(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateRight(90)",
+      "MoveLeft(0.5)",
+      "Done"
+    ]
+  },
+  "scene_index": 5,
+  "target_object_types": [
+    "Candle",
+    "CounterTop"
+  ],
+  "success_conditions": [
+    {
+      "type": "agent_in_room",
+      "room_type": "Kitchen"
+    },
+    {
+      "type": "agent_near_object",
+      "object_type": "CounterTop",
+      "distance": 1.37
+    },
+    {
+      "type": "object_state",
+      "object_type": "Candle",
+      "state": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I need a candle for cooking in the kitchen. Please bring one candle from the living room and wait by any counter.",
+  "max_steps": 72,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level1 Navigation"
+}

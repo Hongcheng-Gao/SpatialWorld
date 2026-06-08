@@ -1,0 +1,39 @@
+{
+  "task_id": "ai2thor05074",
+  "task_name": "Slice the apple and bread",
+  "instruction": "I'm getting ready to eat, so please slice the apple as instructed and keep the pieces together and then slice the bread as instructed and keep the pieces together.",
+  "golden_actions": {
+    "steps": 5,
+    "actions": [
+      "RotateRight(90)",
+      "MoveLeft(0.5)",
+      "SliceObject(Apple)",
+      "SliceObject(Bread)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan17",
+  "target_object_types": [
+    "Apple",
+    "Bread"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Apple",
+      "state": "isSliced",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Bread",
+      "state": "isSliced",
+      "value": true
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "I'm getting ready to eat, so please slice the apple as instructed and keep the pieces together and then slice the bread as instructed and keep the pieces together.",
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3"
+}

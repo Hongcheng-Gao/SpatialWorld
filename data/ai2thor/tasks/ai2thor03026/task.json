@@ -1,0 +1,37 @@
+{
+  "task_id": "ai2thor03026",
+  "task_name": "Bring salt shaker",
+  "instruction": "I think this dish is a bit too bland. Please bring the salt shaker to the table.",
+  "golden_actions": {
+    "steps": 8,
+    "actions": [
+      "MoveAhead(0.25)",
+      "PickupObject(SaltShaker)",
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveLeft(0.5)",
+      "MoveAhead(0.5)",
+      "PutObject(DiningTable)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan20",
+  "target_object_types": [
+    "DiningTable",
+    "SaltShaker"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "SaltShaker",
+      "receptacle_type": "DiningTable",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I think this dish is a bit too bland. Please bring the salt shaker to the table.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

@@ -1,0 +1,71 @@
+{
+  "id": "embodiedcity_5002",
+  "instruction": "I'm not sure if this is the correct entrance to our destination. Please fly me in front of the 'Zhongfu Building' sign so I can confirm the building's name and locate the main lobby.",
+  "start": [
+    5716.365234375,
+    -3570.37353515625,
+    -7.565876007080078
+  ],
+  "start_yaw": 1.96,
+  "end": [
+    5739.25927734375,
+    -3571.974853515625,
+    -23.95565414428711
+  ],
+  "end_yaw": 3.663551718597201,
+  "check_status": "Qualified",
+  "check_comment": "OK",
+  "check_time": "2026-05-12 12:47:57",
+  "trajectory": [
+    {
+      "x": 5716.37,
+      "y": -3570.37,
+      "z": -7.52,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 5726.36,
+      "y": -3570.03,
+      "z": -7.52,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5736.35,
+      "y": -3569.69,
+      "z": -7.47,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5741.35,
+      "y": -3569.52,
+      "z": -7.44,
+      "action": "Forward",
+      "granularity": "Medium"
+    },
+    {
+      "x": 5741.35,
+      "y": -3569.52,
+      "z": -17.4,
+      "action": "Up",
+      "granularity": "Large"
+    },
+    {
+      "x": 5741.35,
+      "y": -3569.52,
+      "z": -22.31,
+      "action": "Up",
+      "granularity": "Medium"
+    },
+    {
+      "x": 5741.35,
+      "y": -3569.52,
+      "z": -22.31,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 6
+}

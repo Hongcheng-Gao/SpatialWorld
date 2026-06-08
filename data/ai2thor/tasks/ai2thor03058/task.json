@@ -1,0 +1,41 @@
+{
+  "task_id": "ai2thor03058",
+  "task_name": "Add spatula to pan",
+  "instruction": "I'm about to start cooking, please put the spatula into the pan.",
+  "golden_actions": {
+    "steps": 13,
+    "actions": [
+      "RotateRight(90)",
+      "MoveAhead(0.5)",
+      "MoveRight(1)",
+      "PickupObject(Spatula)",
+      "RotateLeft(90)",
+      "RotateLeft(90)",
+      "MoveAhead(1)",
+      "MoveAhead(1)",
+      "MoveAhead(1)",
+      "RotateRight(90)",
+      "MoveAhead(1)",
+      "PutObject(Pan)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan26",
+  "target_object_types": [
+    "Pan",
+    "Spatula"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Spatula",
+      "receptacle_type": "Pan"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm about to start cooking, please put the spatula into the pan.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

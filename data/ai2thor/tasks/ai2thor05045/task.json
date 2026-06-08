@@ -1,0 +1,34 @@
+{
+  "task_id": "ai2thor05045",
+  "task_name": "Fill the bowl with water",
+  "instruction": "It looks like it needs liquid, so please fill the bowl with water until it shows it's filled, then keep it steady.",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "RotateRight(90)",
+      "MoveRight(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "FillObjectWithLiquid(Bowl,water)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan316",
+  "target_object_types": [
+    "Bowl"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Bowl",
+      "state": "isFilledWithLiquid",
+      "value": true,
+      "liquid": "water"
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "It looks like it needs liquid, so please fill the bowl with water until it shows it's filled, then keep it steady.",
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3"
+}

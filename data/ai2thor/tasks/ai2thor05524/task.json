@@ -1,0 +1,41 @@
+{
+  "task_id": "ai2thor05524",
+  "task_name": "Please turn off the wall light and open the book",
+  "instruction": "I'm ready to work now; the desk lamp is already on. Please turn off the wall light and open the book",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "ToggleObjectOff(LightSwitch)",
+      "RotateRight(180)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "OpenObject(Book)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan316",
+  "target_object_types": [
+    "LightSwitch",
+    "Book"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "LightSwitch",
+      "state": "isToggled",
+      "value": false
+    },
+    {
+      "type": "object_state",
+      "object_type": "Book",
+      "state": "isOpen",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm ready to work now; the desk lamp is already on. Please turn off the wall light and open the book",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "Study and Work",
+  "Level": "Level3"
+}

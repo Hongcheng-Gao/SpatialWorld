@@ -1,0 +1,41 @@
+{
+  "task_id": "ai2thor05546",
+  "task_name": "Open the shower door, step inside, turn on the faucet",
+  "instruction": "I'm going to take a shower—open the shower door, step inside, turn on the faucet",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "OpenObject(ShowerDoor)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "RotateLeft(90)",
+      "ToggleObjectOn(ShowerHead)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan428",
+  "target_object_types": [
+    "ShowerDoor",
+    "ShowerHead"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "ShowerDoor",
+      "state": "isOpen",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "ShowerHead",
+      "state": "isToggled",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm going to take a shower—open the shower door, step inside, turn on the faucet",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

@@ -1,0 +1,38 @@
+{
+  "task_id": "ai2thor05578",
+  "task_name": "Please get the faucet running and grab the toilet paper",
+  "instruction": "Can you get the faucet running and grab the toilet paper? I'll use it when I'm done washing up.",
+  "golden_actions": {
+    "steps": 3,
+    "actions": [
+      "ToggleObjectOn(Faucet)",
+      "PickupObject(ToiletPaper)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan418",
+  "target_object_types": [
+    "Faucet",
+    "ToiletPaper"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Faucet",
+      "field": "isToggled",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "ToiletPaper",
+      "field": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "Can you get the faucet running and grab the toilet paper? I'll use it when I'm done washing up.",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

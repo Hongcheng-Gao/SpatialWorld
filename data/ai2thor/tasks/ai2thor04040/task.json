@@ -1,0 +1,38 @@
+{
+  "task_id": "ai2thor04040",
+  "task_name": "Tidy bed for sleep",
+  "instruction": "I'm going to sleep now. Please close the books, and then tidy up the bed.",
+  "golden_actions": {
+    "steps": 3,
+    "actions": [
+      "CleanObject(Bed)",
+      "CloseObject(Book)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan324",
+  "target_object_types": [
+    "Book",
+    "Bed"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Book",
+      "state": "isOpen",
+      "value": false
+    },
+    {
+      "type": "object_state",
+      "object_type": "Bed",
+      "state": "isDirty",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm going to sleep now. Please close the books, and then tidy up the bed.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level2 Interaction"
+}

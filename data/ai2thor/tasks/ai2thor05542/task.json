@@ -1,0 +1,42 @@
+{
+  "task_id": "ai2thor05542",
+  "task_name": "Put the cloth into the garbage can",
+  "instruction": "I'm cleaning the bathroom right now—I'm throwing the rag into the trash can",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "PickupObject(Cloth)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "PutObject(GarbageCan)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan429",
+  "target_object_types": [
+    "Cloth",
+    "GarbageCan",
+    "SideTable"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Cloth",
+      "receptacle_type": "SideTable",
+      "value": false
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Cloth",
+      "receptacle_type": "GarbageCan",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm cleaning the bathroom right now—I'm throwing the rag into the trash can",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

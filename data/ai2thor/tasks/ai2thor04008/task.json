@@ -1,0 +1,45 @@
+{
+  "task_id": "ai2thor04008",
+  "task_name": "Move mug to side table",
+  "instruction": "Please help me move the mug from the right side desk to side table by the window.",
+  "golden_actions": {
+    "steps": 10,
+    "actions": [
+      "MoveAhead(0.25)",
+      "MoveRight(0.25)",
+      "PickupObject(Mug)",
+      "MoveLeft(0.25)",
+      "MoveAhead(1.0)",
+      "MoveLeft(1.0)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "PutObject(SideTable)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan303",
+  "target_object_types": [
+    "Desk",
+    "Mug",
+    "SideTable"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Mug",
+      "receptacle_type": "SideTable"
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Mug",
+      "receptacle_type": "Desk",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "Please help me move the mug from the right side desk to side table by the window.",
+  "max_steps": 30,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

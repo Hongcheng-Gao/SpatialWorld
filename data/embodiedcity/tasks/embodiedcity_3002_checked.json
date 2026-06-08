@@ -1,0 +1,49 @@
+{
+  "id": "embodiedcity_3002",
+  "instruction": "I suspect I dropped something around here. Please move to the nearest trash bin and help me watch the ground and the surrounding area.",
+  "start": [
+    5736.751953125,
+    -3576.70458984375,
+    -3.8112757205963135
+  ],
+  "end": [
+    5745.48291015625,
+    -3580.572021484375,
+    -1.5266915559768677
+  ],
+  "check_status": "Qualified",
+  "check_comment": "ok",
+  "check_time": "2026-05-12 12:54:08",
+  "trajectory": [
+    {
+      "x": 5736.75,
+      "y": -3576.7,
+      "z": -3.73,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 5736.75,
+      "y": -3576.7,
+      "z": -3.74,
+      "action": "Yaw Left",
+      "granularity": "Medium"
+    },
+    {
+      "x": 5745.41,
+      "y": -3581.7,
+      "z": -3.68,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5745.41,
+      "y": -3581.7,
+      "z": -3.68,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 3,
+  "start_yaw": 0.0
+}

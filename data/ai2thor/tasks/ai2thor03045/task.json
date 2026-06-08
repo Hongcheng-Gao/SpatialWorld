@@ -1,0 +1,38 @@
+{
+  "task_id": "ai2thor03045",
+  "task_name": "Bring tissue roll",
+  "instruction": "I need to wipe my mouth, please place the tissue roll on the table.",
+  "golden_actions": {
+    "steps": 10,
+    "actions": [
+      "RotateLeft(90)",
+      "RotateLeft(90)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "PickupObject(PaperTowelRoll)",
+      "RotateRight(90)",
+      "MoveRight(1)",
+      "MoveAhead(0.5)",
+      "PutObject(DiningTable)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan24",
+  "target_object_types": [
+    "DiningTable",
+    "PaperTowelRoll"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "PaperTowelRoll",
+      "receptacle_type": "DiningTable"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I need to wipe my mouth, please place the tissue roll on the table.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

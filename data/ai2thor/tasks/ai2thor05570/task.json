@@ -1,0 +1,57 @@
+{
+  "task_id": "ai2thor05570",
+  "task_name": "Please open the shower door, turn on the faucet, and hand me the towel for drying off",
+  "instruction": "I'm going to step into the shower—please open the door for me, turn on the faucet, and hand me the towel for drying off",
+  "golden_actions": {
+    "steps": 15,
+    "actions": [
+      "OpenObject(ShowerDoor)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.5)",
+      "RotateLeft(90)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.75)",
+      "ToggleObjectOn(ShowerHead)",
+      "RotateRight(180)",
+      "MoveAhead(0.5)",
+      "PickupObject(Towel)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan412",
+  "target_object_types": [
+    "ShowerDoor",
+    "ShowerHead",
+    "Towel"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "ShowerDoor",
+      "field": "isOpen",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "ShowerHead",
+      "field": "isToggled",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Towel",
+      "field": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm going to step into the shower—please open the door for me, turn on the faucet, and hand me the towel for drying off",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

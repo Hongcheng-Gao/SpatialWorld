@@ -1,0 +1,48 @@
+{
+  "task_id": "carla00415",
+  "task_name": "Go to the traffic light by the red frame.",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "walker",
+  "instruction": "Walk to the traffic light under the red frame.",
+  "golden_actions": {
+    "steps": 5,
+    "actions": [
+      "TurnRight",
+      "WalkForward(distance=10)",
+      "TurnLeft",
+      "WalkForward(distance=5)",
+      "Done"
+    ]
+  },
+  "scene": "Town05",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "polygon_area",
+    "target_polygon": [
+      [
+        -128.52090396466252,
+        12.718423050547278,
+        0.0
+      ],
+      [
+        -140.57546997070312,
+        12.718439102172852,
+        0.0
+      ],
+      [
+        -140.57547054705623,
+        12.285605269765222,
+        0.0
+      ],
+      [
+        -128.52090454101562,
+        12.285589218139648,
+        0.0
+      ]
+    ],
+    "threshold_label": "strict"
+  },
+  "max_steps": 50
+}

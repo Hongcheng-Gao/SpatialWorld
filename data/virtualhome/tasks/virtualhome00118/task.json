@@ -1,0 +1,37 @@
+{
+  "task_id": "virtualhome00118",
+  "task_name": "Put a bread slice in the toaster and turn on the toaster.",
+  "instruction": "I'm too hungry. Please pick up a bread slice from the toaster and turn on the toaster to cook another one.",
+  "golden_actions": {
+    "steps": 4,
+    "actions": [
+      "LookDown",
+      "WalkForward(small)",
+      "Grab(breadslice)",
+      "SwitchOn(toaster)",
+      "Done"
+    ]
+  },
+  "scene": "0",
+  "target_object_types": [
+    "breadslice",
+    "toaster"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "breadslice",
+      "state": "isPickedUp",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "toaster",
+      "state": "isToggled",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm too hungry. Please pick up a bread slice from the toaster and turn on the toaster to cook another one.",
+  "max_steps": 18
+}

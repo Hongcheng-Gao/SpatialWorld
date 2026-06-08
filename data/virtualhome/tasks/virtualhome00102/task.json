@@ -1,0 +1,38 @@
+{
+  "task_id": "virtualhome00102",
+  "task_name": "Place the pie on the kitchen counter.",
+  "instruction": "I'm full. Please put the pie on the kitchen counter; I'll prepare it later.",
+  "golden_actions": {
+    "steps": 13,
+    "actions": [
+      "WalkForward(small)",
+      "TurnRight(normal)",
+      "WalkForward(medium)",
+      "TurnRight(normal)",
+      "Grab(pie)",
+      "TurnLeft(normal)",
+      "TurnLeft(normal)",
+      "TurnRight(normal)",
+      "TurnLeft(normal)",
+      "TurnRight(small)",
+      "WalkForward(small)",
+      "PutBack(pie, kitchencounter)",
+      "Done"
+    ]
+  },
+  "scene": "0",
+  "target_object_types": [
+    "pie"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "pie",
+      "receptacle_type": "kitchencounter",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm full. Please put the pie on the kitchen counter; I'll prepare it later.",
+  "max_steps": 31
+}

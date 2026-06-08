@@ -1,0 +1,47 @@
+{
+  "task_id": "carla00519",
+  "task_name": "Walk to the speed limit station.",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "walker",
+  "instruction": "Walk to the speed limit station. You can turn and move in any direction.",
+  "golden_actions": {
+    "steps": 4,
+    "actions": [
+      "WalkForward(distance=10)",
+      "TurnRight(degrees=30)",
+      "WalkForward(distance=10)",
+      "Done"
+    ]
+  },
+  "scene": "Town02",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "polygon_area",
+    "target_polygon": [
+      [
+        -9.841065363179975,
+        208.78729248046872,
+        0.23532617092132568
+      ],
+      [
+        -9.91893482208247,
+        208.7872925426824,
+        0.23532617092132568
+      ],
+      [
+        -9.91893486570186,
+        208.73269653320315,
+        0.23532617092132568
+      ],
+      [
+        -9.841065406799366,
+        208.73269647098948,
+        0.23532617092132568
+      ]
+    ],
+    "threshold_label": "medium"
+  },
+  "max_steps": 50
+}

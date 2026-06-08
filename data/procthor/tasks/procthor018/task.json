@@ -1,0 +1,63 @@
+{
+  "task_id": "procthor018",
+  "task_name": "Pick Up Spray Bottle",
+  "instruction": "I'd like to do some cleaning. Please pick up the spray bottle and wait for me at the side table.",
+  "golden_actions": {
+    "steps": 29,
+    "actions": [
+      "LookDown",
+      "RotateRight(90)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "RotateRight(90)",
+      "MoveLeft(0.25)",
+      "MoveAhead(0.5)",
+      "MoveLeft(0.25)",
+      "PickupObject(SprayBottle)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.5)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveLeft(1.0)",
+      "MoveLeft(1.0)",
+      "MoveLeft(0.5)",
+      "MoveLeft(0.25)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "MoveLeft(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "Done"
+    ]
+  },
+  "scene_index": 126,
+  "target_object_types": [
+    "SprayBottle",
+    "SideTable"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "SprayBottle",
+      "state": "isPickedUp",
+      "value": true
+    },
+    {
+      "type": "agent_near_object",
+      "object_type": "SideTable",
+      "distance": 1.5
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'd like to do some cleaning. Please pick up the spray bottle and wait for me at the side table.",
+  "max_steps": 68,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

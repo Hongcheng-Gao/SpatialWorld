@@ -1,0 +1,41 @@
+{
+  "task_id": "ai2thor05028",
+  "task_name": "Toggle the laptop on and clean the bed",
+  "instruction": "Please help me with this task in the scene: toggle the laptop on and clean the bed.",
+  "golden_actions": {
+    "steps": 7,
+    "actions": [
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveAhead(0.5)",
+      "ToggleObjectOn(Laptop)",
+      "RotateRight(90)",
+      "CleanObject(Bed)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan314",
+  "target_object_types": [
+    "Laptop",
+    "Bed"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Bed",
+      "field": "isDirty",
+      "value": false
+    },
+    {
+      "type": "object_state",
+      "object_type": "Laptop",
+      "field": "isToggled",
+      "value": true
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "Please help me with this task in the scene: toggle the laptop on and clean the bed.",
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3"
+}

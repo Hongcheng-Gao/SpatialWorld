@@ -1,0 +1,48 @@
+{
+  "task_id": "carla00307",
+  "task_name": "Drive to the first street lamp after crossing the intersection",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "vehicle",
+  "instruction": "Please go straight through this intersection, stay in this lane, and stop at the very first streetlight marked with red box you see along this roadside.",
+  "golden_actions": {
+    "steps": 5,
+    "actions": [
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "Done"
+    ]
+  },
+  "scene": "Town02",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "polygon_area",
+    "target_polygon": [
+      [
+        38.812808990478516,
+        275.0972595214844,
+        0.3208887577056885
+      ],
+      [
+        42.646244049072266,
+        275.0972595214844,
+        0.3208887577056885
+      ],
+      [
+        42.646244049072266,
+        275.5364685058594,
+        0.3208887577056885
+      ],
+      [
+        38.812808990478516,
+        275.5364685058594,
+        0.3208887577056885
+      ]
+    ],
+    "threshold_label": "medium"
+  },
+  "max_steps": 30
+}

@@ -1,0 +1,60 @@
+{
+  "task_id": "ai2thor03000",
+  "task_name": "Move egg from fridge to pot",
+  "instruction": "I'm hungry and want to take the egg out of the refrigerator and put it in the pot on the left front side. Remember to close the refrigerator door afterwards.",
+  "golden_actions": {
+    "steps": 13,
+    "actions": [
+      "RotateRight(90)",
+      "OpenObject(Fridge)",
+      "PickupObject(Egg)",
+      "CloseObject(Fridge)",
+      "RotateLeft(90)",
+      "MoveAhead(1)",
+      "MoveAhead(1)",
+      "MoveAhead(0.25)",
+      "RotateLeft(90)",
+      "MoveAhead(0.5)",
+      "MoveRight(0.5)",
+      "PutObject(Pan)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan11",
+  "target_object_types": [
+    "Egg",
+    "Fridge",
+    "Pan"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Egg",
+      "receptacle_type": "Pan"
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Egg",
+      "receptacle_type": "Fridge",
+      "value": false
+    },
+    {
+      "type": "object_state",
+      "object_type": "Fridge",
+      "state": "isOpen",
+      "value": false
+    },
+    {
+      "type": "object_state",
+      "object_type": "Egg",
+      "state": "isBroken",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm hungry and want to take the egg out of the refrigerator and put it in the pot on the left front side. Remember to close the refrigerator door afterwards.",
+  "max_steps": 30,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

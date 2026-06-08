@@ -1,0 +1,13 @@
+{
+  "scene": "FloorPlan23",
+  "actions": [
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "ToggleObjectOff(LightSwitch)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "RotateLeft(90)",
+    "LookDown",
+    "Done"
+  ]
+}

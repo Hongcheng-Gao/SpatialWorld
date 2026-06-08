@@ -1,0 +1,33 @@
+{
+  "task_id": "ai2thor05552",
+  "task_name": "Throw the rag in the trash",
+  "instruction": "I am done with the big clean. My rag is really dirty. Could you toss it in the trash for me?",
+  "golden_actions": {
+    "steps": 5,
+    "actions": [
+      "PickupObject(Cloth)",
+      "MoveLeft(0.5)",
+      "RotateLeft(90)",
+      "PutObject(GarbageCan)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan424",
+  "target_object_types": [
+    "Cloth",
+    "GarbageCan"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Cloth",
+      "receptacle_type": "GarbageCan"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I am done with the big clean. My rag is really dirty. Could you toss it in the trash for me?",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

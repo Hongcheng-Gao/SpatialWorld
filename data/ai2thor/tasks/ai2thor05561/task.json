@@ -1,0 +1,62 @@
+{
+  "task_id": "ai2thor05561",
+  "task_name": "Grab the kettle, fill it up, and set it on the coffee table, then switch the TV on for me",
+  "instruction": "I’m ready to really kick back and watch some TV. Could you grab the kettle, fill it up, and set it on the coffee table? Then switch the TV on for me. Nothing beats sipping water while I binge my show.",
+  "golden_actions": {
+    "steps": 12,
+    "actions": [
+      "FillObjectWithLiquid(WateringCan, water)",
+      "PickupObject(WateringCan)",
+      "RotateLeft(180)",
+      "MoveAhead(1.0)",
+      "PutObject(CoffeeTable)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.75)",
+      "MoveRight(1.0)",
+      "MoveRight(0.25)",
+      "ToggleObjectOn(Television)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan215",
+  "target_object_types": [
+    "CoffeeTable",
+    "Shelf",
+    "Television",
+    "WateringCan"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "WateringCan",
+      "receptacle_type": "Shelf",
+      "value": false
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "WateringCan",
+      "receptacle_type": "CoffeeTable",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "WateringCan",
+      "state": "isFilledWithLiquid",
+      "value": true,
+      "liquid": "water"
+    },
+    {
+      "type": "object_state",
+      "object_type": "Television",
+      "state": "isToggled",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I’m ready to really kick back and watch some TV. Could you grab the kettle, fill it up, and set it on the coffee table? Then switch the TV on for me. Nothing beats sipping water while I binge my show.",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "Entertainment (Game/Sports)",
+  "Level": "Level3"
+}

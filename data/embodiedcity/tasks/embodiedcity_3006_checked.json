@@ -1,0 +1,49 @@
+{
+  "id": "embodiedcity_3006",
+  "instruction": "I need to confirm exactly where the trash drop-off point is. Please move to the nearest garbage collection point.",
+  "start": [
+    7811.46435546875,
+    -3605.10595703125,
+    -5.790485858917236
+  ],
+  "end": [
+    7805.73876953125,
+    -3599.219482421875,
+    -1.5827244520187378
+  ],
+  "check_status": "Qualified",
+  "check_comment": "OK",
+  "check_time": "2026-05-12 12:57:59",
+  "trajectory": [
+    {
+      "x": 7811.46,
+      "y": -3605.11,
+      "z": -5.72,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 7811.46,
+      "y": -3605.11,
+      "z": -0.7,
+      "action": "Down",
+      "granularity": "Medium"
+    },
+    {
+      "x": 7803.53,
+      "y": -3599.02,
+      "z": -0.62,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7803.53,
+      "y": -3599.02,
+      "z": -0.62,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "start_yaw": 142.5,
+  "golden_actions_count": 3
+}

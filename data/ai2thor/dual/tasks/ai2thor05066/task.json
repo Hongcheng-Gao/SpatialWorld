@@ -1,0 +1,32 @@
+{
+  "task_id": "ai2thor05066",
+  "task_name": "Pick up the pot",
+  "instruction": "I'm ready to start the stew, so please pick up the pot for me.",
+  "golden_actions": {
+    "steps": 4,
+    "actions": [
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "PickupObject(Pot)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan15",
+  "target_object_types": [
+    "Pot",
+    "Tomato"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Pot",
+      "state": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "I'm ready to start the stew, so please pick up the pot and slice the tomato for me.",
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3"
+}

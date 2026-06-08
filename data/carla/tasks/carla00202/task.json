@@ -1,0 +1,49 @@
+{
+  "task_id": "carla00202",
+  "task_name": "Walk to the streetlight in front of the gas station.",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "walker",
+  "instruction": "Walk to the streetlight in front of the gas station. You can turn and move in any direction.",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "TurnRight(degrees=30)",
+      "WalkForward(distance=10)",
+      "Done"
+    ]
+  },
+  "scene": "Town03",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "polygon_area",
+    "target_polygon": [
+      [
+        -27.394559860229492,
+        183.10986328125,
+        0.08995580673217773
+      ],
+      [
+        -25.02674674987793,
+        183.10986328125,
+        0.08995580673217773
+      ],
+      [
+        -25.02674674987793,
+        185.47769165039062,
+        0.08995580673217773
+      ],
+      [
+        -27.394559860229492,
+        185.47769165039062,
+        0.08995580673217773
+      ]
+    ],
+    "threshold_label": "medium"
+  },
+  "max_steps": 30
+}

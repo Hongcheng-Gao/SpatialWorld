@@ -1,0 +1,37 @@
+{
+  "task_id": "ai2thor04240",
+  "task_name": "Water the houseplant as it is empty.",
+  "instruction": "Please water the houseplant as it is currently empty and lacks water.",
+  "golden_actions": {
+    "steps": 8,
+    "actions": [
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "RotateLeft(90)",
+      "MoveAhead(0.25)",
+      "RotateRight(90)",
+      "MoveAhead(0.25)",
+      "FillObjectWithLiquid(HousePlant, water)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan330",
+  "target_object_types": [
+    "HousePlant"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "HousePlant",
+      "state": "isFilledWithLiquid",
+      "value": true,
+      "liquid": "water"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "Please water the houseplant as it is currently empty and lacks water.",
+  "max_steps": 15,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

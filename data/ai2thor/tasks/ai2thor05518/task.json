@@ -1,0 +1,39 @@
+{
+  "task_id": "ai2thor05518",
+  "task_name": "Please pour a glass of water, turn on the cell phone",
+  "instruction": "I want to take a proper break. Please pour me a glass of water and then turn on my phone—I’d like to play a game for a bit.",
+  "golden_actions": {
+    "steps": 3,
+    "actions": [
+      "FillObjectWithLiquid(Mug, water)",
+      "ToggleObjectOn(CellPhone)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan313",
+  "target_object_types": [
+    "Mug",
+    "CellPhone"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "CellPhone",
+      "field": "isToggled",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Mug",
+      "field": "isFilledWithLiquid",
+      "value": true,
+      "liquid": "water"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to take a proper break. Please pour me a glass of water and then turn on my phone—I’d like to play a game for a bit.",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "Entertainment",
+  "Level": "Level3"
+}

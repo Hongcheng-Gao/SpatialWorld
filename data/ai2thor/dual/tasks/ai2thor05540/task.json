@@ -1,0 +1,43 @@
+{
+  "task_id": "ai2thor05540",
+  "task_name": "Please water the potted plant on the table and then turn off the wall light",
+  "instruction": "I'm getting ready to head out—please water the potted plant on the table and then turn off the wall light.",
+  "golden_actions": {
+    "steps": 7,
+    "actions": [
+      "FillObjectWithLiquid(HousePlant, water)",
+      "MoveBack(0.75)",
+      "MoveRight(1.0)",
+      "MoveRight(0.75)",
+      "RotateRight(90)",
+      "ToggleObjectOff(LightSwitch)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan202",
+  "target_object_types": [
+    "HousePlant",
+    "LightSwitch"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "HousePlant",
+      "field": "isFilledWithLiquid",
+      "value": true,
+      "liquid": "water"
+    },
+    {
+      "type": "object_state",
+      "object_type": "LightSwitch",
+      "field": "isToggled",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm getting ready to head out—please water the potted plant on the table and then turn off the wall light.",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

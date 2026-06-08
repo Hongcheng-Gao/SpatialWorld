@@ -1,0 +1,69 @@
+{
+  "task_id": "procthor401",
+  "task_name": "Candle Delivery to Kitchen",
+  "instruction": "The power is out. Please go to the living room, pick up a candle from the table, and bring it to the kitchen.",
+  "golden_actions": {
+    "steps": 42,
+    "actions": [
+      "RotateLeft(90)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "MoveLeft(1.0)",
+      "MoveLeft(1.0)",
+      "MoveLeft(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "RotateLeft(90)",
+      "LookDown",
+      "MoveRight(0.5)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.25)",
+      "PickupObject(Candle)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveLeft(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "MoveRight(1.0)",
+      "MoveRight(1.0)",
+      "MoveRight(1.0)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "Done"
+    ]
+  },
+  "scene_index": 400,
+  "target_object_types": [
+    "Candle"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_room",
+      "object_type": "Candle",
+      "room_type": "Kitchen"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "The power is out. Please go to the living room, pick up a candle from the table, and bring it to the kitchen.",
+  "max_steps": 94,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

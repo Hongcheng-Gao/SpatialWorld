@@ -1,0 +1,61 @@
+{
+  "task_id": "procthor301",
+  "task_name": "Open Toilet Lid, Wait by Toilet",
+  "instruction": "I need to use the bathroom. Please open the toilet lid and wait beside it.",
+  "golden_actions": {
+    "steps": 24,
+    "actions": [
+      "MoveLeft(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveLeft(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveRight(1.0)",
+      "MoveRight(0.5)",
+      "MoveAhead(1.0)",
+      "MoveLeft(1.0)",
+      "MoveLeft(1.0)",
+      "MoveLeft(0.5)",
+      "LookDown",
+      "OpenObject(Toilet)",
+      "Done"
+    ]
+  },
+  "scene_index": 130,
+  "target_object_types": [
+    "Toilet"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Toilet",
+      "state": "isOpen",
+      "value": true
+    },
+    {
+      "type": "agent_in_room",
+      "room_type": "Bathroom"
+    },
+    {
+      "type": "agent_near_object",
+      "object_type": "Toilet",
+      "distance": 1.5
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I need to use the bathroom. Please open the toilet lid and wait beside it.",
+  "max_steps": 58,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Bathroom)",
+  "Level": "Level3 Hybrid"
+}

@@ -1,0 +1,52 @@
+{
+  "task_id": "ai2thor03052",
+  "task_name": "Slice Potato and Cook a Slice",
+  "instruction": "I'm hungry. Please slice the potato, put a slice in the pan, and cook it.",
+  "golden_actions": {
+    "steps": 11,
+    "actions": [
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveAhead(1)",
+      "SliceObject(Potato)",
+      "CookObject(PotatoSliced)",
+      "PickupObject(PotatoSliced)",
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveAhead(1)",
+      "PutObject(Plate)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan25",
+  "target_object_types": [
+    "Plate",
+    "Potato",
+    "PotatoSliced"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "PotatoSliced",
+      "receptacle_type": "Plate"
+    },
+    {
+      "type": "object_state",
+      "object_type": "Potato",
+      "state": "isSliced",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Potato",
+      "state": "isCooked",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm hungry. Please slice the potato, put a slice in the pan, and cook it.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

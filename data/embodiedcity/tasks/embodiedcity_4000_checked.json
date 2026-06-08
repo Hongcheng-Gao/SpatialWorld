@@ -1,0 +1,78 @@
+{
+  "id": "embodiedcity_4000",
+  "instruction": "I need to withdraw money from Huaxia Bank. Help me fly to their sign to see if they're open.",
+  "start": [
+    6011.181640625,
+    -3722.28564453125,
+    -28.34891128540039
+  ],
+  "start_yaw": 138.17,
+  "end": [
+    5976.45751953125,
+    -3690.985595703125,
+    -24.847047805786133
+  ],
+  "end_yaw": 138.17020132114746,
+  "check_status": "Qualified",
+  "check_comment": "ok",
+  "check_time": "2026-05-12 13:02:31",
+  "trajectory": [
+    {
+      "x": 6011.18,
+      "y": -3722.29,
+      "z": -28.31,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 6003.73,
+      "y": -3715.62,
+      "z": -28.26,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5996.28,
+      "y": -3708.95,
+      "z": -28.24,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5988.83,
+      "y": -3702.28,
+      "z": -28.22,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5981.38,
+      "y": -3695.61,
+      "z": -28.2,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5981.38,
+      "y": -3695.61,
+      "z": -23.15,
+      "action": "Down",
+      "granularity": "Medium"
+    },
+    {
+      "x": 5977.65,
+      "y": -3692.27,
+      "z": -23.07,
+      "action": "Forward",
+      "granularity": "Medium"
+    },
+    {
+      "x": 5977.65,
+      "y": -3692.27,
+      "z": -23.07,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 7
+}

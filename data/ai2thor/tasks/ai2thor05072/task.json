@@ -1,0 +1,41 @@
+{
+  "task_id": "ai2thor05072",
+  "task_name": "Slice the lettuce and apple",
+  "instruction": "I'm making a fresh summer salad; please slice the lettuce and the apple for me.",
+  "golden_actions": {
+    "steps": 7,
+    "actions": [
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "SliceObject(Lettuce)",
+      "MoveLeft(0.5)",
+      "SliceObject(Apple)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan18",
+  "target_object_types": [
+    "Lettuce",
+    "Apple"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Lettuce",
+      "state": "isSliced",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Apple",
+      "state": "isSliced",
+      "value": true
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "I'm making a fresh summer salad; please slice the lettuce and the apple for me.",
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3"
+}

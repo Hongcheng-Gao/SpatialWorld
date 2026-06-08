@@ -1,0 +1,44 @@
+{
+  "task_id": "virtualhome00103",
+  "task_name": "Place the salmon in the microwave and turn it on. Remember to close the microwave door.",
+  "instruction": "Place the salmon in the microwave and turn it on. Remember to close the microwave door.",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "WalkForward(medium)",
+      "Grab(salmon)",
+      "Open(microwave)",
+      "PutIn(salmon, microwave)",
+      "Close(microwave)",
+      "SwitchOn(microwave)",
+      "Done"
+    ]
+  },
+  "scene": "0",
+  "target_object_types": [
+    "microwave"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "microwave",
+      "state": "isOpen",
+      "value": false
+    },
+    {
+      "type": "object_state",
+      "object_type": "microwave",
+      "state": "isToggled",
+      "value": true
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "salmon",
+      "receptacle_type": "microwave",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "Place the salmon in the microwave and turn it on. Remember to close the microwave door.",
+  "max_steps": 22
+}

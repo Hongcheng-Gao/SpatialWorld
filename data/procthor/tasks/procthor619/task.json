@@ -1,0 +1,60 @@
+{
+  "task_id": "procthor619",
+  "task_name": "Clean the living room",
+  "instruction": "I want to clean my living room. Please navigate to the living room and fetch the newspaper from the sofa and place it on the dining table.",
+  "golden_actions": {
+    "steps": 28,
+    "actions": [
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveLeft(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "LookDown",
+      "MoveAhead(1.0)",
+      "MoveRight(1.0)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.5)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "MoveRight(0.5)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "PickupObject(Newspaper)",
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.5)",
+      "RotateLeft(90)",
+      "PutObject(DiningTable)",
+      "Done"
+    ]
+  },
+  "scene_index": 155,
+  "target_object_types": [
+    "Newspaper",
+    "DiningTable"
+  ],
+  "success_conditions": [
+    {
+      "type": "agent_in_room",
+      "room_type": "LivingRoom"
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Newspaper",
+      "receptacle_type": "DiningTable"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to clean my living room. Please navigate to the living room and fetch the newspaper from the sofa and place it on the dining table.",
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid",
+  "max_steps": 66
+}

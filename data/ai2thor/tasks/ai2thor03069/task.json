@@ -1,0 +1,39 @@
+{
+  "task_id": "ai2thor03069",
+  "task_name": "Retrieve lettuce",
+  "instruction": "I accidentally threw the lettuce in the trash can. Please take it out and put it on the table.",
+  "golden_actions": {
+    "steps": 4,
+    "actions": [
+      "MoveRight(1.0)",
+      "PickupObject(Lettuce)",
+      "PutObject(DiningTable)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan28",
+  "target_object_types": [
+    "DiningTable",
+    "GarbageCan",
+    "Lettuce"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Lettuce",
+      "receptacle_type": "DiningTable"
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Lettuce",
+      "receptacle_type": "GarbageCan",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I accidentally threw the lettuce in the trash can. Please take it out and put it on the table.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

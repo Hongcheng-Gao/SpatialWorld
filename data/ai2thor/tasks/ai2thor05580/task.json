@@ -1,0 +1,42 @@
+{
+  "task_id": "ai2thor05580",
+  "task_name": "Please get the cloth from the shower",
+  "instruction": "I think I left my towel in the shower. Would you mind opening the shower door and stepping in to get it for me?",
+  "golden_actions": {
+    "steps": 7,
+    "actions": [
+      "OpenObject(ShowerDoor)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveRight(1.0)",
+      "MoveRight(1.0)",
+      "PickupObject(Cloth)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan402",
+  "target_object_types": [
+    "ShowerDoor",
+    "Cloth"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Cloth",
+      "field": "isPickedUp",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "ShowerDoor",
+      "field": "isOpen",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I think I left my towel in the shower. Would you mind opening the shower door and stepping in to get it for me?",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

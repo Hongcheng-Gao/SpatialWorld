@@ -1,0 +1,42 @@
+{
+  "task_id": "ai2thor05539",
+  "task_name": "Please pick up the book and place it on the sofa",
+  "instruction": "Please pick up the book on the TV stand—the one that seems to be about deep learning—and place it on the sofa; I'll come study it in a bit",
+  "golden_actions": {
+    "steps": 7,
+    "actions": [
+      "PickupObject(Book)",
+      "MoveRight(0.25)",
+      "MoveBack(1.0)",
+      "MoveBack(0.75)",
+      "RotateRight(180)",
+      "PutObject(Sofa)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan202",
+  "target_object_types": [
+    "Book",
+    "Sofa",
+    "TVStand"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Book",
+      "receptacle_type": "TVStand",
+      "value": false
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Book",
+      "receptacle_type": "Sofa"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "Please pick up the book on the TV stand—the one that seems to be about deep learning—and place it on the sofa; I'll come study it in a bit",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "Study and Work",
+  "Level": "Level3"
+}

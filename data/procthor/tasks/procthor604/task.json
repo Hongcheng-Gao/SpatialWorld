@@ -1,0 +1,64 @@
+{
+  "task_id": "procthor604",
+  "task_name": "Go to open the book",
+  "instruction": "I want to study. Please go to the sofa in the living room, pick up a book, open it, and stay there waiting for me.",
+  "golden_actions": {
+    "steps": 20,
+    "actions": [
+      "RotateLeft(90)",
+      "MoveAhead(0.25)",
+      "MoveLeft(0.5)",
+      "MoveAhead(1.0)",
+      "MoveLeft(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "MoveLeft(0.25)",
+      "RotateLeft(90)",
+      "MoveAhead(0.5)",
+      "MoveRight(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveRight(0.25)",
+      "LookDown",
+      "MoveAhead(0.5)",
+      "PickupObject(Book)",
+      "OpenObject(Book)",
+      "Done"
+    ]
+  },
+  "scene_index": 128,
+  "target_object_types": [
+    "Book",
+    "Sofa"
+  ],
+  "success_conditions": [
+    {
+      "type": "agent_in_room",
+      "room_type": "LivingRoom"
+    },
+    {
+      "type": "object_state",
+      "object_type": "Book",
+      "state": "isOpen",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Book",
+      "state": "isPickedUp",
+      "value": true
+    },
+    {
+      "type": "agent_near_object",
+      "object_type": "Sofa",
+      "distance": 1.5
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to study. Please go to the sofa in the living room, pick up a book, open it, and stay there waiting for me.",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "Study and Work",
+  "Level": "Level3 Hybrid"
+}

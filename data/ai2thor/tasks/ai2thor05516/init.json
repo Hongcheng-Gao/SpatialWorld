@@ -1,0 +1,18 @@
+{
+  "scene": "FloorPlan308",
+  "actions": [
+    "LookDown",
+    "RotateLeft(90)",
+    "MoveAhead(0.5)",
+    "MoveAhead(0.25)",
+    "PickupObject(Pencil)",
+    "MoveRight(0.25)",
+    "MoveRight(0.25)",
+    "MoveRight(0.25)",
+    "MoveAhead(0.25)",
+    "PutObject(GarbageCan)",
+    "LookDown",
+    "MoveBack(0.25)",
+    "Done"
+  ]
+}

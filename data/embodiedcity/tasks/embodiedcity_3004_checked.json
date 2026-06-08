@@ -1,0 +1,42 @@
+{
+  "id": "embodiedcity_3004",
+  "instruction": "I need to use the fire hydrant as a reference point for positioning. Please move to the nearest fire hydrant.",
+  "start": [
+    7800.20556640625,
+    -3667.71826171875,
+    -2.0970935821533203
+  ],
+  "end": [
+    7808.111328125,
+    -3671.269287109375,
+    -1.0448648929595947
+  ],
+  "check_status": "Qualified",
+  "check_comment": "ok",
+  "check_time": "2026-05-12 12:57:20",
+  "trajectory": [
+    {
+      "x": 7800.21,
+      "y": -3667.72,
+      "z": -2.02,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 7810.21,
+      "y": -3667.72,
+      "z": -2.03,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7810.21,
+      "y": -3667.72,
+      "z": -2.03,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 2,
+  "start_yaw": 0.0
+}

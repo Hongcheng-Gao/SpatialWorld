@@ -1,0 +1,60 @@
+{
+  "task_id": "ai2thor04036",
+  "task_name": "Prepare bed for sleep",
+  "instruction": "I'm getting ready for bed. Please put the teddy bear and laptop on the sofa and clean the bed.",
+  "golden_actions": {
+    "steps": 17,
+    "actions": [
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "RotateRight(90)",
+      "MoveLeft(0.5)",
+      "CleanObject(Bed)",
+      "PickupObject(TeddyBear)",
+      "RotateLeft(90)",
+      "RotateLeft(90)",
+      "MoveLeft(0.5)",
+      "MoveLeft(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "MoveLeft(0.25)",
+      "PutObject(Sofa)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan323",
+  "target_object_types": [
+    " Bed",
+    "Bed",
+    "Laptop",
+    "Sofa",
+    "TeddyBear"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "TeddyBear",
+      "receptacle_type": "Sofa"
+    },
+    {
+      "type": "object_state",
+      "object_type": "Bed",
+      "state": "isDirty",
+      "value": false
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "TeddyBear",
+      "receptacle_type": "Bed",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm getting ready for bed. Please put the teddy bear and laptop on the sofa and clean the bed.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

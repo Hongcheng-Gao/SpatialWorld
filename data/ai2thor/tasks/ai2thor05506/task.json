@@ -1,0 +1,42 @@
+{
+  "task_id": "ai2thor05506",
+  "task_name": "Pick up the tennis racket and clean the bed",
+  "instruction": "I want to combine my workout with some housework—could you pick up the tennis racket in the corner and give the bed a quick clean?",
+  "golden_actions": {
+    "steps": 7,
+    "actions": [
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "CleanObject(Bed)",
+      "MoveLeft(1.0)",
+      "MoveAhead(1.0)",
+      "PickupObject(TennisRacket)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan324",
+  "target_object_types": [
+    "TennisRacket",
+    "Bed"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "TennisRacket",
+      "field": "isPickedUp",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Bed",
+      "field": "isDirty",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to combine my workout with some housework—could you pick up the tennis racket in the corner and give the bed a quick clean?",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "Entertainment",
+  "Level": "Level3"
+}

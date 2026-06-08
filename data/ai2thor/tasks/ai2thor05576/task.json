@@ -1,0 +1,35 @@
+{
+  "task_id": "ai2thor05576",
+  "task_name": "Please throw the soap in the trash can next to the toilet",
+  "instruction": "This bar of soap is no longer useful. I'd like to throw it in the trash can next to the toilet",
+  "golden_actions": {
+    "steps": 7,
+    "actions": [
+      "PickupObject(SoapBar)",
+      "MoveLeft(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.75)",
+      "RotateLeft(90)",
+      "PutObject(GarbageCan)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan418",
+  "target_object_types": [
+    "SoapBar",
+    "GarbageCan"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "SoapBar",
+      "receptacle_type": "GarbageCan"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "This bar of soap is no longer useful. I'd like to throw it in the trash can next to the toilet",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

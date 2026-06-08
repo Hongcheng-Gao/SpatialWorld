@@ -1,0 +1,51 @@
+{
+  "task_id": "ai2thor03071",
+  "task_name": "Make toast",
+  "instruction": "I want to eat toast. Please slice the bread, put one slice on the toaster, and cook it.",
+  "golden_actions": {
+    "steps": 10,
+    "actions": [
+      "SliceObject(Bread)",
+      "PickupObject(BreadSliced)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "RotateLeft(90)",
+      "MoveAhead(0.25)",
+      "PutObject(Toaster)",
+      "MoveRight(0.25)",
+      "CookObject(BreadSliced)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan29",
+  "target_object_types": [
+    "Bread",
+    "BreadSliced",
+    "Toaster"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "BreadSliced",
+      "receptacle_type": "Toaster"
+    },
+    {
+      "type": "object_state",
+      "object_type": "Bread",
+      "state": "isSliced",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "BreadSliced",
+      "state": "isCooked",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to eat toast. Please slice the bread, put one slice on the toaster, and cook it.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

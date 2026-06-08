@@ -1,0 +1,14 @@
+.codegraph/
+
+outputs/
+
+# Python bytecode/cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# uv virtual environments
+.venv/
+
+# EmbodiedCity generated images
+data/embodiedcity/Datasets/Imgs/

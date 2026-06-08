@@ -1,0 +1,57 @@
+{
+  "id": "embodiedcity_2000",
+  "instruction": "Let's head to the entrance of the building up front-I'm here to pick up a friend.",
+  "start": [
+    7791.9228515625,
+    -3542.974609375,
+    -1.4955482482910156
+  ],
+  "start_yaw": 1.22,
+  "end": [
+    7822.4775390625,
+    -3542.415283203125,
+    -0.5945369601249695
+  ],
+  "end_yaw": -1.8221673519090489,
+  "check_status": "Qualified",
+  "check_comment": "good",
+  "check_time": "2026-05-12 12:39:40",
+  "trajectory": [
+    {
+      "x": 7791.92,
+      "y": -3542.97,
+      "z": -1.43,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 7801.92,
+      "y": -3542.76,
+      "z": -1.43,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7811.92,
+      "y": -3542.55,
+      "z": -1.35,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7821.92,
+      "y": -3542.34,
+      "z": -1.28,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7821.92,
+      "y": -3542.34,
+      "z": -1.28,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 4
+}

@@ -1,0 +1,42 @@
+{
+  "task_id": "ai2thor05034",
+  "task_name": "Turn on the laptop and turn on the cell phone",
+  "instruction": "I need some help with my electronics. Please turn on the laptop first. Once it's fully booted, power on the cell phone and make sure they both stay on.",
+  "golden_actions": {
+    "steps": 8,
+    "actions": [
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "ToggleObjectOn(Laptop)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "ToggleObjectOn(CellPhone)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan315",
+  "target_object_types": [
+    "Laptop",
+    "CellPhone"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Laptop",
+      "field": "isToggled",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "CellPhone",
+      "field": "isToggled",
+      "value": true
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "I need some help with my electronics. Please turn on the laptop first. Once it's fully booted, power on the cell phone and make sure they both stay on.",
+  "Evaluation_Type": "Conditional",
+  "Category": "Study and Work",
+  "Level": "Level3"
+}

@@ -1,0 +1,113 @@
+{
+  "id": "embodiedcity_8002",
+  "instruction": "Please fly over the first overpass behind you.",
+  "start": [
+    5754.67138671875,
+    -3505.2001953125,
+    -4.5138468742370605
+  ],
+  "start_yaw": 1.61,
+  "end": [
+    5676.505859375,
+    -3499.7421875,
+    -22.215068817138672
+  ],
+  "end_yaw": 99.6266011774436,
+  "check_status": "Qualified",
+  "check_comment": "ok",
+  "check_time": "2026-05-12 09:48:30",
+  "trajectory": [
+    {
+      "x": 5754.67,
+      "y": -3505.2,
+      "z": -4.47,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 5754.67,
+      "y": -3505.2,
+      "z": -14.49,
+      "action": "Up",
+      "granularity": "Large"
+    },
+    {
+      "x": 5754.67,
+      "y": -3505.2,
+      "z": -24.43,
+      "action": "Up",
+      "granularity": "Large"
+    },
+    {
+      "x": 5744.68,
+      "y": -3505.48,
+      "z": -24.4,
+      "action": "Backward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5734.68,
+      "y": -3505.76,
+      "z": -24.35,
+      "action": "Backward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5724.68,
+      "y": -3506.04,
+      "z": -24.33,
+      "action": "Backward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5714.69,
+      "y": -3506.32,
+      "z": -24.32,
+      "action": "Backward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5704.69,
+      "y": -3506.61,
+      "z": -24.31,
+      "action": "Backward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5694.69,
+      "y": -3506.89,
+      "z": -24.3,
+      "action": "Backward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5684.7,
+      "y": -3507.17,
+      "z": -24.3,
+      "action": "Backward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5674.7,
+      "y": -3507.45,
+      "z": -24.3,
+      "action": "Backward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5674.56,
+      "y": -3502.45,
+      "z": -24.29,
+      "action": "Right",
+      "granularity": "Medium"
+    },
+    {
+      "x": 5674.56,
+      "y": -3502.45,
+      "z": -24.29,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 12
+}

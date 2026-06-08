@@ -1,0 +1,50 @@
+{
+  "task_id": "ai2thor03015",
+  "task_name": "Turn off microwave, transfer egg to bowl",
+  "instruction": "I want to eat. Please turn off the microwave and take the egg out and put it in a bowl.",
+  "golden_actions": {
+    "steps": 9,
+    "actions": [
+      "ToggleObjectOff(Microwave)",
+      "OpenObject(Microwave)",
+      "PickupObject(Egg)",
+      "CloseObject(Microwave)",
+      "RotateLeft(90)",
+      "MoveAhead(1)",
+      "MoveLeft(0.25)",
+      "PutObject(Bowl)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan14",
+  "target_object_types": [
+    "Bowl",
+    "Egg",
+    "Microwave"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Egg",
+      "receptacle_type": "Bowl"
+    },
+    {
+      "type": "object_state",
+      "object_type": "Microwave",
+      "state": "isToggled",
+      "value": false
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Egg",
+      "receptacle_type": "Microwave",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to eat. Please turn off the microwave and take the egg out and put it in a bowl.",
+  "max_steps": 30,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

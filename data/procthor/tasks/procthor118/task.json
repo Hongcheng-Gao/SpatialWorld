@@ -1,0 +1,46 @@
+{
+  "task_id": "procthor118",
+  "task_name": "Break vase, go to bathroom",
+  "instruction": "Please break the vase, then quickly go to the bathroom.",
+  "golden_actions": {
+    "steps": 14,
+    "actions": [
+      "MoveAhead(0.25)",
+      "MoveLeft(0.25)",
+      "MoveAhead(0.5)",
+      "LookDown",
+      "BreakObject(Vase)",
+      "MoveBack(0.5)",
+      "MoveRight(0.25)",
+      "MoveBack(0.25)",
+      "RotateRight(90)",
+      "MoveRight(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "Done"
+    ]
+  },
+  "scene_index": 35,
+  "target_object_types": [
+    "Vase"
+  ],
+  "success_conditions": [
+    {
+      "type": "agent_in_room",
+      "room_type": "Bathroom"
+    },
+    {
+      "type": "object_state",
+      "object_type": "Vase",
+      "state": "isBroken",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "Please break the vase, then quickly go to the bathroom.",
+  "max_steps": 38,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level1 Navigation"
+}

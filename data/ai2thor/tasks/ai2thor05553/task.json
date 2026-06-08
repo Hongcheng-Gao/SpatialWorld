@@ -1,0 +1,30 @@
+{
+  "task_id": "ai2thor05553",
+  "task_name": "Grab the spray bottle",
+  "instruction": "I want to clean the shower glass—please grab the spray bottle",
+  "golden_actions": {
+    "steps": 2,
+    "actions": [
+      "PickupObject(SprayBottle)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan423",
+  "target_object_types": [
+    "SprayBottle"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "SprayBottle",
+      "field": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to clean the shower glass—please grab the spray bottle",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

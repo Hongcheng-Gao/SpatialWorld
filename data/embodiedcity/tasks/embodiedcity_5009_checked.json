@@ -1,0 +1,64 @@
+{
+  "id": "embodiedcity_5009",
+  "instruction": "Please move to a spot 5 meters in front of the Xi'an Noodle Shop sign.",
+  "start": [
+    5736.6591796875,
+    -3562.839111328125,
+    -13.739311218261719
+  ],
+  "start_yaw": -5.88,
+  "end": [
+    5740.26318359375,
+    -3575.22998046875,
+    -2.7521092891693115
+  ],
+  "end_yaw": -22.758672535558635,
+  "check_status": "Qualified",
+  "check_comment": "ok",
+  "check_time": "2026-05-12 12:54:27",
+  "trajectory": [
+    {
+      "x": 5736.66,
+      "y": -3562.84,
+      "z": -13.67,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 5736.66,
+      "y": -3562.84,
+      "z": -13.65,
+      "action": "Yaw Left",
+      "granularity": "Large"
+    },
+    {
+      "x": 5736.66,
+      "y": -3562.84,
+      "z": -3.57,
+      "action": "Down",
+      "granularity": "Large"
+    },
+    {
+      "x": 5735.63,
+      "y": -3572.79,
+      "z": -3.48,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5740.61,
+      "y": -3573.3,
+      "z": -3.4,
+      "action": "Right",
+      "granularity": "Medium"
+    },
+    {
+      "x": 5740.61,
+      "y": -3573.3,
+      "z": -3.4,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 5
+}

@@ -1,0 +1,40 @@
+{
+  "task_id": "ai2thor04102",
+  "task_name": "Clean bed and pick up keychain",
+  "instruction": "I'm getting ready to leave. Please clean my bed and pick up my keychain.",
+  "golden_actions": {
+    "steps": 5,
+    "actions": [
+      "LookDown",
+      "MoveLeft(0.5)",
+      "CleanObject(Bed)",
+      "PickupObject(KeyChain)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan310",
+  "target_object_types": [
+    "Bed",
+    "KeyChain"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "KeyChain",
+      "state": "isPickedUp",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Bed",
+      "state": "isDirty",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm getting ready to leave. Please clean my bed and pick up my keychain.",
+  "max_steps": 30,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

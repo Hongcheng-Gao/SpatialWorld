@@ -1,0 +1,73 @@
+{
+  "task_id": "procthor501",
+  "task_name": "Turn off floor lamp and prepare the TV",
+  "instruction": "I'm getting ready to sleep. I'd like to lie in bed and watch some TV before I go to sleep. Please go to the living room and turn off a floor lamp. Then, go to the bedroom, tidy up the bed, and turn on the TV for me.",
+  "golden_actions": {
+    "steps": 31,
+    "actions": [
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveLeft(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateLeft(90)",
+      "MoveRight(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "RotateLeft(90)",
+      "ToggleObjectOff(FloorLamp)",
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveRight(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateRight(90)",
+      "CleanObject(Bed)",
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveLeft(1.0)",
+      "MoveLeft(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "ToggleObjectOn(Television)",
+      "Done"
+    ]
+  },
+  "scene_index": 152,
+  "target_object_types": [
+    "Television",
+    "FloorLamp",
+    "Bed"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Television",
+      "state": "isToggled",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Bed",
+      "state": "isDirty",
+      "value": false
+    },
+    {
+      "type": "object_state",
+      "object_type": "FloorLamp",
+      "state": "isToggled",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm getting ready to sleep. I'd like to lie in bed and watch some TV before I go to sleep. Please go to the living room and turn off a floor lamp. Then, go to the bedroom, tidy up the bed, and turn on the TV for me.",
+  "max_steps": 72,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

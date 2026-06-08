@@ -1,0 +1,34 @@
+{
+  "task_id": "ai2thor05511",
+  "task_name": "Turn off the lights in the room",
+  "instruction": "I'm so tired tonight that I want to go to bed early—could you please turn off the lights in the room? The switch is right by the door. Thanks!",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveRight(1.0)",
+      "ToggleObjectOff(LightSwitch)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan305",
+  "target_object_types": [
+    "LightSwitch"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "LightSwitch",
+      "field": "isToggled",
+      "value": false
+    }
+  ],
+  "success_logic": "OR",
+  "target_description": "I'm so tired tonight that I want to go to bed early—could you please turn off the lights in the room? The switch is right by the door. Thanks!",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

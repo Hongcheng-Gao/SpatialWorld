@@ -1,0 +1,65 @@
+{
+  "task_id": "procthor310",
+  "task_name": "Put RemoteControl on DiningTable, Wait by Table",
+  "instruction": "I'm going to have a meal. Please move the RemoteControl from the sofa to the dining table, then wait beside the table.",
+  "golden_actions": {
+    "steps": 30,
+    "actions": [
+      "RotateLeft(90)",
+      "MoveLeft(1.0)",
+      "MoveLeft(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveLeft(1.0)",
+      "MoveLeft(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateRight(90)",
+      "LookDown",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "RotateRight(90)",
+      "PickupObject(RemoteControl)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "PutObject(DiningTable)",
+      "Done"
+    ]
+  },
+  "scene_index": 65,
+  "target_object_types": [
+    "RemoteControl",
+    "Sofa",
+    "DiningTable"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "RemoteControl",
+      "receptacle_type": "DiningTable",
+      "value": "true"
+    },
+    {
+      "type": "agent_near_object",
+      "object_type": "DiningTable",
+      "distance": 1.5
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm going to have a meal. Please move the RemoteControl from the sofa to the dining table, then wait beside the table.",
+  "max_steps": 70,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

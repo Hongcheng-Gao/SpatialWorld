@@ -1,0 +1,47 @@
+{
+  "task_id": "procthor114",
+  "task_name": "Wait at kitchen table",
+  "instruction": "I'll go eat soon. Please wait for me at any kitchen table first.",
+  "golden_actions": {
+    "steps": 20,
+    "actions": [
+      "MoveLeft(0.25)",
+      "MoveAhead(0.25)",
+      "MoveLeft(0.25)",
+      "MoveAhead(0.25)",
+      "MoveLeft(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "RotateLeft(90)",
+      "MoveRight(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.5)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "LookDown",
+      "MoveAhead(0.5)",
+      "Done"
+    ]
+  },
+  "scene_index": 127,
+  "target_object_types": [
+    "DiningTable"
+  ],
+  "success_conditions": [
+    {
+      "type": "agent_near_object",
+      "object_type": "DiningTable",
+      "distance": 1.5
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'll go eat soon. Please wait for me at any kitchen table first.",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level1 Navigation"
+}

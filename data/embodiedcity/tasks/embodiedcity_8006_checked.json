@@ -1,0 +1,106 @@
+{
+  "id": "embodiedcity_8006",
+  "instruction": "Please fly from the circular flowerbed inside the residential complex to a position 5 meters directly in front of and 5 meters above the An Ge Jia sign located on the street outside the complex.",
+  "start": [
+    7761.92333984375,
+    -3564.743408203125,
+    -4.960159778594971
+  ],
+  "start_yaw": 0.0,
+  "end": [
+    7777.3330078125,
+    -3503.818115234375,
+    -12.181242942810059
+  ],
+  "end_yaw": 86.66562027863641,
+  "check_status": "Qualified",
+  "check_comment": "OK",
+  "check_time": "2026-05-12 16:40:57",
+  "trajectory": [
+    {
+      "x": 7761.92,
+      "y": -3564.74,
+      "z": -4.89,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 7761.92,
+      "y": -3564.74,
+      "z": -4.89,
+      "action": "Yaw Right",
+      "granularity": "Large"
+    },
+    {
+      "x": 7761.92,
+      "y": -3564.74,
+      "z": -14.8,
+      "action": "Up",
+      "granularity": "Large"
+    },
+    {
+      "x": 7761.92,
+      "y": -3554.74,
+      "z": -14.73,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7761.92,
+      "y": -3544.74,
+      "z": -14.7,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7761.92,
+      "y": -3534.74,
+      "z": -14.69,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7761.92,
+      "y": -3524.74,
+      "z": -14.67,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7761.92,
+      "y": -3514.74,
+      "z": -14.66,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7761.92,
+      "y": -3504.74,
+      "z": -14.65,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7771.92,
+      "y": -3504.74,
+      "z": -14.63,
+      "action": "Left",
+      "granularity": "Large"
+    },
+    {
+      "x": 7776.92,
+      "y": -3504.74,
+      "z": -14.54,
+      "action": "Left",
+      "granularity": "Medium"
+    },
+    {
+      "x": 7776.92,
+      "y": -3504.74,
+      "z": -14.54,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 11
+}

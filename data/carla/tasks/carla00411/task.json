@@ -1,0 +1,29 @@
+{
+  "task_id": "carla00411",
+  "task_name": "Go wait by the tree near the red frame.",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "walker",
+  "instruction": "Can you see the tree by the red frame? Walk over there. I need to wait for a friend.",
+  "golden_actions": {
+    "steps": 3,
+    "actions": [
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "Done"
+    ]
+  },
+  "scene": "Town05",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "distance_to_waypoint",
+    "target_location": [
+      42.8,
+      -15.4,
+      1.1
+    ],
+    "threshold_label": "strict"
+  },
+  "max_steps": 50
+}

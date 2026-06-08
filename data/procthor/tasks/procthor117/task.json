@@ -1,0 +1,74 @@
+{
+  "task_id": "procthor117",
+  "task_name": "Hide watch on counter, go to bedroom",
+  "instruction": "I'm just kidding. Please hide the watch on the kitchen counter and then quickly go to the bedroom.",
+  "golden_actions": {
+    "steps": 37,
+    "actions": [
+      "PickupObject(Watch)",
+      "RotateLeft(90)",
+      "MoveAhead(0.5)",
+      "MoveRight(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "RotateLeft(90)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveRight(1.0)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "RotateLeft(90)",
+      "MoveRight(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "MoveLeft(0.5)",
+      "MoveAhead(0.5)",
+      "MoveLeft(0.25)",
+      "PutObject(CounterTop)",
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveLeft(0.5)",
+      "MoveLeft(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "Done"
+    ]
+  },
+  "scene_index": 35,
+  "target_object_types": [
+    "Watch"
+  ],
+  "success_conditions": [
+    {
+      "type": "agent_in_room",
+      "room_type": "Bedroom"
+    },
+    {
+      "type": "object_in_room",
+      "object_type": "Watch",
+      "room_type": "Kitchen"
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Watch",
+      "receptacle_type": "CounterTop",
+      "value": "true"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm just kidding. Please hide the watch on the kitchen counter and then quickly go to the bedroom.",
+  "max_steps": 84,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level1 Navigation"
+}

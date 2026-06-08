@@ -1,0 +1,41 @@
+{
+  "task_id": "ai2thor05001",
+  "task_name": "Pick up the laptop and turn it on",
+  "instruction": "Could you help me out by picking up the laptop, turning it on carefully, and holding it securely?",
+  "golden_actions": {
+    "steps": 7,
+    "actions": [
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "MoveLeft(0.25)",
+      "PickupObject(Laptop)",
+      "ToggleObjectOn(Laptop)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan301",
+  "target_object_types": [
+    "Laptop"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Laptop",
+      "field": "isPickedUp",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Laptop",
+      "field": "isToggled",
+      "value": true
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "Could you help me out by picking up the laptop, turning it on carefully, and holding it securely?",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "Study and Work",
+  "Level": "Level3"
+}

@@ -1,0 +1,36 @@
+{
+  "task_id": "ai2thor04503",
+  "task_name": "Pick up the baseball bat",
+  "instruction": "Please pick up the baseball bat leaning against the table by the door.",
+  "golden_actions": {
+    "steps": 8,
+    "actions": [
+      "RotateLeft(90)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "LookDown",
+      "MoveAhead(0.5)",
+      "PickupObject(BaseballBat)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan329",
+  "target_object_types": [
+    "BaseballBat"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "BaseballBat",
+      "field": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "OR",
+  "target_description": "Please pick up the baseball bat leaning against the table by the door.",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "Entertainment",
+  "Level": "Level3"
+}

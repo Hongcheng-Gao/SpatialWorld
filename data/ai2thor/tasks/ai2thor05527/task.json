@@ -1,0 +1,46 @@
+{
+  "task_id": "ai2thor05527",
+  "task_name": "Pick up the trophy and place it on the dresser, then grab the basketball",
+  "instruction": "I'm the MVP of the basketball league. Next to a painting on my bookshelf is my MVP trophy; I want to place it on the dresser , then pick up the basketball and work out",
+  "golden_actions": {
+    "steps": 11,
+    "actions": [
+      "PickupObject(Statue)",
+      "MoveBack(1.0)",
+      "MoveLeft(0.75)",
+      "RotateLeft(90)",
+      "PutObject(Dresser)",
+      "MoveRight(0.5)",
+      "MoveBack(1.0)",
+      "MoveBack(1.0)",
+      "RotateRight(180)",
+      "PickupObject(BasketBall)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan319",
+  "target_object_types": [
+    "BasketBall",
+    "Dresser",
+    "Statue"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "BasketBall",
+      "field": "isPickedUp",
+      "value": true
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Statue",
+      "receptacle_type": "Dresser"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm the MVP of the basketball league. Next to a painting on my bookshelf is my MVP trophy; I want to place it on the dresser , then pick up the basketball and work out",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "Entertainment (Game/Sports)",
+  "Level": "Level3"
+}

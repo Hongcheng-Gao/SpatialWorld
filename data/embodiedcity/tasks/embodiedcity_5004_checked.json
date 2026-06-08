@@ -1,0 +1,71 @@
+{
+  "id": "embodiedcity_5004",
+  "instruction": "Please move to the far right side of the blue roof in front of you.",
+  "start": [
+    7763.13232421875,
+    -3568.8173828125,
+    -6.649720668792725
+  ],
+  "start_yaw": 1.47,
+  "end": [
+    7788.626953125,
+    -3574.9794921875,
+    -8.521028518676758
+  ],
+  "end_yaw": -1.5689380841079956,
+  "check_status": "Qualified",
+  "check_comment": "confused",
+  "check_time": "2026-05-12 12:50:07",
+  "trajectory": [
+    {
+      "x": 7763.13,
+      "y": -3568.82,
+      "z": -6.62,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 7773.13,
+      "y": -3568.56,
+      "z": -6.63,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7783.13,
+      "y": -3568.3,
+      "z": -6.6,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7783.13,
+      "y": -3568.3,
+      "z": -11.54,
+      "action": "Up",
+      "granularity": "Medium"
+    },
+    {
+      "x": 7783.38,
+      "y": -3578.3,
+      "z": -11.45,
+      "action": "Left",
+      "granularity": "Large"
+    },
+    {
+      "x": 7788.38,
+      "y": -3578.17,
+      "z": -11.37,
+      "action": "Forward",
+      "granularity": "Medium"
+    },
+    {
+      "x": 7788.38,
+      "y": -3578.17,
+      "z": -11.37,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 6
+}

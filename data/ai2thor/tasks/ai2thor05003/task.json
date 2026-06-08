@@ -1,0 +1,42 @@
+{
+  "task_id": "ai2thor05003",
+  "task_name": "Open the book and break the window",
+  "instruction": "I'm checking a couple interactions, so please open the book gently so it stays open and then in the simulation, break the window using the provided interaction.",
+  "golden_actions": {
+    "steps": 7,
+    "actions": [
+      "MoveLeft(0.5)",
+      "MoveAhead(1)",
+      "MoveAhead(0.25)",
+      "OpenObject(Book)",
+      "MoveAhead(0.25)",
+      "BreakObject(Window)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan303",
+  "target_object_types": [
+    "Book",
+    "Window"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Book",
+      "field": "isOpen",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Window",
+      "field": "isBroken",
+      "value": true
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "I'm checking a couple interactions, so please open the book gently so it stays open and then in the simulation, break the window using the provided interaction.",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "Study and Work",
+  "Level": "Level3"
+}

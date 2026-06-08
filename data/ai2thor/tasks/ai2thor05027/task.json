@@ -1,0 +1,44 @@
+{
+  "task_id": "ai2thor05027",
+  "task_name": "Move the cell phone to the bed",
+  "instruction": "I'm putting things where they belong, so please pick up the cell phone, carry it over, and set it down on the bed neatly.",
+  "golden_actions": {
+    "steps": 9,
+    "actions": [
+      "MoveAhead(0.5)",
+      "RotateRight(90)",
+      "MoveAhead(0.5)",
+      "PickupObject(CellPhone)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "PutObject(Bed)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan313",
+  "target_object_types": [
+    "Bed",
+    "CellPhone",
+    "Desk"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "CellPhone",
+      "receptacle_type": "Bed",
+      "value": true
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "CellPhone",
+      "receptacle_type": "Desk",
+      "value": false
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "I'm putting things where they belong, so please pick up the cell phone, carry it over, and set it down on the bed neatly.",
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3"
+}

@@ -1,0 +1,31 @@
+{
+  "task_id": "ai2thor04238",
+  "task_name": "Pick up boots between the shelf and the dresser.",
+  "instruction": "I want to put on my boots. Please pick up the boots located between the shelf and the dresser.",
+  "golden_actions": {
+    "steps": 3,
+    "actions": [
+      "MoveAhead(0.5)",
+      "PickupObject(Boots)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan330",
+  "target_object_types": [
+    "Boots"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Boots",
+      "state": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to put on my boots. Please pick up the boots located between the shelf and the dresser.",
+  "max_steps": 30,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

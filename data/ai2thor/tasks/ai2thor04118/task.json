@@ -1,0 +1,39 @@
+{
+  "task_id": "ai2thor04118",
+  "task_name": "Keys on sofa",
+  "instruction": "I'm getting ready to leave. Please leave my keys on the sofa.",
+  "golden_actions": {
+    "steps": 11,
+    "actions": [
+      "MoveLeft(0.5)",
+      "MoveAhead(0.5)",
+      "PickupObject(KeyChain)",
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveRight(0.5)",
+      "MoveAhead(1)",
+      "MoveAhead(1)",
+      "RotateRight(90)",
+      "PutObject(Sofa)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan213",
+  "target_object_types": [
+    "KeyChain",
+    "Sofa"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "KeyChain",
+      "receptacle_type": "Sofa"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm getting ready to leave. Please leave my keys on the sofa.",
+  "max_steps": 60,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

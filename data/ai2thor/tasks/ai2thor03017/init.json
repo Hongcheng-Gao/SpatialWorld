@@ -1,0 +1,20 @@
+{
+  "scene": "FloorPlan14",
+  "actions": [
+    "RotateRight(90)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "PickupObject(Spatula)",
+    "RotateLeft(90)",
+    "MoveAhead(0.25)",
+    "LookDown",
+    "PutObject(CounterTop)",
+    "MoveBack(0.25)",
+    "MoveRight(0.25)",
+    "MoveBack(0.25)",
+    "MoveBack(0.25)",
+    "MoveBack(0.25)",
+    "Done"
+  ]
+}

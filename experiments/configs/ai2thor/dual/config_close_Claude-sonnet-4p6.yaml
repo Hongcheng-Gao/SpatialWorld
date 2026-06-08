@@ -1,0 +1,171 @@
+
+env:
+  type: ai2thor # Environment type
+  agent_count: 2
+  width: 800 # Rendered image width (pixels)
+  height: 600 # Rendered image height (pixels)
+  field_of_view: 60
+  grid_size: 0.25
+  render_depth: false # Whether to render depth map
+  render_instance_segmentation: false # Whether to render instance segmentation map
+  text_state_mode: first_person
+  visibility_distance: 1.5
+  platform: null
+
+max_steps: 30 # Maximum steps per episode
+
+context_management:
+  enable_long_term_summary: false
+  short_term_history_window_size: 49
+
+dual_agent:
+  equal_collaboration: true
+  collaboration_mode: alternating
+  switch_interval: 1
+  max_global_steps: 60
+
+model:
+  vlm:
+    provider: chat
+    model_name: anthropic/claude-sonnet-4.6
+    temperature: 1.0
+    top_p: 0.9
+    max_tokens: 4096
+    base_url: null
+    api_key: null
+
+logging:
+  stdout_verbose: true # Whether to output detailed logs to console
+  save_step_images: true # Whether to save images for each step
+
+actions:
+  move_small_magnitude: 0.25   # Small (default when not specified)
+  move_medium_magnitude: 0.5   # Medium
+  move_large_magnitude: 1      # Large
+  move_ahead_magnitude: 0.5
+  move_back_magnitude: 0.5
+  move_left_magnitude: 0.5
+  move_right_magnitude: 0.5
+  rotate_degrees: 90 # Rotation angle (degrees)
+
+reward:
+  success_reward: 10.0 # Task success reward
+  step_success_bonus: 0.1 # Small reward for each successful action
+  step_failure_penalty: -0.05 # Penalty for each failed action
+
+experiment:
+  num_episodes: 1 # Number of episodes to run
+  output_dir: outputs # Output directory
+
+task_presets:
+  open_fridge:
+    scene: FloorPlan1 # AI2-THOR scene name
+    description: You are now in a kitchen scene, please look around like a person to find the fridge, then walk to the front of the fridge, and finally try to open the fridge door.
+    target_object_types:
+      - Fridge # Target object type
+    success_condition: # Success condition
+      type: object_state # Condition type: check object state
+      field: isOpen # Field to check
+      value: true # Expected value
+      any: true # Any one matching is sufficient
+    target_description: Find and open any Fridge
+
+  open_microwave:
+    scene: FloorPlan1
+    description: Find the microwave in the kitchen, walk to the front of it, and then open the microwave door.
+    target_object_types:
+      - Microwave
+    success_condition:
+      type: object_state
+      field: isOpen
+      value: true
+      any: true
+    target_description: Find and open any Microwave
+
+  close_faucet:
+    scene: FloorPlan1
+    description: Find the open faucet in the kitchen, walk to the front of it, and then close it.
+    target_object_types:
+      - Faucet
+    success_condition:
+      type: object_state
+      field: isToggled # isToggled indicates switch state
+      value: false # false means closed
+      any: true
+    target_description: Find and close any open Faucet
+
+  turn_on_light:
+    scene: FloorPlan10 # Use different scene
+    description: Find the light switch in the room, walk to the front of it, and then turn on the light.
+    target_object_types:
+      - LightSwitch
+    success_condition:
+      type: object_state
+      field: isToggled
+      value: true
+      any: true
+    target_description: Find and turn on any LightSwitch
+
+  pickup_egg:
+    scene: FloorPlan2
+    description: Find the egg (Egg), approach it, and then pick up the egg.
+    target_object_types:
+      - Egg
+    success_condition:
+      type: object_in_hand # Condition type: check object in hand
+      object_type: Egg
+    target_description: Find and pick up the egg (Egg)
+    max_steps: 25 # Override global max_steps
+
+  pickup_phone:
+    scene: FloorPlan2
+    description: Find the phone (Phone), approach it, and then pick up the phone.
+    target_object_types:
+      - Phone
+    success_condition:
+      type: object_in_hand # Condition type: check object in hand
+      object_type: Phone
+    target_description: Find and pick up the phone (Phone)
+    max_steps: 25 # Override global max_steps
+  put_egg_in_pan:
+    scene: FloorPlan2
+    description: Find the egg (Egg), pick it up, and then put it into the pan (Pan)
+    target_object_types:
+      - Egg
+      - Pan
+    success_condition:
+      type: object_state
+      field: parentReceptacles # Check the object's parent container
+      value: Pan # Expected parent container contains Pan
+      any: true
+    target_description: Find the egg (Egg), pick it up, and then put it into the pan (Pan)
+    max_steps: 50 # Complex tasks require more steps
+
+  slice_apple:
+    scene: FloorPlan1
+    description: Find the apple (Apple), slice it
+    target_object_types:
+      - Apple
+    success_condition:
+      type: object_state
+      field: isSliced # Check if it is sliced
+      value: true
+      any: true
+    target_description: Find the apple (Apple), slice it
+    max_steps: 60
+
+  put_two_eggs_in_pan:
+    scene: FloorPlan2
+    description: Find two eggs and put them both into the pan
+    target_object_types:
+      - Egg
+      - Pan
+    success_conditions:
+      - type: object_in_receptacle
+        object_type: Egg
+        receptacle_type: Pan
+        count: 2  # Requires 2 eggs in the pan
+        description: Two eggs must be in the pan
+    success_logic: AND  # All conditions must be satisfied
+    target_description: Find two eggs and put them both into the pan
+    max_steps: 80

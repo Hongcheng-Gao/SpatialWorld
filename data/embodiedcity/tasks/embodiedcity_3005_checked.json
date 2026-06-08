@@ -1,0 +1,42 @@
+{
+  "id": "embodiedcity_3005",
+  "instruction": "I want to follow the direction of the fence to look for an entrance or passage. Please move next to the black fence.",
+  "start": [
+    7818.791015625,
+    -3603.342529296875,
+    -4.116933822631836
+  ],
+  "end": [
+    7827.58740234375,
+    -3600.46826171875,
+    -1.5883361101150513
+  ],
+  "check_status": "Qualified",
+  "check_comment": "ok",
+  "check_time": "2026-05-12 12:57:35",
+  "trajectory": [
+    {
+      "x": 7818.79,
+      "y": -3603.34,
+      "z": -4.03,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 7828.79,
+      "y": -3603.34,
+      "z": -4.05,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7828.79,
+      "y": -3603.34,
+      "z": -4.05,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 2,
+  "start_yaw": 0.0
+}

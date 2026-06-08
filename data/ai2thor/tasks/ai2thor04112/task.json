@@ -1,0 +1,47 @@
+{
+  "task_id": "ai2thor04112",
+  "task_name": "Coffee cup with pencil on side table",
+  "instruction": "Put a coffee cup with a pencil on the side table.",
+  "golden_actions": {
+    "steps": 13,
+    "actions": [
+      "RotateRight(90)",
+      "MoveAhead(1)",
+      "LookDown",
+      "PickupObject(Pen)",
+      "PutObject(Mug)",
+      "PickupObject(Mug)",
+      "RotateLeft(90)",
+      "MoveAhead(0.5)",
+      "MoveLeft(1)",
+      "MoveLeft(0.5)",
+      "MoveAhead(1)",
+      "PutObject(SideTable)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan303",
+  "target_object_types": [
+    "Pencil",
+    "SideTable",
+    "Mug"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Pen",
+      "receptacle_type": "Mug"
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Mug",
+      "receptacle_type": "SideTable"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "Put a coffee cup with a pencil on the side table.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

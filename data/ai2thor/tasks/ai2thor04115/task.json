@@ -1,0 +1,43 @@
+{
+  "task_id": "ai2thor04115",
+  "task_name": "Move coffee to table",
+  "instruction": "I need to get ready for work. Please move the coffee from the bedside table to the desk.",
+  "golden_actions": {
+    "steps": 15,
+    "actions": [
+      "RotateLeft(90)",
+      "MoveLeft(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "PickupObject(Mug)",
+      "RotateLeft(90)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "PutObject(Desk)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan323",
+  "target_object_types": [
+    "Desk",
+    "Mug"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Mug",
+      "receptacle_type": "Desk"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I need to get ready for work. Please move the coffee from the bedside table to the desk.",
+  "max_steps": 60,
+  "Evaluation_Type": "Conditional",
+  "Category": "Study and Work",
+  "Level": "Level3 Hybrid"
+}

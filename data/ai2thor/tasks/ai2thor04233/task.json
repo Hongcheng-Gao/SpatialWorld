@@ -1,0 +1,48 @@
+{
+  "task_id": "ai2thor04233",
+  "task_name": "Cell phone to armchair",
+  "instruction": "I'd like to work in an armchair; please turn on my cell phone and bring it to the armchair.",
+  "golden_actions": {
+    "steps": 14,
+    "actions": [
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "MoveLeft(1.0)",
+      "MoveAhead(0.25)",
+      "ToggleObjectOn(CellPhone)",
+      "PickupObject(CellPhone)",
+      "MoveRight(0.5)",
+      "MoveRight(0.25)",
+      "MoveBack(0.5)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "PutObject(ArmChair)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan322",
+  "target_object_types": [
+    "ArmChair",
+    "CellPhone"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "CellPhone",
+      "receptacle_type": "ArmChair"
+    },
+    {
+      "type": "object_state",
+      "object_type": "CellPhone",
+      "state": "isToggled",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'd like to work in an armchair; please turn on my cell phone and bring it to the armchair.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Study and Work",
+  "Level": "Level3 Hybrid"
+}

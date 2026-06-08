@@ -1,0 +1,59 @@
+{
+  "task_id": "procthor013",
+  "task_name": "Bring Pencil, Wait by TV Cabinet",
+  "instruction": "I'd like to do some tidying up. Please pick up the pencil from the bedroom and stand near the TV cabinet.",
+  "golden_actions": {
+    "steps": 21,
+    "actions": [
+      "LookDown",
+      "MoveRight(0.25)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.5)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.25)",
+      "PickupObject(Pencil)",
+      "RotateLeft(90)",
+      "MoveAhead(0.5)",
+      "MoveLeft(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "MoveLeft(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "RotateRight(90)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.25)",
+      "Done"
+    ]
+  },
+  "scene_index": 122,
+  "target_object_types": [
+    "Pencil",
+    "TVStand"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Pencil",
+      "state": "isPickedUp",
+      "value": true
+    },
+    {
+      "type": "agent_in_room",
+      "room_type": "LivingRoom"
+    },
+    {
+      "type": "agent_near_object",
+      "object_type": "TVStand",
+      "distance": 1.5
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'd like to do some tidying up. Please pick up the pencil from the bedroom and stand near the TV cabinet.",
+  "max_steps": 52,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

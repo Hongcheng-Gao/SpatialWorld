@@ -1,0 +1,62 @@
+{
+  "task_id": "carla00400",
+  "task_name": "Walk to the church ahead of the slide.",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "walker",
+  "instruction": "Do you see the church ahead of the slide? If yes, please walk straight to the church door.",
+  "golden_actions": {
+    "steps": 10,
+    "actions": [
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "TurnRight(degrees=30)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "TurnLeft(degrees=30)",
+      "WalkForward(distance=2.5)",
+      "Done"
+    ]
+  },
+  "scene": "Town04",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "polygon_area",
+    "target_polygon": [
+      [
+        283.7205505371094,
+        -284.39599609375,
+        0.15674257278442383
+      ],
+      [
+        285.7774353027344,
+        -284.39599609375,
+        0.15674257278442383
+      ],
+      [
+        285.7774353027344,
+        -282.09527587890625,
+        0.15674257278442383
+      ],
+      [
+        285.7774353027344,
+        0.15674257278442383
+      ],
+      [
+        285.7774353027344,
+        -282.09527587890625,
+        0.15674257278442383
+      ],
+      [
+        283.7205505371094,
+        -282.09527587890625,
+        0.15674257278442383
+      ]
+    ],
+    "threshold_label": "medium"
+  },
+  "max_steps": 50
+}

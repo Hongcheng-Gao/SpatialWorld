@@ -1,0 +1,41 @@
+{
+  "task_id": "ai2thor05563",
+  "task_name": "Pick up the remote and place it on the coffee table",
+  "instruction": "I'm looking for the remote. Could you look for the remote on the dresser and then set it on the coffee table in front of the TV?",
+  "golden_actions": {
+    "steps": 5,
+    "actions": [
+      "PickupObject(RemoteControl)",
+      "RotateRight(90)",
+      "MoveAhead(0.75)",
+      "PutObject(CoffeeTable)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan206",
+  "target_object_types": [
+    "RemoteControl",
+    "CoffeeTable",
+    "Sofa"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "RemoteControl",
+      "receptacle_type": "Sofa",
+      "value": false
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "RemoteControl",
+      "receptacle_type": "CoffeeTable",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm looking for the remote. Could you look for the remote on the dresser and then set it on the coffee table in front of the TV?",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

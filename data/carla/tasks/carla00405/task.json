@@ -1,0 +1,29 @@
+{
+  "task_id": "carla00405",
+  "task_name": "Eat here, see red box, go there.",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "walker",
+  "instruction": "I want to eat here, can you see the place marked with the red box? Walk over there.",
+  "golden_actions": {
+    "steps": 3,
+    "actions": [
+      "TurnRight(degrees=90)",
+      "WalkForward(distance=10)",
+      "Done"
+    ]
+  },
+  "scene": "Town04",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "distance_to_waypoint",
+    "target_location": [
+      236.5,
+      -181.6,
+      1.2
+    ],
+    "threshold_label": "strict"
+  },
+  "max_steps": 50
+}

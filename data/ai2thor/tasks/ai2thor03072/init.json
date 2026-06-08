@@ -1,0 +1,20 @@
+{
+  "scene": "FloorPlan29",
+  "actions": [
+    "LookDown",
+    "SliceObject(Bread)",
+    "PickupObject(BreadSliced)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "RotateLeft(90)",
+    "MoveAhead(0.25)",
+    "PutObject(Toaster)",
+    "MoveRight(0.25)",
+    "CookObject(BreadSliced)",
+    "Done"
+  ]
+}

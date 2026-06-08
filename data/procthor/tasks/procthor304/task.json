@@ -1,0 +1,42 @@
+{
+  "task_id": "procthor304",
+  "task_name": "bring a basketball",
+  "instruction": "I want to play the basketball. Please bring a basketball in the Bedroom.",
+  "golden_actions": {
+    "steps": 5,
+    "actions": [
+      "LookDown",
+      "MoveLeft(1.0)",
+      "MoveAhead(1.0)",
+      "PickupObject(BasketBall)",
+      "Done"
+    ]
+  },
+  "scene_index": 130,
+  "target_object_types": [
+    "BasketBall"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "BasketBall",
+      "state": "isPickedUp",
+      "value": true
+    },
+    {
+      "type": "agent_in_room",
+      "room_type": "Bedroom"
+    },
+    {
+      "type": "agent_near_object",
+      "object_type": "BasketBall",
+      "distance": 1.5
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to play the basketball. Please bring a basketball in the Bedroom.",
+  "max_steps": 20,
+  "Evaluation_Type": "Conditional",
+  "Category": "Entertainment (Game/Sports)",
+  "Level": "Level3 Hybrid"
+}

@@ -1,0 +1,40 @@
+{
+  "task_id": "ai2thor03060",
+  "task_name": "Dispose rotten egg",
+  "instruction": "This egg is rotten; please throw it in the trash can.",
+  "golden_actions": {
+    "steps": 12,
+    "actions": [
+      "RotateRight(90)",
+      "MoveAhead(1)",
+      "PickupObject(Egg)",
+      "RotateLeft(90)",
+      "RotateLeft(90)",
+      "MoveAhead(1)",
+      "MoveAhead(1)",
+      "RotateRight(90)",
+      "MoveLeft(0.5)",
+      "MoveAhead(0.5)",
+      "PutObject(GarbageCan)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan27",
+  "target_object_types": [
+    "Egg",
+    "GarbageCan"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Egg",
+      "receptacle_type": "GarbageCan"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "This egg is rotten; please throw it in the trash can.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

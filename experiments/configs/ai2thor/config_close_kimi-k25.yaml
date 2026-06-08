@@ -1,0 +1,242 @@
+#复制config
+# 窗口49
+# 步数改为1步
+# 两个模型的状态results 是看最终状态是否一致
+# 托管情况下 某一个成功 就算成功
+#1. 计算步数，看的是轮次 （两个agent都动一步才算一步），如果某个agent死了 另一个agent在动 也算一步
+# 以及其他标准的 AI2-THOR 交互动作 对齐一下 可操作的物体 
+# COLLABORATIVE_AGENT_SYSTEM_PROMPT 
+
+# '''
+# agent_1_continue = agent_1.get("should_continue", True) and agent_1.get("step_count", 0) < agent_1.get("max_steps", 15)
+#     agent_2_continue = agent_2.get("should_continue", True) and agent_2.get("step_count", 0) < agent_2.get("max_steps", 15)
+    
+#     # Check global conditions
+#     global_continue = state.get("global_step_count", 0) < state.get("max_global_steps", 60)
+    
+#     if (agent_1_continue or agent_2_continue) and global_continue and not state.get("global_success"):
+#         return "coordinator"
+#     else:
+#         return "final"
+# """
+
+# 这里改的需要全局的步数 两个都走算一步
+# '''
+
+## 看两个agent的最终状态 最终的评测状态 如果最后评估成功了 就算成功 否则算失败
+# 只要有一个是null 那么最终状态就是null 这是case直接停止，给出null
+# 
+
+# =============================================================================
+# AI2-THOR Dual Agent Configuration File
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Basic Environment Configuration
+# -----------------------------------------------------------------------------
+env:
+  type: ai2thor # Environment type
+  agent_count: 2  # 同场景双具身（AI2-THOR agentId 0/1）；单智能体对照改为 1
+  width: 800 # Rendered image width (pixels)
+  height: 600 # Rendered image height (pixels)
+  field_of_view: 60 # Camera field of view (degrees), default 60 (non-wide angle)
+  grid_size: 0.25 # Navigation grid size (meters), affects movement precision
+  render_depth: false # Whether to render depth map
+  render_instance_segmentation: false # Whether to render instance segmentation map
+  text_state_mode: first_person # Text state description mode: first_person / third_person
+  visibility_distance: 1.0 # Object visibility distance threshold (meters), also means interaction distance affects obj["visible"] in metadata
+  # Rendering platform configuration:
+  # - null: Auto-selection (requires X11 display server)
+  # - CloudRendering: Headless mode (no X11 required, recommended for servers)
+  # Can also be set via --headless command line argument
+  platform: null
+
+# -----------------------------------------------------------------------------
+# Agent Runtime Configuration
+# -----------------------------------------------------------------------------
+max_steps: 30 # Maximum steps per episode
+
+# Context management (for controlling the length of historical trajectories sent to LLM)
+context_management:
+  enable_long_term_summary: false # Whether to enable long-term semantic summary (<SUMMARY> tag)
+  short_term_history_window_size: 29 # 滑动窗口大小 (recent N-step multimodal history)
+
+# -----------------------------------------------------------------------------
+# Dual Agent Specific Configuration
+# -----------------------------------------------------------------------------
+dual_agent:
+  equal_collaboration: true
+  collaboration_mode: alternating
+  switch_interval: 1
+  max_global_steps: 60
+
+# -----------------------------------------------------------------------------
+# Model Configuration
+# -----------------------------------------------------------------------------
+model:
+  vlm:
+    # 使用 OpenRouter API
+
+    provider: openai
+    model_name: Kimi-K2.5
+    temperature: 1.0
+    top_p: 0.9
+    max_tokens: 4096
+    base_url: null
+    api_key: null
+
+# -----------------------------------------------------------------------------
+# Logging and Output Configuration
+# -----------------------------------------------------------------------------
+logging:
+  stdout_verbose: true # Whether to output detailed logs to console
+  save_step_images: true # Whether to save images for each step
+
+# -----------------------------------------------------------------------------
+# Action Parameter Configuration
+# -----------------------------------------------------------------------------
+# Step granularity (Large / Medium / Small)
+# Large=1m, Medium=0.5m, Small=0.25m. Default when omitted: Small.
+actions:
+  move_small_magnitude: 0.25   # Small (default when not specified)
+  move_medium_magnitude: 0.5   # Medium
+  move_large_magnitude: 1      # Large
+  # Backward compatibility: single magnitude (treated as medium)
+  move_ahead_magnitude: 0.5
+  move_back_magnitude: 0.5
+  move_left_magnitude: 0.5
+  move_right_magnitude: 0.5
+  rotate_degrees: 90 # Rotation angle (degrees)
+
+# -----------------------------------------------------------------------------
+# Reward Function Configuration (for reinforcement learning or evaluation)
+# -----------------------------------------------------------------------------
+reward:
+  success_reward: 10.0 # Task success reward
+  step_success_bonus: 0.1 # Small reward for each successful action
+  step_failure_penalty: -0.05 # Penalty for each failed action
+
+# -----------------------------------------------------------------------------
+# Experiment Configuration
+# -----------------------------------------------------------------------------
+experiment:
+  num_episodes: 1 # Number of episodes to run
+  output_dir: outputs # Output directory
+
+# =============================================================================
+# Task Presets
+# Each task includes: scene, task description, target objects, success conditions, etc.
+# =============================================================================
+task_presets:
+  open_fridge:
+    scene: FloorPlan1
+    description: You are now in a kitchen scene, please look around like a person to find the fridge, then walk to the front of the fridge, and finally try to open the fridge door.
+    target_object_types:
+      - Fridge
+    success_condition:
+      type: object_state
+      field: isOpen
+      value: true
+      any: true
+    target_description: Find and open any Fridge
+
+  open_microwave:
+    scene: FloorPlan1
+    description: Find the microwave in the kitchen, walk to the front of it, and then open the microwave door.
+    target_object_types:
+      - Microwave
+    success_condition:
+      type: object_state
+      field: isOpen
+      value: true
+      any: true
+    target_description: Find and open any Microwave
+
+  close_faucet:
+    scene: FloorPlan1
+    description: Find the open faucet in the kitchen, walk to the front of it, and then close it.
+    target_object_types:
+      - Faucet
+    success_condition:
+      type: object_state
+      field: isToggled
+      value: false
+      any: true
+    target_description: Find and close any open Faucet
+
+  turn_on_light:
+    scene: FloorPlan10
+    description: Find the light switch in the room, walk to the front of it, and then turn on the light.
+    target_object_types:
+      - LightSwitch
+    success_condition:
+      type: object_state
+      field: isToggled
+      value: true
+      any: true
+    target_description: Find and turn on any LightSwitch
+
+  pickup_egg:
+    scene: FloorPlan2
+    description: Find the egg (Egg), approach it, and then pick up the egg.
+    target_object_types:
+      - Egg
+    success_condition:
+      type: object_in_hand
+      object_type: Egg
+    target_description: Find and pick up the egg (Egg)
+    max_steps: 25
+
+  pickup_phone:
+    scene: FloorPlan2
+    description: Find the phone (Phone), approach it, and then pick up the phone.
+    target_object_types:
+      - Phone
+    success_condition:
+      type: object_in_hand
+      object_type: Phone
+    target_description: Find and pick up the phone (Phone)
+    max_steps: 25
+
+  put_egg_in_pan:
+    scene: FloorPlan2
+    description: Find the egg (Egg), pick it up, and then put it into the pan (Pan)
+    target_object_types:
+      - Egg
+      - Pan
+    success_condition:
+      type: object_state
+      field: parentReceptacles
+      value: Pan
+      any: true
+    target_description: Find the egg (Egg), pick it up, and then put it into the pan (Pan)
+    max_steps: 50
+
+  slice_apple:
+    scene: FloorPlan1
+    description: Find the apple (Apple), slice it
+    target_object_types:
+      - Apple
+    success_condition:
+      type: object_state
+      field: isSliced
+      value: true
+      any: true
+    target_description: Find the apple (Apple), slice it
+    max_steps: 60
+
+  put_two_eggs_in_pan:
+    scene: FloorPlan2
+    description: Find two eggs and put them both into the pan
+    target_object_types:
+      - Egg
+      - Pan
+    success_conditions:
+      - type: object_in_receptacle
+        object_type: Egg
+        receptacle_type: Pan
+        count: 2
+        description: Two eggs must be in the pan
+    success_logic: AND
+    target_description: Find two eggs and put them both into the pan
+    max_steps: 80

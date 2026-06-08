@@ -1,0 +1,97 @@
+{
+  "task_id": "procthor415",
+  "task_name": "Electronics Relocation to Living Room",
+  "instruction": "I'm planning to clean up the bedroom. Please pick up a cell phone and a laptop from the bedroom and bring them to the dining table in the living room.",
+  "golden_actions": {
+    "steps": 44,
+    "actions": [
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateLeft(90)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.5)",
+      "PickupObject(CellPhone)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateLeft(90)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateRight(90)",
+      "MoveLeft(1.0)",
+      "MoveAhead(1.0)",
+      "PutObject(DiningTable)",
+      "RotateRight(90)",
+      "MoveRight(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateLeft(90)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "PickupObject(Laptop)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "LookDown",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveRight(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "PutObject(DiningTable)",
+      "Done"
+    ]
+  },
+  "scene_index": 408,
+  "target_object_types": [
+    "CellPhone",
+    "Laptop"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_room",
+      "object_type": "CellPhone",
+      "room_type": "LivingRoom"
+    },
+    {
+      "type": "object_in_room",
+      "object_type": "Laptop",
+      "room_type": "LivingRoom"
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "CellPhone",
+      "receptacle_type": "DiningTable"
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Laptop",
+      "receptacle_type": "DiningTable"
+    },
+    {
+      "type": "object_not_in_room",
+      "object_type": "CellPhone",
+      "room_type": "Bedroom"
+    },
+    {
+      "type": "object_not_in_room",
+      "object_type": "Laptop",
+      "room_type": "Bedroom"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm planning to clean up the bedroom. Please pick up a cell phone and a laptop from the bedroom and bring them to the dining table in the living room.",
+  "max_steps": 98,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

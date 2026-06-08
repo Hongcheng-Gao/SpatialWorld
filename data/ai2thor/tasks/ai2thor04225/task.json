@@ -1,0 +1,43 @@
+{
+  "task_id": "ai2thor04225",
+  "task_name": "Open book and place on bed",
+  "instruction": "I'm tired and want to read a book in bed. Please open the book and place it on the bed.",
+  "golden_actions": {
+    "steps": 9,
+    "actions": [
+      "MoveRight(1.0)",
+      "OpenObject(Book)",
+      "PickupObject(Book)",
+      "RotateLeft(90)",
+      "MoveLeft(1.0)",
+      "LookDown",
+      "MoveLeft(0.25)",
+      "PutObject(Bed)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan321",
+  "target_object_types": [
+    "Book",
+    "Bed"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Book",
+      "receptacle_type": "Bed"
+    },
+    {
+      "type": "object_state",
+      "object_type": "Book",
+      "state": "isOpen",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm tired and want to read a book in bed. Please open the book and place it on the bed.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Study and Work",
+  "Level": "Level3 Hybrid"
+}

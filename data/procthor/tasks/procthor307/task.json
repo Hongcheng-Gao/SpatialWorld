@@ -1,0 +1,48 @@
+{
+  "task_id": "procthor307",
+  "task_name": "Slice Bread, Wait by Table",
+  "instruction": "I plan to eat bread. Please slice a bread and wait beside a table.",
+  "golden_actions": {
+    "steps": 10,
+    "actions": [
+      "MoveAhead(1.0)",
+      "MoveLeft(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveLeft(1.0)",
+      "MoveLeft(1.0)",
+      "LookDown",
+      "MoveAhead(0.5)",
+      "SliceObject(Bread)",
+      "Done"
+    ]
+  },
+  "scene_index": 127,
+  "target_object_types": [
+    "Bread",
+    "DiningTable"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Bread",
+      "state": "isSliced",
+      "value": true
+    },
+    {
+      "type": "agent_in_room",
+      "room_type": "Kitchen"
+    },
+    {
+      "type": "agent_near_object",
+      "object_type": "DiningTable",
+      "distance": 1.5
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I plan to eat bread. Please slice a bread and wait beside a table.",
+  "max_steps": 30,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

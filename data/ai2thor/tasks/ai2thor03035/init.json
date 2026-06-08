@@ -1,0 +1,11 @@
+{
+  "scene": "FloorPlan22",
+  "actions": [
+    "LookDown",
+    "MoveAhead(0.5)",
+    "RotateLeft(90)",
+    "MoveAhead(0.5)",
+    "DirtyObject(Pan)",
+    "Done"
+  ]
+}

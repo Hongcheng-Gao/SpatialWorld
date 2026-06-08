@@ -1,0 +1,142 @@
+# =============================================================================
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Basic Environment Configuration
+# -----------------------------------------------------------------------------
+env:
+  type: procthor # Environment type
+  width: 800 # Rendered image width (pixels)
+  height: 600 # Rendered image height (pixels)
+  field_of_view: 60 # Camera field of view (degrees), default 60 (non-wide angle)
+  grid_size: 0.25 # Navigation grid size (meters), affects movement precision
+  render_depth: false # Whether to render depth map
+  render_instance_segmentation: false # Whether to render instance segmentation map
+  text_state_mode: first_person # Text state description mode: first_person / omniscient
+  visibility_distance: 1.0 # Object visibility distance threshold (meters), also means interaction distance affects obj["visible"] in metadata
+  dataset_name: procthor-10k # ProcTHOR dataset name
+  scene_index: 0 # Scene index in the dataset (0-9999 for procthor-10k)
+  # Multi-agent (两个 agent 两个身体，对齐 AI2-THOR 的 agentCount 设计)
+  agent_count: 2
+  # Rendering platform configuration:
+  # - null: Auto-selection (requires X11 display server)
+  # - CloudRendering: Headless mode (no X11 required, recommended for servers)
+  # Can also be set via --headless command line argument
+  platform: null
+
+# -----------------------------------------------------------------------------
+# Dual-agent (two-bodies) configuration — 对齐 spatial-planning/ai2thor
+# -----------------------------------------------------------------------------
+dual_agent:
+  relocate_agent2_near_agent1: true      # reset 后把 agent2 迁移到 agent1 旁边
+  second_agent_spawn_offset_m: 0.75      # 迁移时与 agent1 的水平距离（米）
+
+# -----------------------------------------------------------------------------
+# Agent Runtime Configuration
+# -----------------------------------------------------------------------------
+max_steps: 30 # Maximum steps per episode
+
+# Context management (for controlling the length of historical trajectories sent to LLM)
+context_management:
+  enable_long_term_summary: false # Whether to enable long-term semantic summary (<SUMMARY> tag)
+  short_term_history_window_size: 30 # Short-term history window size (recent N-step multimodal history)
+
+# -----------------------------------------------------------------------------
+# Model Configuration
+# -----------------------------------------------------------------------------
+model:
+  vlm:
+    provider: openai
+    model_name: Gemini-2.5-pro
+    temperature: 1.0
+    top_p: 0.9
+    max_tokens: 4096
+    base_url: null
+    api_key: null
+
+# -----------------------------------------------------------------------------
+# Logging and Output Configuration
+# -----------------------------------------------------------------------------
+logging:
+  stdout_verbose: true # Whether to output detailed logs to console
+  save_step_images: true # Whether to save images for each step
+
+# -----------------------------------------------------------------------------
+# Action Parameter Configuration
+# -----------------------------------------------------------------------------
+# Step granularity (Large / Medium / Small) — aligned with AI2-THOR
+# Large=1m, Medium=0.5m, Small=0.25m. Default when omitted: Small.
+actions:
+  move_small_magnitude: 0.25   # Small (default when not specified)
+  move_medium_magnitude: 0.5   # Medium
+  move_large_magnitude: 1      # Large
+  # Backward compatibility: single magnitude (treated as default Small)
+  move_ahead_magnitude: 0.25
+  move_back_magnitude: 0.25
+  move_left_magnitude: 0.25
+  move_right_magnitude: 0.25
+  rotate_degrees: 90 # Rotation angle (degrees)
+
+# -----------------------------------------------------------------------------
+# Reward Function Configuration (for reinforcement learning or evaluation)
+# -----------------------------------------------------------------------------
+reward:
+  success_reward: 10.0 # Task success reward
+  step_success_bonus: 0.1 # Small reward for each successful action
+  step_failure_penalty: -0.05 # Penalty for each failed action
+
+# -----------------------------------------------------------------------------
+# Experiment Configuration
+# -----------------------------------------------------------------------------
+experiment:
+  num_episodes: 1 # Number of episodes to run
+  output_dir: outputs # Output directory
+
+# =============================================================================
+# Task Presets
+# Each task includes: scene_index, task description, target objects, success conditions, etc.
+# =============================================================================
+task_presets:
+  # ---------------------------------------------------------------------------
+  # Task: Open Fridge
+  # ---------------------------------------------------------------------------
+  open_fridge:
+    scene_index: 0 # ProcTHOR scene index
+    description: You are now in a kitchen scene, please look around like a person to find the fridge, then walk to the front of the fridge, and finally try to open the fridge door.
+    target_object_types:
+      - Fridge # Target object type
+    success_condition: # Success condition
+      type: object_state # Condition type: check object state
+      field: isOpen # Field to check
+      value: true # Expected value
+      any: true # Any one matching is sufficient
+    target_description: Find and open any Fridge
+
+  # ---------------------------------------------------------------------------
+  # Task: Open Microwave
+  # ---------------------------------------------------------------------------
+  open_microwave:
+    scene_index: 0
+    description: Find the microwave in the kitchen, walk to the front of it, and then open the microwave door.
+    target_object_types:
+      - Microwave
+    success_condition:
+      type: object_state
+      field: isOpen
+      value: true
+      any: true
+    target_description: Find and open any Microwave
+
+  # ---------------------------------------------------------------------------
+  # Task: Pick Up Egg
+  # ---------------------------------------------------------------------------
+  pickup_egg:
+    scene_index: 0
+    description: Find the egg (Egg), approach it, and then pick up the egg.
+    target_object_types:
+      - Egg
+    success_condition:
+      type: object_in_hand # Condition type: check object in hand
+      object_type: Egg
+    target_description: Find and pick up the egg (Egg)
+    max_steps: 25 # Override global max_steps

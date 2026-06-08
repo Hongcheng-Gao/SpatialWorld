@@ -1,0 +1,33 @@
+{
+  "task_id": "carla00404",
+  "task_name": "Red box shop? Walk to it.",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "walker",
+  "instruction": "Can you see the storefront marked by the red box? Please walk forward to the front of this shop.",
+  "golden_actions": {
+    "steps": 7,
+    "actions": [
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=5)",
+      "TurnRight(degrees=90)",
+      "WalkForward(distance=2.5)",
+      "Done"
+    ]
+  },
+  "scene": "Town04",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "distance_to_waypoint",
+    "target_location": [
+      250.6,
+      -212.5,
+      1.1
+    ],
+    "threshold_label": "strict"
+  },
+  "max_steps": 50
+}

@@ -1,0 +1,39 @@
+{
+  "task_id": "ai2thor03022",
+  "task_name": "Make coffee",
+  "instruction": "I'd like to drink coffee. Please put the mug in the coffee machine and turn it on.",
+  "golden_actions": {
+    "steps": 4,
+    "actions": [
+      "PickupObject(Mug)",
+      "PutObject(CoffeeMachine)",
+      "ToggleObjectOn(CoffeeMachine)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan15",
+  "target_object_types": [
+    "Mug",
+    "CoffeeMachine"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Mug",
+      "receptacle_type": "CoffeeMachine",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "CoffeeMachine",
+      "state": "isToggled",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'd like to drink coffee. Please put the mug in the coffee machine and turn it on.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level2 Interaction"
+}

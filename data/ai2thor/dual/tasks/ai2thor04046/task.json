@@ -1,0 +1,50 @@
+{
+  "task_id": "ai2thor04046",
+  "task_name": "Enable laptop and TV",
+  "instruction": "I want to work on my laptop while watching TV. Please enable both.",
+  "golden_actions": {
+    "steps": 15,
+    "actions": [
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "RotateRight(90)",
+      "MoveLeft(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "ToggleObjectOn(Laptop)",
+      "MoveBack(0.5)",
+      "RotateLeft(90)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.5)",
+      "ToggleObjectOn(Television)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan210",
+  "target_object_types": [
+    "Laptop",
+    "Television"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Laptop",
+      "state": "isToggled",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Television",
+      "state": "isToggled",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to work on my laptop while watching TV. Please enable both.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Study and Work",
+  "Level": "Level3 Hybrid"
+}

@@ -1,0 +1,67 @@
+{
+  "task_id": "procthor107",
+  "task_name": "Put bowl in kitchen, bring pen to living room",
+  "instruction": "I'm done eating. Please put the bowl back in the kitchen and bring my pen from the kitchen to the living room.",
+  "golden_actions": {
+    "steps": 34,
+    "actions": [
+      "LookDown",
+      "MoveRight(0.5)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.5)",
+      "PickupObject(Bowl)",
+      "RotateRight(90)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.5)",
+      "MoveRight(1.0)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.5)",
+      "MoveRight(0.25)",
+      "RotateRight(90)",
+      "MoveLeft(0.5)",
+      "MoveLeft(0.25)",
+      "MoveAhead(0.25)",
+      "PutObject(CounterTop)",
+      "MoveLeft(1.0)",
+      "PickupObject(Pen)",
+      "RotateRight(90)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.5)",
+      "MoveAhead(0.5)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.25)",
+      "Done"
+    ]
+  },
+  "scene_index": 11,
+  "target_object_types": [
+    "Bowl",
+    "Pen"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_room",
+      "object_type": "Bowl",
+      "room_type": "Kitchen"
+    },
+    {
+      "type": "object_in_room",
+      "object_type": "Pen",
+      "room_type": "LivingRoom"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm done eating. Please put the bowl back in the kitchen and bring my pen from the kitchen to the living room.",
+  "max_steps": 78,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level1 Navigation"
+}

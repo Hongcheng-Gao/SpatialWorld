@@ -1,0 +1,54 @@
+{
+  "task_id": "procthor405",
+  "task_name": "Knife Delivery for Unboxing",
+  "instruction": "I'm planning to open a box with a knife. Please go to the kitchen, get a knife, and bring it to me in the bedroom.",
+  "golden_actions": {
+    "steps": 27,
+    "actions": [
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "LookDown",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "MoveRight(1.0)",
+      "MoveRight(0.5)",
+      "PickupObject(Knife)",
+      "RotateLeft(90)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateLeft(90)",
+      "MoveRight(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "Done"
+    ]
+  },
+  "scene_index": 403,
+  "target_object_types": [
+    "Knife"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_room",
+      "object_type": "Knife",
+      "room_type": "Bedroom"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm planning to open a box with a knife. Please go to the kitchen, get a knife, and bring it to me in the bedroom.",
+  "max_steps": 64,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

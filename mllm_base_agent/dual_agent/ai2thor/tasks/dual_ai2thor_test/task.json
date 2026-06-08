@@ -1,0 +1,32 @@
+{
+  "task_id": "dual_ai2thor_test",
+  "task_name": "Collaborative Cooking",
+  "instruction": "This is a collaborative task for two equal agents. Agent 1 and Agent 2 need to work together: find the Tomato and share its location, find the Knife, go to the Tomato and slice it. Then open the Fridge.",
+  "scene": "FloorPlan1",
+  "target_object_types": [
+    "Tomato",
+    "Knife",
+    "Fridge"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Tomato",
+      "state": "isSliced",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Fridge",
+      "state": "isOpen",
+      "value": true
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "Slice the tomato and open the fridge collaboratively.",
+  "collaboration_config": {
+    "mode": "alternating",
+    "switch_interval": 1,
+    "communication_enabled": true
+  }
+}

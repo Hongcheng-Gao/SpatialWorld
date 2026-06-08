@@ -1,0 +1,48 @@
+{
+  "task_id": "carla00500",
+  "task_name": "Walk to the city lamp",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "walker",
+  "instruction": "Head toward the streetlamp located within the red box in the image. You can turn and move in any direction.",
+  "golden_actions": {
+    "steps": 5,
+    "actions": [
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=5)",
+      "Done"
+    ]
+  },
+  "scene": "Town01",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "polygon_area",
+    "target_polygon": [
+      [
+        245.71035715556286,
+        135.9981842041015,
+        0.10087871551513672
+      ],
+      [
+        245.71035766601562,
+        132.1647490870236,
+        0.10087871551513672
+      ],
+      [
+        246.1495671608434,
+        132.16474914550787,
+        0.10087871551513672
+      ],
+      [
+        246.14956665039062,
+        135.99818426258577,
+        0.10087871551513672
+      ]
+    ],
+    "threshold_label": "medium"
+  },
+  "max_steps": 30
+}

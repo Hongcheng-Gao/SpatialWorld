@@ -1,0 +1,66 @@
+{
+  "task_id": "procthor00002",
+  "task_name": "Store potato",
+  "instruction": "I've just entered the kitchen. Please turn on the kitchen light and put the potato I'm holding into the refrigerator. Remember to close the refrigerator door afterwards.",
+  "golden_actions": {
+    "steps": 38,
+    "actions": [
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveAhead(0.25)",
+      "MoveAhead(0.25)",
+      "MoveAhead(0.25)",
+      "RotateRight(90)",
+      "RotateLeft(90)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.25)",
+      "MoveAhead(0.25)",
+      "MoveAhead(0.25)",
+      "MoveAhead(0.25)",
+      "MoveAhead(0.25)",
+      "RotateRight(90)",
+      "MoveLeft(0.25)",
+      "MoveLeft(0.25)",
+      "RotateRight(90)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.25)",
+      "MoveAhead(0.25)",
+      "MoveAhead(0.25)",
+      "MoveAhead(0.25)",
+      "MoveAhead(0.25)",
+      "MoveAhead(0.25)",
+      "RotateRight(90)",
+      "MoveRight(0.25)",
+      "MoveRight(0.25)",
+      "MoveBack(0.25)",
+      "MoveRight(0.25)",
+      "MoveRight(0.25)",
+      "MoveBack(0.25)",
+      "MoveRight(0.25)",
+      "MoveRight(0.25)",
+      "PickupObject(TeddyBear)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan29",
+  "target_object_types": [
+    "TeddyBear"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "TeddyBear",
+      "state": "isPickedUp",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I've just entered the kitchen. Please turn on the kitchen light and put the potato I'm holding into the refrigerator. Remember to close the refrigerator door afterwards.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

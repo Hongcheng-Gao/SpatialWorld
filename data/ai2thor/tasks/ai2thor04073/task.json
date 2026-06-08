@@ -1,0 +1,71 @@
+{
+  "task_id": "ai2thor04073",
+  "task_name": "Put remote and watch in box",
+  "instruction": "Please help me put the remote control and watch into the box.",
+  "golden_actions": {
+    "steps": 35,
+    "actions": [
+      "MoveBack(0.25)",
+      "MoveLeft(0.5)",
+      "MoveAhead(0.25)",
+      "MoveLeft(0.5)",
+      "MoveAhead(0.25)",
+      "MoveLeft(0.25)",
+      "MoveAhead(0.25)",
+      "MoveLeft(0.25)",
+      "MoveAhead(0.5)",
+      "MoveLeft(0.25)",
+      "MoveAhead(0.25)",
+      "MoveLeft(0.25)",
+      "MoveAhead(1.0)",
+      "PickupObject(Watch)",
+      "MoveBack(0.5)",
+      "RotateRight(90)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.5)",
+      "PutObject(Box)",
+      "MoveBack(0.5)",
+      "MoveLeft(0.5)",
+      "RotateLeft(90)",
+      "MoveLeft(0.25)",
+      "MoveAhead(0.5)",
+      "MoveLeft(0.5)",
+      "PickupObject(RemoteControl)",
+      "MoveBack(0.5)",
+      "MoveRight(0.5)",
+      "RotateRight(90)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.5)",
+      "MoveAhead(0.5)",
+      "PutObject(Box)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan217",
+  "target_object_types": [
+    "Box",
+    "RemoteControl",
+    "Watch"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Watch",
+      "receptacle_type": "Box",
+      "value": true
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "RemoteControl",
+      "receptacle_type": "Box",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "Please help me put the remote control and watch into the box.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

@@ -1,0 +1,43 @@
+{
+  "task_id": "ai2thor03034",
+  "task_name": "Remove cooked potato",
+  "instruction": "I've cooked the potato. Please remove it from the microwave and place it on a plate. Remember to turn off the microwave.",
+  "golden_actions": {
+    "steps": 8,
+    "actions": [
+      "ToggleObjectOff(Microwave)",
+      "OpenObject(Microwave)",
+      "PickupObject(Potato)",
+      "RotateLeft(90)",
+      "RotateLeft(90)",
+      "MoveAhead(0.5)",
+      "PutObject(Plate)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan21",
+  "target_object_types": [
+    "Microwave",
+    "Plate",
+    "Potato"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Potato",
+      "receptacle_type": "Plate"
+    },
+    {
+      "type": "object_state",
+      "object_type": "Microwave",
+      "state": "isToggled",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I've cooked the potato. Please remove it from the microwave and place it on a plate. Remember to turn off the microwave.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

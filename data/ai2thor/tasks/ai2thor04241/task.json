@@ -1,0 +1,32 @@
+{
+  "task_id": "ai2thor04241",
+  "task_name": "Break any window in an emergency.",
+  "instruction": "I am trapped and need an emergency exit. Please break any window in the room.",
+  "golden_actions": {
+    "steps": 4,
+    "actions": [
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "BreakObject(Window)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan329",
+  "target_object_types": [
+    "Window"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Window",
+      "state": "isBroken",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I am trapped and need an emergency exit. Please break any window in the room.",
+  "max_steps": 30,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

@@ -1,0 +1,30 @@
+{
+  "task_id": "ai2thor04001",
+  "task_name": "Pick up pillow",
+  "instruction": "I'm about to wash my pillow. Please help me pick up the pillow from the bed.",
+  "golden_actions": {
+    "steps": 5,
+    "actions": [
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "PickupObject(Pillow)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan301",
+  "target_object_types": [
+    "Pillow"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Pillow",
+      "state": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm about to wash my pillow. Please help me pick up the pillow from the bed.",
+  "max_steps": 30
+}

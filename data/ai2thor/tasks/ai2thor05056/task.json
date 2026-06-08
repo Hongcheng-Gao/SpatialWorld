@@ -1,0 +1,32 @@
+{
+  "task_id": "ai2thor05056",
+  "task_name": "Close the box on the table",
+  "instruction": "I want things put away, so please close the box on the table all the way until it looks fully shut.",
+  "golden_actions": {
+    "steps": 5,
+    "actions": [
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "CloseObject(Box)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan216",
+  "target_object_types": [
+    "Box"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Box",
+      "state": "isOpen",
+      "value": false
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "I want things put away, so please close the box on the table all the way until it looks fully shut.",
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3"
+}

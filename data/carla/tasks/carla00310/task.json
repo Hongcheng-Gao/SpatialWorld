@@ -1,0 +1,52 @@
+{
+  "task_id": "carla00310",
+  "task_name": "Drive to the streetlight",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "vehicle",
+  "instruction": "Please turn left at the intersection ahead and drive to the next streetlight marked with red box.",
+  "golden_actions": {
+    "steps": 9,
+    "actions": [
+      "Stop",
+      "Stop",
+      "Stop",
+      "FollowLane(distance=10)",
+      "TeleportTurnLeft",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "Done"
+    ]
+  },
+  "scene": "Town02",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "polygon_area",
+    "target_polygon": [
+      [
+        87.46208698631045,
+        309.2628173828108,
+        0.32082486152648926
+      ],
+      [
+        87.46208953857442,
+        305.4293820317977,
+        0.32082486152648926
+      ],
+      [
+        87.90130107521298,
+        305.42938232422046,
+        0.32082486152648926
+      ],
+      [
+        87.90129852294902,
+        309.2628176752336,
+        0.32082486152648926
+      ]
+    ],
+    "threshold_label": "medium"
+  },
+  "max_steps": 30
+}

@@ -1,0 +1,32 @@
+{
+  "task_id": "ai2thor04103",
+  "task_name": "Work ready - main light on",
+  "instruction": "I need to get ready for work, please turn on the main light in the room.",
+  "golden_actions": {
+    "steps": 4,
+    "actions": [
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "ToggleObjectOn(LightSwitch)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan310",
+  "target_object_types": [
+    "LightSwitch"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "LightSwitch",
+      "state": "isToggled",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I need to get ready for work, please turn on the main light in the room.",
+  "max_steps": 60,
+  "Evaluation_Type": "Conditional",
+  "Category": "Study and Work",
+  "Level": "Level3 Hybrid"
+}

@@ -1,0 +1,46 @@
+{
+  "task_id": "ai2thor03003",
+  "task_name": "Put apple in fridge",
+  "instruction": "I need to tidy up now. I need to put the apple on the right into the refrigerator, and remember to close the refrigerator door.",
+  "golden_actions": {
+    "steps": 12,
+    "actions": [
+      "RotateRight(90)",
+      "MoveLeft(1)",
+      "PickupObject(Apple)",
+      "RotateLeft(90)",
+      "MoveAhead(1)",
+      "MoveAhead(1)",
+      "RotateLeft(90)",
+      "OpenObject(Fridge)",
+      "MoveAhead(0.25)",
+      "PutObject(Fridge)",
+      "CloseObject(Fridge)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan11",
+  "target_object_types": [
+    "Apple",
+    "Fridge"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Apple",
+      "receptacle_type": "Fridge"
+    },
+    {
+      "type": "object_state",
+      "object_type": "Fridge",
+      "state": "isOpen",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I need to tidy up now. I need to put the apple on the right into the refrigerator, and remember to close the refrigerator door.",
+  "max_steps": 30,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

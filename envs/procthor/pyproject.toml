@@ -1,0 +1,38 @@
+[project]
+name = "spatialworld-procthor"
+version = "0.1.0"
+description = "SpatialWorld procthor uv environment."
+requires-python = ">=3.10"
+dependencies = [
+    "spatialworld",
+    "numpy>=1.26.0",
+    "pandas>=2.0.0",
+    "pillow>=9.4.0",
+    "pydantic>=2.0.0",
+    "python-dotenv>=1.0.0",
+    "pyyaml>=6.0.0",
+    "requests>=2.31.0",
+    "openai>=1.28.0",
+    "ai2thor>=5.0.0",
+    "prior>=1.0.0",
+    "rich>=13.0.0",
+    "opencv-python>=4.8.0",
+    "tiktoken>=0.8.0",
+    "httpx>=0.25.0",
+    "pygame>=2.0.0",
+    "matplotlib>=3.5.0",
+    "tenacity>=8.0.0",
+    "tqdm>=4.60.0",
+
+]
+
+[tool.uv]
+override-dependencies = [
+    "tqdm>=4.60.0",
+    "certifi>=2024.0.0",
+    "opencv-python>=4.8.0",
+    "networkx>=2.8.0",
+]
+
+[tool.uv.sources]
+spatialworld = { path = "../..", editable = true }

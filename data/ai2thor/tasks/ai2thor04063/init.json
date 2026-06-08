@@ -1,0 +1,24 @@
+{
+  "scene": "FloorPlan213",
+  "actions": [
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveRight(0.25)",
+    "MoveAhead(0.25)",
+    "MoveRight(0.25)",
+    "LookDown",
+    "Done"
+  ]
+}

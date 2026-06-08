@@ -1,0 +1,45 @@
+{
+  "task_id": "ai2thor03006",
+  "task_name": "Put bread in fridge and close door",
+  "instruction": "I'm full. Now I need to put the bread in the refrigerator, and remember to close the refrigerator door.",
+  "golden_actions": {
+    "steps": 11,
+    "actions": [
+      "RotateRight(90)",
+      "MoveLeft(0.5)",
+      "PickupObject(Bread)",
+      "RotateLeft(90)",
+      "MoveAhead(1)",
+      "MoveAhead(1)",
+      "RotateRight(90)",
+      "OpenObject(Fridge)",
+      "PutObject(Fridge)",
+      "CloseObject(Fridge)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan12",
+  "target_object_types": [
+    "Bread",
+    "Fridge"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Bread",
+      "receptacle_type": "Fridge"
+    },
+    {
+      "type": "object_state",
+      "object_type": "Fridge",
+      "state": "isOpen",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm full. Now I need to put the bread in the refrigerator, and remember to close the refrigerator door.",
+  "max_steps": 30,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

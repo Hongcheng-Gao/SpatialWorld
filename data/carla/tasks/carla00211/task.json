@@ -1,0 +1,54 @@
+{
+  "task_id": "carla00211",
+  "task_name": "Walk to the ResidentialBuildingRoundCorners.",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "walker",
+  "instruction": "Walk to the ResidentialBuildingRoundCorners.You can turn and move in any direction.",
+  "golden_actions": {
+    "steps": 11,
+    "actions": [
+      "TurnLeft(degrees=30)",
+      "TurnLeft(degrees=30)",
+      "WalkForward(distance=10)",
+      "TurnLeft(degrees=30)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "TurnRight(degrees=30)",
+      "TurnRight(degrees=30)",
+      "WalkForward(distance=10)",
+      "Done"
+    ]
+  },
+  "scene": "Town02",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "polygon_area",
+    "target_polygon": [
+      [
+        178.6798858642578,
+        245.93678283691406,
+        0.16008758544921875
+      ],
+      [
+        186.34010314941406,
+        245.93678283691406,
+        0.16008758544921875
+      ],
+      [
+        186.34010314941406,
+        255.78321838378906,
+        0.16008758544921875
+      ],
+      [
+        178.6798858642578,
+        255.78321838378906,
+        0.16008758544921875
+      ]
+    ],
+    "threshold_label": "loose"
+  },
+  "max_steps": 30
+}

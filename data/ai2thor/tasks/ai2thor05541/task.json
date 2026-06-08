@@ -1,0 +1,53 @@
+{
+  "task_id": "ai2thor05541",
+  "task_name": "Turn phone on and put it on the table",
+  "instruction": "I’ve finished dinner and feel like scrolling on my phone for a bit—please pick it up from the dining table, turn it on, and set it on the coffee table so I can relax with a full stomach",
+  "golden_actions": {
+    "steps": 12,
+    "actions": [
+      "ToggleObjectOn(CellPhone)",
+      "PickupObject(CellPhone)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "RotateLeft(90)",
+      "MoveAhead(0.5)",
+      "MoveRight(1.0)",
+      "MoveRight(0.5)",
+      "MoveAhead(1.0)",
+      "PutObject(CoffeeTable)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan203",
+  "target_object_types": [
+    "CellPhone",
+    "DiningTable",
+    "CoffeeTable"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "CellPhone",
+      "receptacle_type": "DiningTable",
+      "value": false
+    },
+    {
+      "type": "object_state",
+      "object_type": "CellPhone",
+      "field": "isToggled",
+      "value": true
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "CellPhone",
+      "receptacle_type": "CoffeeTable"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I’ve finished dinner and feel like scrolling on my phone for a bit—please pick it up from the dining table, turn it on, and set it on the coffee table so I can relax with a full stomach",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "Entertainment (Game/Sports)",
+  "Level": "Level3"
+}

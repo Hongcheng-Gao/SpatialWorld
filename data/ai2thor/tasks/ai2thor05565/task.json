@@ -1,0 +1,52 @@
+{
+  "task_id": "ai2thor05565",
+  "task_name": "Grab my phone from the dining table and bring it to the sofa",
+  "instruction": "Could you grab my phone from the dining table and bring it to the sofa? I'm feeling a bit lazy and don't want to get up.",
+  "golden_actions": {
+    "steps": 16,
+    "actions": [
+      "PickupObject(CellPhone)",
+      "RotateRight(180)",
+      "MoveLeft(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveLeft(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "RotateRight(90)",
+      "MoveAhead(0.25)",
+      "MoveLeft(0.5)",
+      "MoveAhead(0.25)",
+      "RotateRight(90)",
+      "MoveLeft(0.5)",
+      "PutObject(Sofa)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan218",
+  "target_object_types": [
+    "CellPhone",
+    "Sofa",
+    "DiningTable"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "CellPhone",
+      "receptacle_type": "DiningTable",
+      "value": false
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "CellPhone",
+      "receptacle_type": "Sofa",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "Could you grab my phone from the dining table and bring it to the sofa? I'm feeling a bit lazy and don't want to get up.",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

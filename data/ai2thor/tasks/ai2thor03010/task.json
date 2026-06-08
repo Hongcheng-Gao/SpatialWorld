@@ -1,0 +1,45 @@
+{
+  "task_id": "ai2thor03010",
+  "task_name": "Microwave bread",
+  "instruction": "I'm hungry. Please put the bread in the microwave and turn it on.",
+  "golden_actions": {
+    "steps": 11,
+    "actions": [
+      "PickupObject(Bread)",
+      "RotateLeft(90)",
+      "MoveAhead(1)",
+      "MoveAhead(0.5)",
+      "MoveLeft(0.5)",
+      "MoveAhead(0.25)",
+      "OpenObject(Microwave)",
+      "PutObject(Microwave)",
+      "CloseObject(Microwave)",
+      "ToggleObjectOn(Microwave)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan13",
+  "target_object_types": [
+    "Bread",
+    "Microwave"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Bread",
+      "receptacle_type": "Microwave"
+    },
+    {
+      "type": "object_state",
+      "object_type": "Microwave",
+      "state": "isToggled",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm hungry. Please put the bread in the microwave and turn it on.",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

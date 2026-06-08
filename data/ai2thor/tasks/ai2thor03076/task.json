@@ -1,0 +1,59 @@
+{
+  "task_id": "ai2thor03076",
+  "task_name": "Move clean dishes",
+  "instruction": "I've washed all the dishes in the sink; please take them out and put them on the counter.",
+  "golden_actions": {
+    "steps": 10,
+    "actions": [
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveLeft(0.5)",
+      "MoveBack(0.25)",
+      "MoveAhead(0.25)",
+      "PickupObject(Fork)",
+      "PutObject(CounterTop)",
+      "PickupObject(Spoon)",
+      "PutObject(CounterTop)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan30",
+  "target_object_types": [
+    "CounterTop",
+    "Fork",
+    "SinkBasin",
+    "Spoon"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Spoon",
+      "receptacle_type": "CounterTop",
+      "value": true
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Fork",
+      "receptacle_type": "CounterTop",
+      "value": true
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Spoon",
+      "receptacle_type": "SinkBasin",
+      "value": false
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Fork",
+      "receptacle_type": "SinkBasin",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I've washed all the dishes in the sink; please take them out and put them on the counter.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

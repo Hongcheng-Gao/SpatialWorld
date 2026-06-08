@@ -1,0 +1,33 @@
+{
+  "task_id": "procthor106",
+  "task_name": "Leave bathroom, go to bedroom",
+  "instruction": "I'm going back to my room to sleep. Please come out of the bathroom and then go back to the bedroom.",
+  "golden_actions": {
+    "steps": 9,
+    "actions": [
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "RotateLeft(90)",
+      "MoveRight(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "Done"
+    ]
+  },
+  "scene_index": 7,
+  "target_object_types": [],
+  "success_conditions": [
+    {
+      "type": "agent_in_room",
+      "room_type": "Bedroom"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm going back to my room to sleep. Please come out of the bathroom and then go back to the bedroom.",
+  "max_steps": 28,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level1 Navigation"
+}

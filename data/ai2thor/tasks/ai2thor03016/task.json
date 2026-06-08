@@ -1,0 +1,46 @@
+{
+  "task_id": "ai2thor03016",
+  "task_name": "Microwave egg",
+  "instruction": "I want to eat something. Please put the egg in the microwave and turn it on.",
+  "golden_actions": {
+    "steps": 12,
+    "actions": [
+      "MoveAhead(0.5)",
+      "RotateLeft(90)",
+      "PickupObject(Egg)",
+      "RotateRight(90)",
+      "MoveRight(1)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "OpenObject(Microwave)",
+      "PutObject(Microwave)",
+      "CloseObject(Microwave)",
+      "ToggleObjectOn(Microwave)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan14",
+  "target_object_types": [
+    "Egg",
+    "Microwave"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Egg",
+      "receptacle_type": "Microwave"
+    },
+    {
+      "type": "object_state",
+      "object_type": "Microwave",
+      "state": "isToggled",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to eat something. Please put the egg in the microwave and turn it on.",
+  "max_steps": 30,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

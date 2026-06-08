@@ -1,0 +1,26 @@
+{
+  "scene": "FloorPlan323",
+  "actions": [
+    "RotateRight(90)",
+    "RotateRight(90)",
+    "MoveAhead(0.25)",
+    "MoveLeft(0.25)",
+    "MoveLeft(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveLeft(0.25)",
+    "MoveLeft(0.25)",
+    "MoveLeft(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "LookDown",
+    "DirtyObject(Bowl)",
+    "MoveBack(0.25)",
+    "Done"
+  ]
+}

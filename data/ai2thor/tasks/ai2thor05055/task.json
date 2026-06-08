@@ -1,0 +1,41 @@
+{
+  "task_id": "ai2thor05055",
+  "task_name": "Turn on the laptop and TV",
+  "instruction": "I want to play some games. Please switch on the laptop and the television.",
+  "golden_actions": {
+    "steps": 7,
+    "actions": [
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveRight(1.0)",
+      "MoveAhead(0.5)",
+      "ToggleObjectOn(Laptop)",
+      "ToggleObjectOn(Television)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan217",
+  "target_object_types": [
+    "Laptop",
+    "Television"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Laptop",
+      "state": "isToggled",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Television",
+      "state": "isToggled",
+      "value": true
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "I want to play some games. Please switch on the laptop and the television.",
+  "Evaluation_Type": "Conditional",
+  "Category": "Entertainment (Game/Sports)",
+  "Level": "Level3"
+}

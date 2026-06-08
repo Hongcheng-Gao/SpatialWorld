@@ -1,0 +1,34 @@
+{
+  "task_id": "virtualhome00007",
+  "task_name": "Find my phone and put it on the TV stand.",
+  "instruction": "I can't find my phone. Could you help me look for it? Please put it on the TV stand when you find it.",
+  "golden_actions": {
+    "steps": 8,
+    "actions": [
+      "LookDown",
+      "WalkForward(medium)",
+      "TurnLeft(normal)",
+      "Grab(cellphone)",
+      "TurnRight(normal)",
+      "TurnRight(normal)",
+      "PutBack(cellphone, tvstand)",
+      "Done"
+    ]
+  },
+  "scene": "6",
+  "target_object_types": [
+    "cellphone",
+    "tvstand"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "cellphone",
+      "receptacle_type": "tvstand",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I can't find my phone. Could you help me look for it? Please put it on the TV stand when you find it.",
+  "max_steps": 22
+}

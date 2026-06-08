@@ -1,0 +1,55 @@
+{
+  "task_id": "carla00306",
+  "task_name": "Drive to the next traffic light",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "vehicle",
+  "instruction": "Please turn right at the intersection ahead, then go straight to the traffic light at the next intersection.",
+  "golden_actions": {
+    "steps": 12,
+    "actions": [
+      "Stop",
+      "Stop",
+      "Stop",
+      "FollowLane(distance=10)",
+      "TeleportTurnRight",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "Stop",
+      "Stop",
+      "Stop",
+      "FollowLane(distance=10)",
+      "Done"
+    ]
+  },
+  "scene": "Town02",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "polygon_area",
+    "target_polygon": [
+      [
+        39.52599737065616,
+        227.18598937988241,
+        0.21999990940093994
+      ],
+      [
+        39.413997650146875,
+        227.18598958867372,
+        0.21999990940093994
+      ],
+      [
+        39.41399744135556,
+        227.07398986816446,
+        0.21999990940093994
+      ],
+      [
+        39.525997161864844,
+        227.07398965937315,
+        0.21999990940093994
+      ]
+    ],
+    "threshold_label": "medium"
+  },
+  "max_steps": 30
+}

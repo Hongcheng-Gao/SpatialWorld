@@ -1,0 +1,33 @@
+{
+  "task_id": "carla00409",
+  "task_name": "Walk to the nearest lamp post by the parking sign in the soccer field.",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "walker",
+  "instruction": "Can you walk to the lamp post closest to the parking sign inside the soccer field?",
+  "golden_actions": {
+    "steps": 7,
+    "actions": [
+      "WalkForward(distance=10)",
+      "WalkForward(distance=5)",
+      "TurnLeft(degrees=30)",
+      "WalkForward(distance=2.5)",
+      "TurnLeft(degrees=30)",
+      "WalkForward(distance=2.5)",
+      "Done"
+    ]
+  },
+  "scene": "Town05",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "distance_to_waypoint",
+    "target_location": [
+      141.8,
+      11.3,
+      1.1
+    ],
+    "threshold_label": "strict"
+  },
+  "max_steps": 50
+}

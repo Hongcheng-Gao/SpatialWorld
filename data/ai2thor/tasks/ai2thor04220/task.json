@@ -1,0 +1,52 @@
+{
+  "task_id": "ai2thor04220",
+  "task_name": "Phone on bed - make bed",
+  "instruction": "I'm a little tired. Please turn my phone on and put it on the bed, and make the bed neatly.",
+  "golden_actions": {
+    "steps": 12,
+    "actions": [
+      "MoveRight(1.0)",
+      "ToggleObjectOn(CellPhone)",
+      "PickupObject(CellPhone)",
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "RotateLeft(90)",
+      "CleanObject(Bed)",
+      "PutObject(Bed)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan320",
+  "target_object_types": [
+    "CellPhone",
+    "Bed"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "CellPhone",
+      "receptacle_type": "Bed"
+    },
+    {
+      "type": "object_state",
+      "object_type": "Bed",
+      "state": "isDirty",
+      "value": false
+    },
+    {
+      "type": "object_state",
+      "object_type": "CellPhone",
+      "state": "isToggled",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm a little tired. Please turn my phone on and put it on the bed, and make the bed neatly.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

@@ -1,0 +1,22 @@
+{
+  "scene": "FloorPlan311",
+  "actions": [
+    "MoveAhead(0.5)",
+    "MoveAhead(0.5)",
+    "MoveLeft(0.5)",
+    "MoveLeft(0.5)",
+    "MoveAhead(0.5)",
+    "LookDown",
+    "DirtyObject(Bed)",
+    "RotateRight(90)",
+    "MoveAhead(0.5)",
+    "MoveAhead(0.5)",
+    "MoveAhead(0.5)",
+    "MoveAhead(0.5)",
+    "MoveAhead(0.5)",
+    "ToggleObjectOn(Television)",
+    "MoveLeft(0.5)",
+    "LookDown",
+    "Done"
+  ]
+}

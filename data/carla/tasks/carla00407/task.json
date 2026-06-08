@@ -1,0 +1,31 @@
+{
+  "task_id": "carla00407",
+  "task_name": "Go check that stop sign ahead",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "walker",
+  "instruction": "Is there a stop sign ahead? Walk over there—I want to take a closer look.",
+  "golden_actions": {
+    "steps": 5,
+    "actions": [
+      "WalkForward(distance=10)",
+      "WalkForward(distance=5)",
+      "TurnRight(degrees=30)",
+      "WalkForward(distance=5)",
+      "Done"
+    ]
+  },
+  "scene": "Town05",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "distance_to_waypoint",
+    "target_location": [
+      141.2,
+      4.5,
+      1.0
+    ],
+    "threshold_label": "strict"
+  },
+  "max_steps": 50
+}

@@ -1,0 +1,66 @@
+{
+  "scene": 6,
+  "character_position": [
+    -7.85697,
+    0.00199552625,
+    0.379169941
+  ],
+  "character_rotation": [
+    0.0,
+    -0.49999999999999994,
+    0.0,
+    0.8660254037844387
+  ],
+  "character_yaw_degrees": -60.0,
+  "camera_pitch": 30,
+  "recorded_user_actions": [
+    {
+      "step": 1,
+      "action_type": "navigation",
+      "action_name": "TurnRight",
+      "turn_modifier": "small",
+      "turn_degrees": 30.0
+    },
+    {
+      "step": 2,
+      "action_type": "navigation",
+      "action_name": "TurnLeft",
+      "turn_modifier": "small",
+      "turn_degrees": 30.0
+    },
+    {
+      "step": 3,
+      "action_type": "navigation",
+      "action_name": "TurnLeft",
+      "turn_modifier": "small",
+      "turn_degrees": 30.0
+    },
+    {
+      "step": 4,
+      "action_type": "navigation",
+      "action_name": "WalkForward",
+      "granularity": "small"
+    },
+    {
+      "step": 5,
+      "action_type": "navigation",
+      "action_name": "TurnRight",
+      "turn_modifier": "small",
+      "turn_degrees": 30.0
+    },
+    {
+      "step": 6,
+      "action_type": "navigation",
+      "action_name": "TurnRight",
+      "turn_modifier": "small",
+      "turn_degrees": 30.0
+    },
+    {
+      "step": 7,
+      "action_type": "navigation",
+      "action_name": "TurnRight",
+      "turn_modifier": "small",
+      "turn_degrees": 30.0
+    }
+  ]
+}

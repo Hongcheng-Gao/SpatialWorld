@@ -1,0 +1,16 @@
+{
+  "scene": "FloorPlan14",
+  "actions": [
+    "RotateRight(90)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "DirtyObject(Pot)",
+    "RotateLeft(90)",
+    "LookDown",
+    "PickupObject(Ladle)",
+    "RotateRight(90)",
+    "PutObject(Pot)",
+    "Done"
+  ]
+}

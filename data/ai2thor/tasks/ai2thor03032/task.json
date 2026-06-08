@@ -1,0 +1,44 @@
+{
+  "task_id": "ai2thor03032",
+  "task_name": "Slice tomato for cooking",
+  "instruction": "I'm about to start cooking. Please slice the tomato on the left and put one slice into the pot.",
+  "golden_actions": {
+    "steps": 9,
+    "actions": [
+      "MoveAhead(1)",
+      "RotateLeft(90)",
+      "SliceObject(Tomato)",
+      "PickupObject(TomatoSliced)",
+      "RotateRight(90)",
+      "MoveAhead(1)",
+      "MoveLeft(1)",
+      "PutObject(Pot)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan21",
+  "target_object_types": [
+    "Pot",
+    "Tomato",
+    "TomatoSliced"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "TomatoSliced",
+      "receptacle_type": "Pot"
+    },
+    {
+      "type": "object_state",
+      "object_type": "Tomato",
+      "state": "isSliced",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm about to start cooking. Please slice the tomato on the left and put one slice into the pot.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

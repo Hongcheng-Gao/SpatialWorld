@@ -1,0 +1,57 @@
+{
+  "task_id": "procthor103",
+  "task_name": "Bring bread to living room, wait by sofa",
+  "instruction": "I'm a bit hungry. Please bring one loaf of bread from the kitchen to the living room for me, and wait beside the sofa.",
+  "golden_actions": {
+    "steps": 19,
+    "actions": [
+      "RotateRight(90)",
+      "MoveLeft(1.0)",
+      "MoveAhead(0.5)",
+      "MoveLeft(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "LookDown",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "PickupObject(Bread)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "MoveLeft(1.0)",
+      "MoveLeft(0.25)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "Done"
+    ]
+  },
+  "scene_index": 5,
+  "target_object_types": [
+    "Bread",
+    "Sofa"
+  ],
+  "success_conditions": [
+    {
+      "type": "agent_in_room",
+      "room_type": "LivingRoom"
+    },
+    {
+      "type": "agent_near_object",
+      "object_type": "Sofa",
+      "distance": 1.42
+    },
+    {
+      "type": "object_state",
+      "object_type": "Bread",
+      "state": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm a bit hungry. Please bring one loaf of bread from the kitchen to the living room for me, and wait beside the sofa.",
+  "max_steps": 48,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level1 Navigation"
+}

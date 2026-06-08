@@ -1,0 +1,34 @@
+{
+  "task_id": "ai2thor00000",
+  "task_name": "Place a lettuce in red garbagecan",
+  "instruction": "I found the lettuce was rotten; please help me throw it in the trash.",
+  "golden_actions": {
+    "steps": 9,
+    "actions": [
+      "RotateRight(90)",
+      "MoveRight(1)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.5)",
+      "MoveRight(0.5)",
+      "PickupObject(Lettuce)",
+      "MoveLeft(1)",
+      "PutObject(GarbageCan)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan17",
+  "target_object_types": [
+    "GarbageCan",
+    "Lettuce"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Lettuce",
+      "receptacle_type": "GarbageCan"
+    }
+  ],
+  "success_logic": "OR",
+  "target_description": "I found the lettuce was rotten; please help me throw it in the trash.",
+  "max_steps": 50
+}

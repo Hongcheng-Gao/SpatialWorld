@@ -1,0 +1,64 @@
+{
+  "task_id": "procthor200",
+  "task_name": "Slice tomato, take piece to kitchen table",
+  "instruction": "I'd like to have some fresh snacks. Please go to the kitchen, open the refrigerator, cut the tomatoes into chunks, close the refrigerator, and then take one piece to a table in the kitchen.",
+  "golden_actions": {
+    "steps": 13,
+    "actions": [
+      "RotateLeft(90)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "OpenObject(Fridge)",
+      "MoveAhead(0.25)",
+      "SliceObject(Tomato)",
+      "PickupObject(Tomato)",
+      "CloseObject(Fridge)",
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "Done"
+    ]
+  },
+  "scene_index": 151,
+  "target_object_types": [
+    "Tomato",
+    "Fridge",
+    "DiningTable"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Tomato",
+      "state": "isSliced",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Tomato",
+      "state": "isPickedUp",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Fridge",
+      "state": "isOpen",
+      "value": false
+    },
+    {
+      "type": "agent_in_room",
+      "room_type": "Kitchen"
+    },
+    {
+      "type": "agent_near_object",
+      "object_type": "DiningTable",
+      "distance": 1.5
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'd like to have some fresh snacks. Please go to the kitchen, open the refrigerator, cut the tomatoes into chunks, close the refrigerator, and then take one piece to a table in the kitchen.",
+  "max_steps": 36,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

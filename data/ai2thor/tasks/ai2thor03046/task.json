@@ -1,0 +1,41 @@
+{
+  "task_id": "ai2thor03046",
+  "task_name": "Prepare coffee mug",
+  "instruction": "I'm going to make coffee. Please clean the mug and then put it in the coffee machine.",
+  "golden_actions": {
+    "steps": 7,
+    "actions": [
+      "CleanObject(Mug)",
+      "PickupObject(Mug)",
+      "RotateLeft(90)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "PutObject(CoffeeMachine)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan24",
+  "target_object_types": [
+    "CoffeeMachine",
+    "Mug"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Mug",
+      "state": "isDirty",
+      "value": false
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Mug",
+      "receptacle_type": "CoffeeMachine"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm going to make coffee. Please clean the mug and then put it in the coffee machine.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

@@ -1,0 +1,47 @@
+{
+  "task_id": "carla00413",
+  "task_name": "See the Coca-Cola billboard? Walk under it.",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "walker",
+  "instruction": "Can you see the Coca-Cola billboard? Please walk underneath it.",
+  "golden_actions": {
+    "steps": 4,
+    "actions": [
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=5)",
+      "Done"
+    ]
+  },
+  "scene": "Town05",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "polygon_area",
+    "target_polygon": [
+      [
+        -112.25735473632812,
+        -84.53640747070312,
+        0.2086811065673828
+      ],
+      [
+        -108.25732421875,
+        -84.53640747070312,
+        0.2086811065673828
+      ],
+      [
+        -108.25732421875,
+        -74.92445373535156,
+        0.2086811065673828
+      ],
+      [
+        -112.25735473632812,
+        -74.92445373535156,
+        0.2086811065673828
+      ]
+    ],
+    "threshold_label": "medium"
+  },
+  "max_steps": 50
+}

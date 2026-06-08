@@ -1,0 +1,71 @@
+{
+  "id": "embodiedcity_5005",
+  "instruction": "Please move to the billboard directly in front of you.",
+  "start": [
+    7792.759765625,
+    -3647.56884765625,
+    -8.935945510864258
+  ],
+  "start_yaw": 69.55,
+  "end": [
+    7806.01416015625,
+    -3606.6953125,
+    -3.942265748977661
+  ],
+  "end_yaw": 12.06084800158773,
+  "check_status": "Qualified",
+  "check_comment": "OK",
+  "check_time": "2026-05-12 12:50:21",
+  "trajectory": [
+    {
+      "x": 7792.76,
+      "y": -3647.57,
+      "z": -8.86,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 7796.25,
+      "y": -3638.2,
+      "z": -8.87,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7799.75,
+      "y": -3628.83,
+      "z": -8.84,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7803.24,
+      "y": -3619.46,
+      "z": -8.82,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7806.74,
+      "y": -3610.09,
+      "z": -8.79,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7806.74,
+      "y": -3610.09,
+      "z": -3.75,
+      "action": "Down",
+      "granularity": "Medium"
+    },
+    {
+      "x": 7806.74,
+      "y": -3610.09,
+      "z": -3.75,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 6
+}

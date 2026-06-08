@@ -1,0 +1,9 @@
+{
+  "scene": "FloorPlan424",
+  "actions": [
+    "RotateRight(90)",
+    "LookDown(30)",
+    "DirtyObject(Cloth)",
+    "Done"
+  ]
+}

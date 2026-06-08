@@ -1,0 +1,26 @@
+{
+  "task_id": "virtualhome00005",
+  "task_name": "Pass the pie to me.",
+  "instruction": "I'm a bit hungry. Can you see the pie on the table? Pass it to me.",
+  "golden_actions": {
+    "steps": 2,
+    "actions": [
+      "Grab(pie)",
+      "Done"
+    ]
+  },
+  "scene": "6",
+  "target_object_types": [
+    "pie"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "pie",
+      "state": "isPickedUp"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm a bit hungry. Can you see the pie on the table? Pass it to me.",
+  "max_steps": 13
+}

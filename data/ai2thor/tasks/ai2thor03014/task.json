@@ -1,0 +1,51 @@
+{
+  "task_id": "ai2thor03014",
+  "task_name": "Slice all vegetables",
+  "instruction": "I want to cook, please chop all the vegetables in front of me.",
+  "golden_actions": {
+    "steps": 9,
+    "actions": [
+      "MoveRight(0.5)",
+      "SliceObject(Tomato)",
+      "RotateLeft(90)",
+      "MoveAhead(1)",
+      "RotateRight(90)",
+      "MoveLeft(0.5)",
+      "SliceObject(Potato)",
+      "SliceObject(Lettuce)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan13",
+  "target_object_types": [
+    "Potato",
+    "Lettuce",
+    "Tomato"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Potato",
+      "state": "isSliced",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Lettuce",
+      "state": "isSliced",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Tomato",
+      "state": "isSliced",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to cook, please chop all the vegetables in front of me.",
+  "max_steps": 90,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level2 Interaction"
+}

@@ -1,0 +1,196 @@
+{
+  "task_dir": "dual_agent/task_mutil_procthor",
+  "config": "dual_agent/config_close_Gemini-2.5-pro.yaml",
+  "total": 17,
+  "stuck_count": 0,
+  "stuck_task_ids": [],
+  "reports": [
+    {
+      "task_id": "procthor107",
+      "stuck": false,
+      "success_actions": [
+        "MoveAhead(0.25)",
+        "MoveBack(0.25)",
+        "MoveLeft(0.25)",
+        "MoveRight(0.25)"
+      ],
+      "error": null
+    },
+    {
+      "task_id": "procthor201",
+      "stuck": false,
+      "success_actions": [
+        "MoveAhead(0.25)",
+        "MoveBack(0.25)",
+        "MoveLeft(0.25)",
+        "MoveRight(0.25)"
+      ],
+      "error": null
+    },
+    {
+      "task_id": "procthor202",
+      "stuck": false,
+      "success_actions": [
+        "MoveAhead(0.25)",
+        "MoveBack(0.25)",
+        "MoveLeft(0.25)",
+        "MoveRight(0.25)"
+      ],
+      "error": null
+    },
+    {
+      "task_id": "procthor203",
+      "stuck": false,
+      "success_actions": [
+        "MoveAhead(0.25)",
+        "MoveBack(0.25)",
+        "MoveLeft(0.25)",
+        "MoveRight(0.25)"
+      ],
+      "error": null
+    },
+    {
+      "task_id": "procthor400",
+      "stuck": false,
+      "success_actions": [
+        "MoveAhead(0.25)",
+        "MoveBack(0.25)",
+        "MoveLeft(0.25)",
+        "MoveRight(0.25)"
+      ],
+      "error": null
+    },
+    {
+      "task_id": "procthor406",
+      "stuck": false,
+      "success_actions": [
+        "MoveAhead(0.25)",
+        "MoveBack(0.25)",
+        "MoveLeft(0.25)",
+        "MoveRight(0.25)"
+      ],
+      "error": null
+    },
+    {
+      "task_id": "procthor419",
+      "stuck": false,
+      "success_actions": [
+        "MoveAhead(0.25)",
+        "MoveBack(0.25)",
+        "MoveLeft(0.25)",
+        "MoveRight(0.25)"
+      ],
+      "error": null
+    },
+    {
+      "task_id": "procthor900",
+      "stuck": false,
+      "success_actions": [
+        "MoveAhead(0.25)",
+        "MoveBack(0.25)",
+        "MoveLeft(0.25)",
+        "MoveRight(0.25)"
+      ],
+      "error": null
+    },
+    {
+      "task_id": "procthor901",
+      "stuck": false,
+      "success_actions": [
+        "MoveAhead(0.25)",
+        "MoveBack(0.25)",
+        "MoveLeft(0.25)",
+        "MoveRight(0.25)"
+      ],
+      "error": null
+    },
+    {
+      "task_id": "procthor902",
+      "stuck": false,
+      "success_actions": [
+        "MoveAhead(0.25)",
+        "MoveBack(0.25)",
+        "MoveLeft(0.25)",
+        "MoveRight(0.25)"
+      ],
+      "error": null
+    },
+    {
+      "task_id": "procthor903",
+      "stuck": false,
+      "success_actions": [
+        "MoveAhead(0.25)",
+        "MoveBack(0.25)",
+        "MoveLeft(0.25)",
+        "MoveRight(0.25)"
+      ],
+      "error": null
+    },
+    {
+      "task_id": "procthor904",
+      "stuck": false,
+      "success_actions": [
+        "MoveAhead(0.25)",
+        "MoveBack(0.25)",
+        "MoveLeft(0.25)",
+        "MoveRight(0.25)"
+      ],
+      "error": null
+    },
+    {
+      "task_id": "procthor905",
+      "stuck": false,
+      "success_actions": [
+        "MoveAhead(0.25)",
+        "MoveBack(0.25)",
+        "MoveLeft(0.25)",
+        "MoveRight(0.25)"
+      ],
+      "error": null
+    },
+    {
+      "task_id": "procthor906",
+      "stuck": false,
+      "success_actions": [
+        "MoveAhead(0.25)",
+        "MoveBack(0.25)",
+        "MoveLeft(0.25)",
+        "MoveRight(0.25)"
+      ],
+      "error": null
+    },
+    {
+      "task_id": "procthor907",
+      "stuck": false,
+      "success_actions": [
+        "MoveAhead(0.25)",
+        "MoveBack(0.25)",
+        "MoveLeft(0.25)",
+        "MoveRight(0.25)"
+      ],
+      "error": null
+    },
+    {
+      "task_id": "procthor908",
+      "stuck": false,
+      "success_actions": [
+        "MoveAhead(0.25)",
+        "MoveBack(0.25)",
+        "MoveLeft(0.25)",
+        "MoveRight(0.25)"
+      ],
+      "error": null
+    },
+    {
+      "task_id": "procthor909",
+      "stuck": false,
+      "success_actions": [
+        "MoveAhead(0.25)",
+        "MoveBack(0.25)",
+        "MoveLeft(0.25)",
+        "MoveRight(0.25)"
+      ],
+      "error": null
+    }
+  ]
+}

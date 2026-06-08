@@ -1,0 +1,16 @@
+{
+  "scene": 6,
+  "character_position": [
+    -2.463151,
+    0.00199552625,
+    -5.28167248
+  ],
+  "character_rotation": [
+    0.0,
+    0.7071067811865475,
+    0.0,
+    0.7071067811865476
+  ],
+  "camera_pitch": 30,
+  "character_yaw_degrees": 90.0
+}

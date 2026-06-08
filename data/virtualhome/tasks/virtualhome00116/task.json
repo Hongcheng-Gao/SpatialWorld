@@ -1,0 +1,31 @@
+{
+  "task_id": "virtualhome00116",
+  "task_name": "Pick up the cupcake",
+  "instruction": "I'm hungry, please pick up the cupcake; I'll eat it later.",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "TurnLeft(small)",
+      "WalkForward(large)",
+      "TurnRight(normal)",
+      "LookDown",
+      "Grab(cupcake)",
+      "Done"
+    ]
+  },
+  "scene": "0",
+  "target_object_types": [
+    "cupcake"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "cupcake",
+      "state": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm hungry, please pick up the cupcake; I'll eat it later.",
+  "max_steps": 24
+}

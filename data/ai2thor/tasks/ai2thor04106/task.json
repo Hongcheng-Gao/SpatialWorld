@@ -1,0 +1,38 @@
+{
+  "task_id": "ai2thor04106",
+  "task_name": "Clean up dirt",
+  "instruction": "I'm going to tidy up the room. Please clean up all the dirt in front of me.",
+  "golden_actions": {
+    "steps": 3,
+    "actions": [
+      "CleanObject(Mug)",
+      "CleanObject(Bowl)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan311",
+  "target_object_types": [
+    "Mug",
+    "Bowl"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Mug",
+      "state": "isDirty",
+      "value": false
+    },
+    {
+      "type": "object_state",
+      "object_type": "Bowl",
+      "state": "isDirty",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm going to tidy up the room. Please clean up all the dirt in front of me.",
+  "max_steps": 60,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level2 Interaction"
+}

@@ -1,0 +1,49 @@
+{
+  "task_id": "carla00300",
+  "task_name": "Drive to the lamp",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "vehicle",
+  "instruction": "I'm picking someone up. Please drive to the streetlight by the mailbox.",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "Done"
+    ]
+  },
+  "scene": "Town01",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "polygon_area",
+    "target_polygon": [
+      [
+        267.28961181640597,
+        323.84060633854784,
+        0.10087871551513672
+      ],
+      [
+        267.2896148791228,
+        327.67404174804443,
+        0.10087871551513672
+      ],
+      [
+        266.85040283203153,
+        327.67404209895216,
+        0.10087871551513672
+      ],
+      [
+        266.8503997693147,
+        323.84060668945557,
+        0.10087871551513672
+      ]
+    ],
+    "threshold_label": "medium"
+  },
+  "max_steps": 30
+}

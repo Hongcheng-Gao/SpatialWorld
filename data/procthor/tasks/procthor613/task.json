@@ -1,0 +1,45 @@
+{
+  "task_id": "procthor613",
+  "task_name": "Open the box",
+  "instruction": "Please move to the bedroom and open the box there to check if there is anything inside.",
+  "golden_actions": {
+    "steps": 14,
+    "actions": [
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "LookDown",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "OpenObject(Box)",
+      "Done"
+    ]
+  },
+  "scene_index": 68,
+  "target_object_types": [
+    "Box"
+  ],
+  "success_conditions": [
+    {
+      "type": "agent_in_room",
+      "room_type": "Bedroom"
+    },
+    {
+      "type": "object_state",
+      "object_type": "Box",
+      "state": "isOpen"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "Please move to the bedroom and open the box there to check if there is anything inside.",
+  "max_steps": 38,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

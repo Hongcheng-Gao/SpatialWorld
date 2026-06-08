@@ -1,0 +1,33 @@
+{
+  "task_id": "ai2thor03027",
+  "task_name": "Bring spoon for soup",
+  "instruction": "I'd like some soup. Please bring me the spoon to the table.",
+  "golden_actions": {
+    "steps": 5,
+    "actions": [
+      "PickupObject(Spoon)",
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "PutObject(DiningTable)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan20",
+  "target_object_types": [
+    "Spoon",
+    "DiningTable"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Spoon",
+      "receptacle_type": "DiningTable"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'd like some soup. Please bring me the spoon to the table.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

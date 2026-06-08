@@ -1,0 +1,46 @@
+{
+  "task_id": "ai2thor05537",
+  "task_name": "Please pick up the newspaper and place it on the coffee table",
+  "instruction": "I've finished dinner and feel like reading the paper—please pick up the newspaper and set it right next to the bowl on the coffee table so I can relax and read.",
+  "golden_actions": {
+    "steps": 11,
+    "actions": [
+      "PickupObject(Newspaper)",
+      "RotateLeft(180)",
+      "MoveAhead(0.5)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "PutObject(CoffeeTable)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan201",
+  "target_object_types": [
+    "CoffeeTable",
+    "DiningTable",
+    "Newspaper"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Newspaper",
+      "receptacle_type": "DiningTable",
+      "value": false
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Newspaper",
+      "receptacle_type": "CoffeeTable"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I've finished dinner and feel like reading the paper—please pick up the newspaper and set it right next to the bowl on the coffee table so I can relax and read.",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

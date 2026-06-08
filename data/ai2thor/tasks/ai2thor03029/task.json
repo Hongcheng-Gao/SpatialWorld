@@ -1,0 +1,59 @@
+{
+  "task_id": "ai2thor03029",
+  "task_name": "Store leftover potato",
+  "instruction": "I'm full. Please put the potato on a plate and then put it in the refrigerator.And remember to close the refrigerator door after putting the plate inside.",
+  "golden_actions": {
+    "steps": 19,
+    "actions": [
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveLeft(0.5)",
+      "MoveAhead(0.5)",
+      "PickupObject(Potato)",
+      "MoveRight(0.5)",
+      "MoveAhead(1)",
+      "PutObject(Plate)",
+      "PickupObject(Plate)",
+      "RotateLeft(90)",
+      "RotateLeft(90)",
+      "MoveAhead(1)",
+      "RotateRight(90)",
+      "MoveAhead(1)",
+      "MoveAhead(0.5)",
+      "OpenObject(Fridge)",
+      "PutObject(Fridge)",
+      "CloseObject(Fridge)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan20",
+  "target_object_types": [
+    "Fridge",
+    "Plate",
+    "Potato"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Potato",
+      "receptacle_type": "Plate"
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Plate",
+      "receptacle_type": "Fridge"
+    },
+    {
+      "type": "object_state",
+      "object_type": "Fridge",
+      "state": "isOpen",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm full. Please put the potato on a plate and then put it in the refrigerator.And remember to close the refrigerator door after putting the plate inside.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

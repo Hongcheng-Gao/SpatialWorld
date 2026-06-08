@@ -1,0 +1,37 @@
+{
+  "task_id": "ai2thor05004",
+  "task_name": "Pick up the phone and place it on the bed",
+  "instruction": "I want this put away neatly, so please pick up the phone carefully and hold it securely and then place it on the bed and make sure it sits flat and won't slide.",
+  "golden_actions": {
+    "steps": 8,
+    "actions": [
+      "MoveLeft(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "PickupObject(CellPhone)",
+      "RotateRight(90)",
+      "MoveAhead(0.25)",
+      "PutObject(Bed)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan303",
+  "target_object_types": [
+    "CellPhone",
+    "Bed"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "CellPhone",
+      "receptacle_type": "Bed",
+      "value": true
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "I want this put away neatly, so please pick up the phone carefully and hold it securely and then place it on the bed and make sure it sits flat and won't slide.",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "Study and Work",
+  "Level": "Level3"
+}

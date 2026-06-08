@@ -1,0 +1,155 @@
+{
+  "id": "embodiedcity_7003",
+  "instruction": "Locate the tallest glass building to establish a high-altitude vantage point and plan a flight path to its roof.",
+  "start": [
+    7150.45703125,
+    -3754.6181640625,
+    -4.1028289794921875
+  ],
+  "start_yaw": 0.73,
+  "end": [
+    7094.00146484375,
+    -3763.22021484375,
+    -76.83147430419922
+  ],
+  "end_yaw": -9.052101643640173,
+  "check_status": "Qualified",
+  "check_comment": "1",
+  "check_time": "2026-05-12 10:24:19",
+  "trajectory": [
+    {
+      "x": 7150.46,
+      "y": -3754.62,
+      "z": -4.08,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 7150.46,
+      "y": -3754.62,
+      "z": -4.02,
+      "action": "Yaw Left",
+      "granularity": "Large"
+    },
+    {
+      "x": 7150.46,
+      "y": -3754.62,
+      "z": -4.0,
+      "action": "Yaw Left",
+      "granularity": "Large"
+    },
+    {
+      "x": 7150.46,
+      "y": -3754.62,
+      "z": -13.94,
+      "action": "Up",
+      "granularity": "Large"
+    },
+    {
+      "x": 7150.46,
+      "y": -3754.62,
+      "z": -23.92,
+      "action": "Up",
+      "granularity": "Large"
+    },
+    {
+      "x": 7150.46,
+      "y": -3754.62,
+      "z": -33.91,
+      "action": "Up",
+      "granularity": "Large"
+    },
+    {
+      "x": 7150.46,
+      "y": -3754.62,
+      "z": -43.89,
+      "action": "Up",
+      "granularity": "Large"
+    },
+    {
+      "x": 7150.46,
+      "y": -3754.62,
+      "z": -53.88,
+      "action": "Up",
+      "granularity": "Large"
+    },
+    {
+      "x": 7150.46,
+      "y": -3754.62,
+      "z": -63.87,
+      "action": "Up",
+      "granularity": "Large"
+    },
+    {
+      "x": 7150.46,
+      "y": -3754.62,
+      "z": -73.86,
+      "action": "Up",
+      "granularity": "Large"
+    },
+    {
+      "x": 7140.46,
+      "y": -3754.75,
+      "z": -73.85,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7130.46,
+      "y": -3754.87,
+      "z": -73.85,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7120.46,
+      "y": -3755.0,
+      "z": -73.85,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7120.46,
+      "y": -3755.0,
+      "z": -78.84,
+      "action": "Up",
+      "granularity": "Medium"
+    },
+    {
+      "x": 7110.46,
+      "y": -3755.13,
+      "z": -78.84,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7100.46,
+      "y": -3755.26,
+      "z": -78.83,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7100.59,
+      "y": -3765.25,
+      "z": -78.77,
+      "action": "Right",
+      "granularity": "Large"
+    },
+    {
+      "x": 7090.59,
+      "y": -3765.38,
+      "z": -78.75,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7090.59,
+      "y": -3765.38,
+      "z": -78.75,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 18
+}

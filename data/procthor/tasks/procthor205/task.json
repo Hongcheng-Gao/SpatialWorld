@@ -1,0 +1,63 @@
+{
+  "task_id": "procthor205",
+  "task_name": "Fetch pillow to bathroom",
+  "instruction": "I want to wash the pillow. Please pick up the pillow and bring it to the bathroom.",
+  "golden_actions": {
+    "steps": 36,
+    "actions": [
+      "RotateRight(90)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.25)",
+      "RotateRight(90)",
+      "MoveLeft(0.5)",
+      "MoveLeft(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "RotateRight(90)",
+      "MoveLeft(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "LookDown",
+      "PickupObject(Pillow)",
+      "MoveBack(0.5)",
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "RotateLeft(90)",
+      "MoveRight(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "MoveLeft(0.25)",
+      "MoveAhead(0.25)",
+      "MoveLeft(0.25)",
+      "MoveAhead(0.25)",
+      "MoveLeft(0.25)",
+      "MoveAhead(0.5)",
+      "Done"
+    ]
+  },
+  "scene_index": 300,
+  "target_object_types": [
+    "Pillow"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_room",
+      "object_type": "Pillow",
+      "room_type": "Bathroom"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to wash the pillow. Please pick up the pillow and bring it to the bathroom.",
+  "max_steps": 82,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

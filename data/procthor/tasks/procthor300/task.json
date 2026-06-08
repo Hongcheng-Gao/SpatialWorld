@@ -1,0 +1,50 @@
+{
+  "task_id": "procthor300",
+  "task_name": "Fill Bowl with Water, Wait by Table",
+  "instruction": "I'm thirsty. Please fill a bowl with water and wait beside the table.",
+  "golden_actions": {
+    "steps": 17,
+    "actions": [
+      "MoveLeft(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveLeft(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveRight(1.0)",
+      "MoveRight(1.0)",
+      "MoveAhead(1.0)",
+      "LookDown",
+      "FillObjectWithLiquid(Bowl, water)",
+      "Done"
+    ]
+  },
+  "scene_index": 130,
+  "target_object_types": [
+    "Bowl"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Bowl",
+      "state": "isFilledWithLiquid",
+      "value": true
+    },
+    {
+      "type": "agent_near_object",
+      "object_type": "DiningTable",
+      "distance": 1.5
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm thirsty. Please fill a bowl with water and wait beside the table.",
+  "max_steps": 44,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

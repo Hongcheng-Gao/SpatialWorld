@@ -1,0 +1,39 @@
+{
+  "task_id": "procthor110",
+  "task_name": "Locate bedroom and enter",
+  "instruction": "Can you locate my bedroom? If so, please go ahead and step inside.",
+  "golden_actions": {
+    "steps": 15,
+    "actions": [
+      "MoveRight(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "RotateRight(90)",
+      "MoveLeft(1.0)",
+      "MoveLeft(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "RotateRight(90)",
+      "Done"
+    ]
+  },
+  "scene_index": 17,
+  "target_object_types": [],
+  "success_conditions": [
+    {
+      "type": "agent_in_room",
+      "room_type": "Bedroom"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "Can you locate my bedroom? If so, please go ahead and step inside.",
+  "max_steps": 40,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level1 Navigation"
+}

@@ -1,0 +1,40 @@
+{
+  "task_id": "ai2thor03035",
+  "task_name": "Wash pan and place spatula in it",
+  "instruction": "I'm going to start cooking now. Please wash the pan and then put the spatula into it.",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "CleanObject(Pan)",
+      "RotateRight(90)",
+      "PickupObject(Spatula)",
+      "RotateLeft(90)",
+      "PutObject(Pan)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan22",
+  "target_object_types": [
+    "Pan",
+    "Spatula"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Spatula",
+      "receptacle_type": "Pan"
+    },
+    {
+      "type": "object_state",
+      "object_type": "Spatula",
+      "state": "isDirty",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm going to start cooking now. Please wash the pan and then put the spatula into it.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level2 Interaction"
+}

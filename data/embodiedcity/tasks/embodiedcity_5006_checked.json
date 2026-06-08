@@ -1,0 +1,64 @@
+{
+  "id": "embodiedcity_5006",
+  "instruction": "Please move to the nearest trash can.",
+  "start": [
+    7812.7333984375,
+    -3597.6669921875,
+    -4.773710250854492
+  ],
+  "start_yaw": 32.45,
+  "end": [
+    7807.69921875,
+    -3597.513916015625,
+    -0.9525159001350403
+  ],
+  "end_yaw": 54.90511775797954,
+  "check_status": "Qualified",
+  "check_comment": "OK",
+  "check_time": "2026-05-12 12:51:14",
+  "trajectory": [
+    {
+      "x": 7812.73,
+      "y": -3597.67,
+      "z": -4.72,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 7812.73,
+      "y": -3597.67,
+      "z": -4.72,
+      "action": "Yaw Right",
+      "granularity": "Large"
+    },
+    {
+      "x": 7812.73,
+      "y": -3597.67,
+      "z": -4.69,
+      "action": "Yaw Right",
+      "granularity": "Large"
+    },
+    {
+      "x": 7812.73,
+      "y": -3597.67,
+      "z": -4.64,
+      "action": "Yaw Left",
+      "granularity": "Medium"
+    },
+    {
+      "x": 7807.74,
+      "y": -3597.88,
+      "z": -4.55,
+      "action": "Forward",
+      "granularity": "Medium"
+    },
+    {
+      "x": 7807.74,
+      "y": -3597.88,
+      "z": -4.55,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 5
+}

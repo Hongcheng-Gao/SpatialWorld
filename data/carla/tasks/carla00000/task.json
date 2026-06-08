@@ -1,0 +1,47 @@
+{
+  "task_id": "carla00000",
+  "task_name": "Walk to the city lamp",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "walker",
+  "instruction": "Walk forward to reach the city lamp.",
+  "golden_actions": {
+    "steps": 4,
+    "actions": [
+      "TurnLeft(degrees=90)",
+      "TurnLeft(degrees=30)",
+      "WalkForward(distance=10)",
+      "Done"
+    ]
+  },
+  "scene": "Town01",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "polygon_area",
+    "target_polygon": [
+      [
+        85.67361450195312,
+        279.7303771972656,
+        0.10087871551513672
+      ],
+      [
+        89.50704956054688,
+        279.7303771972656,
+        0.10087871551513672
+      ],
+      [
+        89.50704956054688,
+        280.1695861816406,
+        0.10087871551513672
+      ],
+      [
+        85.67361450195312,
+        280.1695861816406,
+        0.10087871551513672
+      ]
+    ],
+    "threshold_label": "medium"
+  },
+  "max_steps": 30
+}

@@ -1,0 +1,76 @@
+{
+  "task_id": "procthor502",
+  "task_name": "Turn off desk lamp and bring phone to bedside",
+  "instruction": "I've finished my work and I'm planning to rest in bed. Please turn off a desk lamp, power on a cellphone, and bring the phone to the bedside for me.",
+  "golden_actions": {
+    "steps": 29,
+    "actions": [
+      "RotateLeft(90)",
+      "MoveRight(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "RotateLeft(90)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateLeft(90)",
+      "MoveRight(0.5)",
+      "MoveAhead(0.5)",
+      "LookDown",
+      "MoveAhead(0.5)",
+      "RotateLeft(90)",
+      "MoveAhead(0.25)",
+      "ToggleObjectOff(DeskLamp)",
+      "ToggleObjectOn(CellPhone)",
+      "PickupObject(CellPhone)",
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveLeft(1.0)",
+      "MoveAhead(0.5)",
+      "Done"
+    ]
+  },
+  "scene_index": 154,
+  "target_object_types": [
+    "DeskLamp",
+    "CellPhone",
+    "Bed"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "CellPhone",
+      "state": "isToggled",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "CellPhone",
+      "state": "isPickedUp",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "DeskLamp",
+      "state": "isToggled",
+      "value": false
+    },
+    {
+      "type": "agent_near_object",
+      "object_type": "Bed",
+      "distance": 1.5
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I've finished my work and I'm planning to rest in bed. Please turn off a desk lamp, power on a cellphone, and bring the phone to the bedside for me.",
+  "max_steps": 68,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

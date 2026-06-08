@@ -1,0 +1,56 @@
+{
+  "id": "embodiedcity_3009",
+  "instruction": "I’m going to place a positioning marker near the flower bed. Please move to the center of the circular flower bed.",
+  "start": [
+    7783.552734375,
+    -3572.6298828125,
+    -10.880264282226562
+  ],
+  "end": [
+    7767.76123046875,
+    -3567.645751953125,
+    -1.916458249092102
+  ],
+  "check_status": "Qualified",
+  "check_comment": "OK",
+  "check_time": "2026-05-12 13:00:05",
+  "trajectory": [
+    {
+      "x": 7783.55,
+      "y": -3572.63,
+      "z": -10.8,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 7783.55,
+      "y": -3572.63,
+      "z": -0.81,
+      "action": "Down",
+      "granularity": "Large"
+    },
+    {
+      "x": 7774.31,
+      "y": -3568.8,
+      "z": -0.73,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7769.69,
+      "y": -3566.89,
+      "z": -0.63,
+      "action": "Forward",
+      "granularity": "Medium"
+    },
+    {
+      "x": 7769.69,
+      "y": -3566.89,
+      "z": -0.63,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "start_yaw": 157.5,
+  "golden_actions_count": 4
+}

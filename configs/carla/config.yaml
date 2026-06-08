@@ -1,0 +1,125 @@
+# CARLA 自动驾驶环境完整配置
+
+# ==================== 环境配置 ====================
+env:
+  type: carla
+  host: null
+  port: 2000
+  timeout: 10.0
+
+  # 传感器配置
+  sensors:
+    rgb_camera:
+      width: 800
+      height: 600
+      fov: 90
+
+    depth_camera:
+      enabled: false
+
+    lidar:
+      enabled: false
+
+  # 天气配置
+  weather: ClearNoon # ClearNoon, CloudySunset, WetNoon, HardRainNoon 等
+
+  # 地图
+  map: Town01
+
+# ==================== 任务控制 ====================
+max_steps: 100
+
+# ==================== 上下文管理 ====================
+context_management:
+  max_trajectory_length: 20
+  enable_auto_truncation: true
+  enable_long_term_summary: false # 是否启用长期语义摘要（<SUMMARY>标签）
+  short_term_history_window_size: 3 # 短期历史窗口大小（最近N步的多模态历史，包含图像和错误信息）
+
+# ==================== 模型配置 ====================
+model:
+  vlm:
+    provider: openai
+    model_name: gemini-2.5-pro
+    temperature: 0.2
+    max_tokens: 2000
+
+# ==================== 日志配置 ====================
+logging:
+  stdout_verbose: true
+  save_step_images: true
+  log_level: INFO
+
+# ==================== 动作配置 ====================
+actions:
+  # 油门范围
+  throttle_range: [0.0, 1.0]
+  # 转向范围
+  steer_range: [-1.0, 1.0]
+  # 刹车范围
+  brake_range: [0.0, 1.0]
+
+# ==================== 奖励配置 ====================
+reward:
+  success_reward: 10.0
+  step_penalty: -0.01
+  collision_penalty: -1.0
+  lane_invasion_penalty: -0.5
+
+# ==================== 实验配置 ====================
+experiment:
+  num_episodes: 1
+  output_dir: outputs
+
+# ==================== 任务预设 ====================
+task_presets:
+  navigate_to_waypoint:
+    description: 导航到指定的路点位置，沿着道路安全行驶到达目的地
+    max_steps: 100
+    map: Town01
+    waypoint:
+      x: 100.0
+      y: 50.0
+      z: 0.5
+    success_condition:
+      type: distance_to_waypoint
+      threshold: 5.0 # 距离目标点5米内视为成功
+
+  follow_lane:
+    description: 沿着当前车道保持行驶，保持稳定速度，避免偏离车道
+    max_steps: 200
+    map: Town01
+    target_speed: 30.0 # km/h
+    success_condition:
+      type: lane_following
+      min_distance: 500.0 # 至少行驶500米
+
+  avoid_obstacles:
+    description: 避开障碍物并到达目标点，注意前方的静态和动态障碍物
+    max_steps: 150
+    map: Town02
+    obstacle_count: 5
+    waypoint:
+      x: 150.0
+      y: 80.0
+      z: 0.5
+    success_condition:
+      type: distance_to_waypoint
+      threshold: 5.0
+
+  traffic_light_stop:
+    description: 识别交通信号灯，在红灯时停车，绿灯时通行
+    max_steps: 100
+    map: Town03
+    success_condition:
+      type: traffic_light_compliance
+      required_stops: 3 # 需要正确停车3次
+
+  highway_merge:
+    description: 安全驶入高速公路，与其他车辆汇合并保持安全距离
+    max_steps: 150
+    map: Town04
+    target_speed: 60.0 # km/h
+    success_condition:
+      type: highway_merge
+      min_distance: 300.0

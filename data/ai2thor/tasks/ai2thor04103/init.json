@@ -1,0 +1,14 @@
+{
+  "scene": "FloorPlan310",
+  "actions": [
+    "RotateRight(90)",
+    "RotateRight(90)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "ToggleObjectOff(LightSwitch)",
+    "MoveBack(0.5)",
+    "MoveBack(0.5)",
+    "MoveBack(0.5)",
+    "Done"
+  ]
+}

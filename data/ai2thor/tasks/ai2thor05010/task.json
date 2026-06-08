@@ -1,0 +1,34 @@
+{
+  "task_id": "ai2thor05010",
+  "task_name": "Turn on the laptop",
+  "instruction": "I need it running, so please turn on the laptop and wait until you can tell it's powered on.",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "MoveRight(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateLeft(90)",
+      "ToggleObjectOn(Laptop)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan310",
+  "target_object_types": [
+    "Laptop"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Laptop",
+      "field": "isToggled",
+      "value": true
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "I need it running, so please turn on the laptop and wait until you can tell it's powered on.",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "Study and Work",
+  "Level": "Level3"
+}

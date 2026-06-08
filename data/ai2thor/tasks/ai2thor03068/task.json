@@ -1,0 +1,57 @@
+{
+  "task_id": "ai2thor03068",
+  "task_name": "Swap lettuce for potato",
+  "instruction": "I don't want to eat lettuce, I want to eat potato. Please put the lettuce in the refrigerator and take the potato out of the refrigerator and onto the counter.",
+  "golden_actions": {
+    "steps": 16,
+    "actions": [
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "PickupObject(Lettuce)",
+      "RotateLeft(90)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "RotateRight(90)",
+      "MoveLeft(0.5)",
+      "MoveLeft(0.25)",
+      "OpenObject(Fridge)",
+      "MoveAhead(0.25)",
+      "PutObject(Fridge)",
+      "PickupObject(Potato)",
+      "CloseObject(Fridge)",
+      "PutObject(CounterTop)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan28",
+  "target_object_types": [
+    "CounterTop",
+    "Fridge",
+    "Lettuce",
+    "Potato"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Fridge",
+      "state": "isOpen",
+      "value": false
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Lettuce",
+      "receptacle_type": "Fridge"
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Potato",
+      "receptacle_type": "CounterTop"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I don't want to eat lettuce, I want to eat potato. Please put the lettuce in the refrigerator and take the potato out of the refrigerator and onto the counter.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

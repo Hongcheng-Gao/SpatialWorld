@@ -1,0 +1,49 @@
+{
+  "task_id": "carla00203",
+  "task_name": "Walk to the church.",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "walker",
+  "instruction": "Walk to the church. You can turn and move in any direction.",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "TurnRight(degrees=30)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "Done"
+    ]
+  },
+  "scene": "Town04",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "polygon_area",
+    "target_polygon": [
+      [
+        290.882568359375,
+        -294.34478759765625,
+        0.16048622131347656
+      ],
+      [
+        299.8791494835678,
+        -285.34819449378307,
+        0.16048622131347656
+      ],
+      [
+        292.24493408203125,
+        -277.7139892578125,
+        0.16048622131347656
+      ],
+      [
+        283.24835295783845,
+        -286.7105823616857,
+        0.16048622131347656
+      ]
+    ],
+    "threshold_label": "loose"
+  },
+  "max_steps": 30
+}

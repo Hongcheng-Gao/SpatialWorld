@@ -1,0 +1,78 @@
+{
+  "task_id": "procthor119",
+  "task_name": "Grab baseball bat, wait in living room",
+  "instruction": "My friend is coming over to hang out. Please grab a baseball bat for me and then wait for him in the living room.",
+  "golden_actions": {
+    "steps": 41,
+    "actions": [
+      "RotateRight(90)",
+      "MoveRight(1.0)",
+      "MoveRight(0.25)",
+      "LookDown",
+      "MoveAhead(1.0)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "MoveLeft(1.0)",
+      "PickupObject(BaseballBat)",
+      "MoveAhead(1.0)",
+      "RotateRight(90)",
+      "MoveAhead(0.25)",
+      "MoveLeft(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateRight(90)",
+      "MoveLeft(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "MoveLeft(0.5)",
+      "MoveLeft(0.25)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "RotateLeft(90)",
+      "MoveRight(0.5)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "RotateLeft(90)",
+      "MoveRight(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "Done"
+    ]
+  },
+  "scene_index": 93,
+  "target_object_types": [
+    "BaseballBat"
+  ],
+  "success_conditions": [
+    {
+      "type": "agent_in_room",
+      "room_type": "LivingRoom"
+    },
+    {
+      "type": "object_state",
+      "object_type": "BaseballBat",
+      "state": "isPickedUp",
+      "value": true
+    },
+    {
+      "type": "object_in_room",
+      "object_type": "BaseballBat",
+      "room_type": "LivingRoom"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "My friend is coming over to hang out. Please grab a baseball bat for me and then wait for him in the living room.",
+  "max_steps": 92,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level1 Navigation"
+}

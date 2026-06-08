@@ -1,0 +1,46 @@
+{
+  "task_id": "ai2thor03023",
+  "task_name": "Move mug and turn off coffee machine",
+  "instruction": "I want to tidy up the kitchen. Please put the mug on the countertop and then turn off the coffee machine.",
+  "golden_actions": {
+    "steps": 4,
+    "actions": [
+      "PickupObject(Mug)",
+      "PutObject(CounterTop)",
+      "ToggleObjectOff(CoffeeMachine)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan15",
+  "target_object_types": [
+    "CoffeeMachine",
+    "CounterTop",
+    "Mug"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Mug",
+      "receptacle_type": "CounterTop",
+      "value": true
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Mug",
+      "receptacle_type": "CoffeeMachine",
+      "value": false
+    },
+    {
+      "type": "object_state",
+      "object_type": "CoffeeMachine",
+      "state": "isToggled",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to tidy up the kitchen. Please put the mug on the countertop and then turn off the coffee machine.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level2 Interaction"
+}

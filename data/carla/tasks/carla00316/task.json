@@ -1,0 +1,49 @@
+{
+  "task_id": "carla00316",
+  "task_name": "Drive to the second streetlight",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "vehicle",
+  "instruction": "Please drive to the streetlight marked with red box after passing through this intersection.",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "Done"
+    ]
+  },
+  "scene": "Town03",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "polygon_area",
+    "target_polygon": [
+      [
+        -5.189889430999756,
+        169.834228515625,
+        0.15328407287597656
+      ],
+      [
+        0.4782133102416992,
+        169.834228515625,
+        0.15328407287597656
+      ],
+      [
+        0.4782133102416992,
+        170.31741333007812,
+        0.15328407287597656
+      ],
+      [
+        -5.189889430999756,
+        170.31741333007812,
+        0.15328407287597656
+      ]
+    ],
+    "threshold_label": "medium"
+  },
+  "max_steps": 30
+}

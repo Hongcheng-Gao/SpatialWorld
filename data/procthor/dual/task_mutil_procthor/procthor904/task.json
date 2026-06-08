@@ -1,0 +1,56 @@
+{
+  "task_id": "procthor904",
+  "task_name": "Kitchen Dining Prep",
+  "instruction": "I'm going to have a meal in the kitchen and read the newspaper at the same time. Please bring both the newspaper and the plate to the kitchen.",
+  "golden_actions": {
+    "steps": 23,
+    "actions": [
+      "LookDown",
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveLeft(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "PickupObject(Newspaper)",
+      "MoveRight(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "DropHandObject(Newspaper)",
+      "RotateLeft(90)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveRight(1.0)",
+      "RotateRight(90)",
+      "PickupObject(Plate)",
+      "RotateRight(90)",
+      "MoveRight(1.0)",
+      "MoveAhead(1.0)",
+      "Done"
+    ]
+  },
+  "scene_index": 110,
+  "target_object_types": [
+    "Plate",
+    "Newspaper"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_room",
+      "object_type": "Plate",
+      "room_type": "Kitchen"
+    },
+    {
+      "type": "object_in_room",
+      "object_type": "Newspaper",
+      "room_type": "Kitchen"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm going to have a meal in the kitchen and read the newspaper at the same time. Please bring both the newspaper and the plate to the kitchen.",
+  "max_steps": 110,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

@@ -1,0 +1,50 @@
+{
+  "task_id": "procthor006",
+  "task_name": "Fetch an Egg from Fridge",
+  "instruction": "I need to prepare a meal. Please take the an egg out of the refrigerator and stand near it.",
+  "golden_actions": {
+    "steps": 16,
+    "actions": [
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveRight(1.0)",
+      "MoveAhead(1.0)",
+      "MoveLeft(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveLeft(1.0)",
+      "MoveLeft(1.0)",
+      "MoveAhead(1.0)",
+      "OpenObject(Fridge)",
+      "MoveAhead(0.5)",
+      "PickupObject(Egg)",
+      "Done"
+    ]
+  },
+  "scene_index": 110,
+  "target_object_types": [
+    "Egg",
+    "Fridge"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Egg",
+      "state": "isPickedUp",
+      "value": true
+    },
+    {
+      "type": "agent_near_object",
+      "object_type": "Fridge",
+      "distance": 1.5
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I need to prepare a meal. Please take the an egg out of the refrigerator and stand near it.",
+  "max_steps": 42,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

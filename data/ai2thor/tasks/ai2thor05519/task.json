@@ -1,0 +1,30 @@
+{
+  "task_id": "ai2thor05519",
+  "task_name": "Pick up the laptop",
+  "instruction": "I’d like to start working from the bedside—could you please pick up the laptop?",
+  "golden_actions": {
+    "steps": 2,
+    "actions": [
+      "PickupObject(Laptop)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan314",
+  "target_object_types": [
+    "Laptop"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Laptop",
+      "state": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I’d like to start working from the bedside—could you please move the laptop from the desk to the bed?",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "Study and Work",
+  "Level": "Level3"
+}

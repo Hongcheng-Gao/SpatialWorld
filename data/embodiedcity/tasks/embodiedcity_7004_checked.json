@@ -1,0 +1,50 @@
+{
+  "id": "embodiedcity_7004",
+  "instruction": "Locate the trash can to dispose of waste and plan a path to its overhead position.",
+  "start": [
+    7789.41552734375,
+    -3597.698486328125,
+    -0.8590824007987976
+  ],
+  "start_yaw": -2.21,
+  "end": [
+    7806.73291015625,
+    -3598.50146484375,
+    -2.5007827281951904
+  ],
+  "end_yaw": 2.566376701577875,
+  "check_status": "Qualified",
+  "check_comment": "OK",
+  "check_time": "2026-05-12 10:24:46",
+  "trajectory": [
+    {
+      "x": 7799.41,
+      "y": -3598.08,
+      "z": -5.62,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 7799.41,
+      "y": -3598.08,
+      "z": -0.77,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7804.4,
+      "y": -3598.28,
+      "z": -0.72,
+      "action": "Forward",
+      "granularity": "Medium"
+    },
+    {
+      "x": 7804.4,
+      "y": -3598.28,
+      "z": -0.72,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 3
+}

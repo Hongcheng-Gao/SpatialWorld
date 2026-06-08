@@ -1,0 +1,62 @@
+{
+  "task_id": "procthor302",
+  "task_name": "Pick up Plunger, Wait by Toilet.",
+  "instruction": "The toilet is dirty. Please pick up the plunger and wait beside the toilet while I clean it.",
+  "golden_actions": {
+    "steps": 24,
+    "actions": [
+      "LookDown",
+      "MoveLeft(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveLeft(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveRight(1.0)",
+      "MoveRight(0.5)",
+      "MoveAhead(1.0)",
+      "MoveLeft(1.0)",
+      "MoveLeft(1.0)",
+      "MoveAhead(1.0)",
+      "PickupObject(Plunger)",
+      "Done"
+    ]
+  },
+  "scene_index": 130,
+  "target_object_types": [
+    "Plunger",
+    "Toilet"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Plunger",
+      "state": "isPickedUp",
+      "value": true
+    },
+    {
+      "type": "agent_in_room",
+      "room_type": "Bathroom"
+    },
+    {
+      "type": "agent_near_object",
+      "object_type": "Toilet",
+      "distance": 1.5
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "The toilet is dirty. Please pick up the plunger and wait beside the toilet while I clean it.",
+  "max_steps": 58,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

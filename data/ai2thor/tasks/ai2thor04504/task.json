@@ -1,0 +1,42 @@
+{
+  "task_id": "ai2thor04504",
+  "task_name": "Pick up the baseball bat and place it on the bed",
+  "instruction": "Please pick up the baseball bat leaning against the wall by the table and place it on the bed.",
+  "golden_actions": {
+    "steps": 14,
+    "actions": [
+      "RotateRight(90)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.5)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.5)",
+      "PickupObject(BaseballBat)",
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "DropHandObject(Bed)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan315",
+  "target_object_types": [
+    "BaseballBat",
+    "Bed"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "BaseballBat",
+      "receptacle_type": "Bed"
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "Please pick up the baseball bat leaning against the wall by the table and place it on the bed.",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "Entertainment",
+  "Level": "Level3"
+}

@@ -1,0 +1,31 @@
+{
+  "task_id": "carla00406",
+  "task_name": "Find the speed limit sign and go there",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "walker",
+  "instruction": "Please help me find the speed limit sign and walk over to it.",
+  "golden_actions": {
+    "steps": 5,
+    "actions": [
+      "TurnLeft(degrees=90)",
+      "WalkForward(distance=5)",
+      "TurnLeft(degrees=30)",
+      "WalkForward(distance=2.5)",
+      "Done"
+    ]
+  },
+  "scene": "Town04",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "distance_to_waypoint",
+    "target_location": [
+      103.2,
+      -168.2,
+      1.1
+    ],
+    "threshold_label": "strict"
+  },
+  "max_steps": 50
+}

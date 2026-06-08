@@ -1,0 +1,58 @@
+{
+  "task_id": "procthor707",
+  "task_name": "Bring Cloth, Stand by Bed",
+  "instruction": "I'd like to wipe the bed. Please pick up a cloth and stand beside the bed while I wait.",
+  "golden_actions": {
+    "steps": 24,
+    "actions": [
+      "LookDown",
+      "RotateLeft(90)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.5)",
+      "MoveAhead(0.5)",
+      "PickupObject(Cloth)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveLeft(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.25)",
+      "Done"
+    ]
+  },
+  "scene_index": 221,
+  "target_object_types": [
+    "Cloth",
+    "Bed"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Cloth",
+      "state": "isPickedUp",
+      "value": true
+    },
+    {
+      "type": "agent_near_object",
+      "object_type": "Bed",
+      "distance": 1.5
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'd like to wipe the bed. Please pick up a cloth and stand beside the bed while I wait.",
+  "max_steps": 58,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

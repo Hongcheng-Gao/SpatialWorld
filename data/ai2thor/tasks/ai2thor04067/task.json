@@ -1,0 +1,38 @@
+{
+  "task_id": "ai2thor04067",
+  "task_name": "Clean bowl and plate",
+  "instruction": "I'd like to have the bowl and plate cleaned.",
+  "golden_actions": {
+    "steps": 3,
+    "actions": [
+      "CleanObject(Bowl)",
+      "CleanObject(Plate)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan214",
+  "target_object_types": [
+    "Bowl",
+    "Plate"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Plate",
+      "state": "isDirty",
+      "value": false
+    },
+    {
+      "type": "object_state",
+      "object_type": "Bowl",
+      "state": "isDirty",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'd like to have the bowl and plate cleaned.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level2 Interaction"
+}

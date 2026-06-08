@@ -1,0 +1,30 @@
+{
+  "task_id": "ai2thor05549",
+  "task_name": "Turn on the faucet",
+  "instruction": "I want to wash my face—could you turn on the faucet for me?",
+  "golden_actions": {
+    "steps": 2,
+    "actions": [
+      "ToggleObjectOn(Faucet)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan427",
+  "target_object_types": [
+    "Faucet"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Faucet",
+      "field": "isToggled",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to wash my face—could you turn on the faucet for me?",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

@@ -1,0 +1,53 @@
+{
+  "task_id": "carla00214",
+  "task_name": "Walk to the streetlight near the stone.",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "walker",
+  "instruction": "Walk to the streetlight near the stone.You can turn and move in any direction.",
+  "golden_actions": {
+    "steps": 10,
+    "actions": [
+      "TurnRight(degrees=30)",
+      "TurnRight(degrees=30)",
+      "WalkForward(distance=10)",
+      "TurnRight(degrees=30)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "TurnRight(degrees=90)",
+      "Done"
+    ]
+  },
+  "scene": "Town05",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "polygon_area",
+    "target_polygon": [
+      [
+        -16.921325683592,
+        100.81001369464602,
+        0.10883235931396484
+      ],
+      [
+        -16.92133334038507,
+        96.97657775878912,
+        0.10883235931396484
+      ],
+      [
+        -16.482124328615033,
+        96.97657688152586,
+        0.10883235931396484
+      ],
+      [
+        -16.482116671821963,
+        100.81001281738276,
+        0.10883235931396484
+      ]
+    ],
+    "threshold_label": "medium"
+  },
+  "max_steps": 50
+}

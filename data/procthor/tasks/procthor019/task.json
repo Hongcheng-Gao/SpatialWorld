@@ -1,0 +1,50 @@
+{
+  "task_id": "procthor019",
+  "task_name": "Bring Plunger, Wait by Sink",
+  "instruction": "I'd like to do some cleaning. Please pick up the plunger and wait for me by the sink.",
+  "golden_actions": {
+    "steps": 16,
+    "actions": [
+      "LookDown",
+      "RotateRight(90)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.5)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.5)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.5)",
+      "PickupObject(Plunger)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.5)",
+      "MoveAhead(0.5)",
+      "Done"
+    ]
+  },
+  "scene_index": 126,
+  "target_object_types": [
+    "Plunger",
+    "SinkBasin"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Plunger",
+      "state": "isPickedUp",
+      "value": true
+    },
+    {
+      "type": "agent_near_object",
+      "object_type": "SinkBasin",
+      "distance": 1.5
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'd like to do some cleaning. Please pick up the plunger and wait for me by the sink.",
+  "max_steps": 42,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

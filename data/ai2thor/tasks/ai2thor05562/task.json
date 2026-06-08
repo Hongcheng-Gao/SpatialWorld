@@ -1,0 +1,55 @@
+{
+  "task_id": "ai2thor05562",
+  "task_name": "Put the watch and credit card from the table into the box",
+  "instruction": "I'm tidying up—please put the watch and credit card from the table into the box",
+  "golden_actions": {
+    "steps": 5,
+    "actions": [
+      "PickupObject(Watch)",
+      "PutObject(Box)",
+      "PickupObject(CreditCard)",
+      "PutObject(Box)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan205",
+  "target_object_types": [
+    "Box",
+    "CreditCard",
+    "SideTable",
+    "SideTable ",
+    "Watch"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Watch",
+      "receptacle_type": "SideTable",
+      "value": false
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "CreditCard",
+      "receptacle_type": "SideTable",
+      "value": false
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "CreditCard",
+      "receptacle_type": "Box",
+      "value": true
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Watch",
+      "receptacle_type": "Box",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm tidying up—please put the watch and credit card from the table into the box",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

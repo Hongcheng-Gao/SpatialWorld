@@ -1,0 +1,43 @@
+{
+  "task_id": "ai2thor03064",
+  "task_name": "Turn off coffee machine and kitchen light",
+  "instruction": "I forgot to turn off the coffee machine and the kitchen light. Go turn them off.",
+  "golden_actions": {
+    "steps": 8,
+    "actions": [
+      "ToggleObjectOff(CoffeeMachine)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.25)",
+      "RotateRight(90)",
+      "ToggleObjectOff(LightSwitch)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan27",
+  "target_object_types": [
+    "CoffeeMachine",
+    "LightSwitch"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "CoffeeMachine",
+      "state": "isToggled",
+      "value": false
+    },
+    {
+      "type": "object_state",
+      "object_type": "LightSwitch",
+      "state": "isToggled",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I forgot to turn off the coffee machine and the kitchen light. Go turn them off.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

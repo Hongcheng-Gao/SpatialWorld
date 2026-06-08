@@ -1,0 +1,37 @@
+{
+  "task_id": "ai2thor03049",
+  "task_name": "Dispose empty soap",
+  "instruction": "This soap bottle is empty. Please throw it in the trash can.",
+  "golden_actions": {
+    "steps": 9,
+    "actions": [
+      "MoveAhead(1)",
+      "RotateRight(90)",
+      "MoveAhead(0.5)",
+      "PickupObject(SoapBottle)",
+      "RotateRight(90)",
+      "MoveAhead(1)",
+      "MoveAhead(1)",
+      "PutObject(GarbageCan)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan24",
+  "target_object_types": [
+    "GarbageCan",
+    "SoapBottle"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "SoapBottle",
+      "receptacle_type": "GarbageCan"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "This soap bottle is empty. Please throw it in the trash can.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

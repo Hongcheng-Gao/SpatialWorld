@@ -1,0 +1,48 @@
+{
+  "task_id": "ai2thor04051",
+  "task_name": "Prepare dining table",
+  "instruction": "I'm going to eat at the dining table now. Please close my laptop and place it on the coffee table.",
+  "golden_actions": {
+    "steps": 12,
+    "actions": [
+      "MoveAhead(0.25)",
+      "CloseObject(Laptop)",
+      "PickupObject(Laptop)",
+      "MoveBack(1.0)",
+      "MoveBack(1.0)",
+      "MoveBack(0.5)",
+      "RotateLeft(90)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "LookDown",
+      "PutObject(CoffeeTable)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan211",
+  "target_object_types": [
+    "Laptop",
+    "CoffeeTable",
+    "DiningTable"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Laptop",
+      "receptacle_type": "CoffeeTable",
+      "value": true
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Laptop",
+      "receptacle_type": "DiningTable",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm going to eat at the dining table now. Please close my laptop and place it on the coffee table.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

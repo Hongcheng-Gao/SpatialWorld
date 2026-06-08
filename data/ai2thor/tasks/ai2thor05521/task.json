@@ -1,0 +1,41 @@
+{
+  "task_id": "ai2thor05521",
+  "task_name": "Please pick up the pen and open the book.",
+  "instruction": "I want to study now. Please pick up the fountain pen on the table in front of you, then go to the other desk, open the book, and study hard",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "PickupObject(Pen)",
+      "MoveAhead(0.5)",
+      "MoveRight(1.0)",
+      "MoveRight(1.0)",
+      "OpenObject(Book)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan315",
+  "target_object_types": [
+    "Pen",
+    "Book"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Pen",
+      "field": "isPickedUp",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Book",
+      "field": "isOpen",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to study now. Please pick up the fountain pen on the table in front of you, then go to the other desk, open the book, and study hard",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "Study and Work",
+  "Level": "Level3"
+}

@@ -1,0 +1,23 @@
+{
+  "scene": "FloorPlan321",
+  "actions": [
+    "RotateRight(90)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveRight(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "RotateLeft(90)",
+    "LookDown",
+    "MoveRight(0.5)",
+    "MoveRight(0.5)",
+    "MoveAhead(0.5)",
+    "MoveAhead(0.5)",
+    "RotateLeft(90)",
+    "CloseObject(Laptop)",
+    "LookDown",
+    "Done"
+  ]
+}

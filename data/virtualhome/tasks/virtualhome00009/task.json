@@ -1,0 +1,29 @@
+{
+  "task_id": "virtualhome00009",
+  "task_name": "Turn on the computer.",
+  "instruction": "I have a great idea! I want to implement it right away. Go turn on the computer and get ready! I'm about to start brainstorming.",
+  "golden_actions": {
+    "steps": 5,
+    "actions": [
+      "LookDown",
+      "WalkForward(medium)",
+      "LookDown",
+      "SwitchOn(computer)",
+      "Done"
+    ]
+  },
+  "scene": "6",
+  "target_object_types": [
+    "computer"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "computer",
+      "state": "isToggled"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I have a great idea! I want to implement it right away. Go turn on the computer and get ready! I'm about to start brainstorming.",
+  "max_steps": 18
+}

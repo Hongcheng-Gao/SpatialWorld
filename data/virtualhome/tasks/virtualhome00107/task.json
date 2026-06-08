@@ -1,0 +1,39 @@
+{
+  "task_id": "virtualhome00107",
+  "task_name": "Put the mug from the table to coffeetable",
+  "instruction": "I want to put the mug from the table to coffeetable.",
+  "golden_actions": {
+    "steps": 14,
+    "actions": [
+      "TurnRight(small)",
+      "WalkForward(large)",
+      "LookDown",
+      "TurnRight(small)",
+      "WalkForward(medium)",
+      "TurnLeft(small)",
+      "Grab(mug)",
+      "TurnRight(normal)",
+      "TurnRight(normal)",
+      "TurnLeft(small)",
+      "WalkForward(large)",
+      "LookDown",
+      "PutBack(mug, coffeetable)",
+      "Done"
+    ]
+  },
+  "scene": "0",
+  "target_object_types": [
+    "mug"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "mug",
+      "receptacle_type": "coffeetable",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to put the mug from the table to coffeetable.",
+  "max_steps": 28
+}

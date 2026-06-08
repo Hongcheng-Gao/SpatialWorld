@@ -1,0 +1,46 @@
+{
+  "task_id": "virtualhome00117",
+  "task_name": "Place a mobile phone on the table and pick up a mouse.",
+  "instruction": "Please place a mobile phone on the table, and then pick up a mouse.",
+  "golden_actions": {
+    "steps": 13,
+    "actions": [
+      "TurnLeft(normal)",
+      "LookDown",
+      "WalkForward(medium)",
+      "LookDown",
+      "Grab(cellphone)",
+      "TurnRight(normal)",
+      "TurnRight(small)",
+      "LookUp",
+      "WalkForward(large)",
+      "TurnLeft(small)",
+      "PutBack(cellphone, desk)",
+      "Grab(mouse)",
+      "Done"
+    ]
+  },
+  "scene": "0",
+  "target_object_types": [
+    "cellphone",
+    "mouse",
+    "desk"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "mouse",
+      "state": "isPickedUp",
+      "value": true
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "cellphone",
+      "receptacle_type": "desk",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "Please place a mobile phone on the table, and then pick up a mouse.",
+  "max_steps": 33
+}

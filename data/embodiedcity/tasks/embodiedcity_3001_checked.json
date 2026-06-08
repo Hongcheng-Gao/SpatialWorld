@@ -1,0 +1,77 @@
+{
+  "id": "embodiedcity_3001",
+  "instruction": "I need to verify whether this landmark is correct. Please move next to the stone lion ornament on the right.",
+  "start": [
+    6360.8291015625,
+    -4125.2763671875,
+    -8.803628921508789
+  ],
+  "end": [
+    6385.4638671875,
+    -4146.7265625,
+    -3.385134696960449
+  ],
+  "check_status": "Qualified",
+  "check_comment": "right will be confused",
+  "check_time": "2026-05-12 21:46:53",
+  "trajectory": [
+    {
+      "x": 6360.83,
+      "y": -4125.28,
+      "z": -8.77,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 6360.83,
+      "y": -4125.28,
+      "z": -8.73,
+      "action": "Yaw Left",
+      "granularity": "Medium"
+    },
+    {
+      "x": 6369.49,
+      "y": -4130.28,
+      "z": -8.64,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6378.15,
+      "y": -4135.28,
+      "z": -8.61,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6386.81,
+      "y": -4140.28,
+      "z": -8.58,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6386.81,
+      "y": -4140.28,
+      "z": -3.55,
+      "action": "Down",
+      "granularity": "Medium"
+    },
+    {
+      "x": 6384.31,
+      "y": -4144.61,
+      "z": -3.46,
+      "action": "Left",
+      "granularity": "Medium"
+    },
+    {
+      "x": 6384.31,
+      "y": -4144.61,
+      "z": -3.46,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "start_yaw": 0.0,
+  "golden_actions_count": 7
+}

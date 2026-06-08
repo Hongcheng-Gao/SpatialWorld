@@ -1,0 +1,40 @@
+{
+  "task_id": "ai2thor05050",
+  "task_name": "Turn off the desk lamp and light switch.",
+  "instruction": "It's time to power down, so please turn off the desk lamp and confirm it's really off and then turn off the light switch and confirm it's really off.",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "ToggleObjectOff(DeskLamp)",
+      "MoveLeft(1.0)",
+      "MoveLeft(0.5)",
+      "MoveAhead(0.5)",
+      "ToggleObjectOff(LightSwitch)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan318",
+  "target_object_types": [
+    "DeskLamp",
+    "LightSwitch"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "DeskLamp",
+      "state": "isToggled",
+      "value": false
+    },
+    {
+      "type": "object_state",
+      "object_type": "LightSwitch",
+      "state": "isToggled",
+      "value": false
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "It's time to power down, so please turn off the desk lamp and confirm it's really off and then turn off the light switch and confirm it's really off.",
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3"
+}

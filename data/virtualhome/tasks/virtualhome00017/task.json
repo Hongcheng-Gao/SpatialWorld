@@ -1,0 +1,34 @@
+{
+  "task_id": "virtualhome00017",
+  "task_name": "Find my folder and pick it up.",
+  "instruction": "Have you seen my folder? Pick it up for me if you find it.",
+  "golden_actions": {
+    "steps": 9,
+    "actions": [
+      "LookDown",
+      "TurnRight(small)",
+      "TurnRight(small)",
+      "WalkForward(small)",
+      "TurnLeft(normal)",
+      "WalkForward(large)",
+      "WalkForward(medium)",
+      "Grab(folder)",
+      "Done"
+    ]
+  },
+  "scene": "17",
+  "target_object_types": [
+    "folder"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "folder",
+      "state": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "Have you seen my folder? Pick it up for me if you find it.",
+  "max_steps": 37
+}

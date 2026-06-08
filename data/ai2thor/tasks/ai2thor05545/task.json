@@ -1,0 +1,41 @@
+{
+  "task_id": "ai2thor05545",
+  "task_name": "Pick up the soap bottle, turn on the faucet, and put it back on the side table",
+  "instruction": "I want to wash my face—please pick up the soap bottle, turn on the faucet, and then put it back on the side table where it was.",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "PickupObject(SoapBottle)",
+      "MoveAhead(0.5)",
+      "ToggleObjectOn(Faucet)",
+      "RotateRight(90)",
+      "PutObject(SideTable)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan429",
+  "target_object_types": [
+    "SoapBottle",
+    "Faucet",
+    "SideTable"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Faucet",
+      "field": "isToggled",
+      "value": true
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "SoapBottle",
+      "receptacle_type": "SideTable"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to wash my face—please pick up the soap bottle, turn on the faucet, and then put it back on the side table where it was.",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

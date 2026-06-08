@@ -1,0 +1,56 @@
+{
+  "task_id": "ai2thor04062",
+  "task_name": "Open book on sofa",
+  "instruction": "I'd like to read a book on the sofa for a while. Please open the book and place it on the sofa.",
+  "golden_actions": {
+    "steps": 21,
+    "actions": [
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveRight(0.5)",
+      "MoveRight(0.25)",
+      "OpenObject(Book)",
+      "PickupObject(Book)",
+      "MoveLeft(0.25)",
+      "MoveLeft(0.5)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "RotateLeft(90)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "MoveLeft(0.5)",
+      "MoveLeft(0.25)",
+      "MoveAhead(0.25)",
+      "PutObject(Sofa)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan213",
+  "target_object_types": [
+    "Book",
+    "Sofa"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Book",
+      "state": "isOpen",
+      "value": true
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Book",
+      "receptacle_type": "Sofa",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'd like to read a book on the sofa for a while. Please open the book and place it on the sofa.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Study and Work",
+  "Level": "Level3 Hybrid"
+}

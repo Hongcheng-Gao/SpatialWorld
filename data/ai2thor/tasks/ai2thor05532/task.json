@@ -1,0 +1,38 @@
+{
+  "task_id": "ai2thor05532",
+  "task_name": "Please break the statue and pick it up.",
+  "instruction": "I'm taking out the trash, and the glove sculpture in front of me is something I really dislike—please pick it up, walk over to the trash can, and smash it",
+  "golden_actions": {
+    "steps": 10,
+    "actions": [
+      "PickupObject(Statue)",
+      "RotateRight(90)",
+      "MoveAhead(0.5)",
+      "MoveRight(1.0)",
+      "MoveRight(1.0)",
+      "MoveRight(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.75)",
+      "BreakObject(Statue)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan220",
+  "target_object_types": [
+    "Statue"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Statue",
+      "field": "isBroken",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm taking out the trash, and the glove sculpture in front of me is something I really dislike—please pick it up, walk over to the trash can, and smash it",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

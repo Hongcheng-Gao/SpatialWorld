@@ -1,0 +1,60 @@
+{
+  "task_id": "procthor208",
+  "task_name": "Relocate tennis racket to bathroom",
+  "instruction": "I am going out to play soon and need to clean my gear first. Please take the tennis racket and carry it to the bathroom for me.",
+  "golden_actions": {
+    "steps": 33,
+    "actions": [
+      "RotateLeft(90)",
+      "MoveRight(0.5)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "RotateRight(90)",
+      "MoveLeft(0.5)",
+      "MoveLeft(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateRight(90)",
+      "MoveAhead(0.25)",
+      "MoveLeft(1.0)",
+      "MoveLeft(1.0)",
+      "MoveLeft(1.0)",
+      "MoveLeft(0.5)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "LookDown",
+      "PickupObject(TennisRacket)",
+      "RotateLeft(90)",
+      "RotateLeft(90)",
+      "MoveRight(1.0)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.5)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "Done"
+    ]
+  },
+  "scene_index": 332,
+  "target_object_types": [
+    "TennisRacket"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_room",
+      "object_type": "TennisRacket",
+      "room_type": "Bathroom"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I am going out to play soon and need to clean my gear first. Please take the tennis racket and carry it to the bathroom for me.",
+  "max_steps": 76,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

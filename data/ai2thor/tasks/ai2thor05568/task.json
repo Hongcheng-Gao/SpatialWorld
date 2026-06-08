@@ -1,0 +1,41 @@
+{
+  "task_id": "ai2thor05568",
+  "task_name": "Please put the dish sponge in the sink",
+  "instruction": "Can you find my dish sponge? If you do, please put it in the sink—I want to wash the dishes",
+  "golden_actions": {
+    "steps": 5,
+    "actions": [
+      "PickupObject(DishSponge)",
+      "RotateRight(90)",
+      "MoveRight(0.5)",
+      "PutObject(Sink)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan401",
+  "target_object_types": [
+    "DishSponge",
+    "Sink",
+    "SideTable"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "DishSponge",
+      "receptacle_type": "SideTable",
+      "value": false
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "DishSponge",
+      "receptacle_type": "Sink",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "Can you find my dish sponge? If you do, please put it in the sink—I want to wash the dishes",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

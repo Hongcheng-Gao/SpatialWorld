@@ -1,0 +1,41 @@
+{
+  "task_id": "ai2thor05577",
+  "task_name": "Please go over and take the toilet paper from the trash can next to the toilet and place it on the counter top",
+  "instruction": "I accidentally threw the paper into the trash can next to the toilet. Could you go over, take it out, and place it on the counter top for me?",
+  "golden_actions": {
+    "steps": 5,
+    "actions": [
+      "PickupObject(ToiletPaper)",
+      "RotateLeft(180)",
+      "MoveAhead(0.5)",
+      "PutObject(CounterTop)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan418",
+  "target_object_types": [
+    "ToiletPaper",
+    "GarbageCan",
+    "CounterTop"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "ToiletPaper",
+      "receptacle_type": "GarbageCan",
+      "value": false
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "ToiletPaper",
+      "receptacle_type": "CounterTop",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I accidentally threw the paper into the trash can next to the toilet. Could you go over, take it out, and place it on the counter top for me?",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

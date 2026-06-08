@@ -1,0 +1,110 @@
+﻿# =============================================================================
+# VirtualHome Environment Configuration File
+# Mirrors the structure of configs/ai2thor/config.yaml
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Basic Environment Configuration
+# -----------------------------------------------------------------------------
+env:
+  type: virtualhome # Environment type (used by wrapper factory)
+  scene: 0 # VH scene index (integer 0鈥?9; each index is a different apartment)
+  width: 640 # Camera capture width (pixels)
+  height: 480 # Camera capture height (pixels)
+  require_visible_for_interaction: true
+  text_state_mode: first_person # Text state mode: first_person | omniscient
+  # Connection settings for the running Unity process
+  url: null
+  port: "8080"
+  # VirtualHome backend launch settings. CLI flags still override these.
+  backend_exe: 'E:\科研内容\windows_exec\windows_exec.v2.2.4\VirtualHome.exe'
+  backend_args: "-windowed -screen-width 960 -screen-height 540"
+  backend_startup_timeout: 90
+  # Platform / display settings
+  # - null: Auto-select (requires an X11 display server on Linux)
+  # - path/to/executable: Path to the VirtualHome Unity executable
+  #   (the wrapper will launch it automatically)
+  platform: null
+  # x_display: ":0"          # X11 display string, e.g. ":0" or ":1"
+
+# -----------------------------------------------------------------------------
+# Agent Runtime Configuration
+# -----------------------------------------------------------------------------
+max_steps: 30 # Maximum steps per episode
+
+# Context management
+context_management:
+  enable_long_term_summary: false
+  short_term_history_window_size: 29
+
+# -----------------------------------------------------------------------------
+# Model Configuration
+# -----------------------------------------------------------------------------
+model:
+  vlm:
+    provider: openai
+    model_name: doubao-seed-2.0-lite
+    temperature: 1.0
+    top_p: 0.9
+    max_tokens: 4096
+    base_url: null
+    api_key: null
+# -----------------------------------------------------------------------------
+# Logging and Output Configuration
+# -----------------------------------------------------------------------------
+logging:
+  stdout_verbose: true
+  save_step_images: true
+
+# -----------------------------------------------------------------------------
+# Action Parameter Configuration
+# WalkForward: target distance in meters (small/medium/large = 0.25 / 0.5 / 1) is
+# converted to repeated native [WalkForward] steps using walk_forward_base_unit_meters.
+# TurnLeft/TurnRight: default 90掳; TurnLeft(small) = 30掳 (one native VH step).
+# -----------------------------------------------------------------------------
+actions:
+  move_small_magnitude: 0.25
+  move_medium_magnitude: 0.5
+  move_large_magnitude: 1.0
+  walk_forward_base_unit_meters: 0.25
+  vh_turn_step_degrees: 30
+  turn_default_degrees: 90
+  walk_yaw_restore_min_delta_degrees: 30
+  grab_yaw_restore_min_delta_degrees: 20
+  grab_exact_restore_tolerance_degrees: 2
+  grab_yaw_residual_warn_degrees: 8
+  grab_yaw_target_tolerance_degrees: 6
+  grab_yaw_closed_loop_max_turns: 14
+  grab_reset_camera_pose: true
+  init_save_quantize_rotation: true
+  init_save_yaw_step_degrees: 30
+  # Visibility sources are unioned in order. Options: seg_inst, api, fov.
+  # Examples:
+  #   [seg_inst]       -> screenshot instance segmentation only
+  #   [api]            -> Unity get_visible_objects(camera_id) only
+  #   [fov]            -> graph/FOV geometry only
+  #   [seg_inst, api]  -> default union used by strict interaction checks
+  visibility_sources: [seg_inst, api]
+  visible_seg_pixel_threshold: 25
+  # 0 disables the local bbox-surface distance gate; interactions rely on
+  # VirtualHome's Unity-side CLOSE relation only.
+  interaction_distance_meters: 0
+  collision_rollback_enabled: true
+  collision_bbox_shrink_meters: 0.02
+  atomic_walkforward_enabled: true
+  atomic_walkforward_tolerance_meters: 0.05
+
+# -----------------------------------------------------------------------------
+# Reward Function Configuration
+# -----------------------------------------------------------------------------
+reward:
+  success_reward: 10.0
+  step_success_bonus: 0.1
+  step_failure_penalty: -0.05
+
+# -----------------------------------------------------------------------------
+# Experiment Configuration
+# -----------------------------------------------------------------------------
+experiment:
+  num_episodes: 1
+  output_dir: outputs

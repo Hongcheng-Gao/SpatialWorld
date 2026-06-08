@@ -1,0 +1,47 @@
+{
+  "task_id": "carla00317",
+  "task_name": "Drive to the lamppost",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "vehicle",
+  "instruction": "Please drive to the lamppost marked with a red box next to the gate of the terracotta-colored house.",
+  "golden_actions": {
+    "steps": 4,
+    "actions": [
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "FollowLane(distance=10)",
+      "Done"
+    ]
+  },
+  "scene": "Town03",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "polygon_area",
+    "target_polygon": [
+      [
+        66.25769805908203,
+        139.31719970703125,
+        0.1498250961303711
+      ],
+      [
+        68.3145523071289,
+        139.31719970703125,
+        0.1498250961303711
+      ],
+      [
+        68.3145523071289,
+        141.617919921875,
+        0.1498250961303711
+      ],
+      [
+        66.25769805908203,
+        141.617919921875,
+        0.1498250961303711
+      ]
+    ],
+    "threshold_label": "loose"
+  },
+  "max_steps": 30
+}

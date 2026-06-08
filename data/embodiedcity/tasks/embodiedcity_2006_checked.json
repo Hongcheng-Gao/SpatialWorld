@@ -1,0 +1,64 @@
+{
+  "id": "embodiedcity_2006",
+  "instruction": "I want to stand on the ground and observe the structure of the air conditioner outdoor unit carefully.",
+  "start": [
+    7766.478515625,
+    -3665.1240234375,
+    -2.4144551753997803
+  ],
+  "start_yaw": -50.81,
+  "end": [
+    7776.69482421875,
+    -3690.342041015625,
+    -2.945507049560547
+  ],
+  "end_yaw": -95.84241158697738,
+  "check_status": "Qualified",
+  "check_comment": "ok",
+  "check_time": "2026-05-12 12:46:14",
+  "trajectory": [
+    {
+      "x": 7766.48,
+      "y": -3665.12,
+      "z": -2.36,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 7772.8,
+      "y": -3672.87,
+      "z": -2.34,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7779.12,
+      "y": -3680.63,
+      "z": -2.26,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7779.12,
+      "y": -3680.63,
+      "z": -2.18,
+      "action": "Yaw Left",
+      "granularity": "Medium"
+    },
+    {
+      "x": 7780.71,
+      "y": -3690.5,
+      "z": -2.11,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7780.71,
+      "y": -3690.5,
+      "z": -2.11,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 5
+}

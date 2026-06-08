@@ -1,0 +1,45 @@
+{
+  "task_id": "ai2thor05571",
+  "task_name": "Take the cloth from counter top and put it on the side table",
+  "instruction": "I left the cloth on the counter. Could you take it to the side table by the sink?",
+  "golden_actions": {
+    "steps": 9,
+    "actions": [
+      "PickupObject(Cloth)",
+      "MoveBack(1.0)",
+      "MoveBack(1.0)",
+      "MoveBack(0.5)",
+      "MoveRight(1.0)",
+      "RotateRight(90)",
+      "LookDown(30)",
+      "PutObject(SideTable)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan412",
+  "target_object_types": [
+    "Cloth",
+    "SideTable",
+    "CounterTop"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Cloth",
+      "receptacle_type": "CounterTop",
+      "value": false
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Cloth",
+      "receptacle_type": "SideTable",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I left the cloth on the counter. Could you take it to the side table by the sink?",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

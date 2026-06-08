@@ -1,0 +1,42 @@
+{
+  "task_id": "ai2thor05064",
+  "task_name": "Fill the pot with liquid and slice the tomato",
+  "instruction": "I'm planning to make soup, so please fill the pot with water and slice the tomato for me.",
+  "golden_actions": {
+    "steps": 7,
+    "actions": [
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "FillObjectWithLiquid(Pot, water)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "SliceObject(Tomato)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan15",
+  "target_object_types": [
+    "Pot",
+    "Tomato"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Pot",
+      "state": "isFilledWithLiquid",
+      "value": true,
+      "liquid": "water"
+    },
+    {
+      "type": "object_state",
+      "object_type": "Tomato",
+      "state": "isSliced",
+      "value": true
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "I'm planning to make soup, so please fill the pot with water and slice the tomato for me.",
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3"
+}

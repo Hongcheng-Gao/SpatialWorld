@@ -1,0 +1,50 @@
+{
+  "task_id": "ai2thor05522",
+  "task_name": "Please turn on the desktop computer and the laptop on the desk, then fill the bowl with water",
+  "instruction": "I'm going to start working seriously. Please turn on the desktop computer and the laptop on the desk, then fill the bowl with water",
+  "golden_actions": {
+    "steps": 7,
+    "actions": [
+      "ToggleObjectOn(Desktop)",
+      "RotateLeft(90)",
+      "ToggleObjectOn(Laptop)",
+      "MoveBack(0.75)",
+      "MoveRight(0.5)",
+      "FillObjectWithLiquid(Bowl, water)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan316",
+  "target_object_types": [
+    "Desktop",
+    "Laptop",
+    "Bowl"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Desktop",
+      "field": "isToggled",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Laptop",
+      "field": "isToggled",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Bowl",
+      "field": "isFilledWithLiquid",
+      "value": true,
+      "liquid": "water"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm going to start working seriously. Please turn on the desktop computer and the laptop on the desk, then fill the bowl with water",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "Study and Work",
+  "Level": "Level3"
+}

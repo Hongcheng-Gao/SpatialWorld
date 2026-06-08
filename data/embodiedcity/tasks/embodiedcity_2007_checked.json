@@ -1,0 +1,50 @@
+{
+  "id": "embodiedcity_2007",
+  "instruction": "I want to find the nearest no-parking sign to check if my car can be parked around this area.",
+  "start": [
+    7751.353515625,
+    -3547.131103515625,
+    -5.620656490325928
+  ],
+  "start_yaw": 101.76,
+  "end": [
+    7749.72900390625,
+    -3537.8642578125,
+    -0.34336766600608826
+  ],
+  "end_yaw": 91.16057321404259,
+  "check_status": "Unqualified",
+  "check_comment": "look like x logo",
+  "check_time": "2026-05-12 12:46:49",
+  "trajectory": [
+    {
+      "x": 7751.35,
+      "y": -3547.13,
+      "z": -5.56,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 7751.35,
+      "y": -3547.13,
+      "z": -0.56,
+      "action": "Down",
+      "granularity": "Medium"
+    },
+    {
+      "x": 7749.31,
+      "y": -3537.34,
+      "z": -0.48,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 7749.31,
+      "y": -3537.34,
+      "z": -0.48,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 3
+}

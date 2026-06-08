@@ -1,0 +1,57 @@
+{
+  "id": "embodiedcity_2003",
+  "instruction": "I want to stand above the red logo to take a photo.",
+  "start": [
+    5986.49755859375,
+    -3817.86328125,
+    -15.618291854858398
+  ],
+  "start_yaw": 113.5,
+  "end": [
+    5977.2041015625,
+    -3800.681396484375,
+    -21.22878074645996
+  ],
+  "end_yaw": 160.84620540038094,
+  "check_status": "Unqualified",
+  "check_comment": "change to zhaoshang bank better?",
+  "check_time": "2026-05-12 12:44:02",
+  "trajectory": [
+    {
+      "x": 5986.5,
+      "y": -3817.86,
+      "z": -15.58,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 5986.5,
+      "y": -3817.86,
+      "z": -20.58,
+      "action": "Up",
+      "granularity": "Medium"
+    },
+    {
+      "x": 5982.51,
+      "y": -3808.69,
+      "z": -20.52,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5978.52,
+      "y": -3799.52,
+      "z": -20.45,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5978.52,
+      "y": -3799.52,
+      "z": -20.45,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 4
+}

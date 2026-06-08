@@ -1,0 +1,33 @@
+{
+  "task_id": "ai2thor03017",
+  "task_name": "Put spatula in pot",
+  "instruction": "I'm going to start cooking now. Please put the spatula in the pot.",
+  "golden_actions": {
+    "steps": 5,
+    "actions": [
+      "MoveAhead(1)",
+      "PickupObject(Spatula)",
+      "RotateRight(90)",
+      "PutObject(Pot)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan14",
+  "target_object_types": [
+    "Pot",
+    "Spatula"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Spatula",
+      "receptacle_type": "Pot"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm going to start cooking now. Please put the spatula in the pot.",
+  "max_steps": 30,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

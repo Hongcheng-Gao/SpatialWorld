@@ -1,0 +1,56 @@
+{
+  "task_id": "procthor210",
+  "task_name": "Decorate bedroom with vase",
+  "instruction": "I want to decorate my bedroom. Please pick up one vase and relocate it to the bedroom.",
+  "golden_actions": {
+    "steps": 23,
+    "actions": [
+      "MoveLeft(0.5)",
+      "MoveLeft(0.25)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "MoveLeft(1.0)",
+      "MoveLeft(0.5)",
+      "MoveAhead(0.25)",
+      "PickupObject(Vase)",
+      "MoveBack(0.25)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateLeft(90)",
+      "MoveRight(0.5)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateRight(90)",
+      "MoveLeft(1.0)",
+      "MoveAhead(0.5)",
+      "Done"
+    ]
+  },
+  "scene_index": 333,
+  "target_object_types": [
+    "Vase"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_room",
+      "object_type": "Vase",
+      "room_type": "Bedroom"
+    },
+    {
+      "type": "object_state",
+      "object_type": "Vase",
+      "state": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to decorate my bedroom. Please pick up one vase and relocate it to the bedroom.",
+  "max_steps": 56,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

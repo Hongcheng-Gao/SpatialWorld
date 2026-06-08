@@ -1,0 +1,38 @@
+{
+  "task_id": "ai2thor04230",
+  "task_name": "Fill mug with water",
+  "instruction": "I want to drink water, please fill the mug with water.",
+  "golden_actions": {
+    "steps": 9,
+    "actions": [
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "FillObjectWithLiquid(Mug, water)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan322",
+  "target_object_types": [
+    "Mug"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Mug",
+      "state": "isFilledWithLiquid",
+      "value": true,
+      "liquid": "water"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to drink water, please fill the mug with water.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

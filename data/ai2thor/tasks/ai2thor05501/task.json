@@ -1,0 +1,32 @@
+{
+  "task_id": "ai2thor05501",
+  "task_name": "Pick up the tennis racket on the ground",
+  "instruction": "I want to exercise now, could you please hand me the tennis racket on the floor near the table?",
+  "golden_actions": {
+    "steps": 4,
+    "actions": [
+      "RotateRight(90)",
+      "MoveAhead(0.5)",
+      "PickupObject(TennisRacket)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan302",
+  "target_object_types": [
+    "TennisRacket"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "TennisRacket",
+      "field": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "OR",
+  "target_description": "I want to exercise now, could you please hand me the tennis racket on the floor near the table?",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "Entertainment",
+  "Level": "Level3"
+}

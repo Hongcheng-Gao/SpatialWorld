@@ -1,0 +1,22 @@
+{
+  "task_id": "procthor00004",
+  "task_name": "Move to bed",
+  "instruction": "Move the agent to near the bed in the bedroom.",
+  "scene_index": 100,
+  "target_object_types": [
+    "Bed"
+  ],
+  "success_conditions": [
+    {
+      "type": "agent_near_object",
+      "object_type": "Bed",
+      "distance": 1.0
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "Move the agent to near the bed in the bedroom (within 1 meter).",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Navigation)",
+  "Level": "Level1 Navigation"
+}

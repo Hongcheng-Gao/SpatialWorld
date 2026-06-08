@@ -1,0 +1,37 @@
+{
+  "task_id": "ai2thor05530",
+  "task_name": "Please close the paper box and pick it up.",
+  "instruction": "I'm cleaning the room right now—please close the paper box and then pick it up for me",
+  "golden_actions": {
+    "steps": 3,
+    "actions": [
+      "CloseObject(Box)",
+      "PickupObject(Box)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan220",
+  "target_object_types": [
+    "Box"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Box",
+      "field": "isOpen",
+      "value": false
+    },
+    {
+      "type": "object_state",
+      "object_type": "Box",
+      "field": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm cleaning the room right now—please close the paper box and then pick it up for me",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

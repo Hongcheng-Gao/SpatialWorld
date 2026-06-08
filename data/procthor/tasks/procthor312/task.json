@@ -1,0 +1,46 @@
+{
+  "task_id": "procthor312",
+  "task_name": "Tidy Bed, Wait by Bed",
+  "instruction": "The bed is dirty. Please tidy the bed and wait beside it.",
+  "golden_actions": {
+    "steps": 9,
+    "actions": [
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "CleanObject(Bed)",
+      "Done"
+    ]
+  },
+  "scene_index": 68,
+  "target_object_types": [
+    "Bed"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Bed",
+      "state": "isDirty",
+      "value": false
+    },
+    {
+      "type": "agent_in_room",
+      "room_type": "Bedroom"
+    },
+    {
+      "type": "agent_near_object",
+      "object_type": "Bed",
+      "distance": 1.5
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "The bed is dirty. Please tidy the bed and wait beside it.",
+  "max_steps": 28,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

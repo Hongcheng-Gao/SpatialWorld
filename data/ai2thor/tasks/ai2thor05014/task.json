@@ -1,0 +1,41 @@
+{
+  "task_id": "ai2thor05014",
+  "task_name": "Pick up the pencil",
+  "instruction": "Could you help me out by picking up the pencil carefully and holding it securely?",
+  "golden_actions": {
+    "steps": 13,
+    "actions": [
+      "MoveAhead(0.25)",
+      "MoveRight(0.5)",
+      "MoveAhead(0.25)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "RotateRight(90)",
+      "MoveLeft(0.5)",
+      "MoveAhead(0.25)",
+      "PickupObject(Pencil)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan311",
+  "target_object_types": [
+    "Pencil"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Pencil",
+      "field": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "Could you help me out by picking up the pencil carefully and holding it securely?",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "Study and Work",
+  "Level": "Level3"
+}

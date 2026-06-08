@@ -1,0 +1,48 @@
+{
+  "task_id": "ai2thor03018",
+  "task_name": "Empty and wash pot",
+  "instruction": "I'm going to wash the pot now. Please take everything out of the pot and wash it.",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "PickupObject(Ladle)",
+      "PutObject(CounterTop)",
+      "PickupObject(Spatula)",
+      "PutObject(CounterTop)",
+      "CleanObject(Pot)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan14",
+  "target_object_types": [
+    "Ladle",
+    "Spatula",
+    "Pot"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Ladle",
+      "receptacle_type": "Pot",
+      "value": false
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Spatula",
+      "receptacle_type": "Pot",
+      "value": false
+    },
+    {
+      "type": "object_state",
+      "object_type": "Pot",
+      "state": "isDirty",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm going to wash the pot now. Please take everything out of the pot and wash it.",
+  "max_steps": 30,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

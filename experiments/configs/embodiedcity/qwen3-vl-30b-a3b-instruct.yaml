@@ -1,0 +1,37 @@
+﻿# VLN Agent Configuration
+
+data:
+  root: "data/embodiedcity/tasks"                        # root directory containing task JSON folders
+  pattern: "*.json"                # glob pattern for finding data files
+  max_tasks: null                     # null means run all tasks; set a number to limit
+
+api:
+  max_retries: 3                      # number of retry attempts on API failure (exponential backoff)
+
+model:
+  name: "Qwen3-VL-30B-A3B-Instruct"
+  api_key: null
+  api_base: null
+  temperature: 1.0
+  top_p: 0.9
+
+navigation:
+  max_steps: "dynamic"                      # maximum steps per task
+  stop_threshold: 5.0                 # distance (meters) to consider task complete
+  history_window: 30                  # sliding window for conversation history (null = keep all; N = keep first system msg + at most N user-image turns including current; step-1 user/assistant is not pinned)
+  granularity:
+    dist_small: 2.5                  # small movement distance (meters)
+    dist_medium: 5.0                 # medium movement distance (meters)
+    dist_large: 10.0                 # large movement distance (meters)
+    angle_medium: 30                 # medium rotation (degrees)
+    angle_large: 90                  # large rotation (degrees)
+
+resume: true                     # if true, skip tasks that already have a result.json and loop until all tasks are complete
+
+output:
+  save_dir: "outputs/embodiedcity/Qwen3-VL-30B-A3B-Instruct"                 # output directory for results
+  save_images: false                   # whether to save per-step PNG images to disk
+  save_video: true                    # whether to export a first-person view video (MP4)
+  video_fps: 2                        # frames per second for the exported video
+  save_history: true                  # whether to save full text history
+

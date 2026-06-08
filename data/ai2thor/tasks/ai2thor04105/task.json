@@ -1,0 +1,53 @@
+{
+  "task_id": "ai2thor04105",
+  "task_name": "Turn on all electronics",
+  "instruction": "I want entertainment, please turn on all the electronic devices in front of me.",
+  "golden_actions": {
+    "steps": 11,
+    "actions": [
+      "MoveRight(1.0)",
+      "MoveAhead(1.0)",
+      "RotateRight(90)",
+      "MoveLeft(0.5)",
+      "MoveAhead(0.5)",
+      "ToggleObjectOn(CellPhone)",
+      "ToggleObjectOn(Television)",
+      "MoveLeft(1.0)",
+      "MoveLeft(0.5)",
+      "ToggleObjectOn(Laptop)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan311",
+  "target_object_types": [
+    "CellPhone",
+    "Television",
+    "Laptop"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "CellPhone",
+      "state": "isToggled",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Television",
+      "state": "isToggled",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Laptop",
+      "state": "isToggled",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want entertainment, please turn on all the electronic devices in front of me.",
+  "max_steps": 60,
+  "Evaluation_Type": "Conditional",
+  "Category": "Entertainment (Game/Sports)",
+  "Level": "Level3 Hybrid"
+}

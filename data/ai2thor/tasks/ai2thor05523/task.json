@@ -1,0 +1,30 @@
+{
+  "task_id": "ai2thor05523",
+  "task_name": "Turn off the light",
+  "instruction": "The sunlight is lovely now—there's no need for extra light. Please switch off the bedside lamp",
+  "golden_actions": {
+    "steps": 2,
+    "actions": [
+      "ToggleObjectOff(DeskLamp)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan317",
+  "target_object_types": [
+    "DeskLamp"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "DeskLamp",
+      "field": "isToggled",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "The sunlight is lovely now—there's no need for extra light. Please switch off the bedside lamp",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

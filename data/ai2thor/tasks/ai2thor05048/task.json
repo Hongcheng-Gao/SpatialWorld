@@ -1,0 +1,32 @@
+{
+  "task_id": "ai2thor05048",
+  "task_name": "Toggle the laptop on",
+  "instruction": "I need to start my remote meeting, so please toggle the laptop on.",
+  "golden_actions": {
+    "steps": 5,
+    "actions": [
+      "RotateLeft(90)",
+      "MoveLeft(1.0)",
+      "MoveAhead(0.5)",
+      "ToggleObjectOn(Laptop)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan319",
+  "target_object_types": [
+    "Laptop"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Laptop",
+      "state": "isToggled",
+      "value": true
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "I need to start my remote meeting, so please toggle the laptop on.",
+  "Evaluation_Type": "Conditional",
+  "Category": "Study and Work",
+  "Level": "Level3"
+}

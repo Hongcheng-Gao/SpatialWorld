@@ -1,0 +1,45 @@
+{
+  "task_id": "procthor907",
+  "task_name": "Weight Comparison",
+  "instruction": "I need to get a feel for how heavy these two things are. Please hold up the basketball and the watch.",
+  "golden_actions": {
+    "steps": 10,
+    "actions": [
+      "LookDown",
+      "MoveAhead(1.0)",
+      "MoveRight(0.5)",
+      "MoveAhead(0.25)",
+      "PickupObject(Watch)",
+      "DropHandObject(Watch)",
+      "RotateLeft(90)",
+      "MoveAhead(0.25)",
+      "PickupObject(BasketBall)",
+      "Done"
+    ]
+  },
+  "scene_index": 122,
+  "target_object_types": [
+    "Watch",
+    "BasketBall"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Watch",
+      "state": "isPickedUp",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "BasketBall",
+      "state": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I need to get a feel for how heavy these two things are. Please hold up the basketball and the watch.",
+  "max_steps": 30,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

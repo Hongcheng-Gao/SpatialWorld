@@ -1,0 +1,73 @@
+{
+  "task_id": "procthor900",
+  "task_name": "Bathroom Cleaning Prep",
+  "instruction": "I want to give my pillow and teddy bear a wash. Please bring a pillow and a teddy bear to the bathroom.",
+  "golden_actions": {
+    "steps": 40,
+    "actions": [
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateLeft(90)",
+      "LookDown",
+      "PickupObject(TeddyBear)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "LookUp",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.5)",
+      "DropHandObject(TeddyBear)",
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateLeft(90)",
+      "LookDown",
+      "PickupObject(Pillow)",
+      "RotateLeft(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveRight(1.0)",
+      "MoveAhead(1.0)",
+      "Done"
+    ]
+  },
+  "scene_index": 100,
+  "target_object_types": [
+    "Pillow",
+    "TeddyBear"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_room",
+      "object_type": "Pillow",
+      "room_type": "Bathroom"
+    },
+    {
+      "type": "object_in_room",
+      "object_type": "TeddyBear",
+      "room_type": "Bathroom"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I want to give my pillow and teddy bear a wash. Please bring a pillow and a teddy bear to the bathroom.",
+  "max_steps": 130,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

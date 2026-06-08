@@ -1,0 +1,54 @@
+{
+  "task_id": "ai2thor04101",
+  "task_name": "Remove devices from bed",
+  "instruction": "I'm getting ready for bed. Please remove my computer and phone from the bed.",
+  "golden_actions": {
+    "steps": 18,
+    "actions": [
+      "PickupObject(CellPhone)",
+      "RotateLeft(90)",
+      "LookUp",
+      "MoveLeft(0.5)",
+      "MoveAhead(1.0)",
+      "PutObject(Desk)",
+      "RotateRight(90)",
+      "MoveRight(0.5)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.25)",
+      "PickupObject(Laptop)",
+      "LookDown",
+      "RotateLeft(90)",
+      "MoveAhead(0.5)",
+      "MoveLeft(0.25)",
+      "MoveAhead(0.25)",
+      "PutObject(Desk)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan310",
+  "target_object_types": [
+    "Bed",
+    "CellPhone",
+    "Laptop"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Laptop",
+      "receptacle_type": "Bed",
+      "value": false
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "CellPhone",
+      "receptacle_type": "Bed",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm getting ready for bed. Please remove my computer and phone from the bed.",
+  "max_steps": 60,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

@@ -1,0 +1,147 @@
+# Dual-Agent Spatial Planning Configuration
+# This configuration file supports both single-agent and dual-agent modes
+
+# Environment settings
+env:
+  type: ai2thor
+  scene: FloorPlan1
+  width: 800
+  height: 600
+  grid_size: 0.25
+  render_depth: false
+  render_instance_segmentation: false
+  text_state_mode: first_person
+  visibility_distance: 1.5
+
+# Maximum steps for single agent (dual-agent will use 2x this value)
+max_steps: 30
+
+# Context management
+context_management:
+  max_trajectory_length: 20
+  enable_auto_truncation: true
+  enable_long_term_summary: true
+  short_term_history_window_size: 3
+
+# Model configuration
+model:
+  vlm:
+    provider: openai
+    model_name: gpt-4o
+    temperature: 0.2
+    max_tokens: 2000
+
+# Dual-agent specific configuration
+dual_agent:
+  # Enable equal collaboration mode (both agents are equal partners)
+  equal_collaboration: true
+  
+  # Collaboration mode: "alternating" or "sequential"
+  # - alternating: Agents take turns every N steps
+  # - sequential: Agent 1 explores first, then Agent 2 executes
+  collaboration_mode: alternating
+  
+  # Number of steps before switching agents (for alternating mode)
+  switch_interval: 3
+  
+  # Maximum total steps for both agents combined
+  # If not specified, defaults to 2x max_steps
+  max_global_steps: 60
+  
+  # Agent 1 specific settings (optional overrides)
+  agent_1:
+    # Can use different model/temperature
+    # model_name: gpt-4o
+    # temperature: 0.3
+    # max_tokens: 2000
+  
+  # Agent 2 specific settings (optional overrides)
+  agent_2:
+    # Can use different model/temperature
+    # model_name: gpt-4o
+    # temperature: 0.1
+    # max_tokens: 2000
+
+# Logging settings
+logging:
+  stdout_verbose: true
+  save_step_images: true
+
+# Action parameters
+actions:
+  move_ahead_magnitude: 0.25
+  move_back_magnitude: 0.25
+  move_left_magnitude: 0.25
+  move_right_magnitude: 0.25
+  rotate_degrees: 90
+
+# Reward settings
+reward:
+  success_reward: 10.0
+  step_success_bonus: 0.1
+  step_failure_penalty: -0.05
+
+# Experiment settings
+experiment:
+  num_episodes: 1
+  output_dir: outputs
+
+# Task presets (example tasks)
+task_presets:
+  open_fridge:
+    name: open_fridge
+    description: Open the refrigerator
+    instruction: Find and open the refrigerator in the kitchen
+    scene: FloorPlan1
+    max_steps: 30
+    target_object_types:
+      - Fridge
+    success_condition:
+      type: object_state
+      object_type: Fridge
+      state: isOpen
+      value: true
+    evaluator:
+      type: object_state
+      checks:
+        - object_type: Fridge
+          property: isOpen
+          expected: true
+
+  find_apple:
+    name: find_apple
+    description: Find an apple in the kitchen
+    instruction: Explore the kitchen and locate an apple
+    scene: FloorPlan1
+    max_steps: 30
+    target_object_types:
+      - Apple
+    success_condition:
+      type: object_visible
+      object_type: Apple
+    evaluator:
+      type: object_visible
+      checks:
+        - object_type: Apple
+          visible: true
+
+  cook_potato:
+    name: cook_potato
+    description: Cook a potato
+    instruction: Find a potato and cook it
+    scene: FloorPlan1
+    max_steps: 50
+    target_object_types:
+      - Potato
+      - StoveBurner
+    success_condition:
+      type: object_state
+      object_type: Potato
+      state: isCooked
+      value: true
+    evaluator:
+      type: object_state
+      checks:
+        - object_type: Potato
+          property: isCooked
+          expected: true

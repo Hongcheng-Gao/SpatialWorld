@@ -1,0 +1,51 @@
+{
+  "task_id": "carla00513",
+  "task_name": "Walk to the gas station.",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "walker",
+  "instruction": "Walk to the gas station. You can turn and move in any direction.",
+  "golden_actions": {
+    "steps": 8,
+    "actions": [
+      "TurnLeft(degrees=30)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "WalkForward(distance=10)",
+      "TurnRight(degrees=30)",
+      "WalkForward(distance=10)",
+      "Done"
+    ]
+  },
+  "scene": "Town03",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "polygon_area",
+    "target_polygon": [
+      [
+        -68.21886611796361,
+        160.25251501103645,
+        -0.543034553527832
+      ],
+      [
+        -19.229602813720703,
+        143.57504272460938,
+        -0.543034553527832
+      ],
+      [
+        -9.526487580766847,
+        172.07747156122917,
+        -0.543034553527832
+      ],
+      [
+        -58.515750885009766,
+        188.75494384765625,
+        -0.543034553527832
+      ]
+    ],
+    "threshold_label": "loose"
+  },
+  "max_steps": 50
+}

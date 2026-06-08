@@ -1,0 +1,45 @@
+{
+  "task_id": "ai2thor03001",
+  "task_name": "Slice all vegetables",
+  "instruction": "I'm hungry, so I want to slice all the vegetables in front of me.",
+  "golden_actions": {
+    "steps": 3,
+    "actions": [
+      "SliceObject(Tomato)",
+      "SliceObject(Lettuce)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan11",
+  "target_object_types": [
+    "Tomato",
+    "Lettuce",
+    "Bread"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Tomato",
+      "state": "isSliced",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Lettuce",
+      "state": "isSliced",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "Bread",
+      "state": "isSliced",
+      "value": false
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm hungry, so I want to slice all the vegetables in front of me.",
+  "max_steps": 30,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level2 Interaction"
+}

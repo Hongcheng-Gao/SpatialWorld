@@ -1,0 +1,37 @@
+{
+  "task_id": "procthor211",
+  "task_name": "Transport bread to bedroom",
+  "instruction": "I am hungry. Please find the bread and carry it into the bedroom for me.",
+  "golden_actions": {
+    "steps": 10,
+    "actions": [
+      "LookDown",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(0.5)",
+      "PickupObject(Bread)",
+      "MoveLeft(0.5)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "MoveLeft(1.0)",
+      "Done"
+    ]
+  },
+  "scene_index": 333,
+  "target_object_types": [
+    "Bread"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_room",
+      "object_type": "Bread",
+      "room_type": "Bedroom"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I am hungry. Please find the bread and carry it into the bedroom for me.",
+  "max_steps": 30,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

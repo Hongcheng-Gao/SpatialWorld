@@ -1,0 +1,49 @@
+{
+  "task_id": "ai2thor05566",
+  "task_name": "Please fill the watering can with wine and place it on the dining table.",
+  "instruction": "I'd like some wine with dinner—please find my watering can, fill it with wine, and place it on the dining table",
+  "golden_actions": {
+    "steps": 13,
+    "actions": [
+      "FillObjectWithLiquid(WateringCan, wine)",
+      "PickupObject(WateringCan)",
+      "MoveBack(1.0)",
+      "MoveBack(1.0)",
+      "MoveBack(0.25)",
+      "MoveRight(1.0)",
+      "MoveRight(1.0)",
+      "MoveRight(1.0)",
+      "MoveRight(1.0)",
+      "MoveRight(0.75)",
+      "RotateRight(90)",
+      "PutObject(DiningTable)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan218",
+  "target_object_types": [
+    "WateringCan",
+    "DiningTable"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "WateringCan",
+      "field": "isFilledWithLiquid",
+      "value": true,
+      "liquid": "wine"
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "WateringCan",
+      "receptacle_type": "DiningTable",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'd like some wine with dinner—please find my watering can, fill it with wine, and place it on the dining table",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

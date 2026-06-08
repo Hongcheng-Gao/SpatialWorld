@@ -1,0 +1,30 @@
+{
+  "task_id": "ai2thor05556",
+  "task_name": "Pick up the boots",
+  "instruction": "I feel like going out for a walk—could you hand me my boots?",
+  "golden_actions": {
+    "steps": 2,
+    "actions": [
+      "PickupObject(Boots)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan212",
+  "target_object_types": [
+    "Boots"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Boots",
+      "field": "isPickedUp",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I feel like going out for a walk—could you hand me my boots?",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

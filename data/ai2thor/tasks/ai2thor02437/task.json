@@ -1,0 +1,30 @@
+{
+  "task_id": "ai2thor02437",
+  "task_name": "Toggle desk lamp off",
+  "instruction": "I want to rest for a while, please turn off the desk lamp for me.",
+  "golden_actions": {
+    "steps": 5,
+    "actions": [
+      "RotateLeft(90)",
+      "RotateLeft(90)",
+      "MoveAhead(0.5)",
+      "ToggleObjectOff(DeskLamp)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan302",
+  "target_object_types": [
+    "DeskLamp"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "DeskLamp",
+      "state": "isToggled",
+      "value": false
+    }
+  ],
+  "success_logic": "OR",
+  "target_description": "I want to rest for a while, please turn off the desk lamp for me.",
+  "max_steps": 30
+}

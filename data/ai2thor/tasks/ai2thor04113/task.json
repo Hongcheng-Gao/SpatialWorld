@@ -1,0 +1,50 @@
+{
+  "task_id": "ai2thor04113",
+  "task_name": "Cut tomato on countertop",
+  "instruction": "Remove the tomato from the fridge and cut it up on the countertop.",
+  "golden_actions": {
+    "steps": 15,
+    "actions": [
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateRight(90)",
+      "MoveLeft(1.0)",
+      "OpenObject(Fridge)",
+      "MoveRight(0.25)",
+      "PickupObject(Tomato)",
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveAhead(0.5)",
+      "PutObject(CounterTop)",
+      "SliceObject(Tomato)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan3",
+  "target_object_types": [
+    "CounterTop",
+    "Tomato",
+    "TomatoSliced"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "TomatoSliced",
+      "receptacle_type": "CounterTop"
+    },
+    {
+      "type": "object_state",
+      "object_type": "Tomato",
+      "field": "isSliced",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "Remove the tomato from the fridge and cut it up on the countertop.",
+  "max_steps": 60,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

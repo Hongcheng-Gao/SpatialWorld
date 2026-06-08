@@ -1,0 +1,8 @@
+{
+  "actions": [
+    "RotateRight",
+    "MoveAhead",
+    "RotateLeft"
+  ],
+  "scene": "FloorPlan1"
+}

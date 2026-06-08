@@ -1,0 +1,46 @@
+{
+  "task_id": "procthor209",
+  "task_name": "Deliver tomato to bedroom",
+  "instruction": "I am feeling a bit hungry. Please pick up one tomato and carry it to the bedroom.",
+  "golden_actions": {
+    "steps": 19,
+    "actions": [
+      "RotateLeft(90)",
+      "MoveAhead(0.5)",
+      "MoveLeft(0.25)",
+      "MoveAhead(0.5)",
+      "LookDown",
+      "PickupObject(Tomato)",
+      "MoveRight(1.0)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "RotateRight(90)",
+      "MoveLeft(0.5)",
+      "MoveLeft(0.25)",
+      "MoveAhead(0.25)",
+      "MoveLeft(0.25)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "MoveRight(0.5)",
+      "MoveAhead(0.5)",
+      "Done"
+    ]
+  },
+  "scene_index": 332,
+  "target_object_types": [
+    "Tomato"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_room",
+      "object_type": "Tomato",
+      "room_type": "Bedroom"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I am feeling a bit hungry. Please pick up one tomato and carry it to the bedroom.",
+  "max_steps": 48,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

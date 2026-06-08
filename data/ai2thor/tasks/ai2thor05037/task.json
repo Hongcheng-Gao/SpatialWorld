@@ -1,0 +1,42 @@
+{
+  "task_id": "ai2thor05037",
+  "task_name": "Break the laptop and break the cell phone",
+  "instruction": "I'm testing the scene interactions, so please in the simulation, break the laptop using the provided interaction and then in the simulation, break the cell phone using the provided interaction.",
+  "golden_actions": {
+    "steps": 8,
+    "actions": [
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "BreakObject(Laptop)",
+      "RotateRight(90)",
+      "MoveAhead(1.0)",
+      "MoveAhead(1.0)",
+      "BreakObject(CellPhone)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan315",
+  "target_object_types": [
+    "Laptop",
+    "CellPhone"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Laptop",
+      "field": "isBroken",
+      "value": true
+    },
+    {
+      "type": "object_state",
+      "object_type": "CellPhone",
+      "field": "isBroken",
+      "value": true
+    }
+  ],
+  "success_logic": "and",
+  "target_description": "I'm testing the scene interactions, so please in the simulation, break the laptop using the provided interaction and then in the simulation, break the cell phone using the provided interaction.",
+  "Evaluation_Type": "Conditional",
+  "Category": "Study and Work",
+  "Level": "Level3"
+}

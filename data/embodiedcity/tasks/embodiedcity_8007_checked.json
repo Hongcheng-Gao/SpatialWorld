@@ -1,0 +1,302 @@
+{
+  "id": "embodiedcity_8007",
+  "instruction": "Please fly all the way from the Bank of Shanghai to the billboard marked 'Tea Ceremony.'",
+  "start": [
+    6220.20361328125,
+    -3690.444091796875,
+    -38.44916915893555
+  ],
+  "start_yaw": -100.42,
+  "end": [
+    5978.4,
+    -3844.2,
+    -32.2107162475586
+  ],
+  "end_yaw": -164.44801722794566,
+  "check_status": "Qualified",
+  "check_comment": "ok",
+  "check_time": "2026-05-12 13:49:23",
+  "trajectory": [
+    {
+      "x": 6220.2,
+      "y": -3690.44,
+      "z": -38.44,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 6220.2,
+      "y": -3690.44,
+      "z": -38.44,
+      "action": "Yaw Left",
+      "granularity": "Medium"
+    },
+    {
+      "x": 6213.72,
+      "y": -3698.06,
+      "z": -38.35,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6207.24,
+      "y": -3705.67,
+      "z": -38.33,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6200.75,
+      "y": -3713.28,
+      "z": -38.32,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6194.27,
+      "y": -3720.9,
+      "z": -38.31,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6187.78,
+      "y": -3728.51,
+      "z": -38.3,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6181.3,
+      "y": -3736.12,
+      "z": -38.29,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6174.82,
+      "y": -3743.74,
+      "z": -38.29,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6168.33,
+      "y": -3751.35,
+      "z": -38.28,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6161.85,
+      "y": -3758.96,
+      "z": -38.28,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6154.24,
+      "y": -3752.48,
+      "z": -38.27,
+      "action": "Left",
+      "granularity": "Large"
+    },
+    {
+      "x": 6146.62,
+      "y": -3745.99,
+      "z": -38.26,
+      "action": "Left",
+      "granularity": "Large"
+    },
+    {
+      "x": 6139.01,
+      "y": -3739.51,
+      "z": -38.26,
+      "action": "Left",
+      "granularity": "Large"
+    },
+    {
+      "x": 6131.4,
+      "y": -3733.03,
+      "z": -38.26,
+      "action": "Left",
+      "granularity": "Large"
+    },
+    {
+      "x": 6123.78,
+      "y": -3726.54,
+      "z": -38.25,
+      "action": "Left",
+      "granularity": "Large"
+    },
+    {
+      "x": 6116.17,
+      "y": -3720.06,
+      "z": -38.25,
+      "action": "Left",
+      "granularity": "Large"
+    },
+    {
+      "x": 6109.69,
+      "y": -3727.67,
+      "z": -38.25,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6103.2,
+      "y": -3735.28,
+      "z": -38.25,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6096.72,
+      "y": -3742.9,
+      "z": -38.25,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6090.23,
+      "y": -3750.51,
+      "z": -38.25,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6083.75,
+      "y": -3758.12,
+      "z": -38.25,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6077.27,
+      "y": -3765.74,
+      "z": -38.25,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6070.78,
+      "y": -3773.35,
+      "z": -38.25,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6064.3,
+      "y": -3780.96,
+      "z": -38.25,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6057.81,
+      "y": -3788.58,
+      "z": -38.24,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6051.33,
+      "y": -3796.19,
+      "z": -38.24,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6044.85,
+      "y": -3803.8,
+      "z": -38.24,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6038.36,
+      "y": -3811.41,
+      "z": -38.24,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6031.88,
+      "y": -3819.03,
+      "z": -38.24,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6024.27,
+      "y": -3812.54,
+      "z": -38.24,
+      "action": "Left",
+      "granularity": "Large"
+    },
+    {
+      "x": 6016.65,
+      "y": -3806.06,
+      "z": -38.24,
+      "action": "Left",
+      "granularity": "Large"
+    },
+    {
+      "x": 6010.17,
+      "y": -3813.67,
+      "z": -38.24,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6003.68,
+      "y": -3821.29,
+      "z": -38.23,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5997.2,
+      "y": -3828.9,
+      "z": -38.23,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5990.72,
+      "y": -3836.51,
+      "z": -38.23,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5984.23,
+      "y": -3844.12,
+      "z": -38.23,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5984.23,
+      "y": -3844.12,
+      "z": -33.2,
+      "action": "Down",
+      "granularity": "Medium"
+    },
+    {
+      "x": 5980.43,
+      "y": -3840.88,
+      "z": -33.11,
+      "action": "Left",
+      "granularity": "Medium"
+    },
+    {
+      "x": 5980.43,
+      "y": -3840.88,
+      "z": -33.11,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 39
+}

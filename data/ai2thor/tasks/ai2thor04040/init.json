@@ -1,0 +1,24 @@
+{
+  "scene": "FloorPlan324",
+  "actions": [
+    "RotateLeft(90)",
+    "MoveRight(0.25)",
+    "MoveRight(0.25)",
+    "MoveAhead(0.25)",
+    "MoveRight(0.25)",
+    "MoveRight(0.25)",
+    "MoveRight(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveRight(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "MoveAhead(0.25)",
+    "LookDown",
+    "LookDown",
+    "MoveAhead(0.5)",
+    "OpenObject(Book)",
+    "Done"
+  ]
+}

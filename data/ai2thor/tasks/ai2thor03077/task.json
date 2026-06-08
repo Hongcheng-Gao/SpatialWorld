@@ -1,0 +1,48 @@
+{
+  "task_id": "ai2thor03077",
+  "task_name": "Prepare water",
+  "instruction": "I'd like some water. Please wash the cup in front of me and then use a mug to pour a cup of water.",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "CleanObject(Cup)",
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveAhead(0.5)",
+      "FillObjectWithLiquid(Mug, water)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan30",
+  "target_object_types": [
+    "Cup",
+    "Mug"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Cup",
+      "state": "isDirty",
+      "value": false
+    },
+    {
+      "type": "object_state",
+      "object_type": "Cup",
+      "state": "isFilledWithLiquid",
+      "value": false
+    },
+    {
+      "type": "object_state",
+      "object_type": "Mug",
+      "state": "isFilledWithLiquid",
+      "value": true,
+      "liquid": "water"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'd like some water. Please wash the cup in front of me and then use a mug to pour a cup of water.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

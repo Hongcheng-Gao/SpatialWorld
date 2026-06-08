@@ -1,0 +1,29 @@
+{
+  "task_id": "carla00403",
+  "task_name": "Meeting my friend at the green belt ahead. Please go there.",
+  "input_modality": "image_goal",
+  "origin_location": false,
+  "image_url": "./image.png",
+  "executor": "walker",
+  "instruction": "I made plans with my friend to meet at the traffic light pole inside the red box up ahead. Please walk over there and wait.",
+  "golden_actions": {
+    "steps": 3,
+    "actions": [
+      "TurnLeft(degrees=90)",
+      "WalkForward(distance=10)",
+      "Done"
+    ]
+  },
+  "scene": "Town04",
+  "weather": "ClearSunset",
+  "success_conditions": {
+    "type": "distance_to_waypoint",
+    "target_location": [
+      263.7,
+      -301.1,
+      1.1
+    ],
+    "threshold_label": "strict"
+  },
+  "max_steps": 50
+}

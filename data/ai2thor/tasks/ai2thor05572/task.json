@@ -1,0 +1,65 @@
+{
+  "task_id": "ai2thor05572",
+  "task_name": "Take the tissues from counter top and put them on the side table",
+  "instruction": "We are out of paper by the sink. Could you move the tissues from the counter top to the side table next to it?",
+  "golden_actions": {
+    "steps": 29,
+    "actions": [
+      "PickupObject(Footstool)",
+      "MoveAhead(0.25)",
+      "LookDown(30)",
+      "DropHandObject",
+      "PickupObject(TissueBox)",
+      "PutObject(CounterTop)",
+      "PickupObject(Footstool)",
+      "MoveBack(1.0)",
+      "MoveBack(1.0)",
+      "MoveBack(0.75)",
+      "MoveRight(1.0)",
+      "MoveRight(0.75)",
+      "RotateLeft(90)",
+      "PutObject(Floor)",
+      "MoveAhead(1.0)",
+      "MoveRight(1.0)",
+      "MoveRight(0.25)",
+      "MoveAhead(0.75)",
+      "MoveRight(1.0)",
+      "RotateRight(90)",
+      "PickupObject(TissueBox)",
+      "RotateRight(90)",
+      "MoveRight(1.0)",
+      "MoveAhead(0.75)",
+      "MoveRight(1.0)",
+      "MoveRight(0.25)",
+      "MoveAhead(1.0)",
+      "PutObject(SideTable)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan430",
+  "target_object_types": [
+    "TissueBox",
+    "SideTable",
+    "CounterTop"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "TissueBox",
+      "receptacle_type": "CounterTop",
+      "value": false
+    },
+    {
+      "type": "object_in_receptacle",
+      "object_type": "TissueBox",
+      "receptacle_type": "SideTable",
+      "value": true
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "We are out of paper by the sink. Could you move the tissues from the counter top to the side table next to it?",
+  "max_steps": 50,
+  "Evaluation_Type": "Conditional",
+  "Category": "DailyHousehold",
+  "Level": "Level3"
+}

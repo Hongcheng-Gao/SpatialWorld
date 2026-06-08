@@ -1,0 +1,40 @@
+{
+  "task_id": "ai2thor04107",
+  "task_name": "Alarm clock to desk",
+  "instruction": "I'm getting ready for bed, please put the alarm clock on the desk closest to my bed.",
+  "golden_actions": {
+    "steps": 12,
+    "actions": [
+      "LookDown",
+      "MoveAhead(1)",
+      "MoveAhead(1)",
+      "PickupObject(AlarmClock)",
+      "RotateRight(90)",
+      "RotateRight(90)",
+      "MoveAhead(1)",
+      "MoveAhead(1)",
+      "RotateLeft(90)",
+      "MoveAhead(0.25)",
+      "PutObject(Desk)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan310",
+  "target_object_types": [
+    "AlarmClock",
+    "Desk"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "AlarmClock",
+      "receptacle_type": "Desk"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "I'm getting ready for bed, please put the alarm clock on the desk closest to my bed.",
+  "max_steps": 60,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}

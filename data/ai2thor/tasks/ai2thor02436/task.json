@@ -1,0 +1,34 @@
+{
+  "task_id": "ai2thor02436",
+  "task_name": "Toggle laptop on",
+  "instruction": "I want to work for a while now, please open my laptop for me.",
+  "golden_actions": {
+    "steps": 6,
+    "actions": [
+      "MoveAhead(1)",
+      "MoveAhead(0.5)",
+      "MoveAhead(0.25)",
+      "MoveLeft(0.25)",
+      "ToggleObjectOn(Laptop)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan301",
+  "target_object_types": [
+    "Laptop"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_state",
+      "object_type": "Laptop",
+      "state": "isToggled",
+      "value": true
+    }
+  ],
+  "success_logic": "OR",
+  "target_description": "I want to work for a while now, please open my laptop for me.",
+  "max_steps": 30,
+  "Evaluation_Type": "Conditional",
+  "Category": "Study and Work",
+  "Level": "Level3 Hybrid"
+}

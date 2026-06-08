@@ -1,0 +1,106 @@
+{
+  "id": "embodiedcity_5000",
+  "instruction": "Please move to the vicinity of the word Bank on the nearest Huaxia Bank sign.",
+  "start": [
+    6002.794921875,
+    -3649.837158203125,
+    -3.7278947830200195
+  ],
+  "start_yaw": -44.58,
+  "end": [
+    5978.86767578125,
+    -3685.53857421875,
+    -20.387290954589844
+  ],
+  "end_yaw": -71.76027044408865,
+  "check_status": "Qualified",
+  "check_comment": "ok",
+  "check_time": "2026-05-12 12:46:46",
+  "trajectory": [
+    {
+      "x": 6002.79,
+      "y": -3649.84,
+      "z": -3.46,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 6002.79,
+      "y": -3649.84,
+      "z": -3.68,
+      "action": "Yaw Left",
+      "granularity": "Large"
+    },
+    {
+      "x": 5995.78,
+      "y": -3656.96,
+      "z": -3.62,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5988.76,
+      "y": -3664.08,
+      "z": -3.58,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5988.76,
+      "y": -3664.08,
+      "z": -8.55,
+      "action": "Up",
+      "granularity": "Medium"
+    },
+    {
+      "x": 5988.76,
+      "y": -3664.08,
+      "z": -13.54,
+      "action": "Up",
+      "granularity": "Medium"
+    },
+    {
+      "x": 5988.76,
+      "y": -3664.08,
+      "z": -18.53,
+      "action": "Up",
+      "granularity": "Medium"
+    },
+    {
+      "x": 5981.74,
+      "y": -3671.21,
+      "z": -18.52,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5981.74,
+      "y": -3671.21,
+      "z": -18.51,
+      "action": "Yaw Right",
+      "granularity": "Medium"
+    },
+    {
+      "x": 5979.22,
+      "y": -3680.88,
+      "z": -18.43,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5977.96,
+      "y": -3685.72,
+      "z": -18.34,
+      "action": "Forward",
+      "granularity": "Medium"
+    },
+    {
+      "x": 5977.96,
+      "y": -3685.72,
+      "z": -18.34,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 11
+}

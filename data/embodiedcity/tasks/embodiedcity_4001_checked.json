@@ -1,0 +1,99 @@
+{
+  "id": "embodiedcity_4001",
+  "instruction": "My friend asked to meet me at the China Merchants Bank entrance. Help me move to their sign and wait for him.",
+  "start": [
+    6056.2529296875,
+    -3809.3408203125,
+    -27.715959548950195
+  ],
+  "start_yaw": 176.7,
+  "end": [
+    5975.7431640625,
+    -3804.698974609375,
+    -18.469438552856445
+  ],
+  "end_yaw": 176.69702959933693,
+  "check_status": "Qualified",
+  "check_comment": "it seems did not see the sign",
+  "check_time": "2026-05-12 13:02:58",
+  "trajectory": [
+    {
+      "x": 6056.25,
+      "y": -3809.34,
+      "z": -27.68,
+      "action": "Start Point",
+      "granularity": "None"
+    },
+    {
+      "x": 6046.27,
+      "y": -3808.77,
+      "z": -27.62,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6036.29,
+      "y": -3808.19,
+      "z": -27.6,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6026.3,
+      "y": -3807.61,
+      "z": -27.58,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6016.32,
+      "y": -3807.04,
+      "z": -27.56,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 6006.34,
+      "y": -3806.46,
+      "z": -27.55,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5996.35,
+      "y": -3805.89,
+      "z": -27.53,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5986.37,
+      "y": -3805.31,
+      "z": -27.47,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5986.37,
+      "y": -3805.31,
+      "z": -17.42,
+      "action": "Down",
+      "granularity": "Large"
+    },
+    {
+      "x": 5976.39,
+      "y": -3804.74,
+      "z": -17.33,
+      "action": "Forward",
+      "granularity": "Large"
+    },
+    {
+      "x": 5976.39,
+      "y": -3804.74,
+      "z": -17.33,
+      "action": "Done",
+      "granularity": "None"
+    }
+  ],
+  "golden_actions_count": 10
+}

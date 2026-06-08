@@ -1,0 +1,36 @@
+{
+  "task_id": "ai2thor03031",
+  "task_name": "Dispose rotten tomato",
+  "instruction": "This tomato is rotten. Please throw it in the trash can.",
+  "golden_actions": {
+    "steps": 8,
+    "actions": [
+      "MoveAhead(1)",
+      "RotateLeft(90)",
+      "PickupObject(Tomato)",
+      "RotateLeft(90)",
+      "MoveAhead(1)",
+      "MoveAhead(0.5)",
+      "PutObject(GarbageCan)",
+      "Done"
+    ]
+  },
+  "scene": "FloorPlan21",
+  "target_object_types": [
+    "GarbageCan",
+    "Tomato"
+  ],
+  "success_conditions": [
+    {
+      "type": "object_in_receptacle",
+      "object_type": "Tomato",
+      "receptacle_type": "GarbageCan"
+    }
+  ],
+  "success_logic": "AND",
+  "target_description": "This tomato is rotten. Please throw it in the trash can.",
+  "max_steps": 100,
+  "Evaluation_Type": "Conditional",
+  "Category": "Daily Household (Kitchen/Bedroom)",
+  "Level": "Level3 Hybrid"
+}
