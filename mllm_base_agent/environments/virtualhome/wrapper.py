@@ -36,6 +36,17 @@ try:
 except ImportError as e:
     raise ImportError(f"Required package missing: {e}. Run: pip install numpy Pillow")
 
+_np_fromstring = np.fromstring
+
+
+def _virtualhome_fromstring_compat(string, dtype=float, count=-1, sep="", *, like=None):
+    if isinstance(string, (bytes, bytearray, memoryview)) and sep == "":
+        return np.frombuffer(string, dtype=dtype, count=count, like=like)
+    return _np_fromstring(string, dtype=dtype, count=count, sep=sep, like=like)
+
+
+np.fromstring = _virtualhome_fromstring_compat  # type: ignore[assignment]
+
 
 VH_VISIBILITY_SOURCES: Tuple[str, str] = ("seg_inst", "api")
 VH_STABLE_VISIBILITY_RETRIES = 4
