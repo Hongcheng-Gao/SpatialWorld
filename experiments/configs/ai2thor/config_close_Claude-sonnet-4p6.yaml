@@ -1,5 +1,5 @@
 # =============================================================================
-# AI2-THOR Dual Agent Configuration File
+# AI2-THOR Single Agent Configuration File
 # =============================================================================
 
 # -----------------------------------------------------------------------------
@@ -7,7 +7,7 @@
 # -----------------------------------------------------------------------------
 env:
   type: ai2thor # Environment type
-  agent_count: 2  # 同场景双具身（AI2-THOR agentId 0/1）；单智能体对照改为 1
+  agent_count: 1
   width: 800 # Rendered image width (pixels)
   height: 600 # Rendered image height (pixels)
   field_of_view: 60 # Camera field of view (degrees), default 60 (non-wide angle)
@@ -32,18 +32,6 @@ context_management:
   enable_long_term_summary: false # Whether to enable long-term semantic summary (<SUMMARY> tag)
   short_term_history_window_size: 29 # 滑动窗口大小 (recent N-step multimodal history)
 
-# -----------------------------------------------------------------------------
-# Dual Agent Specific Configuration
-# -----------------------------------------------------------------------------
-dual_agent:
-  equal_collaboration: true
-  collaboration_mode: alternating
-  switch_interval: 1
-  max_global_steps: 60
-
-# -----------------------------------------------------------------------------
-# Model Configuration
-# -----------------------------------------------------------------------------
 model:
   vlm:
     # 使用自建 vLLM（本机 8000；若用 SSH 隧道则改为 127.0.0.1:18000）

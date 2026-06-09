@@ -1,5 +1,6 @@
 env:
   type: ai2thor
+  agent_count: 1
   width: 800
   height: 600
   field_of_view: 60

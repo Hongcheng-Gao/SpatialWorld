@@ -3,7 +3,7 @@
 
 env:
   type: ai2thor
-  agent_count: 2  # 同场景双具身（AI2-THOR agentId 0/1）；单智能体对照改为 1
+  agent_count: 1
   width: 800
   height: 600
   field_of_view: 60
@@ -19,12 +19,6 @@ max_steps: 30
 context_management:
   enable_long_term_summary: false
   short_term_history_window_size: 29
-
-dual_agent:
-  equal_collaboration: true
-  collaboration_mode: alternating
-  switch_interval: 1
-  max_global_steps: 60
 
 model:
   vlm:

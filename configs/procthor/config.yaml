@@ -17,6 +17,7 @@ env:
   visibility_distance: 1.0 # Object visibility distance threshold (meters), also means interaction distance affects obj["visible"] in metadata
   dataset_name: procthor-10k # ProcTHOR dataset name
   scene_index: 0 # Scene index in the dataset (0-9999 for procthor-10k)
+  agent_count: 1
   # Rendering platform configuration:
   # - null: Auto-selection (requires X11 display server)
   # - CloudRendering: Headless mode (no X11 required, recommended for servers)

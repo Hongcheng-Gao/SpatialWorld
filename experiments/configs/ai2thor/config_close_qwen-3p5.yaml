@@ -1,6 +1,7 @@
 
 env:
   type: ai2thor # Environment type
+  agent_count: 1
   width: 800 # Rendered image width (pixels)
   height: 600 # Rendered image height (pixels)
   field_of_view: 60

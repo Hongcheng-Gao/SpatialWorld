@@ -3,7 +3,7 @@
 
 env:
   type: ai2thor
-  agent_count: 2  # 同场景双具身（AI2-THOR agentId 0/1）；单智能体对照改为 1
+  agent_count: 2
   width: 800
   height: 600
   field_of_view: 60

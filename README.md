@@ -169,13 +169,13 @@ CSV trackers stay under `experiments/`.
 
 | Environment | CSV | Default Config |
 | --- | --- | --- |
-| AI2-THOR | `experiments/csv/ai2thor/Spatial-Annotation-ai2thor.csv` | `experiments/configs/ai2thor/config_close_gpt-5.yaml` |
-| Multi-AI2-THOR | `experiments/csv/ai2thor/dual/Spatial-Annotation-ai2thor-Gemini-2.5-pro.csv` | `experiments/configs/ai2thor/dual/config_close_gpt-5.yaml` |
-| ProcTHOR | `experiments/csv/procthor/Spatial-Annotation-procthor.csv` | `experiments/configs/procthor/config_close_gpt-5.yaml` |
-| Multi-ProcTHOR | `experiments/csv/procthor/dual/Spatial-Annotation-procthor.csv` | `experiments/configs/procthor/dual/config_close_gpt-5.yaml` |
-| CARLA | `experiments/csv/carla/Spatial-Annotation-carla.csv` | `experiments/configs/carla/config_close_gpt-5.yaml` |
-| VirtualHome | `experiments/csv/virtualhome/Spatial-Annotation-virtualhome.csv` | `experiments/configs/virtualhome/config_close_gpt-5.yaml` |
-| EmbodiedCity | `experiments/csv/embodiedcity/Spatial-Annotation-embodiedcity.csv` | `experiments/configs/embodiedcity/vln-agent-config-gpt54.yaml` |
+| AI2-THOR | `experiments/csv/ai2thor/Spatial-Annotation-ai2thor-gpt-5.csv` | `experiments/configs/ai2thor/config_close_gpt-5.yaml` |
+| Multi-AI2-THOR | `experiments/csv/ai2thor/dual/Spatial-Annotation-ai2thor-Gemini-2.5-pro.csv` | `experiments/configs/ai2thor/dual/config_close_Gemini-2.5-pro.yaml` |
+| ProcTHOR | `experiments/csv/procthor/Spatial-Annotation-procthor-gpt-5.csv` | `experiments/configs/procthor/config_close_gpt-5.yaml` |
+| Multi-ProcTHOR | `experiments/csv/procthor/dual/Spatial-Annotation-procthor-Gpt-5p4.csv` | `experiments/configs/procthor/dual/config_close_Gpt-5p4.yaml` |
+| CARLA | `experiments/csv/carla/Spatial-Annotation-carla-gpt-5.csv` | `experiments/configs/carla/config_close_gpt-5.yaml` |
+| VirtualHome | `experiments/csv/virtualhome/Spatial-Annotation-virtualhome-gpt-5.csv` | `experiments/configs/virtualhome/config_close_gpt-5.yaml` |
+| EmbodiedCity | `experiments/csv/embodiedcity/Spatial-Annotation-embodiedcity-gpt-5.4.csv` | `experiments/configs/embodiedcity/vln-agent-config-gpt54.yaml` |
 | Game | `experiments/csv/game/*.csv` | `configs/game/*_config.py` |
 
 Before evaluation, fill the target config's model block (`provider`,
@@ -461,7 +461,7 @@ ProcTHOR looks for the dataset in `PROCTHOR_DATASET_DIR`,
 
 ```bash
 python -m mllm_base_agent.dual_agent.procthor.run_benchmark \
-  --csv experiments/csv/procthor/dual/Spatial-Annotation-procthor.csv \
+  --csv experiments/csv/procthor/dual/Spatial-Annotation-procthor-Gpt-5p4.csv \
   --config experiments/configs/procthor/dual/config_close_gpt-5.yaml \
   --save-name standard-dual \
   --headless --workers 2

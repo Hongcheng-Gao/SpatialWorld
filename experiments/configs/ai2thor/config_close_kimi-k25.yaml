@@ -1,34 +1,5 @@
-#复制config
-# 窗口49
-# 步数改为1步
-# 两个模型的状态results 是看最终状态是否一致
-# 托管情况下 某一个成功 就算成功
-#1. 计算步数，看的是轮次 （两个agent都动一步才算一步），如果某个agent死了 另一个agent在动 也算一步
-# 以及其他标准的 AI2-THOR 交互动作 对齐一下 可操作的物体 
-# COLLABORATIVE_AGENT_SYSTEM_PROMPT 
-
-# '''
-# agent_1_continue = agent_1.get("should_continue", True) and agent_1.get("step_count", 0) < agent_1.get("max_steps", 15)
-#     agent_2_continue = agent_2.get("should_continue", True) and agent_2.get("step_count", 0) < agent_2.get("max_steps", 15)
-    
-#     # Check global conditions
-#     global_continue = state.get("global_step_count", 0) < state.get("max_global_steps", 60)
-    
-#     if (agent_1_continue or agent_2_continue) and global_continue and not state.get("global_success"):
-#         return "coordinator"
-#     else:
-#         return "final"
-# """
-
-# 这里改的需要全局的步数 两个都走算一步
-# '''
-
-## 看两个agent的最终状态 最终的评测状态 如果最后评估成功了 就算成功 否则算失败
-# 只要有一个是null 那么最终状态就是null 这是case直接停止，给出null
-# 
-
 # =============================================================================
-# AI2-THOR Dual Agent Configuration File
+# AI2-THOR Single Agent Configuration File
 # =============================================================================
 
 # -----------------------------------------------------------------------------
@@ -36,7 +7,7 @@
 # -----------------------------------------------------------------------------
 env:
   type: ai2thor # Environment type
-  agent_count: 2  # 同场景双具身（AI2-THOR agentId 0/1）；单智能体对照改为 1
+  agent_count: 1
   width: 800 # Rendered image width (pixels)
   height: 600 # Rendered image height (pixels)
   field_of_view: 60 # Camera field of view (degrees), default 60 (non-wide angle)
@@ -61,18 +32,6 @@ context_management:
   enable_long_term_summary: false # Whether to enable long-term semantic summary (<SUMMARY> tag)
   short_term_history_window_size: 29 # 滑动窗口大小 (recent N-step multimodal history)
 
-# -----------------------------------------------------------------------------
-# Dual Agent Specific Configuration
-# -----------------------------------------------------------------------------
-dual_agent:
-  equal_collaboration: true
-  collaboration_mode: alternating
-  switch_interval: 1
-  max_global_steps: 60
-
-# -----------------------------------------------------------------------------
-# Model Configuration
-# -----------------------------------------------------------------------------
 model:
   vlm:
     # 使用 OpenRouter API
