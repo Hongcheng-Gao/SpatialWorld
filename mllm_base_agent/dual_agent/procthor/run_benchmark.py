@@ -11,7 +11,7 @@
 
   ：
     python -m mllm_base_agent.dual_agent.procthor.run_benchmark \\
-        --csv "experiments/csv/procthor/Spatial-Annotation-procthor-Gemini-2.5-pro.csv" \\
+        --csv "experiments/csv/procthor/dual/Spatial-Annotation-procthor-Gemini-2.5-pro.csv" \\
         --config experiments/configs/procthor/dual/config_close_gpt-5.yaml \\
         --save-name Gemini-2.5-Pro --headless --workers 5
 """
@@ -47,6 +47,7 @@ if str(PROJECT_ROOT) not in sys.path:
 TASK_FOLDER_ROOT = DUAL_AGENT_DIR / "task_mutil_procthor"
 DEFAULT_BENCHMARK_OUTPUT_DIR = DUAL_AGENT_DIR / "benchmark_outputs"
 DEFAULT_OUTPUTS_COMPLETED_DIR = DUAL_AGENT_DIR / "outputs_completed"
+DEFAULT_DUAL_CSV_DIR = PROJECT_ROOT / "experiments" / "csv" / "procthor" / "dual"
 
 try:
     from tqdm import tqdm
@@ -85,6 +86,36 @@ def normalize_task_id(task_id: str) -> str:
     if "_" in task_id and task_id.startswith("ai2thor_"):
         return task_id.replace("ai2thor_", "ai2thor", 1)
     return task_id
+
+
+def resolve_dual_csv_path(csv_arg: str) -> Path:
+    """Resolve dual ProcTHOR CSVs, preferring experiments/csv/procthor/dual."""
+    raw = Path(csv_arg)
+    basename = raw.name
+    candidates: List[Path] = []
+
+    if raw.is_absolute():
+        candidates.append(raw)
+        candidates.append(DEFAULT_DUAL_CSV_DIR / basename)
+    else:
+        candidates.extend(
+            [
+                DEFAULT_DUAL_CSV_DIR / basename,
+                PROJECT_ROOT / raw,
+                DUAL_AGENT_DIR / raw,
+                raw,
+            ]
+        )
+
+    seen: Set[str] = set()
+    for candidate in candidates:
+        key = str(candidate)
+        if key in seen:
+            continue
+        seen.add(key)
+        if candidate.exists():
+            return candidate
+    return candidates[0]
 
 
 def read_task_ids_from_csv(csv_path: Path, only_null: bool = True) -> List[str]:
@@ -764,7 +795,7 @@ def main() -> int:
         description="ProcTHOR dual-agent benchmark runner (CSV, null/true/false)",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""Examples:
-  python -m mllm_base_agent.dual_agent.procthor.run_benchmark --csv "experiments/csv/procthor/Spatial-Annotation-procthor-Gemini-2.5-pro.csv" \\
+  python -m mllm_base_agent.dual_agent.procthor.run_benchmark --csv "experiments/csv/procthor/dual/Spatial-Annotation-procthor-Gemini-2.5-pro.csv" \\
       --config experiments/configs/procthor/dual/config_close_gpt-5.yaml --save-name Gemini-2.5-Pro --headless --workers 5
 """,
     )
@@ -809,13 +840,7 @@ def main() -> int:
 
     csv_path: Optional[Path] = None
     if args.csv:
-        p = Path(args.csv)
-        if not p.is_absolute():
-            # prefer dual_agent-local, then project root
-            for c in [DUAL_AGENT_DIR / args.csv, PROJECT_ROOT / args.csv, p]:
-                if c.exists():
-                    p = c
-                    break
+        p = resolve_dual_csv_path(args.csv)
         if not p.exists():
             print(f"❌ CSV file not found: {p}")
             return 1

@@ -17,7 +17,7 @@ Usage:
         --task-dir mllm_base_agent/dual_agent/procthor/task_mutil_procthor \\
         --config dual_agent/config_close_Gemini-2.5-pro.yaml \\
         --headless \\
-        --rewrite-csv "experiments/csv/procthor/Spatial-Annotation-procthor.csv" \\
+        --rewrite-csv "experiments/csv/procthor/dual/Spatial-Annotation-procthor.csv" \\
         --output dual_agent/stuck_tasks.json
 """
 

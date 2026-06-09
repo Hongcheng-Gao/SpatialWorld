@@ -8,7 +8,7 @@ Columns align with the AI2-THOR dual-agent CSV schema:
 Usage:
     python dual_agent/scripts/generate_procthor_csv.py \
         --task-dir dual_agent/task_mutil_procthor \
-        --output "experiments/csv/procthor/Spatial-Annotation-procthor.csv"
+        --output "experiments/csv/procthor/dual/Spatial-Annotation-procthor.csv"
 """
 
 from __future__ import annotations

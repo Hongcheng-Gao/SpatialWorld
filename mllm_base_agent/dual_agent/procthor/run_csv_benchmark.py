@@ -8,7 +8,7 @@ Reuse SpatialWorld single-agent benchmark helpers, but execute `mllm_base_agent/
 # """
 # python \
 # "./dual_agent/run_csv_benchmark.py" \
-# --csv "./experiments/csv/procthor/Spatial-Annotation-procthor.csv" \
+# --csv "./experiments/csv/procthor/dual/Spatial-Annotation-procthor.csv" \
 # --config "./experiments/configs/procthor/dual/config_close_gpt-5.yaml" \
 # --agent1 "./experiments/configs/procthor/config_close_kimi-k25.yaml" \
 # --agent2 "./experiments/configs/procthor/config_close_kimi-k25.yaml"
@@ -16,7 +16,7 @@ Reuse SpatialWorld single-agent benchmark helpers, but execute `mllm_base_agent/
 
 """
 python "./dual_agent/run_csv_benchmark.py" \
-  --csv "./experiments/csv/procthor/Spatial-Annotation-procthor.csv" \
+  --csv "./experiments/csv/procthor/dual/Spatial-Annotation-procthor.csv" \
   --config "./experiments/configs/procthor/dual/config_close_Gemini-2.5-pro.yaml"
 """
 

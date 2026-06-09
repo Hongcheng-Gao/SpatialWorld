@@ -20,7 +20,7 @@
 
 """
 python "./dual_agent/run_benchmark.py" \
-  --csv "./experiments/csv/ai2thor/Spatial-Annotation-ai2thor-Kimi-K2.5.csv" \
+  --csv "./experiments/csv/ai2thor/dual/Spatial-Annotation-ai2thor-Gemini-2.5-pro.csv" \
   --config "./experiments/configs/ai2thor/dual/config_close_kimi-k25.yaml"
 """
 

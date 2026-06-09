@@ -11,7 +11,7 @@ Design goals:
 
 """
 python -m mllm_base_agent.dual_agent.procthor.run_csv_benchmark \
-  --csv "./experiments/csv/procthor/Spatial-Annotation-procthor.csv" \
+  --csv "./experiments/csv/procthor/dual/Spatial-Annotation-procthor.csv" \
   --config "experiments/configs/procthor/dual/config_close_gpt-5.yaml"
 """
 

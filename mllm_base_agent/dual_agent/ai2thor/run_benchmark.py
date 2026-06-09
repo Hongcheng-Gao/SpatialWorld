@@ -44,6 +44,7 @@ dual_agent_dir = Path(__file__).resolve().parent
 _DEFAULT_BENCHMARK_OUTPUT_DIR = str(dual_agent_dir / "benchmark_outputs")
 _DEFAULT_OUTPUTS_COMPLETED_DIR = str(dual_agent_dir / "outputs_completed")
 _DEFAULT_DUAL_AGENT_CONFIG = str((Path(__file__).resolve().parents[3] / "configs" / "ai2thor" / "dual" / "config.yaml").resolve())
+_DEFAULT_DUAL_CSV_DIR = Path(project_root) / "experiments" / "csv" / "ai2thor" / "dual"
 
 from .config import load_config
 from scripts.ai2thor.run_benchmark import (  #        benchmark
@@ -96,23 +97,35 @@ def find_result_json(task_output_dir: str) -> Optional[Path]:
 
 
 def resolve_dual_agent_csv_path(csv_arg: Optional[str]) -> Optional[Path]:
-    """Resolve CSV path, preferring dual_agent-local filtered CSVs."""
+    """Resolve dual AI2-THOR CSVs, preferring experiments/csv/ai2thor/dual."""
     if not csv_arg:
         return None
 
-    candidate = Path(csv_arg)
-    if candidate.is_absolute():
-        return candidate
+    raw = Path(csv_arg)
+    basename = raw.name
+    candidates: List[Path] = []
 
-    dual_candidate = dual_agent_dir / csv_arg
-    if dual_candidate.exists():
-        return dual_candidate
+    if raw.is_absolute():
+        candidates.extend([raw, _DEFAULT_DUAL_CSV_DIR / basename])
+    else:
+        candidates.extend(
+            [
+                _DEFAULT_DUAL_CSV_DIR / basename,
+                Path(project_root) / raw,
+                dual_agent_dir / raw,
+                raw,
+            ]
+        )
 
-    project_candidate = Path(project_root) / csv_arg
-    if project_candidate.exists():
-        return project_candidate
-
-    return candidate
+    seen = set()
+    for candidate in candidates:
+        key = str(candidate)
+        if key in seen:
+            continue
+        seen.add(key)
+        if candidate.exists():
+            return candidate
+    return candidates[0]
 
 
 def find_completed_tasks(output_dir: str, save_name: Optional[str] = None) -> set:
@@ -637,11 +650,11 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  python -m mllm_base_agent.dual_agent.ai2thor.run_benchmark --csv "experiments/csv/ai2thor/Spatial-Annotation-ai2thor.csv" --workers 4 --config experiments/configs/ai2thor/dual/config_close_gpt-5.yaml
-  python -m mllm_base_agent.dual_agent.ai2thor.run_benchmark --csv "experiments/csv/ai2thor/Spatial-Annotation-ai2thor.csv" --sequential --config experiments/configs/ai2thor/dual/config_close_gpt-5.yaml
+  python -m mllm_base_agent.dual_agent.ai2thor.run_benchmark --csv "experiments/csv/ai2thor/dual/Spatial-Annotation-ai2thor-Gemini-2.5-pro.csv" --workers 4 --config experiments/configs/ai2thor/dual/config_close_gpt-5.yaml
+  python -m mllm_base_agent.dual_agent.ai2thor.run_benchmark --csv "experiments/csv/ai2thor/dual/Spatial-Annotation-ai2thor-Gemini-2.5-pro.csv" --sequential --config experiments/configs/ai2thor/dual/config_close_gpt-5.yaml
   python -m mllm_base_agent.dual_agent.ai2thor.run_benchmark --task ai2thor05002 --config experiments/configs/ai2thor/dual/config_close_gpt-5.yaml
   python -m mllm_base_agent.dual_agent.ai2thor.run_benchmark --tasks ai2thor05001 ai2thor05002 --workers 2 --config experiments/configs/ai2thor/dual/config_close_gpt-5.yaml
-  python -m mllm_base_agent.dual_agent.ai2thor.run_benchmark --csv "experiments/csv/ai2thor/Spatial-Annotation-ai2thor.csv" --collaboration-mode sequential --switch-interval 5
+  python -m mllm_base_agent.dual_agent.ai2thor.run_benchmark --csv "experiments/csv/ai2thor/dual/Spatial-Annotation-ai2thor-Gemini-2.5-pro.csv" --collaboration-mode sequential --switch-interval 5
   python -m mllm_base_agent.dual_agent.ai2thor.run_benchmark --task ai2thor05002 --config experiments/configs/ai2thor/dual/config_close_gpt-5.yaml --agent1 experiments/configs/ai2thor/dual/config_close_Gemini-3.1-Pro-Preview.yaml --agent2 experiments/configs/ai2thor/dual/config_kimi-a3b.yaml
 """,
     )

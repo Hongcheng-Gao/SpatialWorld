@@ -170,9 +170,9 @@ CSV trackers stay under `experiments/`.
 | Environment | CSV | Default Config |
 | --- | --- | --- |
 | AI2-THOR | `experiments/csv/ai2thor/Spatial-Annotation-ai2thor.csv` | `experiments/configs/ai2thor/config_close_gpt-5.yaml` |
-| Multi-AI2-THOR | `experiments/csv/ai2thor/Spatial-Annotation-ai2thor.csv` | `experiments/configs/ai2thor/dual/config_close_gpt-5.yaml` |
+| Multi-AI2-THOR | `experiments/csv/ai2thor/dual/Spatial-Annotation-ai2thor-Gemini-2.5-pro.csv` | `experiments/configs/ai2thor/dual/config_close_gpt-5.yaml` |
 | ProcTHOR | `experiments/csv/procthor/Spatial-Annotation-procthor.csv` | `experiments/configs/procthor/config_close_gpt-5.yaml` |
-| Multi-ProcTHOR | `experiments/csv/procthor/Spatial-Annotation-procthor.csv` | `experiments/configs/procthor/dual/config_close_gpt-5.yaml` |
+| Multi-ProcTHOR | `experiments/csv/procthor/dual/Spatial-Annotation-procthor.csv` | `experiments/configs/procthor/dual/config_close_gpt-5.yaml` |
 | CARLA | `experiments/csv/carla/Spatial-Annotation-carla.csv` | `experiments/configs/carla/config_close_gpt-5.yaml` |
 | VirtualHome | `experiments/csv/virtualhome/Spatial-Annotation-virtualhome.csv` | `experiments/configs/virtualhome/config_close_gpt-5.yaml` |
 | EmbodiedCity | `experiments/csv/embodiedcity/Spatial-Annotation-embodiedcity.csv` | `experiments/configs/embodiedcity/vln-agent-config-gpt54.yaml` |
@@ -438,7 +438,7 @@ Start with `--workers 1 --task <task_id>` to verify one case, then remove
 
 ```bash
 python -m mllm_base_agent.dual_agent.ai2thor.run_benchmark \
-  --csv experiments/csv/ai2thor/Spatial-Annotation-ai2thor.csv \
+  --csv experiments/csv/ai2thor/dual/Spatial-Annotation-ai2thor-Gemini-2.5-pro.csv \
   --config experiments/configs/ai2thor/dual/config_close_gpt-5.yaml \
   --save-name standard-dual \
   --workers 2
@@ -461,7 +461,7 @@ ProcTHOR looks for the dataset in `PROCTHOR_DATASET_DIR`,
 
 ```bash
 python -m mllm_base_agent.dual_agent.procthor.run_benchmark \
-  --csv experiments/csv/procthor/Spatial-Annotation-procthor.csv \
+  --csv experiments/csv/procthor/dual/Spatial-Annotation-procthor.csv \
   --config experiments/configs/procthor/dual/config_close_gpt-5.yaml \
   --save-name standard-dual \
   --headless --workers 2
