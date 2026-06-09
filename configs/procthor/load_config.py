@@ -73,7 +73,7 @@ class ConfigLoader:
 
     def __init__(self, config_path: Optional[str] = None):
         if config_path is None:
-            project_root = Path(__file__).parent.parent
+            project_root = Path(__file__).resolve().parents[2]
             config_path = project_root / "configs" / "procthor" / "config.yaml"
         self.config_path = Path(config_path)
         self.config: Dict[str, Any] = {}
@@ -99,7 +99,7 @@ class ConfigLoader:
           1. <project_root>/dual_agent/task_mutil_procthor/<name>/task.json
           2. <project_root>/tasks/<name>/task.json
         """
-        project_root = Path(__file__).parent.parent
+        project_root = Path(__file__).resolve().parents[2]
         candidates = [task_name, task_name.replace("_", "")]
         if "procthor" in task_name.lower() and "_" not in task_name and len(task_name) > 7:
             candidates.append("procthor_" + task_name[7:])
@@ -107,6 +107,7 @@ class ConfigLoader:
         search_roots = [
             project_root / "dual_agent" / "task_mutil_procthor",
             project_root / "tasks",
+            project_root / "data" / "procthor" / "tasks",
         ]
         for root in search_roots:
             for name in candidates:
@@ -189,11 +190,12 @@ class ConfigLoader:
         return self.config["task"]
 
     def _get_available_json_tasks(self) -> List[str]:
-        project_root = Path(__file__).parent.parent
+        project_root = Path(__file__).resolve().parents[2]
         names: set = set()
         for root in [
             project_root / "dual_agent" / "task_mutil_procthor",
             project_root / "tasks",
+            project_root / "data" / "procthor" / "tasks",
         ]:
             if not root.exists():
                 continue

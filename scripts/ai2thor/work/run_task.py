@@ -12,7 +12,7 @@ from datetime import datetime
 from dotenv import load_dotenv
 from typing import Dict, Any, Optional
 
-_REPO_ROOT = Path(__file__).resolve().parents[2]
+_REPO_ROOT = Path(__file__).resolve().parents[3]
 if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
 
@@ -188,12 +188,28 @@ def load_task_from_folder(task_folder_path: str) -> Dict[str, Any]:
     import json
     from pathlib import Path
 
-    if not os.path.exists(task_folder_path):
-        tasks_base = Path("tasks")
-        task_id = os.path.basename(task_folder_path)
-        task_folder_path = tasks_base / task_id
+    input_path = Path(task_folder_path).expanduser()
+    candidates = []
+    if input_path.is_absolute():
+        candidates.append(input_path)
+    else:
+        candidates.extend([Path.cwd() / input_path, Path(__file__).resolve().parents[3] / input_path])
 
-    task_folder = Path(task_folder_path)
+    task_names = [input_path.name]
+    if "_" in input_path.name:
+        task_names.append(input_path.name.replace("_", ""))
+    elif input_path.name.lower().startswith("ai2thor"):
+        task_names.append(input_path.name.replace("ai2thor", "ai2thor_", 1))
+
+    repo_root = Path(__file__).resolve().parents[3]
+    for root in (repo_root / "tasks", repo_root / "data" / "ai2thor" / "tasks"):
+        for name in task_names:
+            candidates.append(root / name)
+
+    task_folder = next(
+        (candidate for candidate in candidates if candidate.is_dir() and (candidate / "task.json").exists()),
+        candidates[0],
+    )
 
     if not task_folder.exists():
         raise FileNotFoundError(f"Task folder not found: {task_folder}")
@@ -515,7 +531,8 @@ Example usage:
             print(
                 f"📁 Using task from folder: {task_folder_config.get('task_folder_path', 'N/A')}"
             )
-            task_config = config.apply_task_by_name(task_name)
+            task_config = task_folder_config
+            config.config["task"] = task_config
         else:
             task_config = config.apply_task_by_name(task_name)
 
@@ -652,6 +669,7 @@ Example usage:
                 "vlm": vlm,
                 "step_count": 0,
                 "max_steps": task_config.get("max_steps", 30),
+                "max_steps_override": args.max_steps,
                 "structured_trajectory": [],
                 "conversation_history": [],
                 "short_term_history": [],

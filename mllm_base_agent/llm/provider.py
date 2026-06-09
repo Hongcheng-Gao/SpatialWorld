@@ -20,11 +20,18 @@ GEMINI_RESPONSES_MODELS = {
     "Gemini-3.1-Pro-Preview",
 }
 
+def _env_int(name: str, default: int) -> int:
+    try:
+        return int(os.getenv(name, default))
+    except (TypeError, ValueError):
+        return default
+
+
 API_RETRY_CONFIG = {
-    "max_retries": 5,
-    "retry_delay": 2,
-    "retry_delay_400": 5,
-    "retry_delay_500": 3,
+    "max_retries": _env_int("VLM_API_MAX_RETRIES", 5),
+    "retry_delay": _env_int("VLM_API_RETRY_DELAY", 2),
+    "retry_delay_400": _env_int("VLM_API_RETRY_DELAY_400", 5),
+    "retry_delay_500": _env_int("VLM_API_RETRY_DELAY_500", 3),
     "exponential_backoff": True,
 }
 
@@ -123,7 +130,12 @@ class OpenAICompatibleChatModel:
             return self._client or None
         try:
             from openai import OpenAI
-            self._client = OpenAI(api_key=self.api_key, base_url=self.base_url.rstrip("/") + "/")
+            self._client = OpenAI(
+                api_key=self.api_key,
+                base_url=self.base_url.rstrip("/") + "/",
+                timeout=self.timeout,
+                max_retries=0,
+            )
         except Exception:
             self._client = False
         return self._client or None
@@ -150,7 +162,14 @@ class OpenAICompatibleChatModel:
     def _request_with_requests(self, payload: Dict[str, Any]) -> Dict[str, Any]:
         headers = {"Content-Type": "application/json", "Authorization": f"Bearer {self.api_key}"}
         response = requests.post(self.chat_url, headers=headers, data=json.dumps(payload), timeout=self.timeout)
-        response.raise_for_status()
+        if response.status_code >= 400:
+            body = response.text.strip()
+            if len(body) > 1000:
+                body = body[:1000] + "..."
+            raise requests.HTTPError(
+                f"{response.status_code} Error for url: {response.url}; body: {body}",
+                response=response,
+            )
         return response.json()
 
     def _make_api_request(self, payload: Dict[str, Any]) -> Dict[str, Any]:
@@ -220,7 +239,8 @@ def get_vlm(
     **_: Any,
 ) -> OpenAICompatibleChatModel:
     provider = (provider or "openai").lower()
-    if provider == "openai":
+    openai_compatible_providers = {"openai", "openai_compatible", "vision_http"}
+    if provider in openai_compatible_providers:
         key = api_key or os.getenv("OPENAI_API_KEY")
         model = model_name or os.getenv("VLM_MODEL", "gpt-4o")
         return OpenAICompatibleChatModel(
@@ -229,12 +249,13 @@ def get_vlm(
             temperature=temperature,
             max_tokens=max_tokens,
             top_p=top_p,
-            base_url=base_url or os.getenv("OPENAI_BASE_URL", "http."),
-            timeout=timeout if timeout is not None else 300,
+            base_url=base_url or os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1"),
+            timeout=timeout if timeout is not None else _env_int("VLM_API_TIMEOUT", 300),
             client_max_retries=client_max_retries,
             model_kwargs=model_kwargs,
         )
-    raise ValueError(f"Unsupported provider: {provider}. Supported providers: 'openai'")
+    supported = "', '".join(sorted(openai_compatible_providers))
+    raise ValueError(f"Unsupported provider: {provider}. Supported providers: '{supported}'")
 
 
 create_vlm = get_vlm

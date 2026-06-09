@@ -34,9 +34,11 @@ from dotenv import load_dotenv
 
 _AI2THOR_ROOT = Path(__file__).resolve().parent
 _REPO_ROOT = Path(__file__).resolve().parents[3]
-for _path in (_REPO_ROOT, _AI2THOR_ROOT):
-    if str(_path) not in sys.path:
-        sys.path.insert(0, str(_path))
+for _path in (str(_AI2THOR_ROOT), str(_REPO_ROOT)):
+    while _path in sys.path:
+        sys.path.remove(_path)
+sys.path.insert(0, str(_REPO_ROOT))
+sys.path.append(str(_AI2THOR_ROOT))
 
 from actions.max_steps import compute_max_steps_from_n
 
@@ -56,6 +58,40 @@ def get_vlm_display_name(vlm) -> str:
     )
 
 
+def resolve_task_dir(task_id: str) -> Path:
+    """Resolve a dual-agent task id or explicit task directory."""
+    raw_path = Path(task_id).expanduser()
+    candidates = []
+    if raw_path.is_absolute():
+        candidates.append(raw_path)
+    else:
+        candidates.extend([Path.cwd() / raw_path, _REPO_ROOT / raw_path])
+
+    task_names = [raw_path.name]
+    if "_" in raw_path.name:
+        task_names.append(raw_path.name.replace("_", ""))
+    elif raw_path.name.lower().startswith("ai2thor"):
+        task_names.append(raw_path.name.replace("ai2thor", "ai2thor_", 1))
+
+    for root in (
+        _AI2THOR_ROOT / "tasks",
+        _REPO_ROOT / "data" / "ai2thor" / "tasks",
+    ):
+        for name in task_names:
+            candidates.append(root / name)
+
+    seen = set()
+    for candidate in candidates:
+        key = str(candidate)
+        if key in seen:
+            continue
+        seen.add(key)
+        if candidate.is_dir() and (candidate / "task.json").exists():
+            return candidate
+
+    return _AI2THOR_ROOT / "tasks" / raw_path.name
+
+
 def load_task_info(task_id: str) -> dict:
     """      
     
@@ -65,7 +101,7 @@ def load_task_info(task_id: str) -> dict:
     Returns:
               
     """
-    task_dir = Path(__file__).resolve().parent / "tasks" / task_id
+    task_dir = resolve_task_dir(task_id)
     task_file = task_dir / "task.json"
     init_file = task_dir / "init.json"
     
@@ -127,7 +163,7 @@ def load_task_info(task_id: str) -> dict:
 def execute_init_actions(env, init_actions: list):
     """       """
     if not init_actions:
-        return 0
+        return 0, None
     
     print(f"\n{'='*60}")
     print(f"📁         ({len(init_actions)}  )")
@@ -136,6 +172,7 @@ def execute_init_actions(env, init_actions: list):
     from .core.agent.graph import parse_action_string
     
     init_count = 0
+    last_observation = None
     for i, action_str in enumerate(init_actions, 1):
         action_str = action_str.strip()
         if not action_str or action_str.upper() == "DONE":
@@ -148,6 +185,7 @@ def execute_init_actions(env, init_actions: list):
             observation, error = env.step_with_action_dict(
                 action_dict, thor_agent_id=0
             )
+            last_observation = observation
             init_count += 1
             
             if error:
@@ -156,7 +194,7 @@ def execute_init_actions(env, init_actions: list):
             print(f"     ❌   : {e}")
     
     print(f"✓    {init_count}       \n")
-    return init_count
+    return init_count, last_observation
 
 
 def load_config_dict(config_path: str) -> dict:
@@ -232,6 +270,76 @@ def compute_recursion_limit(per_agent_max_steps: int) -> int:
     total_action_cap = max(1, 2 * int(per_agent_max_steps))
     #         4–6       ，      Pass/  
     return max(500, 15 * total_action_cap)
+
+
+def _json_safe(value):
+    """Convert runner state fragments to JSON-safe values."""
+    if value is None or isinstance(value, (str, int, float, bool)):
+        return value
+    if isinstance(value, list):
+        return [_json_safe(item) for item in value]
+    if isinstance(value, tuple):
+        return [_json_safe(item) for item in value]
+    if isinstance(value, dict):
+        return {str(key): _json_safe(item) for key, item in value.items()}
+    if hasattr(value, "model_dump"):
+        return _json_safe(value.model_dump())
+    return str(value)
+
+
+def save_dual_episode_log(final_state: dict, task_id: str, task_data: dict, output_dir: str) -> Path:
+    """Persist the dual-agent result format expected by the benchmark wrapper."""
+    os.makedirs(output_dir, exist_ok=True)
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    scene = task_data.get("scene", "UnknownScene")
+    safe_scene = str(scene).replace(" ", "_").replace("/", "_")[:80]
+    safe_task = str(task_id).replace(" ", "_").replace("/", "_")[:80]
+    path = Path(output_dir) / f"dual_episode_{safe_scene}_{safe_task}_{timestamp}.json"
+
+    success = final_state.get("global_success")
+    if success is None:
+        success = final_state.get("success", False)
+    fail_reason = final_state.get("global_fail_reason") or final_state.get("fail_reason")
+    failure_type = final_state.get("failure_type")
+    if not success and not failure_type:
+        failure_type = "model_error"
+    trajectory = final_state.get("structured_trajectory", []) or []
+    fallback_steps = final_state.get("step_count") or len(trajectory)
+    global_step_count = final_state.get("global_step_count") or fallback_steps or 0
+    global_action_count = final_state.get("global_action_count") or len(trajectory) or global_step_count
+    agent_1_steps = final_state.get("agent_1", {}).get("step_count", 0) or global_action_count
+    agent_2_steps = final_state.get("agent_2", {}).get("step_count", 0) or 0
+
+    episode = {
+        "task_id": task_id,
+        "task": task_data.get("instruction", ""),
+        "scene": scene,
+        "mode": "dual_agent",
+        "success": bool(success),
+        "failure_type": failure_type,
+        "fail_reason": fail_reason,
+        "global_step_count": global_step_count,
+        "global_action_count": global_action_count,
+        "agent_1_steps": agent_1_steps,
+        "agent_2_steps": agent_2_steps,
+        "turn_count": final_state.get("turn_count") or global_step_count,
+        "communication_history": _json_safe(final_state.get("communication_history", [])),
+        "trajectory": _json_safe(trajectory),
+        "action_sequence": (
+            final_state.get("env").get_action_sequence()
+            if hasattr(final_state.get("env"), "get_action_sequence")
+            else None
+        ),
+        "timestamp": datetime.now().isoformat(),
+        "metadata": {
+            "token_usage": _json_safe(final_state.get("token_usage", {})),
+            "max_steps": final_state.get("max_steps"),
+            "max_global_steps": final_state.get("max_global_steps"),
+        },
+    }
+    with open(path, "w", encoding="utf-8") as handle:
+        json.dump(episode, handle, ensure_ascii=False, indent=2)
+    return path
 
 
 def main():
@@ -436,8 +544,10 @@ def main():
         
         try:
             #   reset     ，   agent 1    init（   init    reset   ）
-            env.reset(task_description=task_prompt)
-            execute_init_actions(env, task_data['init_actions'])
+            observation = env.reset(task_description=task_prompt)
+            _, init_observation = execute_init_actions(env, task_data['init_actions'])
+            if init_observation is not None:
+                observation = init_observation
 
             if getattr(env, "agent_count", 1) > 1 and hasattr(
                 env, "relocate_second_agent_near_agent1"
@@ -482,6 +592,7 @@ def main():
                 run_output_dir=output_dir,
                 skip_env_reset=True,
             )
+            initial_state["observation"] = observation
             
             #         
             print(f"\n{'='*60}")
@@ -496,6 +607,10 @@ def main():
             final_state = app.invoke(
                 initial_state, config={"recursion_limit": recursion_limit}
             )
+            dual_episode_path = save_dual_episode_log(
+                final_state, task_id, task_data, output_dir
+            )
+            print(f"✓ Dual episode saved: {dual_episode_path}")
             
             #     
             print(f"\n{'='*60}")

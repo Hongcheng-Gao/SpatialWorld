@@ -82,8 +82,8 @@ class ConfigLoader:
         """
         if config_path is None:
             # Default to look for config.yaml in project root directory
-            project_root = Path(__file__).parent.parent
-            config_path = project_root / "config.yaml"
+            project_root = Path(__file__).resolve().parents[2]
+            config_path = project_root / "configs" / "ai2thor" / "config.yaml"
         
         self.config_path = Path(config_path)
         self.config: Dict[str, Any] = {}
@@ -131,31 +131,24 @@ class ConfigLoader:
         Returns:
             Path to task.json if found, None otherwise
         """
-        # Get project root directory
-        project_root = Path(__file__).parent.parent
-        
-        # Method 1: Try direct path
-        task_json_path = project_root / "tasks" / task_name / "task.json"
-        if task_json_path.exists():
-            return task_json_path
-        
-        # Method 2: If task_name has underscore, try without underscore
-        # e.g., ai2thor_04000 -> ai2thor04000
+        project_root = Path(__file__).resolve().parents[2]
+        candidates = [task_name]
+
         if '_' in task_name:
-            task_name_without_underscore = task_name.replace('_', '')
-            task_json_path = project_root / "tasks" / task_name_without_underscore / "task.json"
-            if task_json_path.exists():
-                return task_json_path
-        
-        # Method 3: If task_name doesn't have underscore and starts with "ai2thor",
-        # try with underscore after "ai2thor"
-        # e.g., ai2thor04000 -> ai2thor_04000
+            candidates.append(task_name.replace('_', ''))
         if 'ai2thor' in task_name.lower() and '_' not in task_name:
-            # Add underscore after "ai2thor"
-            task_name_with_underscore = task_name.replace('ai2thor', 'ai2thor_', 1)
-            task_json_path = project_root / "tasks" / task_name_with_underscore / "task.json"
-            if task_json_path.exists():
-                return task_json_path
+            candidates.append(task_name.replace('ai2thor', 'ai2thor_', 1))
+
+        search_roots = [
+            project_root / "tasks",
+            project_root / "data" / "ai2thor" / "tasks",
+        ]
+
+        for root in search_roots:
+            for candidate in candidates:
+                task_json_path = root / candidate / "task.json"
+                if task_json_path.exists():
+                    return task_json_path
         
         return None
     
@@ -256,20 +249,21 @@ class ConfigLoader:
         Returns:
             List of task IDs that have task.json files
         """
-        project_root = Path(__file__).parent.parent
-        tasks_dir = project_root / "tasks"
-        
-        if not tasks_dir.exists():
-            return []
-        
         available_tasks = []
-        for task_dir in tasks_dir.iterdir():
-            if task_dir.is_dir():
-                task_json = task_dir / "task.json"
-                if task_json.exists():
-                    available_tasks.append(task_dir.name)
+        project_root = Path(__file__).resolve().parents[2]
+        for tasks_dir in (
+            project_root / "tasks",
+            project_root / "data" / "ai2thor" / "tasks",
+        ):
+            if not tasks_dir.exists():
+                continue
+            for task_dir in tasks_dir.iterdir():
+                if task_dir.is_dir():
+                    task_json = task_dir / "task.json"
+                    if task_json.exists():
+                        available_tasks.append(task_dir.name)
         
-        return sorted(available_tasks)
+        return sorted(set(available_tasks))
     
     def get_all_task_names(self) -> List[str]:
         """Get list of all available task names

@@ -15,7 +15,7 @@ from pathlib import Path
 from datetime import datetime
 from dotenv import load_dotenv
 
-_REPO_ROOT = Path(__file__).resolve().parent.parent
+_REPO_ROOT = Path(__file__).resolve().parents[3]
 if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
 
@@ -164,10 +164,14 @@ def save_episode_log(state: dict, output_dir: str, env) -> None:
     print(f"✓ Episode log saved: {filepath}")
 
 
-def run_agent_loop(env, vlm, task_config: dict, task_output_dir: str, config: dict):
+def run_agent_loop(env, vlm, task_config: dict, task_output_dir: str, config: dict, max_steps_override: int | None = None):
     """    agent   ：Think → Act → Evaluate，  ai2thor   （  API/  /    ） """
     task_prompt = task_config.get("instruction") or task_config.get("description") or "Complete the task."
-    max_steps = resolve_max_steps_from_task(task_config, int(task_config.get("max_steps", 30)))
+    max_steps = (
+        int(max_steps_override)
+        if max_steps_override is not None
+        else resolve_max_steps_from_task(task_config, int(task_config.get("max_steps", 30)))
+    )
     enable_summary = config.get("context_management", {}).get("enable_long_term_summary", False)
     navigation_mode = config.get("actions", {}).get("navigation_mode", "discrete")
     if navigation_mode == "continuous":
@@ -461,7 +465,14 @@ def main():
             continue
 
         try:
-            state = run_agent_loop(env, vlm, task_config, task_output_dir, full_config)
+            state = run_agent_loop(
+                env,
+                vlm,
+                task_config,
+                task_output_dir,
+                full_config,
+                max_steps_override=args.max_steps,
+            )
             all_results.append({
                 "task_name": task_name,
                 "success": state.get("success", False),

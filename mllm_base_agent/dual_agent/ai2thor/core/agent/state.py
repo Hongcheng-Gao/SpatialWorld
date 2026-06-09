@@ -22,6 +22,7 @@ def initialize_dual_agent_state(
         "observation": None,
         "step_count": 0,
         "max_steps": max_steps,
+        "max_steps_override": max_steps,
         "success": None,
         "fail_reason": None,
         "failure_type": None,

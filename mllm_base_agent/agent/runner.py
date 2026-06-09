@@ -481,7 +481,9 @@ class AgentRunner:
     def stream(self, initial_state: AgentState, config: Optional[dict] = None) -> Iterable[Dict[str, AgentState]]:
         state = initial_state
         task_cfg = (state.get('config') or {}).get('task') or {}
-        if task_cfg:
+        if state.get('max_steps_override') is not None:
+            state['max_steps'] = int(state['max_steps_override'])
+        elif task_cfg:
             state['max_steps'] = resolve_max_steps_from_task(task_cfg, int(state.get('max_steps', 30) or 30))
         limit = int((config or {}).get('recursion_limit', self.recursion_limit) or self.recursion_limit)
         iterations = 0

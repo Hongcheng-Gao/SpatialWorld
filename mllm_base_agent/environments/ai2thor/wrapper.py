@@ -133,8 +133,21 @@ class AI2ThorEnvWrapper(BaseEnv):
         # Task configuration (set from YAML or configure_task)
         task_config = self.config.get("task", {})
         self.target_object_types: List[str] = task_config.get("target_object_types", [])
-        self.success_condition: Optional[Dict[str, Any]] = task_config.get(
-            "success_condition", None
+        raw_success_condition = task_config.get("success_condition")
+        raw_success_conditions = task_config.get("success_conditions")
+        if raw_success_conditions is None and isinstance(raw_success_condition, list):
+            raw_success_conditions = raw_success_condition
+            raw_success_condition = None
+        self.success_conditions: List[Dict[str, Any]] = (
+            raw_success_conditions
+            if isinstance(raw_success_conditions, list)
+            else ([raw_success_condition] if isinstance(raw_success_condition, dict) else [])
+        )
+        self.success_logic = str(task_config.get("success_logic", "AND")).upper()
+        self.success_condition: Optional[Dict[str, Any]] = (
+            raw_success_condition
+            if isinstance(raw_success_condition, dict)
+            else (self.success_conditions[0] if len(self.success_conditions) == 1 else None)
         )
         self.success_predicate: Optional[Callable[[dict], bool]] = (
             None  # Will be built when needed
@@ -1898,6 +1911,50 @@ Visible objects: {visible_objects_str}"""
 
         return reward
 
+    def _object_type_matches(self, actual_type: str, expected_type: str) -> bool:
+        if not expected_type:
+            return False
+        return actual_type == expected_type or actual_type.startswith(expected_type + "|")
+
+    def _condition_satisfied(self, condition: Dict[str, Any], metadata: dict) -> bool:
+        condition_type = condition.get("type", "object_state")
+
+        if condition_type == "object_state":
+            object_type = condition.get("object_type")
+            field = condition.get("field") or condition.get("state") or "isOpen"
+            target_value = condition.get("value", True)
+            for obj in metadata.get("objects", []):
+                if object_type and not self._object_type_matches(obj.get("objectType", ""), object_type):
+                    continue
+                if not object_type and obj.get("objectType") not in self.target_object_types:
+                    continue
+                if obj.get(field, False) == target_value:
+                    return True
+            return False
+
+        if condition_type == "object_in_receptacle":
+            object_type = condition.get("object_type")
+            receptacle_type = condition.get("receptacle_type")
+            if not object_type or not receptacle_type:
+                return False
+            for obj in metadata.get("objects", []):
+                if not self._object_type_matches(obj.get("objectType", ""), object_type):
+                    continue
+                for parent_id in obj.get("parentReceptacles") or []:
+                    parent_type = parent_id.split("|")[0] if "|" in parent_id else parent_id
+                    if parent_type == receptacle_type:
+                        return True
+            return False
+
+        if condition_type == "object_in_hand":
+            target_type = condition.get("object_type")
+            for item in metadata.get("inventoryObjects", []):
+                if self._object_type_matches(item.get("objectType", ""), target_type):
+                    return True
+            return False
+
+        return False
+
     def _check_done(self, metadata: dict) -> bool:
         """Check if task is complete (generalized version, based on task config)
 
@@ -1912,6 +1969,19 @@ Visible objects: {visible_objects_str}"""
         Returns:
             Whether complete
         """
+        if self.success_conditions:
+            results = [
+                self._condition_satisfied(condition, metadata)
+                for condition in self.success_conditions
+                if isinstance(condition, dict)
+            ]
+            if not results:
+                return False
+            success = any(results) if self.success_logic == "OR" else all(results)
+            if success:
+                print("  ✓ Task completion condition met")
+            return success
+
         # If task parameters not configured, return False
         if not self.target_object_types or not self.success_predicate:
             return False
