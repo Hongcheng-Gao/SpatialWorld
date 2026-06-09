@@ -1,6 +1,94 @@
+<div align="center">
+
 # SpatialWorld
 
-**Project Page: [https://spatial-world.github.io/](https://spatial-world.github.io/)**
+### Benchmarking Interactive Spatial Reasoning of Multimodal Agents in Real-World Tasks
+
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](pyproject.toml)
+[![Paper](https://img.shields.io/badge/paper-arXiv-red)](https://arxiv.org/abs/2606.09669)
+[![Project Page](https://img.shields.io/badge/project-spatial--world.github.io-blue)](https://spatial-world.github.io/)
+
+**[Project Page](https://spatial-world.github.io/)** · **[Paper](https://arxiv.org/pdf/2606.09669)** · **[Data](https://github.com/Hongcheng-Gao/SpatialWorld/tree/main/data)**
+
+</div>
+
+## Abstract
+
+Spatial reasoning is a foundational capability for multimodal large language models (MLLMs) to perceive and operate within the physical world. However, existing benchmarks predominantly rely on passive evaluation (e.g., static VQA) or simulator-specific pipelines, failing to assess general interactive spatial understanding. We introduce **SpatialWorld**, a unified benchmark for evaluating interactive spatial understanding of multimodal agents in complex real-world tasks.
+
+Integrating eight heterogeneous simulation backends under a shared, simulator-agnostic protocol, SpatialWorld features **760 human-annotated tasks** across diverse domains (e.g., household routines, travel, social collaboration). Agents must solve tasks under vision-only partial observability, actively gathering egocentric visual evidence and expressing decisions via a unified, text-based action interface native to MLLMs. Evaluating 15 advanced agents reveals that robust spatial task solving remains challenging: **GPT-5** achieves an average TSR of only **17.4%**, while the leading open-source model, **Qwen-3.5**, reaches **14.1%**.
+
+| 760 Tasks | 8 Backends | 6 Scenarios | 15 Models |
+| :---: | :---: | :---: | :---: |
+| Human-annotated | Simulation environments | Task categories | Evaluated MLLM agents |
+
+## Benchmark Overview
+
+SpatialWorld unifies diverse 3D backends under a standardized observation–action interface. Agents receive only a natural-language instruction and egocentric RGB observations, express decisions through a unified text-based action interface, and are evaluated with human-validated terminal-state verifiers.
+
+<p align="center">
+  <img src="assets/spatialworld_main.png" alt="SpatialWorld framework overview" width="900"><br>
+  <em>SpatialWorld unifies eight 3D simulation backends under a shared closed-loop evaluation protocol.</em>
+</p>
+
+## Eight Simulation Backends
+
+| Backend | Description | Tasks |
+| --- | --- | ---: |
+| **AI2-THOR** | Near-photorealistic indoor scenes with rich object affordances | 311 |
+| **ProcTHOR** | Procedurally generated indoor layouts for layout generalization | 127 |
+| **VirtualHome** | Daily activity scripts in home environments | 38 |
+| **CARLA** | Urban traffic simulation for outdoor navigation | 80 |
+| **EmbodiedCity** | Large-scale city navigation with realistic dynamics | 53 |
+| **Multi-AI2THOR** | Multi-agent social collaboration in shared indoor scenes | 29 |
+| **Multi-ProcTHOR** | Coordinated multi-agent tasks in procedural scenes | 17 |
+| **3D Games** | Block 3D, Maze 3D, Snake, Rubik's Cube, etc. | 105 |
+
+**Complexity levels** (parallel, not hierarchical): **Navigation** — reach targets via exploration; **Interaction** — object-level state changes; **Hybrid** — long-horizon navigation plus multi-step manipulation.
+
+## Key Findings
+
+- **Far from reliable 3D task solving.** GPT-5 achieves only 14.4% Physical Overall TSR; Qwen-3.5-397B-A17B reaches 12.2%.
+- **Success ≠ efficiency.** Models with comparable TSR can differ substantially in step efficiency (SE).
+- **Domain-specific strengths.** GPT-5 and Qwen-3.5 tie in Work & Study (16.9%); GPT-5 leads Travel (6.8%); Gemini-3.1-Pro leads digital 3D games (39.0% TSR).
+- **Vision-only closed-loop evaluation.** Agents actively explore under partial observability using only egocentric RGB and a text-based action interface.
+
+## Experimental Results
+
+Full TSR / SE tables and task examples are on the **[project page](https://spatial-world.github.io/)**. Highlights below:
+
+<p align="center">
+  <img src="assets/main_indoor_outdoor_radar_top5.png" alt="Indoor vs outdoor radar chart for top-5 models" width="900"><br>
+  <em>Indoor vs. Outdoor Performance — Top-5 Models</em>
+</p>
+
+<details>
+<summary><strong>Scenario Distribution (click to expand)</strong></summary>
+
+| Environment | Daily | Work | Entertain. | Travel | Social | Total |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| AI2-THOR | 219 | 41 | 40 | 11 | 0 | 311 |
+| ProcTHOR | 92 | 10 | 23 | 2 | 0 | 127 |
+| VirtualHome | 27 | 8 | 3 | 0 | 0 | 38 |
+| CARLA | 0 | 0 | 0 | 80 | 0 | 80 |
+| EmbodiedCity | 12 | 0 | 2 | 39 | 0 | 53 |
+| Multi-AI2THOR | 0 | 0 | 0 | 0 | 29 | 29 |
+| Multi-ProcTHOR | 0 | 0 | 0 | 0 | 17 | 17 |
+| 3D Games | 0 | 0 | 105 | 0 | 0 | 105 |
+| **Total** | **350** | **59** | **173** | **132** | **46** | **760** |
+
+</details>
+
+<details>
+<summary><strong>Multi-Agent Social Collaboration Profile (click to expand)</strong></summary>
+
+<p align="center">
+  <img src="assets/main_multi_social_profile.png" alt="Multi-agent social collaboration profile" width="900">
+</p>
+
+</details>
+
+## About This Repository
 
 SpatialWorld is a unified benchmark and toolkit for evaluating interactive
 spatial reasoning of multimodal agents across AI2-THOR, ProcTHOR, CARLA,
@@ -10,6 +98,10 @@ The repository keeps one default config per environment under `configs/` for
 standard evaluation. Model-specific and historical experiment configs are kept
 separately under `experiments/configs/`, while experiment CSV files are kept under
 `experiments/csv/`.
+
+## Getting Started
+
+See [Install](#install) for environment setup, then [Running Benchmarks](#running-benchmarks) to launch evaluation.
 
 ## Install
 
@@ -437,3 +529,30 @@ garbled, run `chcp 65001` and set `PYTHONUTF8=1` before launching scripts.
 
 Before running any benchmark, set the model provider, model name, base URL, and
 API key in the standard config file for the target environment.
+
+## Citation
+
+If you find SpatialWorld helpful, please cite:
+
+```bibtex
+@misc{gao2026spatialworldbenchmarkinginteractivespatial,
+  title={SpatialWorld: Benchmarking Interactive Spatial Reasoning of Multimodal Agents in Real-World Tasks},
+  author={Hongcheng Gao and Hailong Qu and Jingyi Tang and Jiahao Wang and Zihao Huang and Hengkang Qiao and Shihong Huang and Junming Yang and Yi Li and Hongyixuan Yuan and Wenjie Li and Bohan Zeng and Wenbo Li and Bo Wang and Jianhui Liu and Olive Huang and Haoyang Huang and Wentao Zhang and Guoqing Huang and Nan Duan and Yinpeng Dong},
+  year={2026},
+  eprint={2606.09669},
+  archivePrefix={arXiv},
+  primaryClass={cs.AI},
+  url={https://arxiv.org/abs/2606.09669}
+}
+```
+
+## Acknowledgement
+
+SpatialWorld builds on the open-source embodied-AI and simulation ecosystem. We
+especially thank the authors and maintainers of
+[AI2-THOR](https://ai2thor.allenai.org/),
+[ProcTHOR](https://procthor.allenai.org/),
+[VirtualHome](https://github.com/xavierpuigf/virtualhome),
+[CARLA](https://carla.org/),
+[EmbodiedCity](https://github.com/EmbodiedCity/EmbodiedCity),
+and [AirSim](https://microsoft.github.io/AirSim/).
