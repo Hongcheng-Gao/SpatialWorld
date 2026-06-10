@@ -1,6 +1,8 @@
 .codegraph/
 
 outputs/
+benchmark_outputs/
+outputs_completed/
 
 # Python bytecode/cache
 __pycache__/
