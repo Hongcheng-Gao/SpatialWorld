@@ -26,8 +26,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "I'm preparing the scene, so please in the simulation, make the bowl dirty so its state changes to 'dirty'.",
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3"
+  "target_description": "I'm preparing the scene, so please in the simulation, make the bowl dirty so its state changes to 'dirty'."
 }

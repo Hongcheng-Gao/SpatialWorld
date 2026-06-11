@@ -24,6 +24,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm going to sleep. Could you turn off the desk lamp? It's a bit too bright.",
-  "max_steps": 18
+  "target_description": "I'm going to sleep. Could you turn off the desk lamp? It's a bit too bright."
 }

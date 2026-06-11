@@ -22,9 +22,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I've finished using the toilet and washing my hands—please take a hand towel from the hand-towel holder so I can dry them.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "I've finished using the toilet and washing my hands—please take a hand towel from the hand-towel holder so I can dry them."
 }

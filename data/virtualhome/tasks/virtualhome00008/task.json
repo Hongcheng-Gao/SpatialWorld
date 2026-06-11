@@ -32,6 +32,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm starting work now. Could you walk over to my computer and turn it on?",
-  "max_steps": 34
+  "target_description": "I'm starting work now. Could you walk over to my computer and turn it on?"
 }

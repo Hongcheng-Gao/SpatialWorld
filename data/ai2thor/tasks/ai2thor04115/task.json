@@ -35,9 +35,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I need to get ready for work. Please move the coffee from the bedside table to the desk.",
-  "max_steps": 60,
-  "Evaluation_Type": "Conditional",
-  "Category": "Study and Work",
-  "Level": "Level3 Hybrid"
+  "target_description": "I need to get ready for work. Please move the coffee from the bedside table to the desk."
 }

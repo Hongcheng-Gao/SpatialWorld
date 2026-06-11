@@ -26,9 +26,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "My pen is broken. Please throw the pen into the trash can.",
-  "max_steps": 30,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "My pen is broken. Please throw the pen into the trash can."
 }

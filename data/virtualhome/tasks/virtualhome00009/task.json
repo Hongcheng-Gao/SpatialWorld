@@ -24,6 +24,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I have a great idea! I want to implement it right away. Go turn on the computer and get ready! I'm about to start brainstorming.",
-  "max_steps": 18
+  "target_description": "I have a great idea! I want to implement it right away. Go turn on the computer and get ready! I'm about to start brainstorming."
 }

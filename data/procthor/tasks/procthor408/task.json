@@ -43,9 +43,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'd like to have some wine. Please go to the kitchen, get the wine bottle, and bring it to the bedroom.",
-  "max_steps": 58,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'd like to have some wine. Please go to the kitchen, get the wine bottle, and bring it to the bedroom."
 }

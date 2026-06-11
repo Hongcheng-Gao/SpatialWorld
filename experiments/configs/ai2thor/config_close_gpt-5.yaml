@@ -26,7 +26,7 @@ model:
     provider: openai
     model_name: gpt-5
     temperature: 1.0
-    # top_p: Azure GPT-5 不支持 TopP，不配置
+    # top_p: Azure GPT-5 does not support TopP; leave unset
     max_tokens: 4096
     base_url: null
     api_key: null

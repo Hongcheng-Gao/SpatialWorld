@@ -56,9 +56,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to hug my teddy bear on the sofa. Please bring me my teddy bear, hold it up, and wait for me next to the sofa.",
-  "max_steps": 62,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I want to hug my teddy bear on the sofa. Please bring me my teddy bear, hold it up, and wait for me next to the sofa."
 }

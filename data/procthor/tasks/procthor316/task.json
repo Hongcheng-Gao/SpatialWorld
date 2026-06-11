@@ -51,9 +51,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I will read the newspaper on the sofa later. Please pick up the newspaper on the sofa and wait beside the sofa.",
-  "max_steps": 52,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I will read the newspaper on the sofa later. Please pick up the newspaper on the sofa and wait beside the sofa."
 }

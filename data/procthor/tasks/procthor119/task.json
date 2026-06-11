@@ -70,9 +70,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "My friend is coming over to hang out. Please grab a baseball bat for me and then wait for him in the living room.",
-  "max_steps": 92,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level1 Navigation"
+  "target_description": "My friend is coming over to hang out. Please grab a baseball bat for me and then wait for him in the living room."
 }

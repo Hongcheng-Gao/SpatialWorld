@@ -41,9 +41,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I've just entered the kitchen. Please turn on the kitchen light and put the potato I'm holding into the refrigerator. Remember to close the refrigerator door afterwards.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I've just entered the kitchen. Please turn on the kitchen light and put the potato I'm holding into the refrigerator. Remember to close the refrigerator door afterwards."
 }

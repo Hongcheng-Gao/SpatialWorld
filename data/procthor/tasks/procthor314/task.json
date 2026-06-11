@@ -51,9 +51,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "A dishsponge is broken. Please throw it into a trash can, then wait beside the trash can.",
-  "max_steps": 52,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "A dishsponge is broken. Please throw it into a trash can, then wait beside the trash can."
 }

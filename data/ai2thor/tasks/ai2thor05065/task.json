@@ -23,8 +23,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "I'm about to start cooking, could you please pick up a potato for me?",
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3"
+  "target_description": "I'm about to start cooking, could you please pick up a potato for me?"
 }

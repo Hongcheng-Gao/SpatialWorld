@@ -74,9 +74,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "Please take the DishSponge from the kitchen and throw it into the GarbageCan in the bathroom. I want to clean up the bathroom trash together.",
-  "max_steps": 108,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "Please take the DishSponge from the kitchen and throw it into the GarbageCan in the bathroom. I want to clean up the bathroom trash together."
 }

@@ -35,9 +35,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm about to have dinner—please take the bowl from the coffee table and bring it to the dinner table",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "I'm about to have dinner—please take the bowl from the coffee table and bring it to the dinner table"
 }

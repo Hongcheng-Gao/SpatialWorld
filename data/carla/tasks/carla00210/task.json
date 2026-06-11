@@ -47,6 +47,5 @@
       ]
     ],
     "threshold_label": "loose"
-  },
-  "max_steps": 30
+  }
 }

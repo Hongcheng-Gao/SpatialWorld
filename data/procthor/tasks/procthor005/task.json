@@ -44,9 +44,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm going to serve the rice. Please pick up your plate and stand near the counter.",
-  "max_steps": 46,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'm going to serve the rice. Please pick up your plate and stand near the counter."
 }

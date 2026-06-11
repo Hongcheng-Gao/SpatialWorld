@@ -58,9 +58,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm leaving the room, please turn off all the lights.",
-  "max_steps": 60,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'm leaving the room, please turn off all the lights."
 }

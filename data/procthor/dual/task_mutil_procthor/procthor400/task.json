@@ -55,9 +55,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm a bit hungry. First, please go to the kitchen to get the bread and bring it to the dining table in the bedroom. After that, pick up a box from the dining table and take it back to the kitchen.",
-  "max_steps": 70,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'm a bit hungry. First, please go to the kitchen to get the bread and bring it to the dining table in the bedroom. After that, pick up a box from the dining table and take it back to the kitchen."
 }

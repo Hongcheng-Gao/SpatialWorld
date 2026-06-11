@@ -30,9 +30,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "Can you get the faucet running and grab the toilet paper? I'll use it when I'm done washing up.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "Can you get the faucet running and grab the toilet paper? I'll use it when I'm done washing up."
 }

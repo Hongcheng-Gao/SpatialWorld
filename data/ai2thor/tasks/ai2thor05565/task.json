@@ -44,9 +44,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "Could you grab my phone from the dining table and bring it to the sofa? I'm feeling a bit lazy and don't want to get up.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "Could you grab my phone from the dining table and bring it to the sofa? I'm feeling a bit lazy and don't want to get up."
 }

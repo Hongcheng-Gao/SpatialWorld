@@ -54,9 +54,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "The toilet is dirty. Please pick up the plunger and wait beside the toilet while I clean it.",
-  "max_steps": 58,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "The toilet is dirty. Please pick up the plunger and wait beside the toilet while I clean it."
 }

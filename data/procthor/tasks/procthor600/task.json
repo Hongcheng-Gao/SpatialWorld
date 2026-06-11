@@ -46,9 +46,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I am finishing my day. To keep the walkways clear, please relocate to the bedroom and position yourself by a bedside.",
-  "max_steps": 56,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level1 Navigation"
+  "target_description": "I am finishing my day. To keep the walkways clear, please relocate to the bedroom and position yourself by a bedside."
 }

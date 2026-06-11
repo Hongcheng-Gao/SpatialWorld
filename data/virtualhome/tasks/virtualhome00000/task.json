@@ -22,6 +22,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "open the tv",
-  "max_steps": 13
+  "target_description": "open the tv"
 }

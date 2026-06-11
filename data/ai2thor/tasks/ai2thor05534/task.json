@@ -36,9 +36,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm going to walk out for a bit—I don't want to leave the door open, so please pick up the key chain and turn off the light",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "I'm going to walk out for a bit—I don't want to leave the door open, so please pick up the key chain and turn off the light"
 }

@@ -44,9 +44,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I am feeling thirsty and want some water before I go to sleep. Please fill the cup with water and then carry it to the bedroom for me.",
-  "max_steps": 46,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I am feeling thirsty and want some water before I go to sleep. Please fill the cup with water and then carry it to the bedroom for me."
 }

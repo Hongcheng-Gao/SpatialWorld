@@ -30,9 +30,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm feeling chilly after my shower. First, could you get the candle from under the counter and place it up top? Then, go ahead and light it, please",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "I'm feeling chilly after my shower. First, could you get the candle from under the counter and place it up top? Then, go ahead and light it, please"
 }

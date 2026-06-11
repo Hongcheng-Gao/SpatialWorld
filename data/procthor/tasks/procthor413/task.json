@@ -46,9 +46,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I have some urgent tasks to handle. Please go to the bedroom and bring a laptop to the kitchen for me.",
-  "max_steps": 64,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I have some urgent tasks to handle. Please go to the bedroom and bring a laptop to the kitchen for me."
 }

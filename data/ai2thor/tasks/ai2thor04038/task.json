@@ -50,9 +50,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm going on a long trip. Please turn off my phone and put it in the safe. Remember to close the safe door.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'm going on a long trip. Please turn off my phone and put it in the safe. Remember to close the safe door."
 }

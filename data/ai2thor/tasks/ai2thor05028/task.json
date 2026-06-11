@@ -34,8 +34,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "Please help me with this task in the scene: toggle the laptop on and clean the bed.",
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3"
+  "target_description": "Please help me with this task in the scene: toggle the laptop on and clean the bed."
 }

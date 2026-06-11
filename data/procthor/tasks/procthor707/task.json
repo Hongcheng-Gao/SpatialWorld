@@ -50,9 +50,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'd like to wipe the bed. Please pick up a cloth and stand beside the bed while I wait.",
-  "max_steps": 58,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'd like to wipe the bed. Please pick up a cloth and stand beside the bed while I wait."
 }

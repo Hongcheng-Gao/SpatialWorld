@@ -1,15 +1,15 @@
-# CARLA 语义导航任务定义
-# 聚焦于 Visual Grounding（视觉定位）和 Spatial Reasoning（空间推理）
+# CARLA semantic navigation task definitions
+# Focused on visual grounding and spatial reasoning
 
 tasks:
   # ============================================
-  # 任务 1：基础路点导航
+  # Task 1: Basic waypoint navigation
   # ============================================
   navigate_to_waypoint:
     description: |
-      【导航任务】请驾驶车辆到达目标位置。
-      目标坐标已在仪表盘显示，距离约 150 米。
-      要求：安全驾驶，遵守交通规则，到达后停车。
+      [Navigation] Drive the vehicle to the target location.
+      The target coordinates are shown on the dashboard, about 150 meters away.
+      Requirements: drive safely, follow traffic rules, and stop after arrival.
     map: Town01
     max_steps: 30
     waypoint:
@@ -24,9 +24,9 @@ tasks:
   # ============================================
   visual_landmark_navigation:
     description: |
-      【视觉导航任务】不依赖 GPS，根据视觉线索导航。
-      提示：前方第二个路口右转，然后沿着红色建筑物的方向行驶。
-      到达一个有加油站的路口后停车。
+      [Visual Navigation] Navigate without GPS using visual cues.
+      Hint: turn right at the second intersection ahead, then follow the red building.
+      Stop at the intersection with a gas station.
     map: Town03
     max_steps: 40
     success_condition:
@@ -38,16 +38,16 @@ tasks:
       z: 0.5
 
   # ============================================
-  # 任务 3：复杂指令交互（Complex Instruction Following）
+  # Task 3: Complex instruction following
   # ============================================
   complex_instruction:
     description: |
-      【复杂指令任务】执行多步骤导航。
-      1. 首先沿当前道路直行
-      2. 在前方路口左转
-      3. 继续行驶约 100 米
-      4. 在看到停车标志的位置停车
-      注意：保持安全车速，避免碰撞。
+      [Complex Instruction] Execute a multi-step navigation plan.
+      1. Continue straight along the current road
+      2. Turn left at the next intersection
+      3. Drive about 100 meters further
+      4. Stop when you see a stop sign
+      Note: maintain a safe speed and avoid collisions.
     map: Town02
     max_steps: 35
     waypoint:
@@ -59,16 +59,16 @@ tasks:
       threshold: 10.0
 
   # ============================================
-  # 任务 4：交通规则遵守
+  # Task 4: Traffic rule compliance
   # ============================================
   traffic_light_compliance:
     description: |
-      【交通规则任务】模拟城市驾驶场景。
-      要求：
-      - 遇到红灯必须停车等待
-      - 绿灯时正常通行
-      - 黄灯时减速准备停车
-      目标：安全通过 3 个路口后到达目标点。
+      [Traffic Rules] Simulate an urban driving scenario.
+      Requirements:
+      - Stop and wait at red lights
+      - Proceed normally at green lights
+      - Slow down and prepare to stop at yellow lights
+      Goal: safely pass 3 intersections and reach the target point.
     map: Town03
     max_steps: 50
     waypoint:
@@ -80,14 +80,14 @@ tasks:
       threshold: 10.0
 
   # ============================================
-  # 任务 5：车道保持测试
+  # Task 5: Lane keeping
   # ============================================
   lane_following:
     description: |
-      【车道保持任务】测试车道保持能力。
-      要求：沿当前车道行驶至少 200 米，保持在车道中央。
-      目标速度：30-40 km/h
-      评价标准：车道偏离次数越少越好。
+      [Lane Keeping] Test lane-keeping ability.
+      Requirement: stay in the current lane for at least 200 meters and keep near the lane center.
+      Target speed: 30-40 km/h
+      Evaluation: fewer lane departures are better.
     map: Town04
     max_steps: 40
     success_condition:
@@ -96,16 +96,16 @@ tasks:
       max_invasions: 5
 
   # ============================================
-  # 任务 6：紧急情况处理（Corner Case）
+  # Task 6: Emergency handling (corner case)
   # ============================================
   emergency_handling:
     description: |
-      【紧急情况任务】测试应急反应能力。
-      场景：前方可能有障碍物或突发情况。
-      要求：
-      - 保持警觉，观察前方道路
-      - 发现障碍物时及时停车或绕行
-      - 安全到达目标位置
+      [Emergency Handling] Test emergency response ability.
+      Scenario: there may be obstacles or unexpected events ahead.
+      Requirements:
+      - Stay alert and watch the road ahead
+      - Stop or detour promptly when an obstacle appears
+      - Reach the target location safely
     map: Town01
     max_steps: 30
     waypoint:
@@ -117,11 +117,11 @@ tasks:
       threshold: 10.0
 
 # ============================================
-# 预设难度
+# Difficulty presets
 # ============================================
 difficulty_presets:
   easy:
-    time_slice_seconds: 2.0  # 更长的执行时间
+    time_slice_seconds: 2.0  # Longer action execution window
     max_steps: 50
     
   medium:
@@ -129,5 +129,5 @@ difficulty_presets:
     max_steps: 35
     
   hard:
-    time_slice_seconds: 1.0  # 更短的执行时间，需要更频繁决策
+    time_slice_seconds: 1.0  # Shorter action window; requires more frequent decisions
     max_steps: 25

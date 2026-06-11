@@ -41,9 +41,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "Please clean the pan and bowl for me, then turn off the light; I'm getting ready to leave.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "Please clean the pan and bowl for me, then turn off the light; I'm getting ready to leave."
 }

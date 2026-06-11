@@ -22,9 +22,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I’d like to start working from the bedside—could you please move the laptop from the desk to the bed?",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Study and Work",
-  "Level": "Level3"
+  "target_description": "I’d like to start working from the bedside—could you please move the laptop from the desk to the bed?"
 }

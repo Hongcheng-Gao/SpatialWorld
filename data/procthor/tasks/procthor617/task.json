@@ -47,9 +47,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I am cooking and need to check my phone. Please navigate to the sofa in the living room to pick up the phone, then navigate to the kitchen and place it on the countertop.",
-  "max_steps": 56,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I am cooking and need to check my phone. Please navigate to the sofa in the living room to pick up the phone, then navigate to the kitchen and place it on the countertop."
 }

@@ -34,9 +34,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm getting a little sleepy and want to go play on my phone in bed. I need to take my phone from the table to the bed",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Entertainment (Game/Sports)",
-  "Level": "Level3"
+  "target_description": "I'm getting a little sleepy and want to go play on my phone in bed. I need to take my phone from the table to the bed"
 }

@@ -9,7 +9,7 @@ api:
   max_retries: 3                      # number of retry attempts on API failure (exponential backoff)
 
 model:
-  name: "YOUR_LOCAL_MODEL_NAME"            # model name - 璇锋浛鎹负鎮ㄦ湰鍦伴儴缃茬殑妯″瀷鍚嶇О锛堥€氳繃 curl htt. 鏌ョ湅锛?
+  name: "YOUR_LOCAL_MODEL_NAME"                        # replace with your locally deployed model name
   api_key: null
   api_base: null
   temperature: 1.0

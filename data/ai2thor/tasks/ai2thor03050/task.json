@@ -45,9 +45,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I've washed the apple and lettuce; please take them from the sink to the countertop.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I've washed the apple and lettuce; please take them from the sink to the countertop."
 }

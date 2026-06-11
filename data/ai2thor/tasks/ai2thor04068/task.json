@@ -39,9 +39,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "Please put my keychain in the box.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "Please put my keychain in the box."
 }

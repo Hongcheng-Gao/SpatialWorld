@@ -37,9 +37,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "The kitchen is ready. Please fill a cup with water and turn off the light.",
-  "max_steps": 30,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "The kitchen is ready. Please fill a cup with water and turn off the light."
 }

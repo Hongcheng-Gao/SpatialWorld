@@ -25,9 +25,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'd like some soup. Please bring me the spoon to the table.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'd like some soup. Please bring me the spoon to the table."
 }

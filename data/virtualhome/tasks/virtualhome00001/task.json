@@ -30,6 +30,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to eat something. Please open the microwave and refrigerator doors. I'd like to heat something up.",
-  "max_steps": 15
+  "target_description": "I want to eat something. Please open the microwave and refrigerator doors. I'd like to heat something up."
 }

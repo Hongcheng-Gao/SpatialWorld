@@ -42,8 +42,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "I want to read and check my phone, so please open the book gently so it stays open and then pick up the cell phone carefully and hold it securely and turn on the cell phone and wait until you can tell it's powered on.",
-  "Evaluation_Type": "Conditional",
-  "Category": "Study and Work",
-  "Level": "Level3"
+  "target_description": "I want to read and check my phone, so please open the book gently so it stays open and then pick up the cell phone carefully and hold it securely and turn on the cell phone and wait until you can tell it's powered on."
 }

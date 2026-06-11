@@ -47,9 +47,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm about to cook. Please put the potato and egg in the pan and remember to close the refrigerator door.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'm about to cook. Please put the potato and egg in the pan and remember to close the refrigerator door."
 }

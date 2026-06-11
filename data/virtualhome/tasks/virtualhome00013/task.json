@@ -26,6 +26,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I've packed up and I'm ready to head out. Please help me turn off the ceiling light in this room—the switch is by the door.",
-  "max_steps": 19
+  "target_description": "I've packed up and I'm ready to head out. Please help me turn off the ceiling light in this room—the switch is by the door."
 }

@@ -24,6 +24,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm done eating. Can you see the dish bowl on the shelf? Pick it up.",
-  "max_steps": 33
+  "target_description": "I'm done eating. Can you see the dish bowl on the shelf? Pick it up."
 }

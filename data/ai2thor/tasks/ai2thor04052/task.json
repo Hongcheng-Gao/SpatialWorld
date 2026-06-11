@@ -41,9 +41,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I need to get a new phone. Please break the phone in front of you and put it in the box on the right.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I need to get a new phone. Please break the phone in front of you and put it in the box on the right."
 }

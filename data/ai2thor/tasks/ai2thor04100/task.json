@@ -56,9 +56,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "Please place all the pens on the right desk next to the bed on the table by the windows.",
-  "max_steps": 30,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "Please place all the pens on the right desk next to the bed on the table by the windows."
 }

@@ -21,6 +21,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm a bit hungry. Can you see the pie on the table? Pass it to me.",
-  "max_steps": 13
+  "target_description": "I'm a bit hungry. Can you see the pie on the table? Pass it to me."
 }

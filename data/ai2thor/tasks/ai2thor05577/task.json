@@ -33,9 +33,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I accidentally threw the paper into the trash can next to the toilet. Could you go over, take it out, and place it on the counter top for me?",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "I accidentally threw the paper into the trash can next to the toilet. Could you go over, take it out, and place it on the counter top for me?"
 }

@@ -26,6 +26,5 @@
       1.0
     ],
     "threshold_label": "strict"
-  },
-  "max_steps": 50
+  }
 }

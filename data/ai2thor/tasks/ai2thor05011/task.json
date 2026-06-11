@@ -30,9 +30,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "It's not needed right now, so please turn off the desk lamp on the desk and confirm it's really off.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3"
+  "target_description": "It's not needed right now, so please turn off the desk lamp on the desk and confirm it's really off."
 }

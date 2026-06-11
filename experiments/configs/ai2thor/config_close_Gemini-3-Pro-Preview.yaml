@@ -30,22 +30,22 @@ max_steps: 30 # Maximum steps per episode
 # Context management (for controlling the length of historical trajectories sent to LLM)
 context_management:
   enable_long_term_summary: false # Whether to enable long-term semantic summary (<SUMMARY> tag)
-  short_term_history_window_size: 30 # 滑动窗口大小 (recent N-step multimodal history)
+  short_term_history_window_size: 30 # Sliding window size (recent N-step multimodal history)
 
 # -----------------------------------------------------------------------------
 # Model Configuration
 # -----------------------------------------------------------------------------
 model:
   vlm:
-    # 使用自建 vLLM（本机 8000；若用 SSH 隧道则改为 127.0.0.1:18000）
+    # Self-hosted vLLM (localhost:8000; use 127.0.0.1:18000 with SSH tunnel)
     # model_name: Qwen3-VL-8B-Instruct
     # temperature: 0.2
     # max_tokens: 8192
     provider: openai
     model_name: Gemini 3-Pro-Preview
-    temperature: 1.0 # Sampling temperature (标准值)
-    top_p: 0.9       # 若 API 不支持可保持默认，不传
-    max_tokens: 4096 # Maximum number of generated tokens (标准值)
+    temperature: 1.0 # Sampling temperature (default)
+    top_p: 0.9       # Omit if the API does not support this field
+    max_tokens: 4096 # Maximum number of generated tokens (default)
     base_url: null
     api_key: null
 

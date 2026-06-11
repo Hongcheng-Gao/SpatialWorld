@@ -68,9 +68,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I've finished my work and I'm planning to rest in bed. Please turn off a desk lamp, power on a cellphone, and bring the phone to the bedside for me.",
-  "max_steps": 68,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I've finished my work and I'm planning to rest in bed. Please turn off a desk lamp, power on a cellphone, and bring the phone to the bedside for me."
 }

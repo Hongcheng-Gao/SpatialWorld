@@ -56,9 +56,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'd like to have some fresh snacks. Please go to the kitchen, open the refrigerator, cut the tomatoes into chunks, close the refrigerator, and then take one piece to a table in the kitchen.",
-  "max_steps": 36,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'd like to have some fresh snacks. Please go to the kitchen, open the refrigerator, cut the tomatoes into chunks, close the refrigerator, and then take one piece to a table in the kitchen."
 }

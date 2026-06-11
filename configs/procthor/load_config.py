@@ -14,7 +14,12 @@ _REPO_ROOT = Path(__file__).resolve().parents[2]
 if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
 
-from actions.max_steps import compute_max_steps_from_n, derive_task_n
+from actions.max_steps import (
+    compute_dual_agent_max_steps_from_steps,
+    compute_max_steps_from_n,
+    derive_dual_golden_steps,
+    derive_task_n,
+)
 
 
 class ConfigLoader:
@@ -105,6 +110,7 @@ class ConfigLoader:
             candidates.append("procthor_" + task_name[7:])
 
         search_roots = [
+            project_root / "data" / "procthor" / "dual" / "task_mutil_procthor",
             project_root / "dual_agent" / "task_mutil_procthor",
             project_root / "tasks",
             project_root / "data" / "procthor" / "tasks",
@@ -140,25 +146,26 @@ class ConfigLoader:
         return compute_max_steps_from_n(n)
 
     @staticmethod
-    def _compute_dual_agent_max_steps_from_n(n: int) -> int:
-        """Dual-agent also uses the unified per-agent cap: max_steps = 10 + 2n."""
-        return compute_max_steps_from_n(n)
+    def _compute_dual_agent_max_steps_from_steps(steps: int) -> int:
+        """Dual-agent per-agent cap: max_steps = 10 + golden_actions.steps."""
+        return compute_dual_agent_max_steps_from_steps(steps)
 
     def apply_task_by_name(self, task_name: str, *, dual_agent: bool = False) -> Dict[str, Any]:
-        """Apply task and set max_steps from golden action count n.
+        """Apply task and set max_steps from golden action metadata.
 
-        Single-agent: max_steps = 10 + 2 * n.
-        Dual-agent (dual_agent=True): per-agent max_steps also uses 10 + 2 * n.
+        Single-agent: max_steps = 10 + 2 * n (n from golden action count).
+        Dual-agent (dual_agent=True): per-agent max_steps = 10 + golden_actions.steps.
 
         NOTE: The value stored in task_config['max_steps'] is the PER-AGENT cap.
         Dual-agent main.py derives the global cap as 2 * per_agent_steps, so the
         two agents have independent step budgets (not a shared pool).
         """
         compute_max_steps = (
-            self._compute_dual_agent_max_steps_from_n
+            self._compute_dual_agent_max_steps_from_steps
             if dual_agent
             else self._compute_max_steps_from_n
         )
+        derive_n = derive_dual_golden_steps if dual_agent else self._derive_golden_action_n
         task_json_path = self._find_task_json(task_name)
         if task_json_path:
             print(f"✓ Loading task from: {task_json_path}")
@@ -170,7 +177,7 @@ class ConfigLoader:
                 "task_folder_path": task_folder_path,
                 **task_config,
             }
-            n = self._derive_golden_action_n(self.config["task"])
+            n = derive_n(self.config["task"])
             if n is not None:
                 self.config["task"]["max_steps"] = compute_max_steps(n)
             return self.config["task"]
@@ -184,7 +191,7 @@ class ConfigLoader:
             "max_steps": self.config.get("max_steps", 30),
             **preset,
         }
-        n = self._derive_golden_action_n(self.config["task"])
+        n = derive_n(self.config["task"])
         if n is not None:
             self.config["task"]["max_steps"] = compute_max_steps(n)
         return self.config["task"]
@@ -193,6 +200,7 @@ class ConfigLoader:
         project_root = Path(__file__).resolve().parents[2]
         names: set = set()
         for root in [
+            project_root / "data" / "procthor" / "dual" / "task_mutil_procthor",
             project_root / "dual_agent" / "task_mutil_procthor",
             project_root / "tasks",
             project_root / "data" / "procthor" / "tasks",

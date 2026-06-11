@@ -31,9 +31,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to take a proper break. Please pour me a glass of water and then turn on my phone—I’d like to play a game for a bit.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Entertainment",
-  "Level": "Level3"
+  "target_description": "I want to take a proper break. Please pour me a glass of water and then turn on my phone—I’d like to play a game for a bit."
 }

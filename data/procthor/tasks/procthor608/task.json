@@ -34,9 +34,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to study. Please move to the living room and turn on a laptop.",
-  "max_steps": 30,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I want to study. Please move to the living room and turn on a laptop."
 }

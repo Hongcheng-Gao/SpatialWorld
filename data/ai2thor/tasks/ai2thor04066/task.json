@@ -44,9 +44,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'd like to check the news in the newspaper and on TV. Please pick up the newspaper and turn on the TV.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Entertainment (Game/Sports)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'd like to check the news in the newspaper and on TV. Please pick up the newspaper and turn on the TV."
 }

@@ -42,9 +42,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "Please fill the bottle with water, then turn off the kitchen light. I'm leaving.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "Please fill the bottle with water, then turn off the kitchen light. I'm leaving."
 }

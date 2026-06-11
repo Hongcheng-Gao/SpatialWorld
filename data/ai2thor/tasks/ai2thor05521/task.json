@@ -33,9 +33,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to study now. Please pick up the fountain pen on the table in front of you, then go to the other desk, open the book, and study hard",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Study and Work",
-  "Level": "Level3"
+  "target_description": "I want to study now. Please pick up the fountain pen on the table in front of you, then go to the other desk, open the book, and study hard"
 }

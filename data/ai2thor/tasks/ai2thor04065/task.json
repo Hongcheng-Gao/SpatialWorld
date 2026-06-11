@@ -31,9 +31,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to drink water. Please pick up the bowl and fill it with water.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level2 Interaction"
+  "target_description": "I want to drink water. Please pick up the bowl and fill it with water."
 }

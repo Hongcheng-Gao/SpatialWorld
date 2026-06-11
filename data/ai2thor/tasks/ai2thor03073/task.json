@@ -55,9 +55,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to eat potatoes. Please put this potato on a plate and then put the plate in the microwave.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I want to eat potatoes. Please put this potato on a plate and then put the plate in the microwave."
 }

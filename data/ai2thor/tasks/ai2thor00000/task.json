@@ -29,6 +29,5 @@
     }
   ],
   "success_logic": "OR",
-  "target_description": "I found the lettuce was rotten; please help me throw it in the trash.",
-  "max_steps": 50
+  "target_description": "I found the lettuce was rotten; please help me throw it in the trash."
 }

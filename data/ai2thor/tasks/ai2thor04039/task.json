@@ -30,9 +30,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm sleepy. Please wash the bowl in front of me and then fill it with a cup of coffee.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level2 Interaction"
+  "target_description": "I'm sleepy. Please wash the bowl in front of me and then fill it with a cup of coffee."
 }

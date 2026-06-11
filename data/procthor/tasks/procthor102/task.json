@@ -43,9 +43,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "Could you go and turn on the computer screen in the room? I want to check if it's damaged. Then please wait for me near any of the dining tables in the bedroom.",
-  "max_steps": 36,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level1 Navigation"
+  "target_description": "Could you go and turn on the computer screen in the room? I want to check if it's damaged. Then please wait for me near any of the dining tables in the bedroom."
 }

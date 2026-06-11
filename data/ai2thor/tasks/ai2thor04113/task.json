@@ -42,9 +42,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "Remove the tomato from the fridge and cut it up on the countertop.",
-  "max_steps": 60,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "Remove the tomato from the fridge and cut it up on the countertop."
 }

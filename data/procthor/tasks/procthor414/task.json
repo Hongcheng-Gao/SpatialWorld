@@ -57,9 +57,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "The soap on the toilet in the bathroom is used. Please pick it up and take it to the kitchen, then throw it into the garbage can.",
-  "max_steps": 76,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "The soap on the toilet in the bathroom is used. Please pick it up and take it to the kitchen, then throw it into the garbage can."
 }

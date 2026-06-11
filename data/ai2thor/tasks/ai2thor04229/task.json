@@ -29,9 +29,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm going to start working now. Please open my laptop and start it.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Study and Work",
-  "Level": "Level2 Interaction"
+  "target_description": "I'm going to start working now. Please open my laptop and start it."
 }

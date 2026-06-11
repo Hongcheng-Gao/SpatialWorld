@@ -67,9 +67,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm planning to eat a tomato in bed. Could you go get a tomato and wait by my bedside?",
-  "max_steps": 84,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'm planning to eat a tomato in bed. Could you go get a tomato and wait by my bedside?"
 }

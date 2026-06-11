@@ -76,9 +76,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I need to get up early. Please go to the bedroom, pick up the alarm clock on the table, and place it on the bed.",
-  "max_steps": 98,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I need to get up early. Please go to the bedroom, pick up the alarm clock on the table, and place it on the bed."
 }

@@ -39,9 +39,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "I have something really important tomorrow, and I'm afraid I won't hear the alarm—could you please move the alarm clock from the desk to my side table? Thanks!",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "I have something really important tomorrow, and I'm afraid I won't hear the alarm—could you please move the alarm clock from the desk to my side table? Thanks!"
 }

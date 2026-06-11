@@ -39,6 +39,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "Place the salmon in the microwave and turn it on. Remember to close the microwave door.",
-  "max_steps": 22
+  "target_description": "Place the salmon in the microwave and turn it on. Remember to close the microwave door."
 }

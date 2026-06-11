@@ -87,9 +87,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'd like to play basketball. Please pick up the basketball and stand by the sofa in the living room while I wait.",
-  "max_steps": 124,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'd like to play basketball. Please pick up the basketball and stand by the sofa in the living room while I wait."
 }

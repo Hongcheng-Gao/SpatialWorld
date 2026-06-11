@@ -24,6 +24,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm looking for something. Help me open the cabinet.",
-  "max_steps": 22
+  "target_description": "I'm looking for something. Help me open the cabinet."
 }

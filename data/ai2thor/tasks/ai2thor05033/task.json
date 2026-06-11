@@ -36,8 +36,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "I'm preparing the scene, so please in the simulation, make the mirror dirty so its state changes to 'dirty' and then fill the mug with water until it shows it's filled, then keep it steady.",
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3"
+  "target_description": "I'm preparing the scene, so please in the simulation, make the mirror dirty so its state changes to 'dirty' and then fill the mug with water until it shows it's filled, then keep it steady."
 }

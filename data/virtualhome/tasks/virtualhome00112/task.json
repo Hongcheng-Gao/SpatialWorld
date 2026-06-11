@@ -35,6 +35,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to have some fun, so please turn on the TV and pick up a phone.",
-  "max_steps": 16
+  "target_description": "I want to have some fun, so please turn on the TV and pick up a phone."
 }

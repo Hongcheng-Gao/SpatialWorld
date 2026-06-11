@@ -58,9 +58,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm getting ready to play basketball. Please go to the bedroom, pick up the basketball, and bring it to the kitchen.",
-  "max_steps": 88,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'm getting ready to play basketball. Please go to the bedroom, pick up the basketball, and bring it to the kitchen."
 }

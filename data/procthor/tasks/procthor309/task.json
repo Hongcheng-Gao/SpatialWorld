@@ -28,9 +28,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to read a book. Please pick up a book.",
-  "max_steps": 26,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I want to read a book. Please pick up a book."
 }

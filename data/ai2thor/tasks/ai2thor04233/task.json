@@ -40,9 +40,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'd like to work in an armchair; please turn on my cell phone and bring it to the armchair.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Study and Work",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'd like to work in an armchair; please turn on my cell phone and bring it to the armchair."
 }

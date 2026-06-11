@@ -58,9 +58,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'd like to take a nap on the sofa. Please bring a pillow and wait for me next to the sofa.",
-  "max_steps": 66,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'd like to take a nap on the sofa. Please bring a pillow and wait for me next to the sofa."
 }

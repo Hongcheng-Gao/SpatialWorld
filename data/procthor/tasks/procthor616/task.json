@@ -48,9 +48,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I am going to wash my hands.Please navigate to the bathroom and turn on the faucet there.",
-  "max_steps": 92,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I am going to wash my hands.Please navigate to the bathroom and turn on the faucet there."
 }

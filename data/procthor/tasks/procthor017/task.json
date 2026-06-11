@@ -58,9 +58,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm getting ready for bed. Please bring the alarm clock over, and wait for me by my bed.",
-  "max_steps": 74,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'm getting ready for bed. Please bring the alarm clock over, and wait for me by my bed."
 }

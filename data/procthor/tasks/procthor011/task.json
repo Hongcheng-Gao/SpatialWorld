@@ -51,9 +51,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to check the time. Please pick up a watch from the bedroom and wait for me by the refrigerator.",
-  "max_steps": 60,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I want to check the time. Please pick up a watch from the bedroom and wait for me by the refrigerator."
 }

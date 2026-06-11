@@ -33,9 +33,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm getting ready for bed. Please make my bed and turn off the TV.",
-  "max_steps": 60,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level2 Interaction"
+  "target_description": "I'm getting ready for bed. Please make my bed and turn off the TV."
 }

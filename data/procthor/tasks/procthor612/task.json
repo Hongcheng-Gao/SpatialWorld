@@ -43,9 +43,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I am going to relax. Please move to the living room and turn off a desk lamp.",
-  "max_steps": 48,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I am going to relax. Please move to the living room and turn off a desk lamp."
 }

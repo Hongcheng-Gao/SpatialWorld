@@ -33,9 +33,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm about to start working out—please fill the cup with water and then pick up the baseball bat",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Entertainment",
-  "Level": "Level3"
+  "target_description": "I'm about to start working out—please fill the cup with water and then pick up the baseball bat"
 }

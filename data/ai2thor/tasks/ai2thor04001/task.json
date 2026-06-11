@@ -25,6 +25,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm about to wash my pillow. Please help me pick up the pillow from the bed.",
-  "max_steps": 30
+  "target_description": "I'm about to wash my pillow. Please help me pick up the pillow from the bed."
 }

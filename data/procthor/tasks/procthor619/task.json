@@ -52,9 +52,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to clean my living room. Please navigate to the living room and fetch the newspaper from the sofa and place it on the dining table.",
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid",
-  "max_steps": 66
+  "target_description": "I want to clean my living room. Please navigate to the living room and fetch the newspaper from the sofa and place it on the dining table."
 }

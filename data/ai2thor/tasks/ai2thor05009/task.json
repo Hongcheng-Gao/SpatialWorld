@@ -33,9 +33,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "Could you help me out by picking up the cellphone, turning it on carefully, and holding it securely?",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Study and Work",
-  "Level": "Level3"
+  "target_description": "Could you help me out by picking up the cellphone, turning it on carefully, and holding it securely?"
 }

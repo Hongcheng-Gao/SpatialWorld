@@ -44,9 +44,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "Please slice the tomato in the refrigerator, put one slice in the pot, and remember to close the refrigerator door.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "Please slice the tomato in the refrigerator, put one slice in the pot, and remember to close the refrigerator door."
 }

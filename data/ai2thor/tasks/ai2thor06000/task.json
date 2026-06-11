@@ -36,9 +36,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm getting ready to draw. Could you take a pencil from the drawer next to the bed and place the pencil on the desk for me?",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Entertainment (Game/Sports)",
-  "Level": "Level3"
+  "target_description": "I'm getting ready to draw. Could you take a pencil from the drawer next to the bed and place the pencil on the desk for me?"
 }

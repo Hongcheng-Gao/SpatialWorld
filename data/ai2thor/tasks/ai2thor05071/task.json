@@ -43,8 +43,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "Dinner is served, so please move the ladle to the dining table.",
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3"
+  "target_description": "Dinner is served, so please move the ladle to the dining table."
 }

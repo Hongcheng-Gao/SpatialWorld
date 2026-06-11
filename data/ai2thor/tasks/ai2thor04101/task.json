@@ -46,9 +46,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm getting ready for bed. Please remove my computer and phone from the bed.",
-  "max_steps": 60,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'm getting ready for bed. Please remove my computer and phone from the bed."
 }

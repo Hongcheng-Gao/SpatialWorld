@@ -25,8 +25,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "My lunch has gotten cold, so please turn on the microwave to warm it up.",
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3"
+  "target_description": "My lunch has gotten cold, so please turn on the microwave to warm it up."
 }

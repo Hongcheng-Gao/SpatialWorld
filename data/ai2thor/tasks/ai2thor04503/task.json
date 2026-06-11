@@ -28,9 +28,5 @@
     }
   ],
   "success_logic": "OR",
-  "target_description": "Please pick up the baseball bat leaning against the table by the door.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Entertainment",
-  "Level": "Level3"
+  "target_description": "Please pick up the baseball bat leaning against the table by the door."
 }

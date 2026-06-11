@@ -1,5 +1,5 @@
 # =============================================================================
-# 与 config_close_Gpt-5p4 等 close / 托管 API 配置对齐（非自建 vLLM）
+# Aligned with hosted API configs such as config_close_Gpt-5p4 (not self-hosted vLLM)
 # =============================================================================
 env:
   type: ai2thor

@@ -35,9 +35,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'd like to read the book on my desk before bed. Please tidy up the bed first, then bring the book and place it on the bed for me.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "I'd like to read the book on my desk before bed. Please tidy up the bed first, then bring the book and place it on the bed for me."
 }

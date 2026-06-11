@@ -33,9 +33,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "Can you find my dish sponge? If you do, please put it in the sink—I want to wash the dishes",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "Can you find my dish sponge? If you do, please put it in the sink—I want to wash the dishes"
 }

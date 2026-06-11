@@ -85,9 +85,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm a bit hungry and want to grab something to eat, and I'd also like to set a cozy atmosphere in the kitchen with some candlelight. Please open the fridge and place the candle in the kitchen.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'm a bit hungry and want to grab something to eat, and I'd also like to set a cozy atmosphere in the kitchen with some candlelight. Please open the fridge and place the candle in the kitchen."
 }

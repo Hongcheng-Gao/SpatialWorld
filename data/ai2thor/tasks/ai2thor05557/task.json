@@ -38,9 +38,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm about to start work—please fill the kettle with coffee, then pick it up and place it on the coffee table.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Study and Work",
-  "Level": "Level3"
+  "target_description": "I'm about to start work—please fill the kettle with coffee, then pick it up and place it on the coffee table."
 }

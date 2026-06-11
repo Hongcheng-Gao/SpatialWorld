@@ -24,9 +24,5 @@
     }
   ],
   "success_logic": "OR",
-  "target_description": "I want to exercise now, could you please hand me the tennis racket on the floor near the table?",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Entertainment",
-  "Level": "Level3"
+  "target_description": "I want to exercise now, could you please hand me the tennis racket on the floor near the table?"
 }

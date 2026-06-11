@@ -40,8 +40,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "I'm putting things where they belong, so please pick up the alarm clock, carry it over, and set it down on the desk neatly.",
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3"
+  "target_description": "I'm putting things where they belong, so please pick up the alarm clock, carry it over, and set it down on the desk neatly."
 }

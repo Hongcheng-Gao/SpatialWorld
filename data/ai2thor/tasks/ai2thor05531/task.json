@@ -36,9 +36,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "It's a bright and sunny afternoon; I'm going to turn off the wall light in the room, switch on the TV, and enjoy the rest of the day",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "It's a bright and sunny afternoon; I'm going to turn off the wall light in the room, switch on the TV, and enjoy the rest of the day"
 }

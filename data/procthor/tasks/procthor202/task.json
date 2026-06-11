@@ -74,9 +74,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I've finished my work and am going to rest in bed. Please turn off a bedside lamp, turn on a mobile phone, and stand by the bed.",
-  "max_steps": 80,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I've finished my work and am going to rest in bed. Please turn off a bedside lamp, turn on a mobile phone, and stand by the bed."
 }

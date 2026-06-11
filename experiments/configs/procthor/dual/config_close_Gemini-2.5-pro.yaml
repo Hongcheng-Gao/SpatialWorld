@@ -16,7 +16,7 @@ env:
   visibility_distance: 1.0 # Object visibility distance threshold (meters), also means interaction distance affects obj["visible"] in metadata
   dataset_name: procthor-10k # ProcTHOR dataset name
   scene_index: 0 # Scene index in the dataset (0-9999 for procthor-10k)
-  # Multi-agent (两个 agent 两个身体，对齐 AI2-THOR 的 agentCount 设计)
+  # Multi-agent (two agents, two bodies; aligned with AI2-THOR agentCount design)
   agent_count: 2
   # Rendering platform configuration:
   # - null: Auto-selection (requires X11 display server)
@@ -25,11 +25,11 @@ env:
   platform: null
 
 # -----------------------------------------------------------------------------
-# Dual-agent (two-bodies) configuration — 对齐 spatial-planning/ai2thor
+# Dual-agent (two-bodies) configuration aligned with spatial-planning/ai2thor
 # -----------------------------------------------------------------------------
 dual_agent:
-  relocate_agent2_near_agent1: true      # reset 后把 agent2 迁移到 agent1 旁边
-  second_agent_spawn_offset_m: 0.75      # 迁移时与 agent1 的水平距离（米）
+  relocate_agent2_near_agent1: true      # relocate agent2 next to agent1 after reset
+  second_agent_spawn_offset_m: 0.75      # horizontal offset from agent1 in meters
 
 # -----------------------------------------------------------------------------
 # Agent Runtime Configuration

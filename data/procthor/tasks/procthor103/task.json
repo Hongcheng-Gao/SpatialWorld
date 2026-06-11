@@ -49,9 +49,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm a bit hungry. Please bring one loaf of bread from the kitchen to the living room for me, and wait beside the sofa.",
-  "max_steps": 48,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level1 Navigation"
+  "target_description": "I'm a bit hungry. Please bring one loaf of bread from the kitchen to the living room for me, and wait beside the sofa."
 }

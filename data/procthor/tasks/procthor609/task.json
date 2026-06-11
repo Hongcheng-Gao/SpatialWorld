@@ -74,9 +74,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to watch TV. Please fetch the remote control from the table in the bedroom and navigate to the sofa in the living room.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I want to watch TV. Please fetch the remote control from the table in the bedroom and navigate to the sofa in the living room."
 }

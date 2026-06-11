@@ -33,9 +33,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm going to make coffee. Please clean the mug and then put it in the coffee machine.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'm going to make coffee. Please clean the mug and then put it in the coffee machine."
 }

@@ -24,6 +24,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'd like to find something to eat, please open the refrigerator.",
-  "max_steps": 18
+  "target_description": "I'd like to find something to eat, please open the refrigerator."
 }

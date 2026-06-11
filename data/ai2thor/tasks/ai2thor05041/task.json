@@ -34,8 +34,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "To start the research, please power on the cell phone and open the book for me.",
-  "Evaluation_Type": "Conditional",
-  "Category": "Study and Work",
-  "Level": "Level3"
+  "target_description": "To start the research, please power on the cell phone and open the book for me."
 }

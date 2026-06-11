@@ -41,8 +41,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "The soup is a bit bland, please move the salt shaker to the dining table.",
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3"
+  "target_description": "The soup is a bit bland, please move the salt shaker to the dining table."
 }

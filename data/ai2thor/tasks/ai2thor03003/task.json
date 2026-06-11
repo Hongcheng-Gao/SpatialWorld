@@ -38,9 +38,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I need to tidy up now. I need to put the apple on the right into the refrigerator, and remember to close the refrigerator door.",
-  "max_steps": 30,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I need to tidy up now. I need to put the apple on the right into the refrigerator, and remember to close the refrigerator door."
 }

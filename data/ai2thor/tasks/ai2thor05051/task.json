@@ -26,8 +26,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "Please help me with this task in the scene: break the vase.",
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3"
+  "target_description": "Please help me with this task in the scene: break the vase."
 }

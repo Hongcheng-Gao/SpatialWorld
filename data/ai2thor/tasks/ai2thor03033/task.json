@@ -48,9 +48,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm hungry. Please put the potato in the microwave ,close it and turn it on.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'm hungry. Please put the potato in the microwave ,close it and turn it on."
 }

@@ -1,8 +1,8 @@
-# 智能体靠近物体判定配置指南
+# Agent-Near-Object Success Condition Guide
 
-## 基本格式
+## Basic Format
 
-在 `task.json` 的 `success_conditions` 中添加 `agent_near_object` 条件：
+Add an `agent_near_object` condition to `success_conditions` in `task.json`:
 
 ```json
 {
@@ -12,15 +12,15 @@
 }
 ```
 
-## 参数说明
+## Parameters
 
-- **`type`**: 必须为 `"agent_near_object"`
-- **`object_type`**: 目标物体类型（如 `"Bed"`, `"Fridge"`, `"Sofa"` 等）
-- **`distance`**: 最大距离（米），默认值为 `1.0`（如果未指定）
+- **`type`**: Must be `"agent_near_object"`
+- **`object_type`**: Target object type (e.g. `"Bed"`, `"Fridge"`, `"Sofa"`)
+- **`distance`**: Maximum distance in meters (default `1.0` when omitted)
 
-## 完整示例
+## Full Examples
 
-### 示例 1：移动到床附近（1米内）
+### Example 1: Move Near Bed (within 1 m)
 
 ```json
 {
@@ -41,7 +41,7 @@
 }
 ```
 
-### 示例 2：移动到冰箱附近（0.5米内，更严格）
+### Example 2: Move Close to Fridge (within 0.5 m)
 
 ```json
 {
@@ -59,7 +59,7 @@
 }
 ```
 
-### 示例 3：组合条件（移动到床附近 + 在卧室）
+### Example 3: Near Bed + In Bedroom
 
 ```json
 {
@@ -81,7 +81,7 @@
 }
 ```
 
-### 示例 4：移动到沙发附近（2米内，较宽松）
+### Example 4: Near Sofa (within 2 m)
 
 ```json
 {
@@ -99,50 +99,50 @@
 }
 ```
 
-## 距离计算方式
+## Distance Calculation
 
-- **2D距离**：只计算 X 和 Z 坐标的距离，忽略 Y 轴（高度）
-- **公式**：`distance = sqrt((agent_x - object_x)² + (agent_z - object_z)²)`
-- **单位**：米（meters）
+- **2D distance**: Uses X and Z only; Y (height) is ignored
+- **Formula**: `distance = sqrt((agent_x - object_x)² + (agent_z - object_z)²)`
+- **Unit**: meters
 
-## 支持的物体类型
+## Supported Object Types
 
-支持所有 ProcTHOR 中的物体类型，例如：
+All ProcTHOR object types are supported, for example:
 
-- **家具**：`Bed`, `Sofa`, `Chair`, `Table`, `CounterTop`
-- **电器**：`Fridge`, `Microwave`, `Stove`, `TV`
-- **容器**：`Cabinet`, `Drawer`, `Sink`
-- **其他**：任何在场景中存在的物体类型
+- **Furniture**: `Bed`, `Sofa`, `Chair`, `Table`, `CounterTop`
+- **Appliances**: `Fridge`, `Microwave`, `Stove`, `TV`
+- **Containers**: `Cabinet`, `Drawer`, `Sink`
+- **Other**: Any object type present in the scene
 
-**注意**：支持语义变体，例如 `"Apple"` 也会匹配 `"AppleSliced"`。
+**Note:** Semantic variants are supported (e.g. `"Apple"` also matches `"AppleSliced"`).
 
-## 实现原理
+## Implementation
 
-1. 获取智能体的 (x, z) 位置
-2. 在场景中查找所有匹配 `object_type` 的对象（支持语义变体）
-3. 计算智能体到每个匹配对象的2D距离
-4. 如果最短距离 ≤ `distance`，返回成功（1.0），否则返回失败（0.0）
+1. Read the agent's (x, z) position
+2. Find all scene objects matching `object_type` (including semantic variants)
+3. Compute 2D distance from the agent to each match
+4. Return success (1.0) if the shortest distance is ≤ `distance`, otherwise failure (0.0)
 
-## 代码位置
+## Code Locations
 
-- **条件检查**：`evaluators/base.py` 第 445-490 行
-- **距离计算**：`evaluators/metrics.py` 中的 `check_agent_near_object()` 函数
-- **位置获取**：`evaluators/getters.py` 中的 `get_agent_position()` 函数
+- **Condition check**: `evaluators/base.py` lines 445-490
+- **Distance check**: `check_agent_near_object()` in `evaluators/metrics.py`
+- **Position lookup**: `get_agent_position()` in `evaluators/getters.py`
 
-## 调试信息
+## Debug Output
 
-当评估时，会输出详细的调试信息：
+During evaluation, detailed debug logs are printed:
 
 ```
-检查智能体到 Bed 的距离:
-智能体位置: (6.75, 5.25)
-最近对象: Bed|1|2|3, 距离: 0.85m, 阈值: 1.00m
-✅ 智能体在 Bed 附近 (距离: 0.85m <= 1.00m)
+Checking distance from agent to Bed:
+Agent position: (6.75, 5.25)
+Nearest object: Bed|1|2|3, distance: 0.85m, threshold: 1.00m
+Agent is near Bed (distance: 0.85m <= 1.00m)
 ```
 
-## 与其他条件的组合
+## Combining with Other Conditions
 
-`agent_near_object` 可以与其他条件组合使用：
+`agent_near_object` can be combined with other success conditions:
 
 ```json
 {

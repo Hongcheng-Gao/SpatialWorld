@@ -49,9 +49,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to eat fruit. Please pick up the apple from the table in front of you and navigate to the front of the sofa in the living room.",
-  "max_steps": 48,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I want to eat fruit. Please pick up the apple from the table in front of you and navigate to the front of the sofa in the living room."
 }

@@ -32,6 +32,7 @@ _REPO_ROOT = Path(__file__).resolve().parents[3]
 if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
 
+from actions.max_steps import derive_dual_golden_steps
 from configs.procthor.load_config import load_config
 from actions.parser import parse_action_string
 from mllm_base_agent.llm.provider import get_vlm
@@ -551,24 +552,14 @@ def run_dual_agent_loop(
     task_prompt = task_config.get("instruction") or task_config.get("description") or "Complete the task."
     per_agent_steps = int(task_config.get("max_steps", config.get("max_steps", 30)))
     max_global_steps = 2 * per_agent_steps
-    #   config/load_config.py   ：n = golden_actions     Done         
-    golden_n = None
-    try:
-        golden = task_config.get("golden_actions") or {}
-        acts = golden.get("actions") or []
-        counted = [a for a in acts if str(a).strip().upper() != "DONE"]
-        if counted:
-            golden_n = len(counted)
-        else:
-            steps_field = golden.get("steps")
-            if isinstance(steps_field, int):
-                golden_n = int(steps_field)
-    except Exception:
-        golden_n = None
-    if golden_n is not None:
-        print(f"✓          (10+2n, n={int(golden_n)}      golden actions): {per_agent_steps} |       {max_global_steps}（  agent     ）")
+    golden_steps = derive_dual_golden_steps(task_config)
+    if golden_steps is not None:
+        print(
+            f"✓ Per-agent max steps (10+n, n=golden_actions.steps={int(golden_steps)}): "
+            f"{per_agent_steps} | Global cap: {max_global_steps}"
+        )
     else:
-        print(f"✓         : {per_agent_steps} |       {max_global_steps}（  agent     ）")
+        print(f"✓ Per-agent max steps: {per_agent_steps} | Global cap: {max_global_steps}")
     enable_summary = config.get("context_management", {}).get("enable_long_term_summary", False)
     configured_history = int(config.get("context_management", {}).get("short_term_history_window_size", MODEL_HISTORY_TURNS))
     max_history = min(MODEL_HISTORY_TURNS, max(0, configured_history))

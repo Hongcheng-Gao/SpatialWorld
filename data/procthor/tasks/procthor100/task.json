@@ -34,9 +34,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm a bit thirsty and want the apple. Could you please bring an apple from the kitchen to the bedroom?",
-  "max_steps": 32,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level1 Navigation"
+  "target_description": "I'm a bit thirsty and want the apple. Could you please bring an apple from the kitchen to the bedroom?"
 }

@@ -34,9 +34,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'd like to take a nap. Could you tidy the bed and turn off the wall light for me? Thank you.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "I'd like to take a nap. Could you tidy the bed and turn off the wall light for me? Thank you."
 }

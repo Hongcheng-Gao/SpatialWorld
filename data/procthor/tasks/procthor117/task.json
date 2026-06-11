@@ -66,9 +66,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm just kidding. Please hide the watch on the kitchen counter and then quickly go to the bedroom.",
-  "max_steps": 84,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level1 Navigation"
+  "target_description": "I'm just kidding. Please hide the watch on the kitchen counter and then quickly go to the bedroom."
 }

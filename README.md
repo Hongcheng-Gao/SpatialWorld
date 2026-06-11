@@ -99,6 +99,24 @@ standard evaluation. Model-specific and historical experiment configs are kept
 separately under `experiments/configs/`, while experiment CSV files are kept under
 `experiments/csv/`.
 
+### Task Classification
+
+Per-task scenario labels and complexity types are maintained in
+[`task_classification_detail.csv`](task_classification_detail.csv) at the repository
+root. Each row maps a `task_id` to:
+
+| Column | Description |
+| --- | --- |
+| `environment` | Simulation backend (`ai2thor`, `procthor`, `carla`, etc.) |
+| `task_id` | Task identifier used in benchmark CSV files |
+| `instruction` | Natural-language task instruction |
+| `category` | Scenario category: `Daily`, `Work`, `Entertain`, `Travel`, or `Social` |
+| `task_type` | Complexity type: `Navigation`, `Interaction`, or `Hybrid` |
+
+Task JSON files under `data/` intentionally omit legacy metadata fields
+(`Evaluation_Type`, `Category`, `Level`); use the classification CSV as the
+single source of truth for category breakdowns.
+
 ## Getting Started
 
 See [Install](#install) for environment setup, then [Running Benchmarks](#running-benchmarks) to launch evaluation.
@@ -517,10 +535,29 @@ python -m scripts.game.run_benchmark
   `EndTask`, and `Communicate`.
 - The action parser maps unified actions to simulator-native commands.
 - The step budget is `10 + 2n`, where `n` is the golden action count.
+- Multi-agent tasks (Multi-AI2THOR / Multi-ProcTHOR) use **per-agent** `10 + n`, where `n` is `golden_actions.steps` in each task JSON; the global cap is `2 × (10 + n)`.
 - Model input uses 29 historical turns plus the current observation.
 - Prompts do not disclose the hidden max-step budget.
 - Metrics include Task Success Rate (TSR) and Step Efficiency (SE).
 - Evaluation uses terminal-state verification rather than trajectory matching.
+
+### Aggregating Results by Category
+
+After a benchmark run finishes, each environment writes a results CSV with
+`Task ID` and `Completed` columns (`true` / `false` / `null`). Use
+`scripts/aggregate_results_by_category.py` to join that CSV with
+`task_classification_detail.csv` and compute TSR per scenario category,
+complexity type, and environment:
+
+```bash
+python scripts/aggregate_results_by_category.py \
+  --results experiments/csv/ai2thor/Spatial-Annotation-ai2thor-gpt-5.csv \
+  --classification task_classification_detail.csv \
+  --output outputs/ai2thor-gpt-5-category-summary.csv
+```
+
+Pending tasks (`Completed` is `null` or empty) are excluded from the TSR
+denominator. The script also prints an overall summary to stdout.
 
 ## Notes
 

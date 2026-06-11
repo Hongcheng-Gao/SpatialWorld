@@ -33,7 +33,6 @@
   ],
   "success_logic": "AND",
   "target_description": "I'm going to start cooking, so I'll put a bowl on the counter.",
-  "max_steps": 100,
   "alfred_task_type": "pick_cool_then_place_in_recep",
   "original_path": "pick_cool_then_place_in_recep-Bowl-None-DiningTable-23/trial_T20190908_140248_782127"
 }

@@ -27,9 +27,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "This bar of soap is no longer useful. I'd like to throw it in the trash can next to the toilet",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "This bar of soap is no longer useful. I'd like to throw it in the trash can next to the toilet"
 }

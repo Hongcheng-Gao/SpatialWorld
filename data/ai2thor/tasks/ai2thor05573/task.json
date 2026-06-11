@@ -31,9 +31,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I don't need this rag anymore. Please throw it in the trash.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "I don't need this rag anymore. Please throw it in the trash."
 }

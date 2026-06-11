@@ -37,9 +37,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I need to use the toilet—please lift the lid and then put the toilet paper into the toilet paper hanger.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "I need to use the toilet—please lift the lid and then put the toilet paper into the toilet paper hanger."
 }

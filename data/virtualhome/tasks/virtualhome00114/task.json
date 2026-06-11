@@ -29,6 +29,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to rest for a while, please get me a pillow.",
-  "max_steps": 34
+  "target_description": "I want to rest for a while, please get me a pillow."
 }

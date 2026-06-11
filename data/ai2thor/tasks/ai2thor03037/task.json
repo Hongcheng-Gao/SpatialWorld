@@ -33,9 +33,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "The microwave is empty, but it's still on. Turn it off, and then open the microwave door.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "The microwave is empty, but it's still on. Turn it off, and then open the microwave door."
 }

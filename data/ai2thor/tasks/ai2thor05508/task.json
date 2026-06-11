@@ -32,9 +32,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "It's such a lovely day; I feel like tidying up my bed. First I'll pick up my pillow, then give the whole bed a good clean—so I can sleep nice and sound tonight.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "It's such a lovely day; I feel like tidying up my bed. First I'll pick up my pillow, then give the whole bed a good clean—so I can sleep nice and sound tonight."
 }

@@ -8,7 +8,7 @@
 # -----------------------------------------------------------------------------
 env:
   type: virtualhome # Environment type (used by wrapper factory)
-  scene: 0 # VH scene index (integer 0鈥?9; each index is a different apartment)
+  scene: 0 # VH scene index (integer 0-9; each index is a different apartment)
   width: 640 # Camera capture width (pixels)
   height: 480 # Camera capture height (pixels)
   require_visible_for_interaction: true
@@ -17,7 +17,7 @@ env:
   url: null
   port: "8080"
   # VirtualHome backend launch settings. CLI flags still override these.
-  backend_exe: 'E:\科研内容\windows_exec\windows_exec.v2.2.4\VirtualHome.exe'
+  backend_exe: null
   backend_args: "-windowed -screen-width 960 -screen-height 540"
   backend_startup_timeout: 90
   # Platform / display settings
@@ -60,7 +60,7 @@ logging:
 # Action Parameter Configuration
 # WalkForward: target distance in meters (small/medium/large = 0.25 / 0.5 / 1) is
 # converted to repeated native [WalkForward] steps using walk_forward_base_unit_meters.
-# TurnLeft/TurnRight: default 90掳; TurnLeft(small) = 30掳 (one native VH step).
+# TurnLeft/TurnRight: default 90 degrees; TurnLeft(small) = 30 degrees (one native VH step).
 # -----------------------------------------------------------------------------
 actions:
   move_small_magnitude: 0.25

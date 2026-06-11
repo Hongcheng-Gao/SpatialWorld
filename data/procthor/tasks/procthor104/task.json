@@ -61,9 +61,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I need a candle for cooking in the kitchen. Please bring one candle from the living room and wait by any counter.",
-  "max_steps": 72,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level1 Navigation"
+  "target_description": "I need a candle for cooking in the kitchen. Please bring one candle from the living room and wait by any counter."
 }

@@ -34,9 +34,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I think I left my towel in the shower. Would you mind opening the shower door and stepping in to get it for me?",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "I think I left my towel in the shower. Would you mind opening the shower door and stepping in to get it for me?"
 }

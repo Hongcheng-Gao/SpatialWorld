@@ -32,6 +32,5 @@
       0.95
     ],
     "threshold_label": "medium"
-  },
-  "max_steps": 50
+  }
 }

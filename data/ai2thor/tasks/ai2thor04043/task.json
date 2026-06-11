@@ -47,9 +47,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'd like to use my phone in bed for a while. Please turn it on and place it on the bed, and also clean the bed.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'd like to use my phone in bed for a while. Please turn it on and place it on the bed, and also clean the bed."
 }

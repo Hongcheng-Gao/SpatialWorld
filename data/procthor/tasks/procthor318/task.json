@@ -37,9 +37,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to work. Please get the phone from the bed for me, then wait beside the bed.",
-  "max_steps": 24,
-  "Evaluation_Type": "Conditional",
-  "Category": "Study and Work",
-  "Level": "Level3 Hybrid"
+  "target_description": "I want to work. Please get the phone from the bed for me, then wait beside the bed."
 }

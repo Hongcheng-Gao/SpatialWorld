@@ -29,9 +29,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I am hungry. Please find the bread and carry it into the bedroom for me.",
-  "max_steps": 30,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I am hungry. Please find the bread and carry it into the bedroom for me."
 }

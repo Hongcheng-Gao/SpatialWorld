@@ -43,9 +43,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "This potato has been in the refrigerator for a long time. Please take it out and throw it in the trash. Remember to close the refrigerator door.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "This potato has been in the refrigerator for a long time. Please take it out and throw it in the trash. Remember to close the refrigerator door."
 }

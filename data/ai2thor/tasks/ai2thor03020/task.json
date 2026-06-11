@@ -84,9 +84,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm getting ready to tidy up the kitchen. I'm thinking of putting the potato, tomato, and lettuce in the fridge. Remember to close the fridge door.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'm getting ready to tidy up the kitchen. I'm thinking of putting the potato, tomato, and lettuce in the fridge. Remember to close the fridge door."
 }

@@ -35,8 +35,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "I need some help with my electronics. Please turn on the laptop first. Once it's fully booted, power on the cell phone and make sure they both stay on.",
-  "Evaluation_Type": "Conditional",
-  "Category": "Study and Work",
-  "Level": "Level3"
+  "target_description": "I need some help with my electronics. Please turn on the laptop first. Once it's fully booted, power on the cell phone and make sure they both stay on."
 }

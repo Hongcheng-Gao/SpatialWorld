@@ -22,9 +22,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm about to exercise, please pick up this tennisracket for me.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Entertainment (Game/Sports)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'm about to exercise, please pick up this tennisracket for me."
 }

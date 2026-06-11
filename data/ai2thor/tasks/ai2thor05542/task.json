@@ -34,9 +34,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm cleaning the bathroom right now—I'm throwing the rag into the trash can",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "I'm cleaning the bathroom right now—I'm throwing the rag into the trash can"
 }

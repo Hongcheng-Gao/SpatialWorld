@@ -57,9 +57,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "We are out of paper by the sink. Could you move the tissues from the counter top to the side table next to it?",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "We are out of paper by the sink. Could you move the tissues from the counter top to the side table next to it?"
 }

@@ -37,9 +37,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "Could you please take my phone from the dining table and put it on the chair? I left it there after finishing my meal.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "Could you please take my phone from the dining table and put it on the chair? I left it there after finishing my meal."
 }

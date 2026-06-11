@@ -23,6 +23,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'd like to heat up some food. Please open the microwave door.",
-  "max_steps": 16
+  "target_description": "I'd like to heat up some food. Please open the microwave door."
 }

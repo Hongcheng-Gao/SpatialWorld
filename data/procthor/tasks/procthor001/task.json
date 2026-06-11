@@ -48,9 +48,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I need to use the toilet. Please go to the bathroom, turn on the toilet, and then return to the bedroom.",
-  "max_steps": 58,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I need to use the toilet. Please go to the bathroom, turn on the toilet, and then return to the bedroom."
 }

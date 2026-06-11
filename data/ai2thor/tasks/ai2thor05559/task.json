@@ -42,9 +42,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I am heading out to work. Could you do me a quick favor? Grab my watch from the side table and set it on the dresser, then bring my laptop along so I do not forget it.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "I am heading out to work. Could you do me a quick favor? Grab my watch from the side table and set it on the dresser, then bring my laptop along so I do not forget it."
 }

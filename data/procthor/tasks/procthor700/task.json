@@ -62,9 +62,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to clean the dog bed. Please bring the spray bottle next to the dog bed.",
-  "max_steps": 74,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I want to clean the dog bed. Please bring the spray bottle next to the dog bed."
 }

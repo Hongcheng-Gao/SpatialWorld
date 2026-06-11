@@ -32,9 +32,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "I just woke up and I’m ready to get to work—you help me tidy the bed first, then use the laptop to start working and get it booted up.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Study and Work",
-  "Level": "Level3"
+  "target_description": "I just woke up and I’m ready to get to work—you help me tidy the bed first, then use the laptop to start working and get it booted up."
 }

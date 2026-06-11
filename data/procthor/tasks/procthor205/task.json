@@ -55,9 +55,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to wash the pillow. Please pick up the pillow and bring it to the bathroom.",
-  "max_steps": 82,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I want to wash the pillow. Please pick up the pillow and bring it to the bathroom."
 }

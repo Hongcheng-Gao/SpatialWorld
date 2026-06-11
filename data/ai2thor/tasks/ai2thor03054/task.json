@@ -39,9 +39,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm outside the kitchen. Please bring the bread outside and turn off the kitchen lights.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'm outside the kitchen. Please bring the bread outside and turn off the kitchen lights."
 }

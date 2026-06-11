@@ -37,9 +37,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "Please move to the bedroom and open the box there to check if there is anything inside.",
-  "max_steps": 38,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "Please move to the bedroom and open the box there to check if there is anything inside."
 }

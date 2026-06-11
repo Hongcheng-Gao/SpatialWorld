@@ -30,11 +30,11 @@ max_steps: 30 # Maximum steps per episode
 # Context management (for controlling the length of historical trajectories sent to LLM)
 context_management:
   enable_long_term_summary: false # Whether to enable long-term semantic summary (<SUMMARY> tag)
-  short_term_history_window_size: 29 # 滑动窗口大小 (recent N-step multimodal history)
+  short_term_history_window_size: 29 # Sliding window size (recent N-step multimodal history)
 
 model:
   vlm:
-    # 使用自建 vLLM（本机 8000；若用 SSH 隧道则改为 127.0.0.1:18000）
+    # Self-hosted vLLM (localhost:8000; use 127.0.0.1:18000 with SSH tunnel)
     # model_name: Qwen3-VL-8B-Instruct
     # temperature: 0.2
     # max_tokens: 8192

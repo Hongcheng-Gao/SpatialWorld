@@ -34,9 +34,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "My pencil is broken and I want to throw it away. Could you help me drop it from the table into the trash can?",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "My pencil is broken and I want to throw it away. Could you help me drop it from the table into the trash can?"
 }

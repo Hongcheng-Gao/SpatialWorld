@@ -30,9 +30,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm about to start cooking. Please slice all the vegetables in front of you.",
-  "max_steps": 30,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level2 Interaction"
+  "target_description": "I'm about to start cooking. Please slice all the vegetables in front of you."
 }

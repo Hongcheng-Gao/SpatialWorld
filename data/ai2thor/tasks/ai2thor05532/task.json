@@ -30,9 +30,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm taking out the trash, and the glove sculpture in front of me is something I really dislike—please pick it up, walk over to the trash can, and smash it",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "I'm taking out the trash, and the glove sculpture in front of me is something I really dislike—please pick it up, walk over to the trash can, and smash it"
 }

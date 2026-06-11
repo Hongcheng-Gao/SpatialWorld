@@ -37,8 +37,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "I'm doing some chores, so please put the laptop on the desk, then tidy up the bed and wiping it until it looks clean.",
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3"
+  "target_description": "I'm doing some chores, so please put the laptop on the desk, then tidy up the bed and wiping it until it looks clean."
 }

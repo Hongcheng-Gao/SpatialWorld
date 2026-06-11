@@ -46,9 +46,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I have washed the spoon and fork; please remove them from the sink and place them on the countertop.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I have washed the spoon and fork; please remove them from the sink and place them on the countertop."
 }

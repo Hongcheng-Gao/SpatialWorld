@@ -29,9 +29,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I need to heat up the knife. Please put one knife in the pot.",
-  "max_steps": 60,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I need to heat up the knife. Please put one knife in the pot."
 }

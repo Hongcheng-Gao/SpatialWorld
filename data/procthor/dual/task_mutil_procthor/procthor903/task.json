@@ -86,9 +86,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'd like to wash my pillow while taking a bath, and I also want to display the teddy bear in the living room. Please bring the pillow to the bathroom and move the teddy bear to the living room.",
-  "max_steps": 140,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'd like to wash my pillow while taking a bath, and I also want to display the teddy bear in the living room. Please bring the pillow to the bathroom and move the teddy bear to the living room."
 }

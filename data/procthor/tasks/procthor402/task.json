@@ -57,9 +57,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "The basketball is a bit dirty and I'm planning to clean it. Please pick up a basketball from the bedroom floor and take it to the bathroom.",
-  "max_steps": 86,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "The basketball is a bit dirty and I'm planning to clean it. Please pick up a basketball from the bedroom floor and take it to the bathroom."
 }

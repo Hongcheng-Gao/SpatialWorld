@@ -26,6 +26,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'd like to get some water; please feel free to pick up any glass.",
-  "max_steps": 18
+  "target_description": "I'd like to get some water; please feel free to pick up any glass."
 }

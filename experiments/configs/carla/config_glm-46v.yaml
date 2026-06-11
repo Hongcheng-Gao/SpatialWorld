@@ -129,7 +129,7 @@ task_presets:
       threshold: 5.0
 
   traffic_light_stop:
-    description: Obey traffic lights鈥攕top on red and go on green.
+    description: Obey traffic lights - stop on red and go on green.
     max_steps: 100
     map: Town03
     success_condition:

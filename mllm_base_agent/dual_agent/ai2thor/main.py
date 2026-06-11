@@ -40,7 +40,10 @@ for _path in (str(_AI2THOR_ROOT), str(_REPO_ROOT)):
 sys.path.insert(0, str(_REPO_ROOT))
 sys.path.append(str(_AI2THOR_ROOT))
 
-from actions.max_steps import compute_max_steps_from_n
+from actions.max_steps import (
+    compute_dual_agent_max_steps_from_steps,
+    derive_dual_golden_steps,
+)
 
 from .config import load_config
 from .core.llm import get_dual_agent_vlms, get_vlm, use_separate_agent_models
@@ -74,6 +77,7 @@ def resolve_task_dir(task_id: str) -> Path:
         task_names.append(raw_path.name.replace("ai2thor", "ai2thor_", 1))
 
     for root in (
+        _REPO_ROOT / "data" / "ai2thor" / "dual" / "tasks",
         _AI2THOR_ROOT / "tasks",
         _REPO_ROOT / "data" / "ai2thor" / "tasks",
     ):
@@ -127,25 +131,10 @@ def load_task_info(task_id: str) -> dict:
     if init_actions and init_actions[-1].strip().upper() == "DONE":
         init_actions = init_actions[:-1]
     
-    golden_actions = task_info.get("golden_actions", {}) or {}
-    golden_action_list = golden_actions.get("actions", []) or []
-    counted_actions = [
-        action
-        for action in golden_action_list
-        if str(action).strip().upper() != "DONE"
-    ]
-    # n   10+2n     ：             （   Done） 
-    # task.json   golden_actions.steps    len(actions)-1   1（    Done   ），
-    #     actions   ，          10+2n        
-    if counted_actions:
-        golden_action_steps = len(counted_actions)
-    else:
-        steps_field = golden_actions.get("steps")
-        golden_action_steps = int(steps_field) if isinstance(steps_field, int) else None
-
+    golden_action_steps = derive_dual_golden_steps(task_info)
     recommended_max_steps = (
-        compute_max_steps_from_n(golden_action_steps)
-        if isinstance(golden_action_steps, int)
+        compute_dual_agent_max_steps_from_steps(golden_action_steps)
+        if golden_action_steps is not None
         else None
     )
 
@@ -262,11 +251,7 @@ def apply_agent_model_overrides(
 
 
 def compute_recursion_limit(per_agent_max_steps: int) -> int:
-    """            coordinator/think/act/evaluate    
-
-       200    10+2n             ，       
-         dual_episode_*.json（benchmark      null） 
-    """
+    """LangGraph recursion limit from per-agent max steps (10+n)."""
     total_action_cap = max(1, 2 * int(per_agent_max_steps))
     #         4–6       ，      Pass/  
     return max(500, 15 * total_action_cap)
@@ -428,7 +413,7 @@ def main():
         "--recursion-limit",
         type=int,
         default=None,
-        help="    ；    10+2n     （  15×     ）",
+        help="Override per-agent max steps (default: 10 + golden_actions.steps)",
     )
     
     args = parser.parse_args()
@@ -451,17 +436,15 @@ def main():
         print("\n⚠️    :     equal_collaboration = false")
         print("                   ")
     
-    #        （     golden_actions，     10+2n     ）
-    default_max_steps = dual_config.get("max_global_steps", 60)
+    # Per-agent budget defaults to 10 + golden_actions.steps.
+    default_per_agent_max_steps = int(
+        dual_config.get("per_agent_max_steps") or config_dict.get("max_steps", 30)
+    )
     switch_interval = dual_config.get("switch_interval", 1)
     
-    #          
     if args.max_steps:
-        default_max_steps = args.max_steps
-        if "dual_agent" not in config_dict:
-            config_dict["dual_agent"] = {}
-        config_dict["dual_agent"]["max_global_steps"] = default_max_steps
-        print(f"✓        : {default_max_steps}")
+        default_per_agent_max_steps = int(args.max_steps)
+        print(f"✓ Per-agent max steps override: {default_per_agent_max_steps}")
     
     if args.switch_interval:
         switch_interval = args.switch_interval
@@ -471,7 +454,7 @@ def main():
         print(f"✓        : {switch_interval}")
     
     print("\n     :      (Equal Collaboration)")
-    print(f"          : {default_max_steps}")
+    print(f"Default per-agent max steps: {default_per_agent_max_steps}")
     print(f"    : {switch_interval}  ")
     
     #       
@@ -489,23 +472,25 @@ def main():
         task_prompt = task_data.get('instruction', '')
         golden_action_steps = task_data.get("golden_action_steps")
         recommended_max_steps = task_data.get("recommended_max_steps")
-        task_max_steps = args.max_steps or recommended_max_steps or default_max_steps
+        per_agent_max_steps = args.max_steps or recommended_max_steps or default_per_agent_max_steps
+        global_max_steps = 2 * int(per_agent_max_steps)
         print(f"  : {task_prompt}")
         print(f"  : {task_data['scene']}")
         print(f"     : {len(task_data['init_actions'])}  ")
         if golden_action_steps is not None:
-            print(f"golden n (       ，   Done): {golden_action_steps}")
-            print(f"         (10+2n): {task_max_steps}（        {2 * task_max_steps}）")
+            print(f"golden_actions.steps: {golden_action_steps}")
+            print(f"Per-agent max steps (10+n): {per_agent_max_steps} | Global cap: {global_max_steps}")
         else:
-            print(f"        : {task_max_steps}（        {2 * task_max_steps}）")
+            print(f"Per-agent max steps: {per_agent_max_steps} | Global cap: {global_max_steps}")
 
-        recursion_limit = args.recursion_limit or compute_recursion_limit(task_max_steps)
+        recursion_limit = args.recursion_limit or compute_recursion_limit(per_agent_max_steps)
         print(f"    : {recursion_limit}")
         
         #            （    ）
         config_dict["task"] = task_data.get('task_info', {})
         config_dict.setdefault("dual_agent", {})
-        config_dict["dual_agent"]["max_global_steps"] = task_max_steps
+        config_dict["dual_agent"]["per_agent_max_steps"] = per_agent_max_steps
+        config_dict["dual_agent"]["max_global_steps"] = global_max_steps
         
         #     
         print(f"\n{'='*60}")
@@ -587,7 +572,7 @@ def main():
                 vlm=vlm,
                 agent_vlms=agent_vlms,
                 config=config_dict,
-                max_global_steps=task_max_steps,
+                max_global_steps=global_max_steps,
                 collaboration_mode=dual_config.get("collaboration_mode", "alternating"),
                 run_output_dir=output_dir,
                 skip_env_reset=True,
@@ -600,7 +585,7 @@ def main():
             print(f"{'='*60}")
             print("Agent 1   Agent 2         ")
             print(f"    :   {switch_interval}  ")
-            print(f"        : {task_max_steps} |        : {2 * task_max_steps}")
+            print(f"Per-agent max steps: {per_agent_max_steps} | Global cap: {global_max_steps}")
             print(f"{'='*60}\n")
             
             app = create_dual_agent_graph()
@@ -625,7 +610,7 @@ def main():
             print(f"     (global_step_count): {final_state.get('global_step_count', 0)}")
             print(
                 f"      : {final_state.get('global_action_count', 0)}"
-                f" / {2 * task_max_steps}"
+                f" / {global_max_steps}"
             )
             print(f"Agent 1   : {final_state.get('agent_1', {}).get('step_count', 0)}")
             print(f"Agent 2   : {final_state.get('agent_2', {}).get('step_count', 0)}")

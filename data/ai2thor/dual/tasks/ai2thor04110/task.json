@@ -35,9 +35,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I need to get ready to work, please turn on my phone and computer.",
-  "max_steps": 30,
-  "Evaluation_Type": "Conditional",
-  "Category": "Study and Work",
-  "Level": "Level3 Hybrid"
+  "target_description": "I need to get ready to work, please turn on my phone and computer."
 }

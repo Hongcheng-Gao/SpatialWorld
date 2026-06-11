@@ -25,9 +25,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm going back to my room to sleep. Please come out of the bathroom and then go back to the bedroom.",
-  "max_steps": 28,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level1 Navigation"
+  "target_description": "I'm going back to my room to sleep. Please come out of the bathroom and then go back to the bedroom."
 }

@@ -75,9 +75,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I need to make a phone call from the kitchen. Also, please put the baseball bat away and put it in the living room. Please pick up the phone and go to the kitchen, then pick up the baseball bat and go to the living room.",
-  "max_steps": 140,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I need to make a phone call from the kitchen. Also, please put the baseball bat away and put it in the living room. Please pick up the phone and go to the kitchen, then pick up the baseball bat and go to the living room."
 }

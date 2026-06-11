@@ -29,9 +29,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "Please move the soap bottle from the sink next to the faucet to the bathtub next to the faucet.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household",
-  "Level": "Level3"
+  "target_description": "Please move the soap bottle from the sink next to the faucet to the bathtub next to the faucet."
 }

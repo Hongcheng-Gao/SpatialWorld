@@ -25,9 +25,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I am done with the big clean. My rag is really dirty. Could you toss it in the trash for me?",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "I am done with the big clean. My rag is really dirty. Could you toss it in the trash for me?"
 }

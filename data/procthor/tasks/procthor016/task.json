@@ -66,9 +66,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to wash the basketball. Please bring the basketball to the faucet and wait for me.",
-  "max_steps": 90,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I want to wash the basketball. Please bring the basketball to the faucet and wait for me."
 }

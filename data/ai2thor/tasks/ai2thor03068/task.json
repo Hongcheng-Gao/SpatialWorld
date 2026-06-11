@@ -49,9 +49,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I don't want to eat lettuce, I want to eat potato. Please put the lettuce in the refrigerator and take the potato out of the refrigerator and onto the counter.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I don't want to eat lettuce, I want to eat potato. Please put the lettuce in the refrigerator and take the potato out of the refrigerator and onto the counter."
 }

@@ -33,8 +33,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "It's time to power down, so please turn off the desk lamp and confirm it's really off and then turn off the light switch and confirm it's really off.",
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3"
+  "target_description": "It's time to power down, so please turn off the desk lamp and confirm it's really off and then turn off the light switch and confirm it's really off."
 }

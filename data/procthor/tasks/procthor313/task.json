@@ -36,9 +36,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to make coffee. Please turn on a coffee machine and wait beside it.",
-  "max_steps": 24,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I want to make coffee. Please turn on a coffee machine and wait beside it."
 }

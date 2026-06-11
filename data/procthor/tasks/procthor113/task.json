@@ -43,9 +43,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "Can you see any toilet paper? If so, please bring one roll to the kitchen; the kitchen is out of paper.",
-  "max_steps": 46,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level1 Navigation"
+  "target_description": "Can you see any toilet paper? If so, please bring one roll to the kitchen; the kitchen is out of paper."
 }

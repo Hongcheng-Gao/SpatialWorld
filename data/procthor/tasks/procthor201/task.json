@@ -66,9 +66,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm getting ready to sleep. I'd like to lie in bed and watch some TV before I go to sleep. Please go to the living room and turn off one floor lamp. Then, go to the bedroom, tidy up the bed, and turn on the TV for me.",
-  "max_steps": 74,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'm getting ready to sleep. I'd like to lie in bed and watch some TV before I go to sleep. Please go to the living room and turn off one floor lamp. Then, go to the bedroom, tidy up the bed, and turn on the TV for me."
 }

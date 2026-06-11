@@ -33,9 +33,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "This tissue box is broken; please throw it in the trash can.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "This tissue box is broken; please throw it in the trash can."
 }

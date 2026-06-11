@@ -37,9 +37,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I forgot to turn off the lights and close the refrigerator door when I left. Please close them.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I forgot to turn off the lights and close the refrigerator door when I left. Please close them."
 }

@@ -61,9 +61,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "As my robot, please pick up the laptop from my bedroom and bring it to the kitchen because I need to use it there.",
-  "max_steps": 84,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level1 Navigation"
+  "target_description": "As my robot, please pick up the laptop from my bedroom and bring it to the kitchen because I need to use it there."
 }

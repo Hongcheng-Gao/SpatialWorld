@@ -31,9 +31,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'd like to drink coffee. Please put the mug in the coffee machine and turn it on.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level2 Interaction"
+  "target_description": "I'd like to drink coffee. Please put the mug in the coffee machine and turn it on."
 }

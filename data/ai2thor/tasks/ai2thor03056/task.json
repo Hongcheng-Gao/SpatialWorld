@@ -52,9 +52,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm going to clean the kitchen now. Please take a soap bottle and wash the dirty things in front of you.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'm going to clean the kitchen now. Please take a soap bottle and wash the dirty things in front of you."
 }

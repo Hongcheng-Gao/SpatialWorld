@@ -43,9 +43,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "Please move the book from the side table next to the window to the desk next to the bed on the right.",
-  "max_steps": 30,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "Please move the book from the side table next to the window to the desk next to the bed on the right."
 }

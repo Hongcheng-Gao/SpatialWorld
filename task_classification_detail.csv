@@ -1,0 +1,761 @@
+environment,task_id,instruction,category,task_type
+ai2thor,ai2thor00000,I found the lettuce was rotten; please help me throw it in the trash.,Daily,Hybrid
+ai2thor,ai2thor02436,"I want to work for a while now, please open my laptop for me.",Work,Hybrid
+ai2thor,ai2thor02437,"I want to rest for a while, please turn off the desk lamp for me.",Daily,Hybrid
+ai2thor,ai2thor02763,I want to check if the tomato is rotten. Please pick up this tomato for me.,Daily,Hybrid
+ai2thor,ai2thor03000,I'm hungry and want to take the egg out of the refrigerator and put it in the pot on the left front side. Remember to close the refrigerator door afterwards.,Daily,Hybrid
+ai2thor,ai2thor03001,"I'm hungry, so I want to slice all the vegetables in front of me.",Daily,Interaction
+ai2thor,ai2thor03002,"I'm hungry, so I want to put a slice of bread into the toaster that's already turned on.",Daily,Hybrid
+ai2thor,ai2thor03003,"I need to tidy up now. I need to put the apple on the right into the refrigerator, and remember to close the refrigerator door.",Daily,Hybrid
+ai2thor,ai2thor03004,"I need to clean the kitchen. After cleaning the dirty pot, I need to pick it up.",Daily,Interaction
+ai2thor,ai2thor03005,The kitchen is ready. Please fill a cup with water and turn off the light.,Daily,Hybrid
+ai2thor,ai2thor03006,"I'm full. Now I need to put the bread in the refrigerator, and remember to close the refrigerator door.",Daily,Hybrid
+ai2thor,ai2thor03007,I'm about to start cooking. Please slice all the vegetables in front of you.,Daily,Interaction
+ai2thor,ai2thor03008,I'm about to cook. Please put the egg in the pot.,Daily,Hybrid
+ai2thor,ai2thor03009,I'm going to clean the kitchen now. Please clean the dirty mug and cup in front of you and put them in the refrigerator. Remember to close the refrigerator door.,Daily,Hybrid
+ai2thor,ai2thor03010,I'm hungry. Please put the bread in the microwave and turn it on.,Daily,Hybrid
+ai2thor,ai2thor03011,"I'm very hungry now, please slice the bread and pick it up.",Daily,Interaction
+ai2thor,ai2thor03012,"I'm very hungry now. Please put the egg on my right into the pan, crack it, and cook it.",Daily,Hybrid
+ai2thor,ai2thor03014,"I want to cook, please chop all the vegetables in front of me.",Daily,Hybrid
+ai2thor,ai2thor03015,I want to eat. Please turn off the microwave and take the egg out and put it in a bowl.,Daily,Hybrid
+ai2thor,ai2thor03016,I want to eat something. Please put the egg in the microwave and turn it on.,Daily,Hybrid
+ai2thor,ai2thor03017,I'm going to start cooking now. Please put the spatula in the pot.,Daily,Hybrid
+ai2thor,ai2thor03018,I'm going to wash the pot now. Please take everything out of the pot and wash it.,Daily,Interaction
+ai2thor,ai2thor03019,I'm about to start cooking. Please slice the tomato and put one slice into the pot.,Daily,Hybrid
+ai2thor,ai2thor03020,"I'm getting ready to tidy up the kitchen. I'm thinking of putting the potato, tomato, and lettuce in the fridge. Remember to close the fridge door.",Daily,Hybrid
+ai2thor,ai2thor03021,"I'm going to start cooking now, please take all the vegetables out of the refrigerator and put them on the counter.",Daily,Hybrid
+ai2thor,ai2thor03022,I'd like to drink coffee. Please put the mug in the coffee machine and turn it on.,Daily,Interaction
+ai2thor,ai2thor03023,I want to tidy up the kitchen. Please put the mug on the countertop and then turn off the coffee machine.,Daily,Interaction
+ai2thor,ai2thor03024,"I want to eat bread. Please slice the bread, put one slice into the toaster, and turn on the toaster.",Daily,Hybrid
+ai2thor,ai2thor03025,I need to tidy up the counter now. Please put the soap bottle in front of me on the shelf next to the window.,Daily,Hybrid
+ai2thor,ai2thor03026,I think this dish is a bit too bland. Please bring the salt shaker to the table.,Daily,Hybrid
+ai2thor,ai2thor03027,I'd like some soup. Please bring me the spoon to the table.,Daily,Hybrid
+ai2thor,ai2thor03028,I'm hungry. Please take the egg out of the refrigerator and put it in a bowl.,Daily,Hybrid
+ai2thor,ai2thor03029,I'm full. Please put the potato on a plate and then put it in the refrigerator.And remember to close the refrigerator door after putting the plate inside.,Daily,Hybrid
+ai2thor,ai2thor03030,"I'm leaving the kitchen, please turn off all the lights.",Daily,Hybrid
+ai2thor,ai2thor03031,This tomato is rotten. Please throw it in the trash can.,Daily,Hybrid
+ai2thor,ai2thor03032,I'm about to start cooking. Please slice the tomato on the left and put one slice into the pot.,Daily,Hybrid
+ai2thor,ai2thor03033,"I'm hungry. Please put the potato in the microwave ,close it and turn it on.",Daily,Hybrid
+ai2thor,ai2thor03034,I've cooked the potato. Please remove it from the microwave and place it on a plate. Remember to turn off the microwave.,Daily,Hybrid
+ai2thor,ai2thor03035,I'm going to start cooking now. Please wash the pan and then put the spatula into it.,Daily,Hybrid
+ai2thor,ai2thor03036,"I want to slice the green in the refrigerator, then take one slice and put it in the pan, remembering to close the refrigerator door.",Daily,Hybrid
+ai2thor,ai2thor03037,"The microwave is empty, but it's still on. Turn it off, and then open the microwave door.",Daily,Hybrid
+ai2thor,ai2thor03038,"Please put the potato in the refrigerator, and then take the lettuce out of the refrigerator and put it on the counter.Remember to close the fridge.",Daily,Hybrid
+ai2thor,ai2thor03040,I'm going to the kitchen to get something to eat. Please turn on the kitchen light and then pick up the apple.,Daily,Hybrid
+ai2thor,ai2thor03041,"Please clean the pan and bowl for me, then turn off the light; I'm getting ready to leave.",Daily,Hybrid
+ai2thor,ai2thor03042,I have washed the spoon and fork; please remove them from the sink and place them on the countertop.,Daily,Hybrid
+ai2thor,ai2thor03043,The pencil on the table is broken; please throw it in the trash can.,Daily,Hybrid
+ai2thor,ai2thor03044,I forgot to turn off the lights and close the refrigerator door when I left. Please close them.,Daily,Hybrid
+ai2thor,ai2thor03045,"I need to wipe my mouth, please place the tissue roll on the table.",Daily,Hybrid
+ai2thor,ai2thor03046,I'm going to make coffee. Please clean the mug and then put it in the coffee machine.,Daily,Hybrid
+ai2thor,ai2thor03047,I want to eat a potato. Please put the potato in the pot and cook it.,Daily,Hybrid
+ai2thor,ai2thor03049,This soap bottle is empty. Please throw it in the trash can.,Daily,Hybrid
+ai2thor,ai2thor03050,I've washed the apple and lettuce; please take them from the sink to the countertop.,Daily,Hybrid
+ai2thor,ai2thor03051,"Please slice the tomato in the refrigerator, put one slice in the pot, and remember to close the refrigerator door.",Daily,Hybrid
+ai2thor,ai2thor03052,"I'm hungry. Please slice the potato, put a slice in the pan, and cook it.",Daily,Hybrid
+ai2thor,ai2thor03053,I'm about to cook. Please put the potato and egg in the pan and remember to close the refrigerator door.,Daily,Hybrid
+ai2thor,ai2thor03054,I'm outside the kitchen. Please bring the bread outside and turn off the kitchen lights.,Daily,Hybrid
+ai2thor,ai2thor03056,I'm going to clean the kitchen now. Please take a soap bottle and wash the dirty things in front of you.,Daily,Hybrid
+ai2thor,ai2thor03057,I don't want to eat the apple anymore. Please put it in the refrigerator and close the refrigerator door.,Daily,Hybrid
+ai2thor,ai2thor03058,"I'm about to start cooking, please put the spatula into the pan.",Daily,Hybrid
+ai2thor,ai2thor03059,I want to eat this potato. Please put the potato in the pan and cook it until it's done.,Daily,Hybrid
+ai2thor,ai2thor03060,This egg is rotten; please throw it in the trash can.,Daily,Hybrid
+ai2thor,ai2thor03061,I've washed this tomato. Please put it in the refrigerator and remember to close the door.,Daily,Hybrid
+ai2thor,ai2thor03063,"I need to make the soup first. Please put the ladle into the pot, and then add water.",Daily,Hybrid
+ai2thor,ai2thor03064,I forgot to turn off the coffee machine and the kitchen light. Go turn them off.,Daily,Hybrid
+ai2thor,ai2thor03065,I'd like some coffee. Please put a clean mug into the coffee machine and turn it on so the mug is filled with coffee.,Daily,Hybrid
+ai2thor,ai2thor03066,I put the dirty pot in the sink. Please wash it and then put it on the dining table.,Daily,Hybrid
+ai2thor,ai2thor03067,This potato has been in the refrigerator for a long time. Please take it out and throw it in the trash. Remember to close the refrigerator door.,Daily,Hybrid
+ai2thor,ai2thor03068,"I don't want to eat lettuce, I want to eat potato. Please put the lettuce in the refrigerator and take the potato out of the refrigerator and onto the counter.",Daily,Hybrid
+ai2thor,ai2thor03069,I accidentally threw the lettuce in the trash can. Please take it out and put it on the table.,Daily,Hybrid
+ai2thor,ai2thor03070,I've just entered the kitchen. Please turn on the kitchen light and put the potato I'm holding into the refrigerator. Remember to close the refrigerator door afterwards.,Daily,Hybrid
+ai2thor,ai2thor03071,"I want to eat toast. Please slice the bread, put one slice on the toaster, and cook it.",Daily,Hybrid
+ai2thor,ai2thor03072,I accidentally burned the bread slice in the toaster. Please help me put the bread slice from the toaster into the trash can.,Daily,Hybrid
+ai2thor,ai2thor03073,I want to eat potatoes. Please put this potato on a plate and then put the plate in the microwave.,Daily,Hybrid
+ai2thor,ai2thor03074,"I want to eat an egg, not bread. Please put the bread in the refrigerator and take the egg.",Daily,Hybrid
+ai2thor,ai2thor03075,Please help me throw the apple into the trash can and turn on my phone.,Daily,Hybrid
+ai2thor,ai2thor03076,I've washed all the dishes in the sink; please take them out and put them on the counter.,Daily,Hybrid
+ai2thor,ai2thor03077,I'd like some water. Please wash the cup in front of me and then use a mug to pour a cup of water.,Daily,Hybrid
+ai2thor,ai2thor03078,"Please fill the bottle with water, then turn off the kitchen light. I'm leaving.",Daily,Hybrid
+ai2thor,ai2thor04000,I want to look up information on my phone. Please pick up the cell phone from the desk in the room.,Work,Hybrid
+ai2thor,ai2thor04001,I'm about to wash my pillow. Please help me pick up the pillow from the bed.,Daily,Hybrid
+ai2thor,ai2thor04004,Please move the book from the side table next to the window to the desk next to the bed on the right.,Work,Hybrid
+ai2thor,ai2thor04005,Please transfer the cellphone from the side table next to the window to the desk by the bed on the right.,Work,Hybrid
+ai2thor,ai2thor04006,Please move the pencil from the desk on the right to the side table by the window.,Work,Hybrid
+ai2thor,ai2thor04008,Please help me move the mug from the right side desk to side table by the window.,Daily,Hybrid
+ai2thor,ai2thor04009,I'd like to read a book. Please open the book on the table to the left and place it on the bed.,Entertain,Hybrid
+ai2thor,ai2thor04035,Please put my keychain in the safe.,Daily,Hybrid
+ai2thor,ai2thor04036,I'm getting ready for bed. Please put the teddy bear and laptop on the sofa and clean the bed.,Daily,Hybrid
+ai2thor,ai2thor04037,I'm going to study now. Please take a pen to the desk on the right and open the book.,Work,Hybrid
+ai2thor,ai2thor04038,I'm going on a long trip. Please turn off my phone and put it in the safe. Remember to close the safe door.,Travel,Hybrid
+ai2thor,ai2thor04039,I'm sleepy. Please wash the bowl in front of me and then fill it with a cup of coffee.,Daily,Interaction
+ai2thor,ai2thor04040,"I'm going to sleep now. Please close the books, and then tidy up the bed.",Daily,Interaction
+ai2thor,ai2thor04042,I'm getting ready to leave. Please hold my keychain and turn off all the lights.,Travel,Hybrid
+ai2thor,ai2thor04043,"I'd like to use my phone in bed for a while. Please turn it on and place it on the bed, and also clean the bed.",Entertain,Hybrid
+ai2thor,ai2thor04044,"I'm going home now, please turn on all the lights in the room.",Daily,Hybrid
+ai2thor,ai2thor04045,I'm about to put my watch on; please place it on the chair.,Daily,Hybrid
+ai2thor,ai2thor04046,I want to work on my laptop while watching TV. Please enable both.,Entertain,Hybrid
+ai2thor,ai2thor04047,Please turn on the TV.,Daily,Hybrid
+ai2thor,ai2thor04048,Please place the watering can on the dressing table next to it and fill it with water.,Daily,Hybrid
+ai2thor,ai2thor04049,"I don't want to watch TV anymore, please put the remote control in the box.",Daily,Hybrid
+ai2thor,ai2thor04050,I don't like the vase and statue on your left. Please smash them both.,Daily,Hybrid
+ai2thor,ai2thor04051,I'm going to eat at the dining table now. Please close my laptop and place it on the coffee table.,Daily,Hybrid
+ai2thor,ai2thor04052,I need to get a new phone. Please break the phone in front of you and put it in the box on the right.,Daily,Hybrid
+ai2thor,ai2thor04053,I want to watch TV. Please pick up the remote and turn on the TV.,Entertain,Hybrid
+ai2thor,ai2thor04054,I'm about to leave. Please take my phone and turn off all the lights.,Travel,Hybrid
+ai2thor,ai2thor04055,This tissue box is broken; please throw it in the trash can.,Daily,Hybrid
+ai2thor,ai2thor04056,I want to sleep now. Please take the pillow and turn off all the lights.,Daily,Hybrid
+ai2thor,ai2thor04057,I'd like to read a newspaper. Please bring one to the sofa.,Entertain,Hybrid
+ai2thor,ai2thor04058,"I want to work on the sofa, please turn on my laptop.",Work,Hybrid
+ai2thor,ai2thor04059,"I want to organize some things, please put the tissue box in the room or in the box.",Daily,Hybrid
+ai2thor,ai2thor04061,Please fill my indoor plants with water.,Daily,Hybrid
+ai2thor,ai2thor04062,I'd like to read a book on the sofa for a while. Please open the book and place it on the sofa.,Entertain,Hybrid
+ai2thor,ai2thor04063,"I don't want the watch anymore, please put it in the box.",Daily,Hybrid
+ai2thor,ai2thor04064,I want to go out. Please take my keychain and turn off my laptop and TV.,Travel,Hybrid
+ai2thor,ai2thor04065,I want to drink water. Please pick up the bowl and fill it with water.,Daily,Hybrid
+ai2thor,ai2thor04066,I'd like to check the news in the newspaper and on TV. Please pick up the newspaper and turn on the TV.,Entertain,Hybrid
+ai2thor,ai2thor04067,I'd like to have the bowl and plate cleaned.,Daily,Interaction
+ai2thor,ai2thor04068,Please put my keychain in the box.,Daily,Hybrid
+ai2thor,ai2thor04069,I want to work now. Please put my laptop on the coffee table and turn it on.,Work,Hybrid
+ai2thor,ai2thor04072,I want to sleep. Please turn off the TV and bring a pillow.,Daily,Hybrid
+ai2thor,ai2thor04073,Please help me put the remote control and watch into the box.,Daily,Hybrid
+ai2thor,ai2thor04100,Please place all the pens on the right desk next to the bed on the table by the windows.,Work,Hybrid
+ai2thor,ai2thor04101,I'm getting ready for bed. Please remove my computer and phone from the bed.,Daily,Hybrid
+ai2thor,ai2thor04102,I'm getting ready to leave. Please clean my bed and pick up my keychain.,Daily,Hybrid
+ai2thor,ai2thor04103,"I need to get ready for work, please turn on the main light in the room.",Work,Hybrid
+ai2thor,ai2thor04104,I need to tidy up the room. Please put my credit card and keychain in the box.,Daily,Hybrid
+ai2thor,ai2thor04105,"I want entertainment, please turn on all the electronic devices in front of me.",Entertain,Hybrid
+ai2thor,ai2thor04106,I'm going to tidy up the room. Please clean up all the dirt in front of me.,Daily,Interaction
+ai2thor,ai2thor04107,"I'm getting ready for bed, please put the alarm clock on the desk closest to my bed.",Daily,Hybrid
+ai2thor,ai2thor04108,"I want to get up and work, please turn on the computer and open the book",Work,Hybrid
+ai2thor,ai2thor04109,I'm getting ready for bed. Please make my bed and turn off the TV.,Daily,Hybrid
+ai2thor,ai2thor04110,"I need to get ready to work, please turn on my phone and computer.",Work,Hybrid
+ai2thor,ai2thor04112,Put a coffee cup with a pencil on the side table.,Daily,Hybrid
+ai2thor,ai2thor04113,Remove the tomato from the fridge and cut it up on the countertop.,Daily,Hybrid
+ai2thor,ai2thor04114,"I'm going to start cooking, so I'll put a bowl on the counter.",Daily,Hybrid
+ai2thor,ai2thor04115,I need to get ready for work. Please move the coffee from the bedside table to the desk.,Work,Hybrid
+ai2thor,ai2thor04116,"I'm hungry, please put the bread slices in the microwave to heat them up.",Daily,Hybrid
+ai2thor,ai2thor04117,I need to heat up the knife. Please put one knife in the pot.,Daily,Hybrid
+ai2thor,ai2thor04118,I'm getting ready to leave. Please leave my keys on the sofa.,Travel,Hybrid
+ai2thor,ai2thor04119,I'm going to clean the house now. Please put my keys and credit card in the box.,Daily,Hybrid
+ai2thor,ai2thor04120,"I'm leaving the room, please turn off all the lights.",Daily,Hybrid
+ai2thor,ai2thor04220,"I'm a little tired. Please turn my phone on and put it on the bed, and make the bed neatly.",Entertain,Hybrid
+ai2thor,ai2thor04221,I want to sleep. Please turn off all the lights in the room.,Daily,Hybrid
+ai2thor,ai2thor04222,I need to get ready to work. Please turn on my desk lamp and turn on my computer.,Work,Interaction
+ai2thor,ai2thor04223,Both the pencil and pen are broken; please throw them in the trash.,Daily,Hybrid
+ai2thor,ai2thor04224,"I'm about to exercise, please pick up this tennisracket for me.",Entertain,Interaction
+ai2thor,ai2thor04225,I'm tired and want to read a book in bed. Please open the book and place it on the bed.,Entertain,Hybrid
+ai2thor,ai2thor04226,"I have a runny nose, please send a box of tissues to the desk.",Daily,Hybrid
+ai2thor,ai2thor04227,I'd like to read a book in the armchair. Please open the book and place it on the armchair.,Entertain,Hybrid
+ai2thor,ai2thor04228,"I want to sleep now. Please turn off my phone, then clean the bed.",Daily,Hybrid
+ai2thor,ai2thor04229,I'm going to start working now. Please open my laptop and start it.,Work,Interaction
+ai2thor,ai2thor04230,"I want to drink water, please fill the mug with water.",Daily,Hybrid
+ai2thor,ai2thor04232,I'm going out shopping. Please take my credit card and turn off the light next to the door.,Travel,Hybrid
+ai2thor,ai2thor04233,I'd like to work in an armchair; please turn on my cell phone and bring it to the armchair.,Work,Hybrid
+ai2thor,ai2thor04234,I'm trapped outside. Please take the keychain and break the window.,Daily,Hybrid
+ai2thor,ai2thor04235,My pen is broken. Please throw the pen into the trash can.,Daily,Hybrid
+ai2thor,ai2thor04236,I want to clean the dirty mirror. Please clean the mirror.,Daily,Hybrid
+ai2thor,ai2thor04238,I want to put on my boots. Please pick up the boots located between the shelf and the dresser.,Travel,Hybrid
+ai2thor,ai2thor04239,"Please walk to the window, and if the window is intact, break it.",Daily,Hybrid
+ai2thor,ai2thor04240,Please water the houseplant as it is currently empty and lacks water.,Daily,Hybrid
+ai2thor,ai2thor04241,I am trapped and need an emergency exit. Please break any window in the room.,Daily,Hybrid
+ai2thor,ai2thor04242,I want to start working. Please open the laptop and turn it on.,Work,Interaction
+ai2thor,ai2thor04243,"I am tired from reading. Please close the book, then turn off the light switch and the desk lamp.",Daily,Hybrid
+ai2thor,ai2thor04500,I'm going to start working now. Please bring me the laptop from the sofa.,Work,Hybrid
+ai2thor,ai2thor04501,I'm thirsty. Please fill the mug at the coffee machine and put it on the dining table.,Daily,Hybrid
+ai2thor,ai2thor04502,Please pick up the tennis racket located in the aisle between the bed and the wall.,Entertain,Hybrid
+ai2thor,ai2thor04503,Please pick up the baseball bat leaning against the table by the door.,Entertain,Hybrid
+ai2thor,ai2thor04504,Please pick up the baseball bat leaning against the wall by the table and place it on the bed.,Entertain,Hybrid
+ai2thor,ai2thor04505,Please move the soap bottle from the sink next to the faucet to the bathtub next to the faucet.,Daily,Hybrid
+ai2thor,ai2thor05001,"Could you help me out by picking up the laptop, turning it on carefully, and holding it securely?",Work,Hybrid
+ai2thor,ai2thor05002,Please help me with this task in the scene: open the book and turn off the desk lamp.,Work,Hybrid
+ai2thor,ai2thor05003,"I'm checking a couple interactions, so please open the book gently so it stays open and then in the simulation, break the window using the provided interaction.",Work,Hybrid
+ai2thor,ai2thor05004,"I want this put away neatly, so please pick up the phone carefully and hold it securely and then place it on the bed and make sure it sits flat and won't slide.",Daily,Hybrid
+ai2thor,ai2thor05005,"I want this put away neatly, so please pick up the pen carefully and hold it securely and then place it on the shelf and make sure it sits flat and won't slide.",Daily,Hybrid
+ai2thor,ai2thor05006,"I want this put away neatly, so please pick up the credit card carefully and hold it securely and then place it on the side table and make sure it sits flat and won't slide.",Daily,Hybrid
+ai2thor,ai2thor05007,"It's time to power down, so please turn off the desk lamp and confirm it's really off and then pick up the book and place it on the bed.",Daily,Hybrid
+ai2thor,ai2thor05008,"I want to read and check my phone, so please open the book gently so it stays open and then pick up the cell phone carefully and hold it securely and turn on the cell phone and wait until you can tell it's powered on.",Work,Hybrid
+ai2thor,ai2thor05009,"Could you help me out by picking up the cellphone, turning it on carefully, and holding it securely?",Entertain,Hybrid
+ai2thor,ai2thor05010,"I need it running, so please turn on the laptop and wait until you can tell it's powered on.",Work,Hybrid
+ai2thor,ai2thor05011,"It's not needed right now, so please turn off the desk lamp on the desk and confirm it's really off.",Daily,Hybrid
+ai2thor,ai2thor05012,"I'm putting things where they belong, so please pick up the book, carry it over, and set it down on the bed neatly.",Entertain,Hybrid
+ai2thor,ai2thor05013,"I need it running, so please turn on the laptop and wait until you can tell it's powered on.",Work,Hybrid
+ai2thor,ai2thor05014,Could you help me out by picking up the pencil carefully and holding it securely?,Work,Hybrid
+ai2thor,ai2thor05015,Could you help me out by picking up the pen carefully and holding it securely?,Work,Hybrid
+ai2thor,ai2thor05016,"I'm putting things where they belong, so please pick up the alarm clock, carry it over, and set it down on the desk neatly.",Daily,Hybrid
+ai2thor,ai2thor05017,"I need it running, so please turn on the TV and wait until you can tell it's powered on.",Entertain,Hybrid
+ai2thor,ai2thor05021,"I'm putting things where they belong, so please pick up the phone, carry it over, and set it down on the bed neatly.",Daily,Hybrid
+ai2thor,ai2thor05022,"I need to tidy up, so please tidy up the bed by clearing any clutter and wiping it until it looks clean and then turn on the laptop and wait until you can tell it's powered on.",Work,Hybrid
+ai2thor,ai2thor05023,"I'm cleaning up before I relax, so please tidy up the bed and wiping it until it looks clean, then turn off the desk lamp and confirm it's really off.",Daily,Hybrid
+ai2thor,ai2thor05024,"I'm tidying up, so please pick up the book and place it on the nightstand, then tidy up the bed and wiping it until it looks clean.",Daily,Hybrid
+ai2thor,ai2thor05025,"I'm taking care of a couple things, so please fill the mug with water until it shows it's filled, then keep it steady and then tidy up the bed and wiping it until it looks clean.",Daily,Hybrid
+ai2thor,ai2thor05026,"I'm doing some chores, so please put the laptop on the desk, then tidy up the bed and wiping it until it looks clean.",Work,Hybrid
+ai2thor,ai2thor05027,"I'm putting things where they belong, so please pick up the cell phone, carry it over, and set it down on the bed neatly.",Daily,Hybrid
+ai2thor,ai2thor05028,Please help me with this task in the scene: toggle the laptop on and clean the bed.,Work,Hybrid
+ai2thor,ai2thor05029,"I'm putting things where they belong, so please pick up the alarm clock, carry it over, and set it down on the desk neatly.",Daily,Hybrid
+ai2thor,ai2thor05030,"I'm putting things where they belong, so please pick up the book, carry it over, and set it down on the desk neatly.",Work,Hybrid
+ai2thor,ai2thor05031,"I'm putting things where they belong, so please pick up the alarm clock, carry it over, and set it down on the desk neatly.",Daily,Hybrid
+ai2thor,ai2thor05032,"I'm running a quick test, so please in the simulation, break the mirror using the provided interaction and then fill the mug with water until it shows it's filled, then keep it steady.",Daily,Hybrid
+ai2thor,ai2thor05033,"I'm preparing the scene, so please in the simulation, make the mirror dirty so its state changes to 'dirty' and then fill the mug with water until it shows it's filled, then keep it steady.",Daily,Hybrid
+ai2thor,ai2thor05034,"I need some help with my electronics. Please turn on the laptop first. Once it's fully booted, power on the cell phone and make sure they both stay on.",Work,Hybrid
+ai2thor,ai2thor05035,"I'm running a quick test, so please in the simulation, break the laptop using the provided interaction and then pick up the cell phone carefully and hold it securely.",Daily,Hybrid
+ai2thor,ai2thor05037,"I'm testing the scene interactions, so please in the simulation, break the laptop using the provided interaction and then in the simulation, break the cell phone using the provided interaction.",Daily,Hybrid
+ai2thor,ai2thor05038,"I'm putting things where they belong, so please pick up the CD, carry it over, and set it down on the dresser neatly.",Daily,Hybrid
+ai2thor,ai2thor05039,"I'm putting things where they belong, so please pick up the keychain, carry it over, and set it down on the dresser neatly.",Daily,Hybrid
+ai2thor,ai2thor05040,"I'm putting things where they belong, so please pick up the credit card, carry it over, and set it down on the dresser neatly.",Daily,Hybrid
+ai2thor,ai2thor05041,"To start the research, please power on the cell phone and open the book for me.",Work,Hybrid
+ai2thor,ai2thor05043,"I want the space neat, so please tidy up the bed and wiping it until it looks clean.",Daily,Hybrid
+ai2thor,ai2thor05044,"It looks like it needs liquid, so please fill the houseplant with water until it shows it's filled, then keep it steady.",Daily,Hybrid
+ai2thor,ai2thor05045,"It looks like it needs liquid, so please fill the bowl with water until it shows it's filled, then keep it steady.",Daily,Hybrid
+ai2thor,ai2thor05046,"I'm preparing the scene, so please in the simulation, make the bowl dirty so its state changes to 'dirty'.",Daily,Hybrid
+ai2thor,ai2thor05048,"I need to start my remote meeting, so please toggle the laptop on.",Work,Hybrid
+ai2thor,ai2thor05049,It's time for my daily exercise; can you pick up the dumbbell from the floor.,Entertain,Interaction
+ai2thor,ai2thor05050,"It's time to power down, so please turn off the desk lamp and confirm it's really off and then turn off the light switch and confirm it's really off.",Daily,Hybrid
+ai2thor,ai2thor05051,Please help me with this task in the scene: break the vase.,Daily,Hybrid
+ai2thor,ai2thor05052,"I want it switched on, so please toggle the TV to the on position and check the room responds.",Entertain,Hybrid
+ai2thor,ai2thor05055,I want to play some games. Please switch on the laptop and the television.,Entertain,Hybrid
+ai2thor,ai2thor05056,"I want things put away, so please close the box on the table all the way until it looks fully shut.",Daily,Hybrid
+ai2thor,ai2thor05057,"I'm going to take a nap on the couch, so switch off the desk lamp right next to it.",Daily,Hybrid
+ai2thor,ai2thor05058,"I'm putting things where they belong, so please pick up the box, carry it over, and set it down on the dining table neatly.",Daily,Hybrid
+ai2thor,ai2thor05060,We are under a cyberattack. Power on the TV for news and break the laptop immediately so no one can access the data.,Entertain,Hybrid
+ai2thor,ai2thor05061,"I'm settling in on the sofa, so please turn on the laptop on the sofa and wait until you can tell it's powered on.",Work,Hybrid
+ai2thor,ai2thor05063,"The pot looks a bit dusty, so clean the pot and slice the tomato for the soup.",Daily,Hybrid
+ai2thor,ai2thor05064,"I'm planning to make soup, so please fill the pot with water and slice the tomato for me.",Daily,Hybrid
+ai2thor,ai2thor05065,"I'm about to start cooking, could you please pick up a potato for me?",Daily,Hybrid
+ai2thor,ai2thor05066,"I'm ready to start the stew, so please pick up the pot for me.",Daily,Hybrid
+ai2thor,ai2thor05068,"I'm hungry, so please slice the bread as instructed and keep the pieces together and then pick up one piece.",Daily,Hybrid
+ai2thor,ai2thor05069,"I'm putting things where they belong, so please pick up the tomato, carry it over, and set it down on the dining table neatly.",Daily,Hybrid
+ai2thor,ai2thor05070,"The soup is a bit bland, please move the salt shaker to the dining table.",Daily,Hybrid
+ai2thor,ai2thor05071,"Dinner is served, so please move the ladle to the dining table.",Daily,Hybrid
+ai2thor,ai2thor05072,I'm making a fresh summer salad; please slice the lettuce and the apple for me.,Daily,Hybrid
+ai2thor,ai2thor05073,"My lunch has gotten cold, so please turn on the microwave to warm it up.",Daily,Hybrid
+ai2thor,ai2thor05074,"I'm getting ready to eat, so please slice the apple as instructed and keep the pieces together and then slice the bread as instructed and keep the pieces together.",Daily,Hybrid
+ai2thor,ai2thor05075,"I need it running, so please turn on the faucet.",Daily,Hybrid
+ai2thor,ai2thor05076,"I'm about to cook, so please slice the lettuce as instructed and keep the pieces together.",Daily,Hybrid
+ai2thor,ai2thor05077,Please help me with this task in the scene: break the plate.,Daily,Hybrid
+ai2thor,ai2thor05078,We need to make soup for dinner; can you fill the pot with water?,Daily,Hybrid
+ai2thor,ai2thor05079,"I'm starting breakfast now, so please turn on the coffee machine for me.",Daily,Hybrid
+ai2thor,ai2thor05080,I'm feeling a bit sleepy; could you fill the cup with coffee to help me wake up?,Daily,Hybrid
+ai2thor,ai2thor05501,"I want to exercise now, could you please hand me the tennis racket on the floor near the table?",Entertain,Hybrid
+ai2thor,ai2thor05505,I see a tennis racket—could you pick it up for me? I'm ready to get a good workout in,Entertain,Hybrid
+ai2thor,ai2thor05506,I want to combine my workout with some housework—could you pick up the tennis racket in the corner and give the bed a quick clean?,Entertain,Hybrid
+ai2thor,ai2thor05508,"It's such a lovely day; I feel like tidying up my bed. First I'll pick up my pillow, then give the whole bed a good clean—so I can sleep nice and sound tonight.",Daily,Hybrid
+ai2thor,ai2thor05509,I'd like to take a nap. Could you tidy the bed and turn off the wall light for me? Thank you.,Daily,Hybrid
+ai2thor,ai2thor05510,"I have something really important tomorrow, and I'm afraid I won't hear the alarm—could you please move the alarm clock from the desk to my side table? Thanks!",Daily,Hybrid
+ai2thor,ai2thor05511,I'm so tired tonight that I want to go to bed early—could you please turn off the lights in the room? The switch is right by the door. Thanks!,Daily,Hybrid
+ai2thor,ai2thor05512,"I'd like to read the book on my desk before bed. Please tidy up the bed first, then bring the book and place it on the bed for me.",Entertain,Hybrid
+ai2thor,ai2thor05513,I'm getting a little sleepy and want to go play on my phone in bed. I need to take my phone from the table to the bed,Entertain,Hybrid
+ai2thor,ai2thor05514,My pencil is broken and I want to throw it away. Could you help me drop it from the table into the trash can?,Daily,Hybrid
+ai2thor,ai2thor05515,I feel like taking a break; I'm going to pick up my phone from the desk and turn on the TV so I can really unwind,Entertain,Hybrid
+ai2thor,ai2thor05516,I have ended my friendship and I no longer want the pencil or the fountain pen he gave me. I have already thrown the pencil into the trash. Could you throw the fountain pen into the trash for me?,Daily,Hybrid
+ai2thor,ai2thor05517,"I just woke up and I’m ready to get to work—you help me tidy the bed first, then use the laptop to start working and get it booted up.",Work,Hybrid
+ai2thor,ai2thor05518,I want to take a proper break. Please pour me a glass of water and then turn on my phone—I’d like to play a game for a bit.,Entertain,Interaction
+ai2thor,ai2thor05519,I’d like to start working from the bedside—could you please pick up the laptop?,Work,Interaction
+ai2thor,ai2thor05520,I'm about to start working out—please fill the cup with water and then pick up the baseball bat,Entertain,Hybrid
+ai2thor,ai2thor05521,"I want to study now. Please pick up the fountain pen on the table in front of you, then go to the other desk, open the book, and study hard",Work,Hybrid
+ai2thor,ai2thor05522,"I'm going to start working seriously. Please turn on the desktop computer and the laptop on the desk, then fill the bowl with water",Work,Hybrid
+ai2thor,ai2thor05523,The sunlight is lovely now—there's no need for extra light. Please switch off the bedside lamp,Daily,Interaction
+ai2thor,ai2thor05524,I'm ready to work now; the desk lamp is already on. Please turn off the wall light and open the book,Work,Hybrid
+ai2thor,ai2thor05525,I'd like to take a break and read for a while in the armchair—could you place the book on it?,Entertain,Interaction
+ai2thor,ai2thor05526,"I'd like to read in bed for a while—please take the book from the desk, put it on the bed, and open it",Entertain,Hybrid
+ai2thor,ai2thor05527,"I'm the MVP of the basketball league. Next to a painting on my bookshelf is my MVP trophy; I want to place it on the dresser , then pick up the basketball and work out",Entertain,Hybrid
+ai2thor,ai2thor05528,I'd like to work and watch TV at the same time. Could you please help me turn on the laptop and then the TV?,Work,Hybrid
+ai2thor,ai2thor05529,I'd like to work at the other desk. Please take the tissues next to the laptop and put them beside the newspaper on that desk,Daily,Hybrid
+ai2thor,ai2thor05530,I'm cleaning the room right now—please close the paper box and then pick it up for me,Daily,Interaction
+ai2thor,ai2thor05531,"It's a bright and sunny afternoon; I'm going to turn off the wall light in the room, switch on the TV, and enjoy the rest of the day",Entertain,Hybrid
+ai2thor,ai2thor05532,"I'm taking out the trash, and the glove sculpture in front of me is something I really dislike—please pick it up, walk over to the trash can, and smash it",Daily,Hybrid
+ai2thor,ai2thor05533,"The sunlight is so bright today—there's no need for the big wall light in the room, so go ahead and switch it off. Just turn on the floor lamp next to the sofa instead.",Daily,Hybrid
+ai2thor,ai2thor05534,"I'm going to walk out for a bit—I don't want to leave the door open, so please pick up the key chain and turn off the light",Travel,Hybrid
+ai2thor,ai2thor05535,"I'm the housekeeper of this room, and I need to keep it tidy every day. I'd like to water the flowers by the door first, then clear the plates from the dinner table.",Daily,Hybrid
+ai2thor,ai2thor05536,I'm about to have dinner—please take the bowl from the coffee table and bring it to the dinner table,Daily,Hybrid
+ai2thor,ai2thor05537,I've finished dinner and feel like reading the paper—please pick up the newspaper and set it right next to the bowl on the coffee table so I can relax and read.,Entertain,Hybrid
+ai2thor,ai2thor05538,I'm going to the gym and need to put my watch in the box—please pick up the watch and place it in the box,Daily,Hybrid
+ai2thor,ai2thor05539,Please pick up the book on the TV stand—the one that seems to be about deep learning—and place it on the sofa; I'll come study it in a bit,Entertain,Hybrid
+ai2thor,ai2thor05540,I'm getting ready to head out—please water the potted plant on the table and then turn off the wall light.,Daily,Hybrid
+ai2thor,ai2thor05541,"I’ve finished dinner and feel like scrolling on my phone for a bit—please pick it up from the dining table, turn it on, and set it on the coffee table so I can relax with a full stomach",Entertain,Hybrid
+ai2thor,ai2thor05542,I'm cleaning the bathroom right now—I'm throwing the rag into the trash can,Daily,Hybrid
+ai2thor,ai2thor05543,I need to use the toilet—please lift the lid and then put the toilet paper into the toilet paper hanger.,Daily,Hybrid
+ai2thor,ai2thor05545,"I want to wash my face—please pick up the soap bottle, turn on the faucet, and then put it back on the side table where it was.",Daily,Hybrid
+ai2thor,ai2thor05546,"I'm going to take a shower—open the shower door, step inside, turn on the faucet",Daily,Hybrid
+ai2thor,ai2thor05547,I've finished my shower. Please open the bathroom door for me and turn off the lights. Thank you.,Daily,Hybrid
+ai2thor,ai2thor05548,"I'm about to hop in the shower. Could you grab the soap, drop it on the tub, and pull the curtain open for me?",Daily,Hybrid
+ai2thor,ai2thor05549,I want to wash my face—could you turn on the faucet for me?,Daily,Interaction
+ai2thor,ai2thor05550,I need to use the toilet. Could you lift the seat for me? Thanks.,Daily,Interaction
+ai2thor,ai2thor05551,I'm in a hurry to use the toilet—could you take the paper towel from the sink counter and place it on the toilet for me?,Daily,Hybrid
+ai2thor,ai2thor05552,I am done with the big clean. My rag is really dirty. Could you toss it in the trash for me?,Daily,Hybrid
+ai2thor,ai2thor05553,I want to clean the shower glass—please grab the spray bottle,Daily,Interaction
+ai2thor,ai2thor05554,I've finished using the toilet and washing my hands—please take a hand towel from the hand-towel holder so I can dry them.,Daily,Interaction
+ai2thor,ai2thor05555,I'm about to start my bath—please pick up the candle next to the bathtub and place it on the countertop to keep water from splashing onto it.,Daily,Hybrid
+ai2thor,ai2thor05556,I feel like going out for a walk—could you hand me my boots?,Travel,Interaction
+ai2thor,ai2thor05557,"I'm about to start work—please fill the kettle with coffee, then pick it up and place it on the coffee table.",Daily,Interaction
+ai2thor,ai2thor05558,I need to go to the bank—could you find my credit card and hand it to me if you locate it?,Travel,Interaction
+ai2thor,ai2thor05559,"I am heading out to work. Could you do me a quick favor? Grab my watch from the side table and set it on the dresser, then bring my laptop along so I do not forget it.",Travel,Hybrid
+ai2thor,ai2thor05560,"Please find the vase that’s sitting on the shelf, pick it up, and set it on the side table next to the sofa.",Daily,Hybrid
+ai2thor,ai2thor05561,"I’m ready to really kick back and watch some TV. Could you grab the kettle, fill it up, and set it on the coffee table? Then switch the TV on for me. Nothing beats sipping water while I binge my show.",Entertain,Hybrid
+ai2thor,ai2thor05562,I'm tidying up—please put the watch and credit card from the table into the box,Daily,Interaction
+ai2thor,ai2thor05563,I'm looking for the remote. Could you look for the remote on the dresser and then set it on the coffee table in front of the TV?,Entertain,Hybrid
+ai2thor,ai2thor05564,"I'm getting sleepy—could you turn off all the lights in the room for me, including the one over the dining table and the floor lamp? Thanks.",Daily,Hybrid
+ai2thor,ai2thor05565,Could you grab my phone from the dining table and bring it to the sofa? I'm feeling a bit lazy and don't want to get up.,Entertain,Hybrid
+ai2thor,ai2thor05566,"I'd like some wine with dinner—please find my watering can, fill it with wine, and place it on the dining table",Daily,Hybrid
+ai2thor,ai2thor05567,Could you please take my phone from the dining table and put it on the chair? I left it there after finishing my meal.,Daily,Hybrid
+ai2thor,ai2thor05568,"Can you find my dish sponge? If you do, please put it in the sink—I want to wash the dishes",Daily,Hybrid
+ai2thor,ai2thor05570,"I'm going to step into the shower—please open the door for me, turn on the faucet, and hand me the towel for drying off",Daily,Hybrid
+ai2thor,ai2thor05571,I left the cloth on the counter. Could you take it to the side table by the sink?,Daily,Hybrid
+ai2thor,ai2thor05572,We are out of paper by the sink. Could you move the tissues from the counter top to the side table next to it?,Daily,Hybrid
+ai2thor,ai2thor05573,I don't need this rag anymore. Please throw it in the trash.,Daily,Hybrid
+ai2thor,ai2thor05575,My soap bottle is empty. Could you throw it in the trash for me?,Daily,Hybrid
+ai2thor,ai2thor05576,This bar of soap is no longer useful. I'd like to throw it in the trash can next to the toilet,Daily,Hybrid
+ai2thor,ai2thor05577,"I accidentally threw the paper into the trash can next to the toilet. Could you go over, take it out, and place it on the counter top for me?",Daily,Hybrid
+ai2thor,ai2thor05578,Can you get the faucet running and grab the toilet paper? I'll use it when I'm done washing up.,Daily,Interaction
+ai2thor,ai2thor05579,"I'm feeling chilly after my shower. First, could you get the candle from under the counter and place it up top? Then, go ahead and light it, please",Daily,Interaction
+ai2thor,ai2thor05580,I think I left my towel in the shower. Would you mind opening the shower door and stepping in to get it for me?,Daily,Hybrid
+ai2thor,ai2thor06000,I'm getting ready to draw. Could you take a pencil from the drawer next to the bed and place the pencil on the desk for me?,Work,Hybrid
+carla,carla00200,Walk to the position of the large tree ahead on the right. You can turn and move in any direction.,Travel,Navigation
+carla,carla00201,Walk to the newsstand next to the bus stop. You can turn and move in any direction.,Travel,Navigation
+carla,carla00202,Walk to the streetlight in front of the gas station. You can turn and move in any direction.,Travel,Navigation
+carla,carla00203,Walk to the church. You can turn and move in any direction.,Travel,Navigation
+carla,carla00204,Walk to the yellow shop next to the trash can. You can turn and move in any direction.,Travel,Navigation
+carla,carla00205,Walk to the position marked by the red line in the screenshot.You can turn and move in any direction.,Travel,Navigation
+carla,carla00206,Walk to the position marked by the red line in the screenshot.You can turn and move in any direction.,Travel,Navigation
+carla,carla00207,Walk to the position marked by the red line in the screenshot.You can turn and move in any direction.,Travel,Navigation
+carla,carla00208,Walk to the position marked by the red line in the screenshot.You can turn and move in any direction.,Travel,Navigation
+carla,carla00209,Walk to the position marked by the red line in the screenshot.You can turn and move in any direction.,Travel,Navigation
+carla,carla00210,Walk to the house with the yellow roof.You can turn and move in any direction.,Travel,Navigation
+carla,carla00211,Walk to the ResidentialBuildingRoundCorners.You can turn and move in any direction.,Travel,Navigation
+carla,carla00212,Walk to the HighwayLight_multiple.You can turn and move in any direction.,Travel,Navigation
+carla,carla00213,Walk to under the billboard.You can turn and move in any direction.,Travel,Navigation
+carla,carla00214,Walk to the streetlight near the stone.You can turn and move in any direction.,Travel,Navigation
+carla,carla00215,Walk to the position marked by the red line in the screenshot.You can turn and move in any direction.,Travel,Navigation
+carla,carla00216,Walk to the position marked by the red line in the screenshot.You can turn and move in any direction.,Travel,Navigation
+carla,carla00217,Walk to the position marked by the red line in the screenshot.You can turn and move in any direction.,Travel,Navigation
+carla,carla00218,Walk to the position marked by the red line in the screenshot.You can turn and move in any direction.,Travel,Navigation
+carla,carla00219,Walk to the position marked by the red line in the screenshot.You can turn and move in any direction.,Travel,Navigation
+carla,carla00300,I'm picking someone up. Please drive to the streetlight by the mailbox.,Travel,Navigation
+carla,carla00301,"Please turn right at the intersection ahead, then drive to the streetlight closely framed by the red box, just before the next intersection.",Travel,Navigation
+carla,carla00302,Please go straight through the traffic lights ahead and pull up next to the speed limit sign.,Travel,Navigation
+carla,carla00303,Please turn left at the traffic light ahead and go straight until the next traffic light.,Travel,Navigation
+carla,carla00304,Please continue straight ahead until you reach the traffic light shown in the image.,Travel,Navigation
+carla,carla00305,Please go straight at the intersection ahead until the next streetlight marked with red box.,Travel,Navigation
+carla,carla00306,"Please turn right at the intersection ahead, then go straight to the traffic light at the next intersection.",Travel,Navigation
+carla,carla00307,"Please go straight through this intersection, stay in this lane, and stop at the very first streetlight marked with red box you see along this roadside.",Travel,Navigation
+carla,carla00308,Please go to the location of the traffic light shown in the image.,Travel,Navigation
+carla,carla00309,Please turn right at the intersection ahead and drive to the next streetlight marked with red box.,Travel,Navigation
+carla,carla00310,Please turn left at the intersection ahead and drive to the next streetlight marked with red box.,Travel,Navigation
+carla,carla00311,Please go straight along the current road until you reach the speed limit sign.,Travel,Navigation
+carla,carla00312,Please go straight through the intersection ahead and drive to the nearest tree in front marked with red box.,Travel,Navigation
+carla,carla00313,Please drive straight through the traffic light and then stop next to streetlight marked with red box.,Travel,Navigation
+carla,carla00314,"Please follow the current lane and stop at the streetlight closely framed by the red box, situated immediately before the intersection.",Travel,Navigation
+carla,carla00315,Please go straight to the streetlight closely framed by the red box before you reach the intersection.,Travel,Navigation
+carla,carla00316,Please drive to the streetlight marked with red box after passing through this intersection.,Travel,Navigation
+carla,carla00317,Please drive to the lamppost marked with a red box next to the gate of the terracotta-colored house.,Travel,Navigation
+carla,carla00318,"Please drive to the tree marked with red box,which is in front of the house ahead.",Travel,Navigation
+carla,carla00319,Please keep going straight on this road until you reach the lamppost marked with a red box before the next intersection.,Travel,Navigation
+carla,carla00400,"Do you see the church ahead of the slide? If yes, please walk straight to the church door.",Travel,Navigation
+carla,carla00401,Do you see the streetlight just beyond the two cars in front of you? Please walk up to the streetlight.,Travel,Navigation
+carla,carla00403,I made plans with my friend to meet at the traffic light pole inside the red box up ahead. Please walk over there and wait.,Travel,Navigation
+carla,carla00404,Can you see the storefront marked by the red box? Please walk forward to the front of this shop.,Travel,Navigation
+carla,carla00405,"I want to eat here, can you see the place marked with the red box? Walk over there.",Travel,Navigation
+carla,carla00406,Please help me find the speed limit sign and walk over to it.,Travel,Navigation
+carla,carla00407,Is there a stop sign ahead? Walk over there—I want to take a closer look.,Travel,Navigation
+carla,carla00408,"Can you find the soccer goal under the Coca-Cola sign? If so, please walk over there.",Travel,Navigation
+carla,carla00409,Can you walk to the lamp post closest to the parking sign inside the soccer field?,Travel,Navigation
+carla,carla00410,See the two office hallways ahead? Walk to the second one—I need to wait for someone there.,Travel,Navigation
+carla,carla00411,Can you see the tree by the red frame? Walk over there. I need to wait for a friend.,Travel,Navigation
+carla,carla00412,Walk to the security booth in front of this lawn. I need to find the guard.,Travel,Navigation
+carla,carla00413,Can you see the Coca-Cola billboard? Please walk underneath it.,Travel,Navigation
+carla,carla00414,Walk to the last tree inside the red frame. I think I left something there.,Travel,Navigation
+carla,carla00415,Walk to the traffic light under the red frame.,Travel,Navigation
+carla,carla00416,Can you see the shop inside the red box? Walk over there. I'm a bit hungry.,Travel,Navigation
+carla,carla00417,Can you see the utility pole in the image? Walk underneath it,Travel,Navigation
+carla,carla00418,Can you find the traffic light closest to the house with the red border? Walk over to it.,Travel,Navigation
+carla,carla00419,Can you see the storefront marked by the red box? Please walk forward to the front of this shop.,Travel,Navigation
+carla,carla00500,Head toward the streetlamp located within the red box in the image. You can turn and move in any direction.,Travel,Navigation
+carla,carla00501,Walk to the target point. You can turn and move in any direction.,Travel,Navigation
+carla,carla00502,Walk to the target point. You can turn and move in any direction.,Travel,Navigation
+carla,carla00503,Walk to the target point. You can turn and move in any direction.,Travel,Navigation
+carla,carla00504,Walk to the target point. You can turn and move in any direction.,Travel,Navigation
+carla,carla00505,Walk to the target point. You can turn and move in any direction.,Travel,Navigation
+carla,carla00506,Walk to the target point. You can turn and move in any direction.,Travel,Navigation
+carla,carla00507,Walk to the target point. You can turn and move in any direction.,Travel,Navigation
+carla,carla00508,Walk to the target point. You can turn and move in any direction.,Travel,Navigation
+carla,carla00509,Walk to the target point. You can turn and move in any direction.,Travel,Navigation
+carla,carla00510,Walk to the target point. You can turn and move in any direction.,Travel,Navigation
+carla,carla00511,Walk to the house behind the car.You can turn and move in any direction.,Travel,Navigation
+carla,carla00512,Walk to the nearest traffic light beside the tree. You may turn and move in any direction.,Travel,Navigation
+carla,carla00513,Walk to the gas station. You can turn and move in any direction.,Travel,Navigation
+carla,carla00514,Walk to the tree positioned in the middle section of the straight wire fence.You can turn and move in any direction.,Travel,Navigation
+carla,carla00515,Walk to the stopsign. You can turn and move in any direction.,Travel,Navigation
+carla,carla00516,Walk to the traffic light. You can turn and move in any direction.,Travel,Navigation
+carla,carla00517,Walk to the area near the yellow-roofed bungalow. You can turn and move in any direction.,Travel,Navigation
+carla,carla00518,Please walk to Walk toward the streetlight opposite the house with the yellow roof. You can turn and move in any direction.,Travel,Navigation
+carla,carla00519,Walk to the speed limit station. You can turn and move in any direction.,Travel,Navigation
+carla,carla00000,Walk forward to reach the city lamp.,Travel,Navigation
+embodiedcity,embodiedcity_2000,Let's head to the entrance of the building up front-I'm here to pick up a friend.,Daily,Navigation
+embodiedcity,embodiedcity_2001,"I have to dump my garbage, let me go find a trash can.",Daily,Navigation
+embodiedcity,embodiedcity_2002,I need to find a shaded spot under a tree against the wall to cool off.,Daily,Navigation
+embodiedcity,embodiedcity_2003,I want to stand above the red logo to take a photo.,Entertain,Navigation
+embodiedcity,embodiedcity_2004,"I have to dump my garbage, let me go find a trash can.",Daily,Navigation
+embodiedcity,embodiedcity_2005,Please move to the first lamppost on your right.,Travel,Navigation
+embodiedcity,embodiedcity_2006,I want to stand on the ground and observe the structure of the air conditioner outdoor unit carefully.,Daily,Navigation
+embodiedcity,embodiedcity_2007,I want to find the nearest no-parking sign to check if my car can be parked around this area.,Travel,Navigation
+embodiedcity,embodiedcity_2008,"I'm tired from walking around the park, so I want to find a chair to sit on.",Daily,Navigation
+embodiedcity,embodiedcity_2009,I want to observe the shutters of the building ahead up close as soon as possible.,Travel,Navigation
+embodiedcity,embodiedcity_3000,I want to check the surroundings under the shade of the trees. Please move to the tree at the front-left.,Travel,Navigation
+embodiedcity,embodiedcity_3001,I need to verify whether this landmark is correct. Please move next to the stone lion ornament on the right.,Travel,Navigation
+embodiedcity,embodiedcity_3002,I suspect I dropped something around here. Please move to the nearest trash bin and help me watch the ground and the surrounding area.,Daily,Navigation
+embodiedcity,embodiedcity_3003,I want to confirm the location of the road facilities to avoid going the wrong way. Please move to the manhole cover ahead.,Travel,Navigation
+embodiedcity,embodiedcity_3004,I need to use the fire hydrant as a reference point for positioning. Please move to the nearest fire hydrant.,Travel,Navigation
+embodiedcity,embodiedcity_3005,I want to follow the direction of the fence to look for an entrance or passage. Please move next to the black fence.,Travel,Navigation
+embodiedcity,embodiedcity_3006,I need to confirm exactly where the trash drop-off point is. Please move to the nearest garbage collection point.,Daily,Navigation
+embodiedcity,embodiedcity_3007,I need to confirm the entrance to this house. Please move to the doorway of the house ahead.,Travel,Navigation
+embodiedcity,embodiedcity_3008,I want to clearly see the information on the billboard. Please move next to the billboard.,Travel,Navigation
+embodiedcity,embodiedcity_3009,I’m going to place a positioning marker near the flower bed. Please move to the center of the circular flower bed.,Travel,Navigation
+embodiedcity,embodiedcity_4000,I need to withdraw money from Huaxia Bank. Help me fly to their sign to see if they're open.,Travel,Navigation
+embodiedcity,embodiedcity_4001,My friend asked to meet me at the China Merchants Bank entrance. Help me move to their sign and wait for him.,Daily,Navigation
+embodiedcity,embodiedcity_4005,I need to observe the traffic conditions at this intersection. Help me move to the center of the crossroads.,Travel,Navigation
+embodiedcity,embodiedcity_4006,I want to check if the traffic light in front of the drone is working properly. Help me fly closer to that green signal light to take a look.,Travel,Navigation
+embodiedcity,embodiedcity_4007,My keys might have fallen near the rightmost stone pier. Help me move there and look around carefully.,Daily,Navigation
+embodiedcity,embodiedcity_4008,That orange billboard has the contact number I need. Help me fly closer to get a clear photo.,Travel,Navigation
+embodiedcity,embodiedcity_4009,My friend lives in the building in front of the drone but can't find the entrance. Help me move to the residential building entrance to confirm the location.,Travel,Navigation
+embodiedcity,embodiedcity_5000,Please move to the vicinity of the word Bank on the nearest Huaxia Bank sign.,Travel,Navigation
+embodiedcity,embodiedcity_5001,Please move to the nearest fire hydrant.,Travel,Navigation
+embodiedcity,embodiedcity_5002,I'm not sure if this is the correct entrance to our destination. Please fly me in front of the 'Zhongfu Building' sign so I can confirm the building's name and locate the main lobby.,Travel,Navigation
+embodiedcity,embodiedcity_5003,I heard strange sounds coming from beneath the manhole cover at that nearby T-junction. Go over there and investigate it for me.,Travel,Navigation
+embodiedcity,embodiedcity_5004,Please move to the far right side of the blue roof in front of you.,Travel,Navigation
+embodiedcity,embodiedcity_5005,Please move to the billboard directly in front of you.,Travel,Navigation
+embodiedcity,embodiedcity_5006,Please move to the nearest trash can.,Daily,Navigation
+embodiedcity,embodiedcity_5007,Please proceed to the very top-left corner of the iron gate to your left.,Travel,Navigation
+embodiedcity,embodiedcity_5008,I need to conduct a transaction at Huaxia Bank. Please guide me to a spot 10 meters in front of the nearest bank sign and confirm the location of the ATM.,Travel,Navigation
+embodiedcity,embodiedcity_5009,Please move to a spot 5 meters in front of the Xi'an Noodle Shop sign.,Travel,Navigation
+embodiedcity,embodiedcity_7000,"Designate the left edge of the blue-roofed structure in front of you as your landing point to secure a better vantage point, and navigate to that location.",Travel,Navigation
+embodiedcity,embodiedcity_7001,Identify the 'Gong' character on the ICBC building and coordinate a flight path to its overhead position.,Travel,Navigation
+embodiedcity,embodiedcity_7002,"Locate the Xi'an Noodle Restaurant sign to confirm the destination, then execute a flight to its frontal position.",Travel,Navigation
+embodiedcity,embodiedcity_7003,Locate the tallest glass building to establish a high-altitude vantage point and plan a flight path to its roof.,Travel,Navigation
+embodiedcity,embodiedcity_7004,Locate the trash can to dispose of waste and plan a path to its overhead position.,Daily,Navigation
+embodiedcity,embodiedcity_7005,"Look for an open area nearby containing a curved lawn to identify a safe landing spot, and fly toward the center of the lawn area.",Travel,Navigation
+embodiedcity,embodiedcity_7006,Locate the pink tree ahead to capture a scenic view and coordinate a flight to its overhead position.,Entertain,Navigation
+embodiedcity,embodiedcity_7007,Take off and ascend to the level of the low-rise building ahead to establish a safe vantage point on its roof.,Travel,Navigation
+embodiedcity,embodiedcity_7008,Spot the nearby circular flower bed and descend to land on it.,Travel,Navigation
+embodiedcity,embodiedcity_7009,"Aim for the center of the shaded area in the parking lot to avoid direct sunlight, and set the flight path over that area.",Travel,Navigation
+embodiedcity,embodiedcity_8000,Please proceed to the area above and behind the Agricultural Bank of China logo.,Travel,Navigation
+embodiedcity,embodiedcity_8001,Please fly to the maple tree located 10 meters below the cylindrical building.,Travel,Navigation
+embodiedcity,embodiedcity_8002,Please fly over the first overpass behind you.,Travel,Navigation
+embodiedcity,embodiedcity_8005,Please fly to the tree furthest down the column to the right of the pink trees on your right.,Travel,Navigation
+embodiedcity,embodiedcity_8006,Please fly from the circular flowerbed inside the residential complex to a position 5 meters directly in front of and 5 meters above the An Ge Jia sign located on the street outside the complex.,Travel,Navigation
+embodiedcity,embodiedcity_8007,Please fly all the way from the Bank of Shanghai to the billboard marked 'Tea Ceremony.',Travel,Navigation
+game,block3d/level_01,block3d | block3d/level_01 | Intro - Straight line (X-axis horizontal),Entertain,Hybrid
+game,block3d/level_02,block3d | block3d/level_02 | Unknown level 2,Entertain,Hybrid
+game,block3d/level_03,block3d | block3d/level_03 | Unknown level 3,Entertain,Hybrid
+game,block3d/level_04,block3d | block3d/level_04 | Unknown level 4,Entertain,Hybrid
+game,block3d/level_05,block3d | block3d/level_05 | Unknown level 5,Entertain,Hybrid
+game,block3d/level_06,block3d | block3d/level_06 | Unknown level 6,Entertain,Hybrid
+game,block3d/level_07,block3d | block3d/level_07 | Unknown level 7,Entertain,Hybrid
+game,block3d/level_08,block3d | block3d/level_08 | Easy - Chair,Entertain,Hybrid
+game,block3d/level_09,block3d | block3d/level_09 | Unknown level 9,Entertain,Hybrid
+game,block3d/level_10,block3d | block3d/level_10 | Unknown level 10,Entertain,Hybrid
+game,block3d/level_11,block3d | block3d/level_11 | Unknown level 11,Entertain,Hybrid
+game,block3d/level_12,block3d | block3d/level_12 | Unknown level 12,Entertain,Hybrid
+game,block3d/level_13,block3d | block3d/level_13 | Unknown level 13,Entertain,Hybrid
+game,block3d/level_14,block3d | block3d/level_14 | Unknown level 14,Entertain,Hybrid
+game,block3d/level_15,block3d | block3d/level_15 | Unknown level 15,Entertain,Hybrid
+game,block3d/level_16,block3d | block3d/level_16 | Medium - Arch,Entertain,Hybrid
+game,block3d/level_17,block3d | block3d/level_17 | Hard - Spiral stairs,Entertain,Hybrid
+game,block3d/level_18,block3d | block3d/level_18 | Unknown level 18,Entertain,Hybrid
+game,block3d/level_19,block3d | block3d/level_19 | Unknown level 19,Entertain,Hybrid
+game,block3d/level_20,block3d | block3d/level_20 | Unknown level 20,Entertain,Hybrid
+game,maze/level_01,maze | maze/level_01,Entertain,Navigation
+game,maze/level_02,maze | maze/level_02,Entertain,Navigation
+game,maze/level_03,maze | maze/level_03,Entertain,Navigation
+game,maze/level_04,maze | maze/level_04,Entertain,Navigation
+game,maze/level_05,maze | maze/level_05,Entertain,Navigation
+game,maze/level_06,maze | maze/level_06,Entertain,Navigation
+game,maze/level_07,maze | maze/level_07,Entertain,Navigation
+game,maze/level_08,maze | maze/level_08,Entertain,Navigation
+game,maze/level_09,maze | maze/level_09,Entertain,Navigation
+game,maze/level_10,maze | maze/level_10,Entertain,Navigation
+game,maze/level_11,maze | maze/level_11,Entertain,Navigation
+game,maze/level_12,maze | maze/level_12,Entertain,Navigation
+game,maze/level_13,maze | maze/level_13,Entertain,Navigation
+game,maze/level_14,maze | maze/level_14,Entertain,Navigation
+game,maze/level_15,maze | maze/level_15,Entertain,Navigation
+game,maze/level_16,maze | maze/level_16,Entertain,Navigation
+game,maze/level_17,maze | maze/level_17,Entertain,Navigation
+game,maze/level_18,maze | maze/level_18,Entertain,Navigation
+game,maze/level_19,maze | maze/level_19,Entertain,Navigation
+game,maze/level_20,maze | maze/level_20,Entertain,Navigation
+game,maze3d_pro/level_01,maze3d_pro | maze3d_pro/level_01,Entertain,Navigation
+game,maze3d_pro/level_02,maze3d_pro | maze3d_pro/level_02,Entertain,Navigation
+game,maze3d_pro/level_03,maze3d_pro | maze3d_pro/level_03,Entertain,Navigation
+game,maze3d_pro/level_04,maze3d_pro | maze3d_pro/level_04,Entertain,Navigation
+game,maze3d_pro/level_05,maze3d_pro | maze3d_pro/level_05,Entertain,Navigation
+game,maze3d_pro/level_06,maze3d_pro | maze3d_pro/level_06,Entertain,Navigation
+game,maze3d_pro/level_07,maze3d_pro | maze3d_pro/level_07,Entertain,Navigation
+game,maze3d_pro/level_08,maze3d_pro | maze3d_pro/level_08,Entertain,Navigation
+game,maze3d_pro/level_09,maze3d_pro | maze3d_pro/level_09,Entertain,Navigation
+game,maze3d_pro/level_10,maze3d_pro | maze3d_pro/level_10,Entertain,Navigation
+game,maze3d_pro/level_11,maze3d_pro | maze3d_pro/level_11,Entertain,Navigation
+game,maze3d_pro/level_12,maze3d_pro | maze3d_pro/level_12,Entertain,Navigation
+game,maze3d_pro/level_13,maze3d_pro | maze3d_pro/level_13,Entertain,Navigation
+game,maze3d_pro/level_14,maze3d_pro | maze3d_pro/level_14,Entertain,Navigation
+game,maze3d_pro/level_15,maze3d_pro | maze3d_pro/level_15,Entertain,Navigation
+game,maze3d_pro/level_16,maze3d_pro | maze3d_pro/level_16,Entertain,Navigation
+game,maze3d_pro/level_17,maze3d_pro | maze3d_pro/level_17,Entertain,Navigation
+game,maze3d_pro/level_18,maze3d_pro | maze3d_pro/level_18,Entertain,Navigation
+game,maze3d_pro/level_19,maze3d_pro | maze3d_pro/level_19,Entertain,Navigation
+game,maze3d_pro/level_20,maze3d_pro | maze3d_pro/level_20,Entertain,Navigation
+game,maze3d_pro/level_21,maze3d_pro | maze3d_pro/level_21,Entertain,Navigation
+game,maze3d_pro/level_22,maze3d_pro | maze3d_pro/level_22,Entertain,Navigation
+game,maze3d_pro/level_23,maze3d_pro | maze3d_pro/level_23,Entertain,Navigation
+game,maze3d_pro/level_24,maze3d_pro | maze3d_pro/level_24,Entertain,Navigation
+game,maze3d_pro/level_25,maze3d_pro | maze3d_pro/level_25,Entertain,Navigation
+game,rubik/level_01,rubik | rubik/level_01,Entertain,Interaction
+game,rubik/level_02,rubik | rubik/level_02,Entertain,Interaction
+game,rubik/level_03,rubik | rubik/level_03,Entertain,Interaction
+game,rubik/level_04,rubik | rubik/level_04,Entertain,Interaction
+game,rubik/level_05,rubik | rubik/level_05,Entertain,Interaction
+game,rubik/level_06,rubik | rubik/level_06,Entertain,Interaction
+game,rubik/level_07,rubik | rubik/level_07,Entertain,Interaction
+game,rubik/level_08,rubik | rubik/level_08,Entertain,Interaction
+game,rubik/level_09,rubik | rubik/level_09,Entertain,Interaction
+game,rubik/level_10,rubik | rubik/level_10,Entertain,Interaction
+game,rubik/level_11,rubik | rubik/level_11,Entertain,Interaction
+game,rubik/level_12,rubik | rubik/level_12,Entertain,Interaction
+game,rubik/level_13,rubik | rubik/level_13,Entertain,Interaction
+game,rubik/level_14,rubik | rubik/level_14,Entertain,Interaction
+game,rubik/level_15,rubik | rubik/level_15,Entertain,Interaction
+game,rubik/level_16,rubik | rubik/level_16,Entertain,Interaction
+game,rubik/level_17,rubik | rubik/level_17,Entertain,Interaction
+game,rubik/level_18,rubik | rubik/level_18,Entertain,Interaction
+game,rubik/level_19,rubik | rubik/level_19,Entertain,Interaction
+game,rubik/level_20,rubik | rubik/level_20,Entertain,Interaction
+game,snake/run_001,snake | snake/run_001,Entertain,Navigation
+game,snake/run_002,snake | snake/run_002,Entertain,Navigation
+game,snake/run_003,snake | snake/run_003,Entertain,Navigation
+game,snake/run_004,snake | snake/run_004,Entertain,Navigation
+game,snake/run_005,snake | snake/run_005,Entertain,Navigation
+game,snake/run_006,snake | snake/run_006,Entertain,Navigation
+game,snake/run_007,snake | snake/run_007,Entertain,Navigation
+game,snake/run_008,snake | snake/run_008,Entertain,Navigation
+game,snake/run_009,snake | snake/run_009,Entertain,Navigation
+game,snake/run_010,snake | snake/run_010,Entertain,Navigation
+game,snake/run_011,snake | snake/run_011,Entertain,Navigation
+game,snake/run_012,snake | snake/run_012,Entertain,Navigation
+game,snake/run_013,snake | snake/run_013,Entertain,Navigation
+game,snake/run_014,snake | snake/run_014,Entertain,Navigation
+game,snake/run_015,snake | snake/run_015,Entertain,Navigation
+game,snake/run_016,snake | snake/run_016,Entertain,Navigation
+game,snake/run_017,snake | snake/run_017,Entertain,Navigation
+game,snake/run_018,snake | snake/run_018,Entertain,Navigation
+game,snake/run_019,snake | snake/run_019,Entertain,Navigation
+game,snake/run_020,snake | snake/run_020,Entertain,Navigation
+mutil-ai2thor,ai2thor03038,"Please put the potato in the refrigerator, and then take the lettuce out of the refrigerator and put it on the counter.Remember to close the fridge.",Social,Hybrid
+mutil-ai2thor,ai2thor03044,I forgot to turn off the lights and close the refrigerator door when I left. Please close them.,Social,Hybrid
+mutil-ai2thor,ai2thor03054,I'm outside the kitchen. Please bring the bread outside and turn off the kitchen lights.,Social,Hybrid
+mutil-ai2thor,ai2thor03064,I forgot to turn off the coffee machine and the kitchen light. Go turn them off.,Social,Hybrid
+mutil-ai2thor,ai2thor03075,Please help me throw the apple into the trash can and turn on my phone.,Social,Hybrid
+mutil-ai2thor,ai2thor04039,I'm sleepy. Please wash the bowl in front of me and then fill it with a cup of coffee.,Social,Interaction
+mutil-ai2thor,ai2thor04046,I want to work on my laptop while watching TV. Please enable both.,Social,Hybrid
+mutil-ai2thor,ai2thor04108,"I want to get up and work, please turn on the computer and open the book",Social,Hybrid
+mutil-ai2thor,ai2thor04109,I'm getting ready for bed. Please make my bed and turn off the TV.,Social,Hybrid
+mutil-ai2thor,ai2thor04110,"I need to get ready to work, please turn on my phone and computer.",Social,Hybrid
+mutil-ai2thor,ai2thor04243,"I am tired from reading. Please close the book, then turn off the light switch and the desk lamp.",Social,Hybrid
+mutil-ai2thor,ai2thor05007,"It's time to power down, so please turn off the desk lamp and confirm it's really off and then pick up the book and place it on the bed.",Social,Hybrid
+mutil-ai2thor,ai2thor05022,"I need to tidy up, so please tidy up the bed by clearing any clutter and wiping it until it looks clean and then turn on the laptop and wait until you can tell it's powered on.",Social,Hybrid
+mutil-ai2thor,ai2thor05026,"I'm doing some chores, so please put the laptop on the desk, then tidy up the bed and wiping it until it looks clean.",Social,Hybrid
+mutil-ai2thor,ai2thor05033,"I'm preparing the scene, so please in the simulation, make the mirror dirty so its state changes to 'dirty' and then fill the mug with water until it shows it's filled, then keep it steady.",Social,Hybrid
+mutil-ai2thor,ai2thor05041,"To start the research, please power on the cell phone and open the book for me.",Social,Hybrid
+mutil-ai2thor,ai2thor05063,"The pot looks a bit dusty, so clean the pot and slice the tomato for the soup.",Social,Hybrid
+mutil-ai2thor,ai2thor05066,"I'm ready to start the stew, so please pick up the pot for me.",Social,Hybrid
+mutil-ai2thor,ai2thor05079,"I'm starting breakfast now, so please turn on the coffee machine for me.",Social,Hybrid
+mutil-ai2thor,ai2thor05506,I want to combine my workout with some housework—could you pick up the tennis racket in the corner and give the bed a quick clean?,Social,Hybrid
+mutil-ai2thor,ai2thor05508,"It's such a lovely day; I feel like tidying up my bed. First I'll pick up my pillow, then give the whole bed a good clean—so I can sleep nice and sound tonight.",Social,Hybrid
+mutil-ai2thor,ai2thor05509,I'd like to take a nap. Could you tidy the bed and turn off the wall light for me? Thank you.,Social,Hybrid
+mutil-ai2thor,ai2thor05512,"I'd like to read the book on my desk before bed. Please tidy up the bed first, then bring the book and place it on the bed for me.",Social,Hybrid
+mutil-ai2thor,ai2thor05515,I feel like taking a break; I'm going to pick up my phone from the desk and turn on the TV so I can really unwind,Social,Hybrid
+mutil-ai2thor,ai2thor05517,"I just woke up and I’m ready to get to work—you help me tidy the bed first, then use the laptop to start working and get it booted up.",Social,Hybrid
+mutil-ai2thor,ai2thor05528,I'd like to work and watch TV at the same time. Could you please help me turn on the laptop and then the TV?,Social,Hybrid
+mutil-ai2thor,ai2thor05533,"The sunlight is so bright today—there's no need for the big wall light in the room, so go ahead and switch it off. Just turn on the floor lamp next to the sofa instead.",Social,Hybrid
+mutil-ai2thor,ai2thor05540,I'm getting ready to head out—please water the potted plant on the table and then turn off the wall light.,Social,Hybrid
+mutil-ai2thor,ai2thor05545,"I want to wash my face—please pick up the soap bottle, turn on the faucet, and then put it back on the side table where it was.",Social,Hybrid
+mutil-procthor,procthor107,I'm done eating. Please put the bowl back in the kitchen and bring my pen from the kitchen to the living room.,Social,Hybrid
+mutil-procthor,procthor201,"I'm getting ready to sleep. I'd like to lie in bed and watch some TV before I go to sleep. Please go to the living room and turn off one floor lamp. Then, go to the bedroom, tidy up the bed, and turn on the TV for me.",Social,Hybrid
+mutil-procthor,procthor202,"I've finished my work and am going to rest in bed. Please turn off a bedside lamp, turn on a mobile phone, and stand by the bed.",Social,Hybrid
+mutil-procthor,procthor203,"I'm getting ready for breakfast. Please go to the kitchen, turn on the toaster, and turn on the coffee machine for me.",Social,Hybrid
+mutil-procthor,procthor400,"I'm a bit hungry. First, please go to the kitchen to get the bread and bring it to the dining table in the bedroom. After that, pick up a box from the dining table and take it back to the kitchen.",Social,Hybrid
+mutil-procthor,procthor406,"I'm heading out for work. First, please go to the bedroom to open the laptop. Then, pick up a keychain from the bedroom and bring it to the living room.",Social,Hybrid
+mutil-procthor,procthor419,"I need to tidy up the bedroom. Please pick up a pillow from the bed and take it to the sofa in the living room. After that, pick up the alarm clock on the bed and bring it to the dining table in the living room. Finally, clean the bed.",Social,Hybrid
+mutil-procthor,procthor900,I want to give my pillow and teddy bear a wash. Please bring a pillow and a teddy bear to the bathroom.,Social,Hybrid
+mutil-procthor,procthor901,I want to catch up on the news while relaxing in the bedroom. Please turn on the TV and bring the newspaper to the bedroom.,Social,Hybrid
+mutil-procthor,procthor902,"I'm a bit hungry and want to grab something to eat, and I'd also like to set a cozy atmosphere in the kitchen with some candlelight. Please open the fridge and place the candle in the kitchen.",Social,Hybrid
+mutil-procthor,procthor903,"I'd like to wash my pillow while taking a bath, and I also want to display the teddy bear in the living room. Please bring the pillow to the bathroom and move the teddy bear to the living room.",Social,Hybrid
+mutil-procthor,procthor904,I'm going to have a meal in the kitchen and read the newspaper at the same time. Please bring both the newspaper and the plate to the kitchen.,Social,Hybrid
+mutil-procthor,procthor905,I want to check what's inside each of these. Please open both the box and the fridge.,Social,Hybrid
+mutil-procthor,procthor906,I need to take a photo of some ingredients. Please hold up the tomato and the egg.,Social,Hybrid
+mutil-procthor,procthor907,I need to get a feel for how heavy these two things are. Please hold up the basketball and the watch.,Social,Hybrid
+mutil-procthor,procthor908,"I'd like to use the candle in the kitchen tonight, and I need a bottle of wine set out in the bedroom. Please pick up the candle and head to the kitchen, then pick up the wine bottle and go to the bedroom.",Social,Hybrid
+mutil-procthor,procthor909,"I need to make a phone call from the kitchen. Also, please put the baseball bat away and put it in the living room. Please pick up the phone and go to the kitchen, then pick up the baseball bat and go to the living room.",Social,Hybrid
+procthor,procthor000,I'm planning to eat a tomato in bed. Could you go get a tomato and wait by my bedside?,Daily,Hybrid
+procthor,procthor001,"I need to use the toilet. Please go to the bathroom, turn on the toilet, and then return to the bedroom.",Daily,Hybrid
+procthor,procthor002,I'd like to take a nap on the sofa. Please bring a pillow and wait for me next to the sofa.,Daily,Hybrid
+procthor,procthor003,"I want to hug my teddy bear on the sofa. Please bring me my teddy bear, hold it up, and wait for me next to the sofa.",Entertain,Hybrid
+procthor,procthor004,"I'll finish eating soon and I need tissues. Please go to the restroom, get some tissues, and wait for me near a dining table.",Daily,Hybrid
+procthor,procthor005,I'm going to serve the rice. Please pick up your plate and stand near the counter.,Daily,Hybrid
+procthor,procthor006,I need to prepare a meal. Please take the an egg out of the refrigerator and stand near it.,Daily,Hybrid
+procthor,procthor007,"I'd like some water. Please go to the kitchen and get a cup, then wait for me near the sofa.",Daily,Hybrid
+procthor,procthor008,I need to use a spatula. Please pick up the spatula and stand near the refrigerator.,Daily,Hybrid
+procthor,procthor009,I need a spoon. Please pick up the spoon and stand near the sofa.,Daily,Hybrid
+procthor,procthor010,I need your help to pick up the basketball from the bedroom floor and wait for me by the TV cabinet.,Entertain,Hybrid
+procthor,procthor011,I want to check the time. Please pick up a watch from the bedroom and wait for me by the refrigerator.,Daily,Hybrid
+procthor,procthor012,I'd like to do some organization. Please pick up a book and stand next to the TV cabinet.,Daily,Hybrid
+procthor,procthor013,I'd like to do some tidying up. Please pick up the pencil from the bedroom and stand near the TV cabinet.,Daily,Hybrid
+procthor,procthor014,I need you to get me a candle and wait for me next to the refrigerator.,Daily,Hybrid
+procthor,procthor015,I need you to bring me a candle and wait for me by the bed.,Daily,Hybrid
+procthor,procthor016,I want to wash the basketball. Please bring the basketball to the faucet and wait for me.,Daily,Hybrid
+procthor,procthor017,"I'm getting ready for bed. Please bring the alarm clock over, and wait for me by my bed.",Daily,Hybrid
+procthor,procthor018,I'd like to do some cleaning. Please pick up the spray bottle and wait for me at the side table.,Daily,Hybrid
+procthor,procthor019,I'd like to do some cleaning. Please pick up the plunger and wait for me by the sink.,Daily,Hybrid
+procthor,procthor100,I'm a bit thirsty and want the apple. Could you please bring an apple from the kitchen to the bedroom?,Daily,Hybrid
+procthor,procthor101,"I left a book in my room. Please pick up a book, place it in the living room, and then stand next to the dining table.",Daily,Hybrid
+procthor,procthor102,Could you go and turn on the computer screen in the room? I want to check if it's damaged. Then please wait for me near any of the dining tables in the bedroom.,Work,Hybrid
+procthor,procthor103,"I'm a bit hungry. Please bring one loaf of bread from the kitchen to the living room for me, and wait beside the sofa.",Daily,Hybrid
+procthor,procthor104,I need a candle for cooking in the kitchen. Please bring one candle from the living room and wait by any counter.,Daily,Hybrid
+procthor,procthor105,Can you bring the empty toilet paper holder from the bathroom to the bedroom? I'll refill it with paper.,Daily,Hybrid
+procthor,procthor106,I'm going back to my room to sleep. Please come out of the bathroom and then go back to the bedroom.,Daily,Navigation
+procthor,procthor107,I'm done eating. Please put the bowl back in the kitchen and bring my pen from the kitchen to the living room.,Daily,Hybrid
+procthor,procthor108,Please go to the bedroom.,Daily,Navigation
+procthor,procthor109,I want to read the newspaper when I use the bathroom. Please bring the newspaper to me in the bathroom,Entertain,Hybrid
+procthor,procthor110,"Can you locate my bedroom? If so, please go ahead and step inside.",Daily,Navigation
+procthor,procthor111,"An apple a day keeps the doctor away. Please grab one apple from the kitchen, bring it to my bedroom, and put it on any dresser. I'll eat it later.",Daily,Hybrid
+procthor,procthor112,Can you turn on one phone and bring it to the bathroom? I want to use it while I'm in there.,Entertain,Hybrid
+procthor,procthor113,"Can you see any toilet paper? If so, please bring one roll to the kitchen; the kitchen is out of paper.",Daily,Hybrid
+procthor,procthor114,I'll go eat soon. Please wait for me at any kitchen table first.,Daily,Navigation
+procthor,procthor115,Please take one book from the bedroom to the kitchen. It might help me with cooking.,Work,Hybrid
+procthor,procthor116,"As my robot, please pick up the laptop from my bedroom and bring it to the kitchen because I need to use it there.",Daily,Hybrid
+procthor,procthor117,I'm just kidding. Please hide the watch on the kitchen counter and then quickly go to the bedroom.,Daily,Hybrid
+procthor,procthor118,"Please break the vase, then quickly go to the bathroom.",Daily,Hybrid
+procthor,procthor119,My friend is coming over to hang out. Please grab a baseball bat for me and then wait for him in the living room.,Daily,Hybrid
+procthor,procthor200,"I'd like to have some fresh snacks. Please go to the kitchen, open the refrigerator, cut the tomatoes into chunks, close the refrigerator, and then take one piece to a table in the kitchen.",Daily,Hybrid
+procthor,procthor201,"I'm getting ready to sleep. I'd like to lie in bed and watch some TV before I go to sleep. Please go to the living room and turn off one floor lamp. Then, go to the bedroom, tidy up the bed, and turn on the TV for me.",Entertain,Hybrid
+procthor,procthor202,"I've finished my work and am going to rest in bed. Please turn off a bedside lamp, turn on a mobile phone, and stand by the bed.",Entertain,Hybrid
+procthor,procthor203,"I'm getting ready for breakfast. Please go to the kitchen, turn on the toaster, and turn on the coffee machine for me.",Daily,Hybrid
+procthor,procthor204,"I want to eat an egg. Please go to the kitchen, open the refrigerator, take out an egg, close the refrigerator, and then place it next to the pot.",Daily,Hybrid
+procthor,procthor205,I want to wash the pillow. Please pick up the pillow and bring it to the bathroom.,Daily,Hybrid
+procthor,procthor206,I want to read before going to sleep. Please find one book and bring it to the bedroom.,Entertain,Hybrid
+procthor,procthor207,My basketball is dirty and I want to wash it. Please pick up one basketball and navigate to the bathroom.,Daily,Hybrid
+procthor,procthor208,I am going out to play soon and need to clean my gear first. Please take the tennis racket and carry it to the bathroom for me.,Daily,Hybrid
+procthor,procthor209,I am feeling a bit hungry. Please pick up one tomato and carry it to the bedroom.,Daily,Hybrid
+procthor,procthor210,I want to decorate my bedroom. Please pick up one vase and relocate it to the bedroom.,Daily,Hybrid
+procthor,procthor211,I am hungry. Please find the bread and carry it into the bedroom for me.,Daily,Hybrid
+procthor,procthor212,I am planning to organize some items in the kitchen. Please pick up the box and move it to the kitchen for me.,Daily,Hybrid
+procthor,procthor213,I just finished my snack and need to tidy up. Please pick up one box and carry it over to the kitchen.,Daily,Hybrid
+procthor,procthor214,I would like to have some fruit before I go to sleep. Please pick up the apple and carry it to the bedroom.,Daily,Hybrid
+procthor,procthor215,I want to decorate the kitchen. Please pick up one book and move it to the kitchen.,Daily,Hybrid
+procthor,procthor216,I want to read the newspaper before going to sleep. Please pick up one newspaper and carry it to the bedroom.,Entertain,Hybrid
+procthor,procthor217,I want to have a drink before going to sleep. Please pick up the wine bottle and move it to the bedroom for me.,Daily,Hybrid
+procthor,procthor218,I think a teddy bear needs a wash. Please pick one up and carry it to the bathroom for me.,Daily,Hybrid
+procthor,procthor219,I am feeling thirsty and want some water before I go to sleep. Please fill the cup with water and then carry it to the bedroom for me.,Daily,Hybrid
+procthor,procthor300,I'm thirsty. Please fill a bowl with water and wait beside the table.,Daily,Hybrid
+procthor,procthor301,I need to use the bathroom. Please open the toilet lid and wait beside it.,Daily,Hybrid
+procthor,procthor302,The toilet is dirty. Please pick up the plunger and wait beside the toilet while I clean it.,Daily,Hybrid
+procthor,procthor303,A basketball on the floor is blocking the way. Please pick it up and stand by a bed.,Daily,Hybrid
+procthor,procthor304,I want to play the basketball. Please bring a basketball in the Bedroom.,Entertain,Hybrid
+procthor,procthor305,"I'm going to sleep, but a bed is messy. Please tidy a bed and wait beside it.",Daily,Hybrid
+procthor,procthor306,I'm ready to work. Please turn on a computer and wait beside it.,Work,Hybrid
+procthor,procthor307,I plan to eat bread. Please slice a bread and wait beside a table.,Daily,Hybrid
+procthor,procthor308,I'm ready to work. Please pick up the phone from the sofa and wait beside the sofa.,Work,Hybrid
+procthor,procthor309,I want to read a book. Please pick up a book.,Entertain,Hybrid
+procthor,procthor310,"I'm going to have a meal. Please move the RemoteControl from the sofa to the dining table, then wait beside the table.",Daily,Hybrid
+procthor,procthor311,A BaseballBat fell on the floor. Please pick up the BaseballBat and wait beside the dresser.,Daily,Hybrid
+procthor,procthor312,The bed is dirty. Please tidy the bed and wait beside it.,Daily,Hybrid
+procthor,procthor313,I want to make coffee. Please turn on a coffee machine and wait beside it.,Daily,Hybrid
+procthor,procthor314,"A dishsponge is broken. Please throw it into a trash can, then wait beside the trash can.",Daily,Hybrid
+procthor,procthor316,I will read the newspaper on the sofa later. Please pick up the newspaper on the sofa and wait beside the sofa.,Entertain,Hybrid
+procthor,procthor317,"I want to watch TV. Please turn on a TV, then wait beside a sofa.",Entertain,Hybrid
+procthor,procthor318,"I want to work. Please get the phone from the bed for me, then wait beside the bed.",Work,Hybrid
+procthor,procthor400,"I'm a bit hungry. First, please go to the kitchen to get the bread and bring it to the dining table in the bedroom. After that, pick up a box from the dining table and take it back to the kitchen.",Daily,Hybrid
+procthor,procthor401,"The power is out. Please go to the living room, pick up a candle from the table, and bring it to the kitchen.",Daily,Hybrid
+procthor,procthor402,The basketball is a bit dirty and I'm planning to clean it. Please pick up a basketball from the bedroom floor and take it to the bathroom.,Daily,Hybrid
+procthor,procthor403,I'm ready to read the newspaper. Please get a newspaper from the living room and bring it to the bedroom.,Entertain,Hybrid
+procthor,procthor404,"I want to clean the desk in the bedroom. Please go to the bathroom, get a dish sponge, and bring it to the bedroom.",Daily,Hybrid
+procthor,procthor405,"I'm planning to open a box with a knife. Please go to the kitchen, get a knife, and bring it to me in the bedroom.",Daily,Hybrid
+procthor,procthor406,"I'm heading out for work. First, please go to the bedroom to open the laptop. Then, pick up a keychain from the bedroom and bring it to the living room.",Travel,Hybrid
+procthor,procthor407,"The tennis racket is dirty. Please go to the bedroom, pick up the tennis racket, and bring it to the bathroom.",Daily,Hybrid
+procthor,procthor408,"I'd like to have some wine. Please go to the kitchen, get the wine bottle, and bring it to the bedroom.",Entertain,Hybrid
+procthor,procthor409,"I'm getting ready to play baseball. Please go to the bedroom, pick up the baseball bat leaning against the wall under the window, and bring it to the living room.",Entertain,Hybrid
+procthor,procthor410,"The teddy bear is a bit dirty and needs a wash. Please go to the bedroom, pick up the teddy bear, and bring it to the bathroom.",Daily,Hybrid
+procthor,procthor411,"I'm getting ready to play basketball. Please go to the bedroom, pick up the basketball, and bring it to the kitchen.",Entertain,Hybrid
+procthor,procthor412,Please take the DishSponge from the kitchen and throw it into the GarbageCan in the bathroom. I want to clean up the bathroom trash together.,Daily,Hybrid
+procthor,procthor413,I have some urgent tasks to handle. Please go to the bedroom and bring a laptop to the kitchen for me.,Work,Hybrid
+procthor,procthor414,"The soap on the toilet in the bathroom is used. Please pick it up and take it to the kitchen, then throw it into the garbage can.",Daily,Hybrid
+procthor,procthor415,I'm planning to clean up the bedroom. Please pick up a cell phone and a laptop from the bedroom and bring them to the dining table in the living room.,Daily,Hybrid
+procthor,procthor419,"I need to tidy up the bedroom. Please pick up a pillow from the bed and take it to the sofa in the living room. After that, pick up the other items on the bed and bring them to the dining table in the living room. Finally, clean the bed.",Daily,Hybrid
+procthor,procthor501,"I'm getting ready to sleep. I'd like to lie in bed and watch some TV before I go to sleep. Please go to the living room and turn off a floor lamp. Then, go to the bedroom, tidy up the bed, and turn on the TV for me.",Entertain,Hybrid
+procthor,procthor502,"I've finished my work and I'm planning to rest in bed. Please turn off a desk lamp, power on a cellphone, and bring the phone to the bedside for me.",Entertain,Hybrid
+procthor,procthor600,"I am finishing my day. To keep the walkways clear, please relocate to the bedroom and position yourself by a bedside.",Daily,Navigation
+procthor,procthor601,I want to start studying. Please move to the living room and fetch a pen from the table in the living room.,Work,Hybrid
+procthor,procthor602,I am hungry. Please move to the kitchen and get the tomato from the stove in the kitchen.,Daily,Hybrid
+procthor,procthor603,I am going to sleep. Please proceed to the bedroom and position yourself at a bedside to remain available for my assistance.,Daily,Navigation
+procthor,procthor604,"I want to study. Please go to the sofa in the living room, pick up a book, open it, and stay there waiting for me.",Work,Hybrid
+procthor,procthor605,I want to eat fruit. Please pick up the apple from the table in front of you and navigate to the front of the sofa in the living room.,Daily,Hybrid
+procthor,procthor606,"I need to get up early. Please go to the bedroom, pick up the alarm clock on the table, and place it on the bed.",Daily,Hybrid
+procthor,procthor607,I want to relax. Please fetch the phone from the table and navigate to the bedside in the bedroom.,Entertain,Hybrid
+procthor,procthor608,I want to study. Please move to the living room and turn on a laptop.,Work,Hybrid
+procthor,procthor609,I want to watch TV. Please fetch the remote control from the table in the bedroom and navigate to the sofa in the living room.,Entertain,Hybrid
+procthor,procthor610,I want to relax. Please fetch the apple in the kitchen and move to the sofa in the living room.,Daily,Hybrid
+procthor,procthor611,I want to read. Please fetch the book in the bedroom and move to a dining table in the living room.,Entertain,Hybrid
+procthor,procthor612,I am going to relax. Please move to the living room and turn off a desk lamp.,Daily,Hybrid
+procthor,procthor613,Please move to the bedroom and open the box there to check if there is anything inside.,Daily,Hybrid
+procthor,procthor614,I am going to wash my face. Please navigate to the bathroom and turn on a faucet there.,Daily,Hybrid
+procthor,procthor615,"I am going to cook. Please navigate to the kitchen, find the tomato and then pick it up.",Daily,Hybrid
+procthor,procthor616,I am going to wash my hands. Please navigate to the bathroom and turn on the faucet there.,Daily,Hybrid
+procthor,procthor617,"I am cooking and need to check my phone. Please navigate to the sofa in the living room to pick up the phone, then navigate to the kitchen and place it on the countertop.",Daily,Hybrid
+procthor,procthor618,I want to clean my bedroom. Please navigate to the bedroom and fetch the baseball bat from the floor and place it on the dresser.,Daily,Hybrid
+procthor,procthor619,I want to clean my living room. Please navigate to the living room and fetch the newspaper from the sofa and place it on the dining table.,Daily,Hybrid
+procthor,procthor700,I want to clean the dog bed. Please bring the spray bottle next to the dog bed.,Daily,Hybrid
+procthor,procthor701,I want to play basketball in the living room. Please pick up the basketball and stand beside the sofa and wait for me.,Entertain,Hybrid
+procthor,procthor702,I want to cook. Please pick up the alarm clock and stand beside the microwave in the kitchen.,Daily,Hybrid
+procthor,procthor703,I want to have breakfast in bed. Please pick up the eggs and stand by the bed.,Daily,Hybrid
+procthor,procthor704,Please go to the living room and turn off the floor lamp. Then come back to the bedside of the bedroom and wait for me.,Daily,Hybrid
+procthor,procthor705,I want to clean the toilet. Please pick up a dish sponge and stand next to the toilet while I wait.,Daily,Hybrid
+procthor,procthor706,I'd like to play basketball. Please pick up the basketball and stand by the sofa in the living room while I wait.,Entertain,Hybrid
+procthor,procthor707,I'd like to wipe the bed. Please pick up a cloth and stand beside the bed while I wait.,Daily,Hybrid
+procthor,procthor708,I'd like to work on the sofa for a while. Please pick up your laptop and stand next to the sofa while I wait.,Work,Hybrid
+procthor,procthor709,I'm going out. Please take a keychain and wait for me by the sofa.,Travel,Hybrid
+virtualhome,virtualhome00000,open the tv,Daily,Interaction
+virtualhome,virtualhome00001,I want to eat something. Please open the microwave and refrigerator doors. I'd like to heat something up.,Daily,Interaction
+virtualhome,virtualhome00002,I can't find my keyboard. Could you help me locate it and pick it up to show me?,Work,Hybrid
+virtualhome,virtualhome00003,Turn on the sink please. I want to wash my face.,Daily,Interaction
+virtualhome,virtualhome00005,I'm a bit hungry. Can you see the pie on the table? Pass it to me.,Daily,Interaction
+virtualhome,virtualhome00006,I'm going to sleep. Could you turn off the desk lamp? It's a bit too bright.,Daily,Hybrid
+virtualhome,virtualhome00007,I can't find my phone. Could you help me look for it? Please put it on the TV stand when you find it.,Daily,Hybrid
+virtualhome,virtualhome00008,I'm starting work now. Could you walk over to my computer and turn it on?,Work,Hybrid
+virtualhome,virtualhome00009,I have a great idea! I want to implement it right away. Go turn on the computer and get ready! I'm about to start brainstorming.,Work,Hybrid
+virtualhome,virtualhome00010,I just finished using the toilet and forgot to flush. Now I need to go back and turn on the toilet to flush.,Daily,Hybrid
+virtualhome,virtualhome00011,I'm done eating. Can you see the dish bowl on the shelf? Pick it up.,Daily,Hybrid
+virtualhome,virtualhome00012,I want to wash my face. Help me turn on the faucet.,Daily,Hybrid
+virtualhome,virtualhome00013,I've packed up and I'm ready to head out. Please help me turn off the ceiling light in this room—the switch is by the door.,Daily,Hybrid
+virtualhome,virtualhome00014,Can you see the ceiling light switch by the door? Please walk over and turn it off. I'm going to sleep.,Daily,Hybrid
+virtualhome,virtualhome00015,I can't find my mouse. Can you see it? It should be by the computer. Pick it up for me if you find it.,Work,Hybrid
+virtualhome,virtualhome00017,Have you seen my folder? Pick it up for me if you find it.,Work,Hybrid
+virtualhome,virtualhome00018,I'm looking for something. Help me open the cabinet.,Daily,Hybrid
+virtualhome,virtualhome00019,I'm done showering and want a good sleep. Please turn off the light—the switch is by the door. It's the overhead room light,Daily,Hybrid
+virtualhome,virtualhome00020,"I'm brushing my teeth, but I can't find my toothbrush. Can you help me look for it and pick it up?",Daily,Hybrid
+virtualhome,virtualhome00100,"I'd like to find something to eat, please open the refrigerator.",Daily,Hybrid
+virtualhome,virtualhome00101,I'd like to heat up some food. Please open the microwave door.,Daily,Hybrid
+virtualhome,virtualhome00102,I'm full. Please put the pie on the kitchen counter; I'll prepare it later.,Daily,Hybrid
+virtualhome,virtualhome00103,Place the salmon in the microwave and turn it on. Remember to close the microwave door.,Daily,Hybrid
+virtualhome,virtualhome00104,"I need to tidy up the kitchen. Please open the refrigerator door and put the salmon inside, but do not close the refrigerator door.",Daily,Hybrid
+virtualhome,virtualhome00105,"I'm going to start working now, please turn on your computer.",Work,Hybrid
+virtualhome,virtualhome00107,I want to put the mug from the table to coffeetable.,Work,Hybrid
+virtualhome,virtualhome00108,I'd like to get some water; please feel free to pick up any glass.,Daily,Hybrid
+virtualhome,virtualhome00109,I'd like to drink coffee. Please turn on the coffee machine.,Daily,Hybrid
+virtualhome,virtualhome00110,I want to listen to music. Please turn on the radio for me.,Daily,Hybrid
+virtualhome,virtualhome00111,I'd like to use my cellphone. Please put it back on the bed.,Daily,Hybrid
+virtualhome,virtualhome00112,"I want to have some fun, so please turn on the TV and pick up a phone.",Entertain,Hybrid
+virtualhome,virtualhome00113,I'd like to watch some TV. Please put the remote on the coffee table.,Entertain,Hybrid
+virtualhome,virtualhome00114,"I want to rest for a while, please get me a pillow.",Daily,Hybrid
+virtualhome,virtualhome00115,I'm about to play a game. Please turn on a computer and pick up a cup from the table.,Entertain,Hybrid
+virtualhome,virtualhome00116,"I'm hungry, please pick up the cupcake; I'll eat it later.",Daily,Hybrid
+virtualhome,virtualhome00117,"Please place a mobile phone on the table, and then pick up a mouse.",Work,Hybrid
+virtualhome,virtualhome00118,I'm too hungry. Please pick up a bread slice from the toaster and turn on the toaster to cook another one.,Daily,Hybrid
+virtualhome,virtualhome00119,I want to clean the kitchen. Please get me a bottle of dish soap and then turn on the faucet.,Daily,Hybrid

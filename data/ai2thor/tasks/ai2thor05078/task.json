@@ -27,8 +27,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "We need to make soup for dinner; can you fill the pot with water?",
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3"
+  "target_description": "We need to make soup for dinner; can you fill the pot with water?"
 }

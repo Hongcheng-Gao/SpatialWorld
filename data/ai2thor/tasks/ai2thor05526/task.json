@@ -40,9 +40,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'd like to read in bed for a while—please take the book from the desk, put it on the bed, and open it",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Study and Work",
-  "Level": "Level3"
+  "target_description": "I'd like to read in bed for a while—please take the book from the desk, put it on the bed, and open it"
 }

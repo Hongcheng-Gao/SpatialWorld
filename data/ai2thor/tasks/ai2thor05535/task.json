@@ -34,9 +34,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm the housekeeper of this room, and I need to keep it tidy every day. I'd like to water the flowers by the door first, then clear the plates from the dinner table.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "I'm the housekeeper of this room, and I need to keep it tidy every day. I'd like to water the flowers by the door first, then clear the plates from the dinner table."
 }

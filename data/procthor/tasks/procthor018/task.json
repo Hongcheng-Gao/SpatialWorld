@@ -55,9 +55,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'd like to do some cleaning. Please pick up the spray bottle and wait for me at the side table.",
-  "max_steps": 68,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'd like to do some cleaning. Please pick up the spray bottle and wait for me at the side table."
 }

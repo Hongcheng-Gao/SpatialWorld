@@ -40,9 +40,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm going to the kitchen to get something to eat. Please turn on the kitchen light and then pick up the apple.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'm going to the kitchen to get something to eat. Please turn on the kitchen light and then pick up the apple."
 }

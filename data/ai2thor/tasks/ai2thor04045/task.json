@@ -39,9 +39,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm about to put my watch on; please place it on the chair.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'm about to put my watch on; please place it on the chair."
 }

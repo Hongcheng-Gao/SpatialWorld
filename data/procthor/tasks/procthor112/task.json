@@ -65,9 +65,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "Can you turn on one phone and bring it to the bathroom? I want to use it while I'm in there.",
-  "max_steps": 90,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level1 Navigation"
+  "target_description": "Can you turn on one phone and bring it to the bathroom? I want to use it while I'm in there."
 }

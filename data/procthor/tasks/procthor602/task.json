@@ -62,9 +62,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I am hungry. Please move to the kitchen and get the tomato from the stove in the kitchen.",
-  "max_steps": 86,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I am hungry. Please move to the kitchen and get the tomato from the stove in the kitchen."
 }

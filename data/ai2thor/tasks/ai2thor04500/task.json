@@ -27,8 +27,5 @@
     }
   ],
   "success_logic": "OR",
-  "target_description": "I'm going to start working now. Please bring me the laptop from the sofa.",
-  "max_steps": 30,
-  "Category": "Study and Work",
-  "Level": "Level3"
+  "target_description": "I'm going to start working now. Please bring me the laptop from the sofa."
 }

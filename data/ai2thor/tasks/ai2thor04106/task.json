@@ -30,9 +30,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm going to tidy up the room. Please clean up all the dirt in front of me.",
-  "max_steps": 60,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level2 Interaction"
+  "target_description": "I'm going to tidy up the room. Please clean up all the dirt in front of me."
 }

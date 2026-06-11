@@ -39,9 +39,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to get up and work, please turn on the computer and open the book.",
-  "max_steps": 60,
-  "Evaluation_Type": "Conditional",
-  "Category": "Study and Work",
-  "Level": "Level3 Hybrid"
+  "target_description": "I want to get up and work, please turn on the computer and open the book."
 }

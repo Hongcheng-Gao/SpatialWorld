@@ -32,8 +32,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "I'm hungry, so please slice the bread as instructed and keep the pieces together and then pick up one piece.",
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3"
+  "target_description": "I'm hungry, so please slice the bread as instructed and keep the pieces together and then pick up one piece."
 }

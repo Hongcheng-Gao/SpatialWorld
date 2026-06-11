@@ -75,9 +75,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'd like to use the candle in the kitchen tonight, and I need a bottle of wine set out in the bedroom. Please pick up the candle and head to the kitchen, then pick up the wine bottle and go to the bedroom.",
-  "max_steps": 130,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'd like to use the candle in the kitchen tonight, and I need a bottle of wine set out in the bedroom. Please pick up the candle and head to the kitchen, then pick up the wine bottle and go to the bedroom."
 }

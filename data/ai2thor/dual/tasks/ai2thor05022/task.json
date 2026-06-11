@@ -35,8 +35,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "I need to tidy up, so please tidy up the bed by clearing any clutter and wiping it until it looks clean and then turn on the laptop and wait until you can tell it's powered on.",
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3"
+  "target_description": "I need to tidy up, so please tidy up the bed by clearing any clutter and wiping it until it looks clean and then turn on the laptop and wait until you can tell it's powered on."
 }

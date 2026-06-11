@@ -32,6 +32,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I need to tidy up the kitchen. Please open the refrigerator door and put the salmon inside, but do not close the refrigerator door.",
-  "max_steps": 19
+  "target_description": "I need to tidy up the kitchen. Please open the refrigerator door and put the salmon inside, but do not close the refrigerator door."
 }

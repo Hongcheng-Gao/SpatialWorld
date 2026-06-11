@@ -26,8 +26,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "I'm settling in on the sofa, so please turn on the laptop on the sofa and wait until you can tell it's powered on.",
-  "Evaluation_Type": "Conditional",
-  "Category": "Study and Work",
-  "Level": "Level3"
+  "target_description": "I'm settling in on the sofa, so please turn on the laptop on the sofa and wait until you can tell it's powered on."
 }

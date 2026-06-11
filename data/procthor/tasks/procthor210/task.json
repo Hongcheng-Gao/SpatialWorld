@@ -48,9 +48,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to decorate my bedroom. Please pick up one vase and relocate it to the bedroom.",
-  "max_steps": 56,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I want to decorate my bedroom. Please pick up one vase and relocate it to the bedroom."
 }

@@ -25,6 +25,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I can't find my keyboard. Could you help me locate it and pick it up to show me?",
-  "max_steps": 33
+  "target_description": "I can't find my keyboard. Could you help me locate it and pick it up to show me?"
 }

@@ -33,9 +33,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to have a drink before going to sleep. Please pick up the wine bottle and move it to the bedroom for me.",
-  "max_steps": 38,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I want to have a drink before going to sleep. Please pick up the wine bottle and move it to the bedroom for me."
 }

@@ -29,9 +29,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm very hungry now, please slice the bread and pick it up.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level2 Interaction"
+  "target_description": "I'm very hungry now, please slice the bread and pick it up."
 }

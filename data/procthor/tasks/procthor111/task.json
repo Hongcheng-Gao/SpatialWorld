@@ -46,9 +46,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "An apple a day keeps the doctor away. Please grab one apple from the kitchen, bring it to my bedroom, and put it on any dresser. I'll eat it later.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level1 Navigation"
+  "target_description": "An apple a day keeps the doctor away. Please grab one apple from the kitchen, bring it to my bedroom, and put it on any dresser. I'll eat it later."
 }

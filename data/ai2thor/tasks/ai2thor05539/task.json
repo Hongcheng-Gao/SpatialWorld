@@ -34,9 +34,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "Please pick up the book on the TV stand—the one that seems to be about deep learning—and place it on the sofa; I'll come study it in a bit",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Study and Work",
-  "Level": "Level3"
+  "target_description": "Please pick up the book on the TV stand—the one that seems to be about deep learning—and place it on the sofa; I'll come study it in a bit"
 }

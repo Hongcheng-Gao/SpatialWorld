@@ -1,6 +1,6 @@
 # CARLA VLM — OpenRouter：anthropic/claude-sonnet-4.6
 
-# THINK 节点每步 VLM 轮次与退避；见 core/agent/graph.py _resolve_local_retry_config
+# THINK-node VLM retries/backoff; see core/agent/graph.py _resolve_local_retry_config
 api:
   max_retries: 6
   api_retry_delay: 10

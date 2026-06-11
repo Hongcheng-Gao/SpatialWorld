@@ -42,9 +42,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to relax. Please fetch the apple in the kitchen and move to the sofa in the living room.",
-  "max_steps": 36,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I want to relax. Please fetch the apple in the kitchen and move to the sofa in the living room."
 }

@@ -21,6 +21,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "Turn on the sink please. I want to wash my face.",
-  "max_steps": 13
+  "target_description": "Turn on the sink please. I want to wash my face."
 }

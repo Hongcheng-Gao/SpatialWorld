@@ -40,9 +40,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I accidentally burned the bread slice in the toaster. Please help me put the bread slice from the toaster into the trash can.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I accidentally burned the bread slice in the toaster. Please help me put the bread slice from the toaster into the trash can."
 }

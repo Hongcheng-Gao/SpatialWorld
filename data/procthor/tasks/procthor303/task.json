@@ -39,9 +39,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "The basketball on the floor is blocking the way. Please pick it up and stand by the bed.",
-  "max_steps": 28,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "The basketball on the floor is blocking the way. Please pick it up and stand by the bed."
 }

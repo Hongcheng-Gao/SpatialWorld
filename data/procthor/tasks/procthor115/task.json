@@ -53,9 +53,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "Please take one book from the bedroom to the kitchen. It might help me with cooking.",
-  "max_steps": 68,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level1 Navigation"
+  "target_description": "Please take one book from the bedroom to the kitchen. It might help me with cooking."
 }

@@ -41,9 +41,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'd like some wine with dinner—please find my watering can, fill it with wine, and place it on the dining table",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "I'd like some wine with dinner—please find my watering can, fill it with wine, and place it on the dining table"
 }

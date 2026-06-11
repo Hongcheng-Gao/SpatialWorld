@@ -1,13 +1,13 @@
-# CARLA 自动驾驶环境完整配置
+# CARLA autonomous driving environment configuration
 
-# ==================== 环境配置 ====================
+# ==================== Environment ====================
 env:
   type: carla
   host: null
   port: 2000
   timeout: 10.0
 
-  # 传感器配置
+  # Sensor configuration
   sensors:
     rgb_camera:
       width: 800
@@ -20,23 +20,23 @@ env:
     lidar:
       enabled: false
 
-  # 天气配置
-  weather: ClearNoon # ClearNoon, CloudySunset, WetNoon, HardRainNoon 等
+  # Weather configuration
+  weather: ClearNoon # e.g. ClearNoon, CloudySunset, WetNoon, HardRainNoon
 
-  # 地图
+  # Map
   map: Town01
 
-# ==================== 任务控制 ====================
+# ==================== Task Control ====================
 max_steps: 100
 
-# ==================== 上下文管理 ====================
+# ==================== Context Management ====================
 context_management:
   max_trajectory_length: 20
   enable_auto_truncation: true
-  enable_long_term_summary: false # 是否启用长期语义摘要（<SUMMARY>标签）
-  short_term_history_window_size: 3 # 短期历史窗口大小（最近N步的多模态历史，包含图像和错误信息）
+  enable_long_term_summary: false # Enable long-term semantic summary (<SUMMARY> tag)
+  short_term_history_window_size: 3 # Short-term multimodal history window size
 
-# ==================== 模型配置 ====================
+# ==================== Model ====================
 model:
   vlm:
     provider: openai
@@ -44,37 +44,37 @@ model:
     temperature: 0.2
     max_tokens: 2000
 
-# ==================== 日志配置 ====================
+# ==================== Logging ====================
 logging:
   stdout_verbose: true
   save_step_images: true
   log_level: INFO
 
-# ==================== 动作配置 ====================
+# ==================== Actions ====================
 actions:
-  # 油门范围
+  # Throttle range
   throttle_range: [0.0, 1.0]
-  # 转向范围
+  # Steering range
   steer_range: [-1.0, 1.0]
-  # 刹车范围
+  # Brake range
   brake_range: [0.0, 1.0]
 
-# ==================== 奖励配置 ====================
+# ==================== Rewards ====================
 reward:
   success_reward: 10.0
   step_penalty: -0.01
   collision_penalty: -1.0
   lane_invasion_penalty: -0.5
 
-# ==================== 实验配置 ====================
+# ==================== Experiment ====================
 experiment:
   num_episodes: 1
   output_dir: outputs
 
-# ==================== 任务预设 ====================
+# ==================== Task Presets ====================
 task_presets:
   navigate_to_waypoint:
-    description: 导航到指定的路点位置，沿着道路安全行驶到达目的地
+    description: Navigate to the specified waypoint safely along the road
     max_steps: 100
     map: Town01
     waypoint:
@@ -83,19 +83,19 @@ task_presets:
       z: 0.5
     success_condition:
       type: distance_to_waypoint
-      threshold: 5.0 # 距离目标点5米内视为成功
+      threshold: 5.0 # success within 5 meters of the target
 
   follow_lane:
-    description: 沿着当前车道保持行驶，保持稳定速度，避免偏离车道
+    description: Stay in the current lane at a stable speed and avoid lane departures
     max_steps: 200
     map: Town01
     target_speed: 30.0 # km/h
     success_condition:
       type: lane_following
-      min_distance: 500.0 # 至少行驶500米
+      min_distance: 500.0 # drive at least 500 meters
 
   avoid_obstacles:
-    description: 避开障碍物并到达目标点，注意前方的静态和动态障碍物
+    description: Avoid obstacles and reach the target while watching for static and dynamic obstacles
     max_steps: 150
     map: Town02
     obstacle_count: 5
@@ -108,15 +108,15 @@ task_presets:
       threshold: 5.0
 
   traffic_light_stop:
-    description: 识别交通信号灯，在红灯时停车，绿灯时通行
+    description: Recognize traffic lights, stop on red, and proceed on green
     max_steps: 100
     map: Town03
     success_condition:
       type: traffic_light_compliance
-      required_stops: 3 # 需要正确停车3次
+      required_stops: 3 # correctly stop 3 times
 
   highway_merge:
-    description: 安全驶入高速公路，与其他车辆汇合并保持安全距离
+    description: Merge safely onto the highway and keep a safe distance from other vehicles
     max_steps: 150
     map: Town04
     target_speed: 60.0 # km/h

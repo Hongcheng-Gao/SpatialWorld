@@ -47,9 +47,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "Both the pencil and pen are broken; please throw them in the trash.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "Both the pencil and pen are broken; please throw them in the trash."
 }

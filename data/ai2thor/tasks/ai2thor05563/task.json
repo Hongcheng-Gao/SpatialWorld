@@ -33,9 +33,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm looking for the remote. Could you look for the remote on the dresser and then set it on the coffee table in front of the TV?",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "I'm looking for the remote. Could you look for the remote on the dresser and then set it on the coffee table in front of the TV?"
 }

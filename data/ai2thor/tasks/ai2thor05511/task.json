@@ -26,9 +26,5 @@
     }
   ],
   "success_logic": "OR",
-  "target_description": "I'm so tired tonight that I want to go to bed early—could you please turn off the lights in the room? The switch is right by the door. Thanks!",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "I'm so tired tonight that I want to go to bed early—could you please turn off the lights in the room? The switch is right by the door. Thanks!"
 }

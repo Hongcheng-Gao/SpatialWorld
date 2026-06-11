@@ -27,8 +27,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "I'm starting breakfast now, so please turn on the coffee machine for me.",
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3"
+  "target_description": "I'm starting breakfast now, so please turn on the coffee machine for me."
 }

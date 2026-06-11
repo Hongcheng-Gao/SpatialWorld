@@ -22,9 +22,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "The sunlight is lovely now—there's no need for extra light. Please switch off the bedside lamp",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "The sunlight is lovely now—there's no need for extra light. Please switch off the bedside lamp"
 }

@@ -55,9 +55,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "Can you bring the empty toilet paper holder from the bathroom to the bedroom? I'll refill it with paper.",
-  "max_steps": 62,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level1 Navigation"
+  "target_description": "Can you bring the empty toilet paper holder from the bathroom to the bedroom? I'll refill it with paper."
 }

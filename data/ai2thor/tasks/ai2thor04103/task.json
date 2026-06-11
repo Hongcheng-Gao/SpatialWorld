@@ -24,9 +24,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I need to get ready for work, please turn on the main light in the room.",
-  "max_steps": 60,
-  "Evaluation_Type": "Conditional",
-  "Category": "Study and Work",
-  "Level": "Level3 Hybrid"
+  "target_description": "I need to get ready for work, please turn on the main light in the room."
 }

@@ -28,6 +28,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'd like to use my cellphone. Please put it back on the bed.",
-  "max_steps": 21
+  "target_description": "I'd like to use my cellphone. Please put it back on the bed."
 }

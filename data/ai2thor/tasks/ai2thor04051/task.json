@@ -40,9 +40,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm going to eat at the dining table now. Please close my laptop and place it on the coffee table.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'm going to eat at the dining table now. Please close my laptop and place it on the coffee table."
 }

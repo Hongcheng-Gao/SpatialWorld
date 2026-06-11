@@ -37,9 +37,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I left the cloth on the counter. Could you take it to the side table by the sink?",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "I left the cloth on the counter. Could you take it to the side table by the sink?"
 }

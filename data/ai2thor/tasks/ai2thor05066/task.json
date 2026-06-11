@@ -25,8 +25,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "I'm ready to start the stew, so please pick up the pot and slice the tomato for me.",
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3"
+  "target_description": "I'm ready to start the stew, so please pick up the pot and slice the tomato for me."
 }

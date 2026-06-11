@@ -34,9 +34,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "Please pick up the baseball bat leaning against the wall by the table and place it on the bed.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Entertainment",
-  "Level": "Level3"
+  "target_description": "Please pick up the baseball bat leaning against the wall by the table and place it on the bed."
 }

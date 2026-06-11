@@ -35,9 +35,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm getting sleepy—could you turn off all the lights in the room for me, including the one over the dining table and the floor lamp? Thanks.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "I'm getting sleepy—could you turn off all the lights in the room for me, including the one over the dining table and the floor lamp? Thanks."
 }

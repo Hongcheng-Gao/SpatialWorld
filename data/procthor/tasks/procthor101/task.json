@@ -69,9 +69,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I left a book in my room. Please pick up a book, place it in the living room, and then stand next to the dining table.",
-  "max_steps": 90,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level1 Navigation"
+  "target_description": "I left a book in my room. Please pick up a book, place it in the living room, and then stand next to the dining table."
 }

@@ -27,8 +27,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "I'm feeling a bit sleepy; could you fill the cup with coffee to help me wake up?",
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3"
+  "target_description": "I'm feeling a bit sleepy; could you fill the cup with coffee to help me wake up?"
 }

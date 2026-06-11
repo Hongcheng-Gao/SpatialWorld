@@ -42,9 +42,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm thirsty. Please fill the mug at the coffee machine and put it on the dining table.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household",
-  "Level": "Level3"
+  "target_description": "I'm thirsty. Please fill the mug at the coffee machine and put it on the dining table."
 }

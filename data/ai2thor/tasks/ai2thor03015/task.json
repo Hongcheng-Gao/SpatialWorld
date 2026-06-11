@@ -42,9 +42,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to eat. Please turn off the microwave and take the egg out and put it in a bowl.",
-  "max_steps": 30,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I want to eat. Please turn off the microwave and take the egg out and put it in a bowl."
 }

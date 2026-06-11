@@ -26,9 +26,5 @@
     }
   ],
   "success_logic": "OR",
-  "target_description": "I want to work for a while now, please open my laptop for me.",
-  "max_steps": 30,
-  "Evaluation_Type": "Conditional",
-  "Category": "Study and Work",
-  "Level": "Level3 Hybrid"
+  "target_description": "I want to work for a while now, please open my laptop for me."
 }

@@ -33,9 +33,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I have ended my friendship and I no longer want the pencil or the fountain pen he gave me. I have already thrown the pencil into the trash. Could you throw the fountain pen into the trash for me?",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "I have ended my friendship and I no longer want the pencil or the fountain pen he gave me. I have already thrown the pencil into the trash. Could you throw the fountain pen into the trash for me?"
 }

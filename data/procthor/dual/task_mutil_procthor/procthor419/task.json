@@ -116,9 +116,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I need to tidy up the bedroom. Please pick up a pillow from the bed and take it to the sofa in the living room. After that, pick up the alarm clock on the bed and bring it to the dining table in the living room. Finally, clean the bed.",
-  "max_steps": 160,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I need to tidy up the bedroom. Please pick up a pillow from the bed and take it to the sofa in the living room. After that, pick up the alarm clock on the bed and bring it to the dining table in the living room. Finally, clean the bed."
 }

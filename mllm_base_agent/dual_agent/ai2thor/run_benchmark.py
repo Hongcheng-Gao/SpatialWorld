@@ -680,7 +680,7 @@ Examples:
         "--recursion-limit",
         type=int,
         default=None,
-        help="    ；    mllm_base_agent/dual_agent/ai2thor/main   10+2n     ",
+        help="Override per-agent max steps (default: 10 + golden_actions.steps)",
     )
     parser.add_argument(
         "--switch-interval",

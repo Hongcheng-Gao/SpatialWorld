@@ -46,9 +46,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm planning to open a box with a knife. Please go to the kitchen, get a knife, and bring it to me in the bedroom.",
-  "max_steps": 64,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'm planning to open a box with a knife. Please go to the kitchen, get a knife, and bring it to me in the bedroom."
 }

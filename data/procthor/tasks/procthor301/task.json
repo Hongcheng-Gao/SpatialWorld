@@ -53,9 +53,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I need to use the bathroom. Please open the toilet lid and wait beside it.",
-  "max_steps": 58,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Bathroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I need to use the bathroom. Please open the toilet lid and wait beside it."
 }

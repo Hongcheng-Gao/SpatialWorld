@@ -33,9 +33,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I've finished my shower. Please open the bathroom door for me and turn off the lights. Thank you.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "I've finished my shower. Please open the bathroom door for me and turn off the lights. Thank you."
 }

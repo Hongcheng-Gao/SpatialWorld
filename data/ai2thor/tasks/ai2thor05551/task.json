@@ -33,9 +33,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm in a hurry to use the toilet—could you take the paper towel from the sink counter and place it on the toilet for me?",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "I'm in a hurry to use the toilet—could you take the paper towel from the sink counter and place it on the toilet for me?"
 }

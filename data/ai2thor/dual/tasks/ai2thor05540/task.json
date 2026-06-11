@@ -35,9 +35,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm getting ready to head out—please water the potted plant on the table and then turn off the wall light.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "I'm getting ready to head out—please water the potted plant on the table and then turn off the wall light."
 }

@@ -53,7 +53,7 @@ model:
     max_tokens: 4096
     base_url: null
     api_key: null
-    # vLLM 备用:
+    # vLLM fallback:
     # model_name: Qwen3-VL-8B-Instruct
 
 # -----------------------------------------------------------------------------

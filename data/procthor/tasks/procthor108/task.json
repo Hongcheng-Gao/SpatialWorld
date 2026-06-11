@@ -36,9 +36,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "Please go to the bedroom.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level1 Navigation"
+  "target_description": "Please go to the bedroom."
 }

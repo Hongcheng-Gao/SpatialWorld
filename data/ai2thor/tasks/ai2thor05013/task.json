@@ -30,9 +30,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "I need it running, so please turn on the laptop and wait until you can tell it's powered on.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Study and Work",
-  "Level": "Level3"
+  "target_description": "I need it running, so please turn on the laptop and wait until you can tell it's powered on."
 }

@@ -46,9 +46,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to clean my bedroom. Please navigate to the bedroom and fetch the baseball bat from the floor and place it on the dresser.",
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid",
-  "max_steps": 54
+  "target_description": "I want to clean my bedroom. Please navigate to the bedroom and fetch the baseball bat from the floor and place it on the dresser."
 }

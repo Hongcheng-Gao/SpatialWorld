@@ -27,8 +27,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "It looks like it needs liquid, so please fill the houseplant with water until it shows it's filled, then keep it steady.",
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3"
+  "target_description": "It looks like it needs liquid, so please fill the houseplant with water until it shows it's filled, then keep it steady."
 }

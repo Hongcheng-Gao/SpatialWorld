@@ -35,9 +35,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "Please find the vase that’s sitting on the shelf, pick it up, and set it on the side table next to the sofa.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "Please find the vase that’s sitting on the shelf, pick it up, and set it on the side table next to the sofa."
 }

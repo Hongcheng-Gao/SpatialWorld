@@ -54,9 +54,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I’m ready to really kick back and watch some TV. Could you grab the kettle, fill it up, and set it on the coffee table? Then switch the TV on for me. Nothing beats sipping water while I binge my show.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Entertainment (Game/Sports)",
-  "Level": "Level3"
+  "target_description": "I’m ready to really kick back and watch some TV. Could you grab the kettle, fill it up, and set it on the coffee table? Then switch the TV on for me. Nothing beats sipping water while I binge my show."
 }

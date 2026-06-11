@@ -39,9 +39,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'll go eat soon. Please wait for me at any kitchen table first.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level1 Navigation"
+  "target_description": "I'll go eat soon. Please wait for me at any kitchen table first."
 }

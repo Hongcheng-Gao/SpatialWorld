@@ -32,9 +32,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I just finished my snack and need to tidy up. Please pick up one box and carry it over to the kitchen.",
-  "max_steps": 36,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I just finished my snack and need to tidy up. Please pick up one box and carry it over to the kitchen."
 }

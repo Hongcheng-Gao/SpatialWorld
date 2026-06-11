@@ -71,6 +71,42 @@ def compute_max_steps_from_n(n: int) -> int:
     return 10 + 2 * max(0, int(n))
 
 
+def derive_dual_golden_steps(task_config: Mapping[str, Any] | None) -> Optional[int]:
+    """Read n from ``golden_actions.steps`` for multi-agent tasks."""
+    if not isinstance(task_config, Mapping):
+        return None
+    golden = task_config.get("golden_actions") or {}
+    if not isinstance(golden, Mapping):
+        return None
+    steps = golden.get("steps")
+    try:
+        if steps is not None:
+            return max(0, int(steps))
+    except (TypeError, ValueError):
+        return None
+    return None
+
+
+def compute_dual_agent_max_steps_from_steps(steps: int) -> int:
+    """Per-agent step budget for multi-agent tasks: max_steps = 10 + n."""
+    return 10 + max(0, int(steps))
+
+
+def resolve_dual_agent_max_steps_from_task(
+    task_config: Mapping[str, Any] | None, default: int = 30
+) -> int:
+    """Resolve per-agent max_steps for multi-agent tasks using golden_actions.steps."""
+    steps = derive_dual_golden_steps(task_config)
+    if steps is not None:
+        return compute_dual_agent_max_steps_from_steps(steps)
+    if isinstance(task_config, Mapping) and task_config.get("max_steps") is not None:
+        try:
+            return int(task_config["max_steps"])
+        except (TypeError, ValueError):
+            pass
+    return int(default)
+
+
 def resolve_max_steps_from_task(task_config: Mapping[str, Any] | None, default: int = 30) -> int:
     """Resolve max_steps using 10 + 2n, falling back only when n is unknown."""
     n = derive_task_n(task_config)
@@ -84,4 +120,11 @@ def resolve_max_steps_from_task(task_config: Mapping[str, Any] | None, default: 
     return int(default)
 
 
-__all__ = ["compute_max_steps_from_n", "derive_task_n", "resolve_max_steps_from_task"]
+__all__ = [
+    "compute_dual_agent_max_steps_from_steps",
+    "compute_max_steps_from_n",
+    "derive_dual_golden_steps",
+    "derive_task_n",
+    "resolve_dual_agent_max_steps_from_task",
+    "resolve_max_steps_from_task",
+]

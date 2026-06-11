@@ -26,6 +26,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to check if the tomato is rotten. Please pick up this tomato for me.",
-  "max_steps": 30
+  "target_description": "I want to check if the tomato is rotten. Please pick up this tomato for me."
 }

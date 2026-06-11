@@ -27,6 +27,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I can't find my mouse. Can you see it? It should be by the computer. Pick it up for me if you find it.",
-  "max_steps": 36
+  "target_description": "I can't find my mouse. Can you see it? It should be by the computer. Pick it up for me if you find it."
 }

@@ -22,9 +22,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I need to use the toilet. Could you lift the seat for me? Thanks.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "I need to use the toilet. Could you lift the seat for me? Thanks."
 }

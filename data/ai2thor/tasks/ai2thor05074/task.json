@@ -32,8 +32,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "I'm getting ready to eat, so please slice the apple as instructed and keep the pieces together and then slice the bread as instructed and keep the pieces together.",
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3"
+  "target_description": "I'm getting ready to eat, so please slice the apple as instructed and keep the pieces together and then slice the bread as instructed and keep the pieces together."
 }

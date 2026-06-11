@@ -25,6 +25,5 @@
     }
   ],
   "success_logic": "OR",
-  "target_description": "I want to rest for a while, please turn off the desk lamp for me.",
-  "max_steps": 30
+  "target_description": "I want to rest for a while, please turn off the desk lamp for me."
 }

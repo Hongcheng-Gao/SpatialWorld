@@ -57,9 +57,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to read the newspaper when I use the bathroom. Please bring the newspaper to me in the bathroom",
-  "max_steps": 66,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level1 Navigation"
+  "target_description": "I want to read the newspaper when I use the bathroom. Please bring the newspaper to me in the bathroom"
 }

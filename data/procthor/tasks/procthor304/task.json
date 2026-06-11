@@ -34,9 +34,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to play the basketball. Please bring a basketball in the Bedroom.",
-  "max_steps": 20,
-  "Evaluation_Type": "Conditional",
-  "Category": "Entertainment (Game/Sports)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I want to play the basketball. Please bring a basketball in the Bedroom."
 }

@@ -61,9 +61,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I am going to sleep. Please proceed to the bedroom and position yourself at a bedside to remain available for my assistance.",
-  "max_steps": 86,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level1 Navigation"
+  "target_description": "I am going to sleep. Please proceed to the bedroom and position yourself at a bedside to remain available for my assistance."
 }

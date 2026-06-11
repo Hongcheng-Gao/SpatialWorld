@@ -47,9 +47,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I need to use a spatula. Please pick up the spatula and stand near the refrigerator.",
-  "max_steps": 52,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I need to use a spatula. Please pick up the spatula and stand near the refrigerator."
 }

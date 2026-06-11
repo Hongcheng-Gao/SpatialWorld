@@ -33,6 +33,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm full. Please put the pie on the kitchen counter; I'll prepare it later.",
-  "max_steps": 31
+  "target_description": "I'm full. Please put the pie on the kitchen counter; I'll prepare it later."
 }

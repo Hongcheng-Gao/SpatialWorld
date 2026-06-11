@@ -90,9 +90,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm going to start cooking now, please take all the vegetables out of the refrigerator and put them on the counter.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'm going to start cooking now, please take all the vegetables out of the refrigerator and put them on the counter."
 }

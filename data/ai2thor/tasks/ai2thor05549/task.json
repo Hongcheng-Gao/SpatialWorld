@@ -22,9 +22,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to wash my face—could you turn on the faucet for me?",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "I want to wash my face—could you turn on the faucet for me?"
 }

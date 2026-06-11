@@ -29,6 +29,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'd like to drink coffee. Please turn on the coffee machine.",
-  "max_steps": 24
+  "target_description": "I'd like to drink coffee. Please turn on the coffee machine."
 }

@@ -57,9 +57,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I need a spoon. Please pick up the spoon and stand near the sofa.",
-  "max_steps": 72,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I need a spoon. Please pick up the spoon and stand near the sofa."
 }

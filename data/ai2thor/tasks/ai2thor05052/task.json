@@ -28,8 +28,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "I want it switched on, so please toggle the TV to the on position and check the room responds.",
-  "Evaluation_Type": "Conditional",
-  "Category": "Entertainment (Game/Sports)",
-  "Level": "Level3"
+  "target_description": "I want it switched on, so please toggle the TV to the on position and check the room responds."
 }

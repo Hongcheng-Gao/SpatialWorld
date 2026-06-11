@@ -27,6 +27,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "Can you see the ceiling light switch by the door? Please walk over and turn it off. I'm going to sleep.",
-  "max_steps": 25
+  "target_description": "Can you see the ceiling light switch by the door? Please walk over and turn it off. I'm going to sleep."
 }

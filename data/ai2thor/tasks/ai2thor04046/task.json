@@ -42,9 +42,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to work on my laptop while watching TV. Please enable both.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Study and Work",
-  "Level": "Level3 Hybrid"
+  "target_description": "I want to work on my laptop while watching TV. Please enable both."
 }

@@ -31,9 +31,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to sleep now. Please turn off my phone, then clean the bed.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I want to sleep now. Please turn off my phone, then clean the bed."
 }

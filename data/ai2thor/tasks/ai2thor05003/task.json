@@ -34,9 +34,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "I'm checking a couple interactions, so please open the book gently so it stays open and then in the simulation, break the window using the provided interaction.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Study and Work",
-  "Level": "Level3"
+  "target_description": "I'm checking a couple interactions, so please open the book gently so it stays open and then in the simulation, break the window using the provided interaction."
 }

@@ -35,9 +35,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm going to sleep, but a bed is messy. Please tidy a bed and wait beside it.",
-  "max_steps": 22,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'm going to sleep, but a bed is messy. Please tidy a bed and wait beside it."
 }

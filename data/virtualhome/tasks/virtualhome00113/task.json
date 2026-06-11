@@ -34,6 +34,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'd like to watch some TV. Please put the remote on the coffee table.",
-  "max_steps": 31
+  "target_description": "I'd like to watch some TV. Please put the remote on the coffee table."
 }

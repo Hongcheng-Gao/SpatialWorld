@@ -29,9 +29,5 @@
     }
   ],
   "success_logic": "OR",
-  "target_description": "I see a tennis racket—could you pick it up for me? I'm ready to get a good workout in",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Entertainment",
-  "Level": "Level3"
+  "target_description": "I see a tennis racket—could you pick it up for me? I'm ready to get a good workout in"
 }

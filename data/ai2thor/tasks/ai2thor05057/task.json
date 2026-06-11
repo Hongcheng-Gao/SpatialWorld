@@ -28,8 +28,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "I'm going to take a nap on the couch, so switch off the desk lamp right next to it.",
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3"
+  "target_description": "I'm going to take a nap on the couch, so switch off the desk lamp right next to it."
 }

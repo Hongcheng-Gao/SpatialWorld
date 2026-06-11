@@ -48,9 +48,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm going to have a meal in the kitchen and read the newspaper at the same time. Please bring both the newspaper and the plate to the kitchen.",
-  "max_steps": 110,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'm going to have a meal in the kitchen and read the newspaper at the same time. Please bring both the newspaper and the plate to the kitchen."
 }

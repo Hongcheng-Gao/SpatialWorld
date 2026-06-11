@@ -32,9 +32,5 @@
     }
   ],
   "success_logic": "OR",
-  "target_description": "Please pick up the tennis racket located in the aisle between the bed and the wall.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Entertainment",
-  "Level": "Level3"
+  "target_description": "Please pick up the tennis racket located in the aisle between the bed and the wall."
 }

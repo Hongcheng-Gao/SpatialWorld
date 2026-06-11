@@ -47,9 +47,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm tidying up—please put the watch and credit card from the table into the box",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "I'm tidying up—please put the watch and credit card from the table into the box"
 }

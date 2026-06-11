@@ -51,9 +51,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I've washed all the dishes in the sink; please take them out and put them on the counter.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I've washed all the dishes in the sink; please take them out and put them on the counter."
 }

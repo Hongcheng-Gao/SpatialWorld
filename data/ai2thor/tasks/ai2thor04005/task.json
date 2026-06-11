@@ -43,9 +43,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "Please transfer the cellphone from the side table next to the window to the desk by the bed on the right.",
-  "max_steps": 30,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "Please transfer the cellphone from the side table next to the window to the desk by the bed on the right."
 }

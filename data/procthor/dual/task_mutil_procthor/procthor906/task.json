@@ -49,9 +49,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I need to take a photo of some ingredients. Please hold up the tomato and the egg.",
-  "max_steps": 54,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I need to take a photo of some ingredients. Please hold up the tomato and the egg."
 }

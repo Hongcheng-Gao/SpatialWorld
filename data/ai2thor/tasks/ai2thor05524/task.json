@@ -33,9 +33,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm ready to work now; the desk lamp is already on. Please turn off the wall light and open the book",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Study and Work",
-  "Level": "Level3"
+  "target_description": "I'm ready to work now; the desk lamp is already on. Please turn off the wall light and open the book"
 }

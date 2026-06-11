@@ -1,194 +1,185 @@
-# Dual-Agent Spatial Planning 双智能体协作系统
+# Dual-Agent Spatial Planning
 
-## 📖 概述
+## Overview
 
-Dual-Agent Spatial Planning 是基于主目录单智能体框架扩展的**双智能体协作系统**。两个具身智能体在共享的 3D 虚拟环境（AI2-THOR）中通过**显式通信**协作完成任务。
+Dual-Agent Spatial Planning extends the single-agent framework with a **two-agent collaboration system**. Two embodied agents work in a shared 3D virtual environment (AI2-THOR) and complete tasks through **explicit communication**.
 
-### 核心设计理念
+### Core Design
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    共享环境 (AI2-THOR)                       │
+│                    Shared Environment (AI2-THOR)              │
 │  ┌─────────────────┐              ┌─────────────────┐       │
 │  │    Agent 1      │◄────────────►│    Agent 2      │       │
 │  │  (Collaborator) │  COMMUNICATE │  (Collaborator) │       │
 │  └────────┬────────┘              └────────┬────────┘       │
 │           │                                │                │
 │           ▼                                ▼                │
-│      观察环境                          观察环境              │
-│      执行动作                          执行动作              │
+│      Observe env                      Observe env           │
+│      Execute action                   Execute action        │
 └─────────────────────────────────────────────────────────────┘
 ```
 
-**关键特性：**
-- 🤝 **平等协作**：两个智能体地位平等，无主从之分
-- 📨 **显式通信**：智能体只能通过 `<COMMUNICATE>` 标签交流，无法"偷看"对方的观察
-- 🔄 **交替执行**：智能体轮流执行动作，模拟真实协作场景
-- 🎯 **共同目标**：完成同一个任务，需要分工与协调
+**Key properties:**
+- **Equal collaboration**: both agents are peers; there is no master/slave hierarchy
+- **Explicit communication**: agents exchange information only through `<COMMUNICATE>` tags
+- **Alternating execution**: agents take turns, simulating real collaboration
+- **Shared goal**: both agents work on the same task and must coordinate
 
-## 🏗️ 系统架构
+## System Architecture
 
-### 与单智能体版本的对比
+### Comparison with Single-Agent Mode
 
-| 特性 | 单智能体 | 双智能体 |
+| Feature | Single-Agent | Dual-Agent |
 |------|----------|----------|
-| 状态定义 | `AgentState` | `DualAgentState` (包含两个 `AgentState`) |
-| 状态机节点 | Think → Act → Evaluate | Coordinator → Think → Act → Evaluate |
-| 信息流 | 单一轨迹 | 两条独立轨迹 + 通信历史 |
-| Prompt | 单一 System Prompt | 协作导向的 System Prompt |
+| State | `AgentState` | `DualAgentState` (two `AgentState` instances) |
+| Graph nodes | Think → Act → Evaluate | Coordinator → Think → Act → Evaluate |
+| Information flow | Single trajectory | Two trajectories + communication history |
+| Prompt | Single system prompt | Collaboration-oriented system prompt |
 
-### 模块复用关系
+### Module Reuse
 
-双智能体系统**复用**主目录的以下模块（不重复实现）：
-- `envs/ai2thor/wrapper.py` - 环境封装
-- `evaluators/base.py` - 任务评估器
-- `config/load_config.py` - 配置加载
-- `core/llm/schemas.py` - 数据结构
+The dual-agent system **reuses** these main-repo modules:
+- `envs/ai2thor/wrapper.py` — environment wrapper
+- `evaluators/base.py` — task evaluator
+- `config/load_config.py` — config loading
+- `core/llm/schemas.py` — shared schemas
 
-双智能体系统**扩展**的模块：
-- `dual_agent/core/agent/graph.py` - 双智能体状态机
-- `dual_agent/core/agent/state.py` - 双智能体状态定义
-- `dual_agent/core/prompts/dual_agent.py` - 协作 Prompt
+The dual-agent system **extends**:
+- `dual_agent/core/agent/graph.py` — dual-agent state machine
+- `dual_agent/core/agent/state.py` — dual-agent state definitions
+- `dual_agent/core/prompts/dual_agent.py` — collaboration prompts
 
-### 状态机流程
+### State Machine Flow
 
 ```mermaid
 graph TD
-    START[开始] --> COORD[Coordinator<br/>选择当前智能体]
-    COORD --> THINK[Think<br/>VLM 分析与规划]
-    THINK --> ACT[Act<br/>执行动作]
-    ACT --> EVAL[Evaluate<br/>评估状态]
-    EVAL -->|继续| COORD
-    EVAL -->|完成/失败| FINAL[Final<br/>保存results]
-    FINAL --> END[结束]
+    START[Start] --> COORD[Coordinator<br/>select active agent]
+    COORD --> THINK[Think<br/>VLM planning]
+    THINK --> ACT[Act<br/>execute action]
+    ACT --> EVAL[Evaluate<br/>check status]
+    EVAL -->|continue| COORD
+    EVAL -->|done/fail| FINAL[Final<br/>save results]
+    FINAL --> END[End]
 ```
 
-### 项目结构
+### Project Layout
 
 ```
 dual_agent/
-├── main.py               # 主入口（推荐使用）
-├── config.yaml           # 默认配置
-├── configs/              # 配置文件目录
+├── main.py               # Main entry point
+├── config.yaml           # Default config
+├── configs/
 │   └── equal_collaboration.yaml
 ├── core/
 │   ├── agent/
-│   │   ├── graph.py      # 双智能体状态机（核心）
-│   │   └── state.py      # 状态定义
+│   │   ├── graph.py      # Dual-agent state machine
+│   │   └── state.py      # State definitions
 │   ├── llm/
-│   │   └── __init__.py   # VLM 初始化
+│   │   └── __init__.py   # VLM initialization
 │   ├── prompts/
-│   │   └── dual_agent.py # 协作 Prompt 模板
+│   │   └── dual_agent.py # Collaboration prompt templates
 │   └── memory/
-│       └── __init__.py   # 双智能体记忆管理
-├── docs/                 # 文档
-├── outputs/              # 运行输出
-└── tasks/                # 任务定义（可选）
+│       └── __init__.py   # Dual-agent memory
+├── docs/
+├── outputs/
+└── tasks/
 ```
 
-## 🚀 快速开始
+## Quick Start
 
-### 1. 环境准备
+### 1. Environment Setup
 
 ```bash
-# 确保在项目根目录
 cd spatial-planning
 
-# 激活环境
 conda activate spatial
 
-# 配置 API Key（在 dual_agent/.env 中）
 echo "OPENAI_API_KEY=your_key_here" > dual_agent/.env
 echo "OPENAI_BASE_URL=http." >> dual_agent/.env
 ```
 
-### 2. 运行单个任务
+### 2. Run a Single Task
 
 ```bash
-# 使用默认配置运行任务
 python mllm_base_agent/dual_agent/ai2thor/main.py --task ai2thor05041
 
-# 设置最大步数
 python mllm_base_agent/dual_agent/ai2thor/main.py --task ai2thor05041 --max-steps 40
 
-# 设置智能体切换间隔
 python mllm_base_agent/dual_agent/ai2thor/main.py --task ai2thor05041 --switch-interval 5
 ```
 
-### 3. 运行多个任务
+### 3. Run Multiple Tasks
 
 ```bash
 python mllm_base_agent/dual_agent/ai2thor/main.py --task ai2thor05001 ai2thor050002 ai2thor05003
 ```
 
-### 4. 查看results
+### 4. Inspect Outputs
 
-运行results保存在 `dual_agent/outputs/task_{task_id}_{timestamp}/` 目录下：
-- `dual_episode_*.json`：完整的运行日志，包含轨迹、通信历史等
-- `step_*.png`：每一步的视角截图
+Runs are saved under `dual_agent/outputs/task_{task_id}_{timestamp}/`:
+- `dual_episode_*.json`: full run log with trajectories and communication history
+- `step_*.png`: per-step egocentric screenshots
 
-## 📝 配置说明
+## Configuration
 
-### 主配置文件 `dual_agent/config.yaml`
+### Main Config `dual_agent/config.yaml`
 
 ```yaml
-# 环境配置
 env:
   type: ai2thor
   scene: FloorPlan1
   width: 800
   height: 600
 
-# 双智能体专用配置
 dual_agent:
-  equal_collaboration: true     # 平等协作模式
-  collaboration_mode: alternating  # 交替执行
-  switch_interval: 1            # 每1步切换智能体
-  max_global_steps: 60          # 总步数上限
+  equal_collaboration: true
+  collaboration_mode: alternating
+  switch_interval: 1
+  max_global_steps: 60
 
-# 模型配置
 model:
   vlm:
     model_name: gpt-4o
     temperature: 0.2
 ```
 
-### 配置选项详解
+### Config Options
 
-| 配置项 | 说明 | 默认值 |
+| Option | Description | Default |
 |--------|------|--------|
-| `equal_collaboration` | 是否启用平等协作模式 | `true` |
-| `collaboration_mode` | 协作模式：`alternating`（交替）或 `sequential`（顺序） | `alternating` |
-| `switch_interval` | 交替模式下的切换间隔 | `1` |
-| `max_global_steps` | 两个智能体的总步数上限 | `60` |
+| `equal_collaboration` | Enable equal-collaboration mode | `true` |
+| `collaboration_mode` | `alternating` or `sequential` | `alternating` |
+| `switch_interval` | Steps before switching agents in alternating mode | `1` |
+| `max_global_steps` | Global step budget for both agents | `60` |
 
-## 🔧 核心实现细节
+## Implementation Details
 
-### 1. 智能体通信机制
+### 1. Communication
 
-智能体只能通过 `<COMMUNICATE>` 标签互相交流：
+Agents communicate only through `<COMMUNICATE>`:
 
 ```xml
 <THINK>
-我看到了书桌上有一本书，需要告诉我的搭档。
+I see a book on the desk and should tell my partner.
 </THINK>
 <ACTION>
 RotateRight
 </ACTION>
 <COMMUNICATE>
-我在书桌上发现了一本书，位置在房间的右侧。你能帮忙打开它吗？
+I found a book on the desk on the right side of the room. Can you open it?
 </COMMUNICATE>
 ```
 
-### 2. 信息隔离原则
+### 2. Information Isolation
 
-**设计原则**：两个智能体无法直接访问对方的观察results，只能通过通信了解对方的发现。
+Agents cannot directly access each other's observations; they learn about the partner only through messages.
 
 ```python
-# ❌ 不允许：自动共享发现的物体
+# Not allowed: auto-sharing discovered objects
 # state["shared_memory"]["discovered_objects"][obj_type].append(pos)
 
-# ✅ 允许：通过通信共享
+# Allowed: sharing through communication
 state["communication_history"].append({
     "sender": current_agent_id,
     "receiver": other_agent_id,
@@ -196,49 +187,40 @@ state["communication_history"].append({
 })
 ```
 
-### 3. 状态定义
+### 3. State Definition
 
 ```python
 class DualAgentState(TypedDict):
-    # 任务相关
     task_prompt: str
-    
-    # 智能体状态
     agent_1: AgentState
     agent_2: AgentState
     current_agent: str  # "agent_1" or "agent_2"
-    
-    # 通信
-    communication_history: List[Dict]  # 通信记录
-    message_queue: List[Dict]          # 待处理消息
-    
-    # 全局控制
+    communication_history: List[Dict]
+    message_queue: List[Dict]
     global_step_count: int
     max_global_steps: int
     global_success: bool
 ```
 
-### 4. Coordinator 节点
+### 4. Coordinator Node
 
-负责决定下一个执行的智能体：
+Selects the next active agent:
 
 ```python
 def coordinator_node(state: DualAgentState) -> DualAgentState:
-    # 检查切换条件
     if current_turn_steps >= switch_interval:
-        # 切换到另一个智能体
         state["current_agent"] = other_agent_id
         state["current_turn_steps"] = 0
     return state
 ```
 
-## 📊 输出格式
+## Output Format
 
-### Episode JSON 结构
+### Episode JSON
 
 ```json
 {
-  "task": "打开书并关闭台灯",
+  "task": "Open the book and turn off the desk lamp",
   "scene": "FloorPlan302",
   "mode": "dual_agent",
   "success": true,
@@ -251,27 +233,27 @@ def coordinator_node(state: DualAgentState) -> DualAgentState:
       "agent_id": "agent_1",
       "thinking": "...",
       "action_string": "RotateRight",
-      "communication": "我看到书桌在右边..."
+      "communication": "I see the desk on the right..."
     }
   ],
   "communication_history": [
     {
       "sender": "agent_1",
       "receiver": "agent_2",
-      "message": "我看到书桌在右边...",
+      "message": "I see the desk on the right...",
       "step": 0
     }
   ]
 }
 ```
 
-## ⚠️ 注意事项
+## Notes
 
-1. **通信开销**：过于频繁的通信可能消耗步数，需要平衡
-2. **任务分工**：复杂任务建议在 Prompt 中引导智能体明确分工
-3. **错误处理**：当一个智能体声称 DONE 但验证失败时，系统会自动切换到另一个智能体继续
+1. Frequent communication can consume the step budget; balance coordination and efficiency
+2. For complex tasks, guide agents to divide labor explicitly in the prompt
+3. If one agent outputs DONE but verification fails, control switches to the other agent
 
-## 🔗 相关文档
+## Related Docs
 
-- [架构设计](architecture.md)
-- [API 参考](api_reference.md)
+- [Architecture](architecture.md)
+- [API Reference](api_reference.md)

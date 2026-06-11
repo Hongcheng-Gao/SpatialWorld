@@ -50,9 +50,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm going to clean the house now. Please put my keys and credit card in the box.",
-  "max_steps": 60,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'm going to clean the house now. Please put my keys and credit card in the box."
 }

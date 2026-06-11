@@ -38,9 +38,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm ready to work. Please turn on a computer and wait beside it.",
-  "max_steps": 24,
-  "Evaluation_Type": "Conditional",
-  "Category": "Study and Work",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'm ready to work. Please turn on a computer and wait beside it."
 }

@@ -89,9 +89,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm planning to clean up the bedroom. Please pick up a cell phone and a laptop from the bedroom and bring them to the dining table in the living room.",
-  "max_steps": 98,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'm planning to clean up the bedroom. Please pick up a cell phone and a laptop from the bedroom and bring them to the dining table in the living room."
 }

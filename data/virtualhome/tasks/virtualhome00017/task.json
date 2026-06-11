@@ -29,6 +29,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "Have you seen my folder? Pick it up for me if you find it.",
-  "max_steps": 37
+  "target_description": "Have you seen my folder? Pick it up for me if you find it."
 }

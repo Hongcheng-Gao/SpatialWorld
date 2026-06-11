@@ -32,8 +32,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "The pot looks a bit dusty, so clean the pot and slice the tomato for the soup.",
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3"
+  "target_description": "The pot looks a bit dusty, so clean the pot and slice the tomato for the soup."
 }

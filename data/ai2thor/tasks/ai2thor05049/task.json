@@ -22,8 +22,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "It's time for my daily exercise; can you pick up the dumbbell from the floor.",
-  "Evaluation_Type": "Conditional",
-  "Category": "Entertainment (Game/Sports)",
-  "Level": "Level3"
+  "target_description": "It's time for my daily exercise; can you pick up the dumbbell from the floor."
 }

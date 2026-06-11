@@ -44,9 +44,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I am tired from reading. Please close the book, then turn off the light switch and the desk lamp.",
-  "max_steps": 50,
-  "Evaluation_Type": "Sequential",
-  "Category": "Study and Work",
-  "Level": "Level3 Hybrid"
+  "target_description": "I am tired from reading. Please close the book, then turn off the light switch and the desk lamp."
 }

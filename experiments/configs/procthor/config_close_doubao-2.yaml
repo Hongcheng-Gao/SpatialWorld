@@ -43,7 +43,7 @@ model:
     model_name: doubao-seed-2-0-lite-260215
     temperature: 1.0
     top_p: 0.9
-    max_tokens: 4096 # Maximum number of generated tokens (标准值)
+    max_tokens: 4096 # Maximum number of generated tokens (default)
     base_url: null
     api_key: null
 

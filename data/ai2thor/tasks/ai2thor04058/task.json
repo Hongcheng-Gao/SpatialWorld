@@ -24,9 +24,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to work on the sofa, please turn on my laptop.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Study and Work",
-  "Level": "Level3 Hybrid"
+  "target_description": "I want to work on the sofa, please turn on my laptop."
 }

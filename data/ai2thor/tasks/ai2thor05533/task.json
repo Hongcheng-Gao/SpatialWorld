@@ -35,9 +35,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "The sunlight is so bright today—there's no need for the big wall light in the room, so go ahead and switch it off. Just turn on the floor lamp next to the sofa instead.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "The sunlight is so bright today—there's no need for the big wall light in the room, so go ahead and switch it off. Just turn on the floor lamp next to the sofa instead."
 }

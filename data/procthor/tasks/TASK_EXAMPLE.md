@@ -1,12 +1,12 @@
-# 任务配置示例：将泰迪熊从卧室移到浴室
+# Task Configuration Example: Move TeddyBear from Bedroom to Bathroom
 
-## 任务描述
+## Task Description
 
-将泰迪熊（TeddyBear）从卧室（Bedroom）的床上移动到浴室（Bathroom）。
+Move the TeddyBear from the bed in the bedroom to the bathroom.
 
-## 成功条件设置
+## Success Condition Setup
 
-### 方法 1：只检查目标房间（推荐）
+### Method 1: Check Target Room Only (Recommended)
 
 ```json
 {
@@ -27,13 +27,13 @@
 }
 ```
 
-**说明**：
-- 只要泰迪熊在浴室（Bathroom）中，任务就成功
-- 不需要检查是否不在卧室，因为只要在浴室就满足了要求
+**Notes:**
+- The task succeeds as soon as the TeddyBear is in the bathroom
+- There is no need to check that it is no longer in the bedroom
 
-### 方法 2：组合条件（更严格）
+### Method 2: Combined Conditions (Stricter)
 
-如果需要确保泰迪熊不在卧室，可以添加反向条件：
+If you need to ensure the TeddyBear is no longer in the bedroom, add a reverse condition:
 
 ```json
 {
@@ -54,34 +54,34 @@
 }
 ```
 
-**说明**：
-- 第一个条件：泰迪熊必须在浴室
-- 第二个条件：泰迪熊必须被放下（不在手中）
+**Notes:**
+- First condition: TeddyBear must be in the bathroom
+- Second condition: TeddyBear must be placed down (not held)
 
-## 代码识别能力
+## Code Support
 
-✅ **代码已支持 `object_in_room` 条件**
+The evaluator already supports the `object_in_room` condition.
 
-### 实现方式
+### Implementation
 
-代码使用 **floorPolygon（精确多边形）** 来判断对象所在的房间：
+Room membership is determined using **floorPolygon (exact polygon)**:
 
-1. **优先使用 floorPolygon**：
-   - 获取对象的 (x, z) 位置
-   - 使用 `_point_in_polygon()` 函数检查对象是否在某个房间的多边形内
-   - 这是最准确的方法，直接来自 ProcTHOR 的场景数据
+1. **Prefer floorPolygon**:
+   - Read the object's (x, z) position
+   - Use `_point_in_polygon()` to test whether the point lies inside a room polygon
+   - This is the most accurate method and comes directly from ProcTHOR scene data
 
-2. **回退方案**：
-   - 如果 floorPolygon 不可用，会使用对象的 `roomType` 属性（如果存在）
+2. **Fallback**:
+   - If floorPolygon is unavailable, use the object's `roomType` attribute when present
 
-### 代码位置
+### Code Locations
 
-- **条件检查**：`evaluators/base.py` 第 390-419 行
-- **房间判断**：`evaluators/getters.py` 中的 `_build_room_boundaries_from_house_scene()` 和 `_point_in_polygon()`
+- **Condition check**: `evaluators/base.py` lines 390-419
+- **Room inference**: `_build_room_boundaries_from_house_scene()` and `_point_in_polygon()` in `evaluators/getters.py`
 
-## 使用示例
+## Usage Examples
 
-### 运行任务评估
+### Run Task Evaluation
 
 ```bash
 python scripts/evaluate_action_sequence.py \
@@ -89,48 +89,38 @@ python scripts/evaluate_action_sequence.py \
   --action-sequence actions.json
 ```
 
-### 在代码中使用
+### Use in Code
 
 ```python
 from envs.procthor_wrapper import ProcTHOREnvWrapper
 import json
 
-# 加载任务配置
 with open('tasks/procthor00003/task.json', 'r') as f:
     task_config = json.load(f)
 
-# 创建环境
 env = ProcTHOREnvWrapper(
     scene_index=task_config['scene_index'],
     config={'task': task_config}
 )
 
-# 重置环境
 observation = env.reset(task_config['instruction'])
 
-# 执行动作序列...
-# ...
-
-# 评估任务
 from evaluators.base import create_evaluator_from_config
 evaluator = create_evaluator_from_config(task_config)
 score = evaluator.evaluate(env, env.controller.last_event.metadata)
-print(f"任务得分: {score}")
+print(f"Task score: {score}")
 ```
 
-## 注意事项
+## Notes
 
-1. **房间名称大小写**：代码支持大小写不敏感匹配，`"Bathroom"` 和 `"bathroom"` 都可以
+1. **Room name casing**: Matching is case-insensitive (`"Bathroom"` and `"bathroom"` both work)
+2. **Object type matching**: Semantic variants are supported (e.g. `"Apple"` also matches `"AppleSliced"`)
+3. **Multiple objects**: If several objects share the same type, success is returned when any one satisfies the condition
+4. **Object position**: Room membership uses the object's `position.x` and `position.z` coordinates
 
-2. **对象类型匹配**：支持语义变体，例如 `"Apple"` 也会匹配 `"AppleSliced"`
+## Other Success Condition Types
 
-3. **多个对象**：如果有多个相同类型的对象，只要有一个满足条件就会返回成功
-
-4. **对象位置**：使用对象的 `position` 字段中的 `x` 和 `z` 坐标来判断房间
-
-## 其他可用的成功条件类型
-
-- `object_state`: 检查对象状态（如 `isOpen`, `isPickedUp` 等）
-- `object_in_hand`: 检查对象是否在手中
-- `object_in_receptacle`: 检查对象是否在容器中
-- `agent_in_room`: 检查智能体是否在指定房间
+- `object_state`: Check object state (e.g. `isOpen`, `isPickedUp`)
+- `object_in_hand`: Check whether an object is held
+- `object_in_receptacle`: Check whether an object is inside a receptacle
+- `agent_in_room`: Check whether the agent is in a specified room

@@ -34,9 +34,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'd like to work and watch TV at the same time. Could you please help me turn on the laptop and then the TV?",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Study and Work",
-  "Level": "Level3"
+  "target_description": "I'd like to work and watch TV at the same time. Could you please help me turn on the laptop and then the TV?"
 }

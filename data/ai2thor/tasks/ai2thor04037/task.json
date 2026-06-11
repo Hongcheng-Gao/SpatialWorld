@@ -39,9 +39,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm going to study now. Please take a pen to the desk on the right and open the book.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Study and Work",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'm going to study now. Please take a pen to the desk on the right and open the book."
 }

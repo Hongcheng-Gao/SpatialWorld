@@ -42,9 +42,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I need to prepare a meal. Please take the an egg out of the refrigerator and stand near it.",
-  "max_steps": 42,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I need to prepare a meal. Please take the an egg out of the refrigerator and stand near it."
 }

@@ -9,7 +9,7 @@ api:
   max_retries: 3                      # number of retry attempts on API failure (exponential backoff)
 
 model:
-  name: "doubao-seed-2.0-lite"            # model name - 璇锋浛鎹负鎮ㄦ湰鍦伴儴缃茬殑妯″瀷鍚嶇О锛堥€氳繃 curl htt. 鏌ョ湅锛?
+  name: "doubao-seed-2.0-lite"                        # replace with your locally deployed model name
   api_key: null
   api_base: null
   temperature: 1.0

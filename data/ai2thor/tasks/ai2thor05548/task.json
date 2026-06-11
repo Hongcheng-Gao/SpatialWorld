@@ -41,9 +41,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm about to hop in the shower. Could you grab the soap, drop it on the tub, and pull the curtain open for me?",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "I'm about to hop in the shower. Could you grab the soap, drop it on the tub, and pull the curtain open for me?"
 }

@@ -29,7 +29,7 @@ model:
     top_p: 0.9
     max_tokens: 4096
     base_url: null
-    # 与你能跑通 Flash 的脚本用同一 key，避免 app 未开通 Flash 导致 404
+    # Use the same API key as your working Flash script to avoid 404 when Flash is disabled
     api_key: null
 
 logging:

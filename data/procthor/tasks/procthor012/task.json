@@ -54,9 +54,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'd like to do some organization. Please pick up a book and stand next to the TV cabinet.",
-  "max_steps": 58,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'd like to do some organization. Please pick up a book and stand next to the TV cabinet."
 }

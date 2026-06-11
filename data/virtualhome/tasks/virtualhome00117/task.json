@@ -41,6 +41,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "Please place a mobile phone on the table, and then pick up a mouse.",
-  "max_steps": 33
+  "target_description": "Please place a mobile phone on the table, and then pick up a mouse."
 }

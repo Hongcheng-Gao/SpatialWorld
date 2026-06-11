@@ -33,9 +33,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I feel like taking a break; I'm going to pick up my phone from the desk and turn on the TV so I can really unwind",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Entertainment (Game/Sports)",
-  "Level": "Level3"
+  "target_description": "I feel like taking a break; I'm going to pick up my phone from the desk and turn on the TV so I can really unwind"
 }

@@ -81,9 +81,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'd like to work on the sofa for a while. Please pick up your laptop and stand next to the sofa while I wait.",
-  "max_steps": 112,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'd like to work on the sofa for a while. Please pick up your laptop and stand next to the sofa while I wait."
 }

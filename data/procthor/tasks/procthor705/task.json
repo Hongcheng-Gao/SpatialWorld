@@ -44,9 +44,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to clean the toilet. Please pick up a dish sponge and stand next to the toilet while I wait.",
-  "max_steps": 38,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I want to clean the toilet. Please pick up a dish sponge and stand next to the toilet while I wait."
 }

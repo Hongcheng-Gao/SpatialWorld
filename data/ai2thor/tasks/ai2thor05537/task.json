@@ -38,9 +38,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I've finished dinner and feel like reading the paper—please pick up the newspaper and set it right next to the bowl on the coffee table so I can relax and read.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "I've finished dinner and feel like reading the paper—please pick up the newspaper and set it right next to the bowl on the coffee table so I can relax and read."
 }

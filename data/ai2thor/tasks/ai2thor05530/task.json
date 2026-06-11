@@ -29,9 +29,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm cleaning the room right now—please close the paper box and then pick it up for me",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "I'm cleaning the room right now—please close the paper box and then pick it up for me"
 }

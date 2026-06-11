@@ -38,9 +38,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to decorate the kitchen. Please pick up one book and move it to the kitchen.",
-  "max_steps": 48,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I want to decorate the kitchen. Please pick up one book and move it to the kitchen."
 }

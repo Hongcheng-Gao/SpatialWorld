@@ -40,9 +40,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I would like to have some fruit before I go to sleep. Please pick up the apple and carry it to the bedroom.",
-  "max_steps": 52,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I would like to have some fruit before I go to sleep. Please pick up the apple and carry it to the bedroom."
 }

@@ -45,9 +45,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to slice the green in the refrigerator, then take one slice and put it in the pan, remembering to close the refrigerator door.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I want to slice the green in the refrigerator, then take one slice and put it in the pan, remembering to close the refrigerator door."
 }

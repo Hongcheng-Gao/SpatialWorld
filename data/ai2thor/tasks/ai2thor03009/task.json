@@ -65,9 +65,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm going to clean the kitchen now. Please clean the dirty mug and cup in front of you and put them in the refrigerator. Remember to close the refrigerator door.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'm going to clean the kitchen now. Please clean the dirty mug and cup in front of you and put them in the refrigerator. Remember to close the refrigerator door."
 }

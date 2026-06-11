@@ -35,6 +35,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to clean the kitchen. Please get me a bottle of dish soap and then turn on the faucet.",
-  "max_steps": 18
+  "target_description": "I want to clean the kitchen. Please get me a bottle of dish soap and then turn on the faucet."
 }

@@ -22,9 +22,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I need to go to the bank—could you find my credit card and hand it to me if you locate it?",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "I need to go to the bank—could you find my credit card and hand it to me if you locate it?"
 }

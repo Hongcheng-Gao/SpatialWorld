@@ -59,9 +59,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm done eating. Please put the bowl back in the kitchen and bring my pen from the kitchen to the living room.",
-  "max_steps": 78,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level1 Navigation"
+  "target_description": "I'm done eating. Please put the bowl back in the kitchen and bring my pen from the kitchen to the living room."
 }

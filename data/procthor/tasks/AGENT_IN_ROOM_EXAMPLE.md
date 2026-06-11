@@ -1,8 +1,8 @@
-# 智能体房间位置判定配置指南
+# Agent-in-Room Success Condition Guide
 
-## 基本格式
+## Basic Format
 
-在 `task.json` 的 `success_conditions` 中添加 `agent_in_room` 条件：
+Add an `agent_in_room` condition to `success_conditions` in `task.json`:
 
 ```json
 {
@@ -11,30 +11,30 @@
 }
 ```
 
-## 与 object_in_room 的对比
+## Comparison with `object_in_room`
 
-### 物体在房间（需要指定 object_type）
+### Object in Room (requires `object_type`)
 
 ```json
 {
   "type": "object_in_room",
-  "object_type": "TeddyBear",  // 必须指定物体类型
+  "object_type": "TeddyBear",
   "room_type": "Bedroom"
 }
 ```
 
-### 智能体在房间（不需要 object_type）
+### Agent in Room (no `object_type` required)
 
 ```json
 {
   "type": "agent_in_room",
-  "room_type": "Kitchen"  // 只需要指定房间类型
+  "room_type": "Kitchen"
 }
 ```
 
-## 完整示例
+## Full Examples
 
-### 示例 1：只检查智能体位置
+### Example 1: Agent Position Only
 
 ```json
 {
@@ -50,7 +50,7 @@
 }
 ```
 
-### 示例 2：组合条件（智能体 + 物体）
+### Example 2: Combined Agent + Object Conditions
 
 ```json
 {
@@ -71,7 +71,7 @@
 }
 ```
 
-### 示例 3：多个条件组合
+### Example 3: Multiple Combined Conditions
 
 ```json
 {
@@ -98,26 +98,26 @@
 }
 ```
 
-## 支持的房间类型
+## Supported Room Types
 
-- `Kitchen` - 厨房
-- `Bathroom` - 浴室
-- `Bedroom` - 卧室
-- `LivingRoom` - 客厅
-- `DiningRoom` - 餐厅
-- 其他房间类型（根据场景而定）
+- `Kitchen`
+- `Bathroom`
+- `Bedroom`
+- `LivingRoom`
+- `DiningRoom`
+- Other room types defined by the scene
 
-**注意**：房间名称大小写不敏感，`"Kitchen"` 和 `"kitchen"` 都可以。
+**Note:** Room names are matched case-insensitively (`"Kitchen"` and `"kitchen"` both work).
 
-## 实现原理
+## Implementation
 
-`agent_in_room` 条件使用 **floorPolygon（精确多边形）** 来判断智能体所在的房间：
+The `agent_in_room` condition uses **floorPolygon (exact polygon)** to determine the agent's room:
 
-1. 获取智能体的 (x, z) 位置
-2. 使用 `_point_in_polygon()` 函数检查智能体是否在某个房间的多边形内
-3. 这是最准确的方法，直接来自 ProcTHOR 的场景数据
+1. Read the agent's (x, z) position
+2. Use `_point_in_polygon()` to test whether the point lies inside a room polygon
+3. This is the most accurate method and comes directly from ProcTHOR scene data
 
-## 代码位置
+## Code Locations
 
-- **条件检查**：`evaluators/base.py` 第 321-388 行
-- **房间判断**：`evaluators/getters.py` 中的 `get_agent_room()` 函数
+- **Condition check**: `evaluators/base.py` lines 321-388
+- **Room inference**: `get_agent_room()` in `evaluators/getters.py`

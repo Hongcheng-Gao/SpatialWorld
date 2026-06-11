@@ -48,9 +48,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to start studying. Please move to the living room and fetch a pen from the table in the living room.",
-  "max_steps": 58,
-  "Evaluation_Type": "Conditional",
-  "Category": "Study and Work",
-  "Level": "Level3 Hybrid"
+  "target_description": "I want to start studying. Please move to the living room and fetch a pen from the table in the living room."
 }

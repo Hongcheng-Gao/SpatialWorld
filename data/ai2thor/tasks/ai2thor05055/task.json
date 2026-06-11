@@ -34,8 +34,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "I want to play some games. Please switch on the laptop and the television.",
-  "Evaluation_Type": "Conditional",
-  "Category": "Entertainment (Game/Sports)",
-  "Level": "Level3"
+  "target_description": "I want to play some games. Please switch on the laptop and the television."
 }

@@ -53,9 +53,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'd like some water. Please go to the kitchen and get a cup, then wait for me near the sofa.",
-  "max_steps": 64,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'd like some water. Please go to the kitchen and get a cup, then wait for me near the sofa."
 }

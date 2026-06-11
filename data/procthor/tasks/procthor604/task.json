@@ -56,9 +56,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to study. Please go to the sofa in the living room, pick up a book, open it, and stay there waiting for me.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Study and Work",
-  "Level": "Level3 Hybrid"
+  "target_description": "I want to study. Please go to the sofa in the living room, pick up a book, open it, and stay there waiting for me."
 }

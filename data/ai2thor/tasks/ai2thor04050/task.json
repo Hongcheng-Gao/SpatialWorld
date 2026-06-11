@@ -32,9 +32,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I don't like the vase and statue on your left. Please smash them both.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level2 Interaction"
+  "target_description": "I don't like the vase and statue on your left. Please smash them both."
 }

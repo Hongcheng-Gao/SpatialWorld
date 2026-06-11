@@ -34,8 +34,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "I'm cleaning up before I relax, so please tidy up the bed and wiping it until it looks clean, then turn off the desk lamp and confirm it's really off.",
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3"
+  "target_description": "I'm cleaning up before I relax, so please tidy up the bed and wiping it until it looks clean, then turn off the desk lamp and confirm it's really off."
 }

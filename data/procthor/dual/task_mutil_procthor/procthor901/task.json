@@ -76,9 +76,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to catch up on the news while relaxing in the bedroom. Please turn on the TV and bring the newspaper to the bedroom.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I want to catch up on the news while relaxing in the bedroom. Please turn on the TV and bring the newspaper to the bedroom."
 }

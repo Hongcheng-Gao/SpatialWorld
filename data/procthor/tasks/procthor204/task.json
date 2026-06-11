@@ -56,9 +56,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to eat an egg. Please go to the kitchen, open the refrigerator, take out an egg, close the refrigerator, and then place it next to the pot.",
-  "max_steps": 56,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I want to eat an egg. Please go to the kitchen, open the refrigerator, take out an egg, close the refrigerator, and then place it next to the pot."
 }

@@ -47,9 +47,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm getting ready for breakfast. Please go to the kitchen, turn on the toaster, and turn on the coffee machine for me.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'm getting ready for breakfast. Please go to the kitchen, turn on the toaster, and turn on the coffee machine for me."
 }

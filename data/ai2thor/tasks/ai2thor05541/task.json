@@ -45,9 +45,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I’ve finished dinner and feel like scrolling on my phone for a bit—please pick it up from the dining table, turn it on, and set it on the coffee table so I can relax with a full stomach",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Entertainment (Game/Sports)",
-  "Level": "Level3"
+  "target_description": "I’ve finished dinner and feel like scrolling on my phone for a bit—please pick it up from the dining table, turn it on, and set it on the coffee table so I can relax with a full stomach"
 }

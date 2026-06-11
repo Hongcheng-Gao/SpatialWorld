@@ -28,6 +28,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I just finished using the toilet and forgot to flush. Now I need to go back and turn on the toilet to flush.",
-  "max_steps": 27
+  "target_description": "I just finished using the toilet and forgot to flush. Now I need to go back and turn on the toilet to flush."
 }

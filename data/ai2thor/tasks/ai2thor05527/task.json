@@ -38,9 +38,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm the MVP of the basketball league. Next to a painting on my bookshelf is my MVP trophy; I want to place it on the dresser , then pick up the basketball and work out",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Entertainment (Game/Sports)",
-  "Level": "Level3"
+  "target_description": "I'm the MVP of the basketball league. Next to a painting on my bookshelf is my MVP trophy; I want to place it on the dresser , then pick up the basketball and work out"
 }

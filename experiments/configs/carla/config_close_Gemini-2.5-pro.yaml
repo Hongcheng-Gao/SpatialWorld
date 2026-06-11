@@ -1,6 +1,6 @@
-# Vehicle: rgb_camera.attach 与 scripts/carla/interact_carla.py 一致；评测里 CarlaEnvWrapper 另挂
-# sensor.other.collision（与 interact_carla 相同），metadata/text_state 含 collisions 计数。
-# Walker: rgb_camera_walker 与 scripts/carla/interact_walker.py 一致（仅 z=1.7，pitch=0；interact 无碰撞传感器）。
+# Vehicle: rgb_camera.attach matches scripts/carla/interact_carla.py; CarlaEnvWrapper adds
+# sensor.other.collision (same as interact_carla); metadata/text_state includes collision counts.
+# Walker: rgb_camera_walker matches scripts/carla/interact_walker.py (z=1.7, pitch=0; no collision sensor).
 
 api:
   max_retries: 3

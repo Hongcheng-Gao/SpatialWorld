@@ -46,9 +46,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I need your help to pick up the basketball from the bedroom floor and wait for me by the TV cabinet.",
-  "max_steps": 42,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I need your help to pick up the basketball from the bedroom floor and wait for me by the TV cabinet."
 }

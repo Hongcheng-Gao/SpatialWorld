@@ -42,9 +42,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I am going to wash my face. Please navigate to the bathroom and turn on a faucet there.",
-  "max_steps": 48,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I am going to wash my face. Please navigate to the bathroom and turn on a faucet there."
 }

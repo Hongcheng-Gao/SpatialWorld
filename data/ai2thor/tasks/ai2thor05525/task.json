@@ -30,9 +30,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'd like to take a break and read for a while in the armchair—could you place the book on it?",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Study and Work",
-  "Level": "Level3"
+  "target_description": "I'd like to take a break and read for a while in the armchair—could you place the book on it?"
 }

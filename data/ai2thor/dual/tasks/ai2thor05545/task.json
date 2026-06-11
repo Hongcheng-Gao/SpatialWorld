@@ -33,9 +33,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to wash my face—please pick up the soap bottle, turn on the faucet, and then put it back on the side table where it was.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "I want to wash my face—please pick up the soap bottle, turn on the faucet, and then put it back on the side table where it was."
 }

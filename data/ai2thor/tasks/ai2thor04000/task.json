@@ -24,6 +24,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to look up information on my phone. Please pick up the cell phone from the desk in the room.",
-  "max_steps": 30
+  "target_description": "I want to look up information on my phone. Please pick up the cell phone from the desk in the room."
 }

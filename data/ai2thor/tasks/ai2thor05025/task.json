@@ -37,8 +37,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "I'm taking care of a couple things, so please fill the mug with water until it shows it's filled, then keep it steady and then tidy up the bed and wiping it until it looks clean.",
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3"
+  "target_description": "I'm taking care of a couple things, so please fill the mug with water until it shows it's filled, then keep it steady and then tidy up the bed and wiping it until it looks clean."
 }

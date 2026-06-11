@@ -32,9 +32,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "Please walk to the window, and if the window is intact, break it.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "Please walk to the window, and if the window is intact, break it."
 }

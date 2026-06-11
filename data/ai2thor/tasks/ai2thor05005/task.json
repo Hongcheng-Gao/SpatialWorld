@@ -32,9 +32,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "I want this put away neatly, so please pick up the pen carefully and hold it securely and then place it on the shelf and make sure it sits flat and won't slide.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Study and Work",
-  "Level": "Level3"
+  "target_description": "I want this put away neatly, so please pick up the pen carefully and hold it securely and then place it on the shelf and make sure it sits flat and won't slide."
 }

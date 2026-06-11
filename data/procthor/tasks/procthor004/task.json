@@ -53,9 +53,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'll finish eating soon and I need tissues. Please go to the restroom, get some tissues, and wait for me near a dining table.",
-  "max_steps": 64,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'll finish eating soon and I need tissues. Please go to the restroom, get some tissues, and wait for me near a dining table."
 }

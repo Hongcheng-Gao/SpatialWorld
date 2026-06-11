@@ -35,9 +35,5 @@
     }
   ],
   "success_logic": "and",
-  "target_description": "Please help me with this task in the scene: open the book and turn off the desk lamp.",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Study and Work",
-  "Level": "Level3"
+  "target_description": "Please help me with this task in the scene: open the book and turn off the desk lamp."
 }

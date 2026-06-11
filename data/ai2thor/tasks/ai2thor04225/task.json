@@ -35,9 +35,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm tired and want to read a book in bed. Please open the book and place it on the bed.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Study and Work",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'm tired and want to read a book in bed. Please open the book and place it on the bed."
 }

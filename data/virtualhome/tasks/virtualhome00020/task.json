@@ -24,6 +24,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm brushing my teeth, but I can't find my toothbrush. Can you help me look for it and pick it up?",
-  "max_steps": 18
+  "target_description": "I'm brushing my teeth, but I can't find my toothbrush. Can you help me look for it and pick it up?"
 }

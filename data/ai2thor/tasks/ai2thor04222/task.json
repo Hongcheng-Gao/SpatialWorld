@@ -30,9 +30,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I need to get ready to work. Please turn on my desk lamp and turn on my computer.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Study and Work",
-  "Level": "Level3 Hybrid"
+  "target_description": "I need to get ready to work. Please turn on my desk lamp and turn on my computer."
 }

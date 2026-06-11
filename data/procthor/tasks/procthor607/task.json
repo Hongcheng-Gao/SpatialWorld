@@ -61,9 +61,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to relax. Please fetch the phone from the table and navigate to the bedside in the bedroom.",
-  "max_steps": 72,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I want to relax. Please fetch the phone from the table and navigate to the bedside in the bedroom."
 }

@@ -61,9 +61,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "The power is out. Please go to the living room, pick up a candle from the table, and bring it to the kitchen.",
-  "max_steps": 94,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "The power is out. Please go to the living room, pick up a candle from the table, and bring it to the kitchen."
 }

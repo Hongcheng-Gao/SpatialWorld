@@ -34,6 +34,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to put the mug from the table to coffeetable.",
-  "max_steps": 28
+  "target_description": "I want to put the mug from the table to coffeetable."
 }

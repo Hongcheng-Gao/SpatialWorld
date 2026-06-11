@@ -38,9 +38,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "My basketball is dirty and I want to wash it. Please pick up one basketball and navigate to the bathroom.",
-  "max_steps": 48,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "My basketball is dirty and I want to wash it. Please pick up one basketball and navigate to the bathroom."
 }

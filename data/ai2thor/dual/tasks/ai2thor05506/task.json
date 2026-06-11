@@ -34,9 +34,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I want to combine my workout with some housework—could you pick up the tennis racket in the corner and give the bed a quick clean?",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "Entertainment",
-  "Level": "Level3"
+  "target_description": "I want to combine my workout with some housework—could you pick up the tennis racket in the corner and give the bed a quick clean?"
 }

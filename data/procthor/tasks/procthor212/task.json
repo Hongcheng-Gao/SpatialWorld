@@ -32,9 +32,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I am planning to organize some items in the kitchen. Please pick up the box and move it to the kitchen for me.",
-  "max_steps": 36,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I am planning to organize some items in the kitchen. Please pick up the box and move it to the kitchen for me."
 }

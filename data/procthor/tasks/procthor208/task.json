@@ -52,9 +52,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I am going out to play soon and need to clean my gear first. Please take the tennis racket and carry it to the bathroom for me.",
-  "max_steps": 76,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I am going out to play soon and need to clean my gear first. Please take the tennis racket and carry it to the bathroom for me."
 }

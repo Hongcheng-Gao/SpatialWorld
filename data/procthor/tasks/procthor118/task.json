@@ -38,9 +38,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "Please break the vase, then quickly go to the bathroom.",
-  "max_steps": 38,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level1 Navigation"
+  "target_description": "Please break the vase, then quickly go to the bathroom."
 }

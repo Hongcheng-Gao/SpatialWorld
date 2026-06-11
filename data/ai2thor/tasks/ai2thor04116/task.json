@@ -51,9 +51,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm hungry, please put the bread slices in the microwave to heat them up.",
-  "max_steps": 60,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'm hungry, please put the bread slices in the microwave to heat them up."
 }

@@ -49,9 +49,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm going to step into the shower—please open the door for me, turn on the faucet, and hand me the towel for drying off",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "I'm going to step into the shower—please open the door for me, turn on the faucet, and hand me the towel for drying off"
 }

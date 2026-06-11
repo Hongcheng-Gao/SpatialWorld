@@ -35,9 +35,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'd like to work at the other desk. Please take the tissues next to the laptop and put them beside the newspaper on that desk",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "I'd like to work at the other desk. Please take the tissues next to the laptop and put them beside the newspaper on that desk"
 }

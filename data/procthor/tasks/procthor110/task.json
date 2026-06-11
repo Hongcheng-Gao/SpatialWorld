@@ -31,9 +31,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "Can you locate my bedroom? If so, please go ahead and step inside.",
-  "max_steps": 40,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level1 Navigation"
+  "target_description": "Can you locate my bedroom? If so, please go ahead and step inside."
 }

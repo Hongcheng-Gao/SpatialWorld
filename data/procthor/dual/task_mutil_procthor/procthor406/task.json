@@ -75,9 +75,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm heading out for work. First, please go to the bedroom to open the laptop. Then, pick up a keychain from the bedroom and bring it to the living room.",
-  "max_steps": 108,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'm heading out for work. First, please go to the bedroom to open the laptop. Then, pick up a keychain from the bedroom and bring it to the living room."
 }

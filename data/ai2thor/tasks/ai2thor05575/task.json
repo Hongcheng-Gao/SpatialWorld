@@ -31,9 +31,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "My soap bottle is empty. Could you throw it in the trash for me?",
-  "max_steps": 50,
-  "Evaluation_Type": "Conditional",
-  "Category": "DailyHousehold",
-  "Level": "Level3"
+  "target_description": "My soap bottle is empty. Could you throw it in the trash for me?"
 }

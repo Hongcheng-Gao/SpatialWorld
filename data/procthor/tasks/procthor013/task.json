@@ -51,9 +51,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'd like to do some tidying up. Please pick up the pencil from the bedroom and stand near the TV cabinet.",
-  "max_steps": 52,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I'd like to do some tidying up. Please pick up the pencil from the bedroom and stand near the TV cabinet."
 }

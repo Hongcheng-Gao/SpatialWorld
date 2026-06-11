@@ -26,6 +26,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I'm hungry, please pick up the cupcake; I'll eat it later.",
-  "max_steps": 24
+  "target_description": "I'm hungry, please pick up the cupcake; I'll eat it later."
 }

@@ -67,9 +67,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "Please go to the living room and turn off the floor lamp. Then come back to the bedside of the bedroom and wait for me.",
-  "max_steps": 84,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "Please go to the living room and turn off the floor lamp. Then come back to the bedside of the bedroom and wait for me."
 }

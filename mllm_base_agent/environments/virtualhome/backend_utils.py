@@ -11,10 +11,7 @@ from pathlib import Path
 from typing import Any, Mapping
 
 
-DEFAULT_BACKEND_EXE = os.environ.get(
-    "VIRTUALHOME_BACKEND_EXE",
-    r"E:\科研内容\windows_exec\windows_exec.v2.2.4\VirtualHome.exe",
-)
+DEFAULT_BACKEND_EXE = os.environ.get("VIRTUALHOME_BACKEND_EXE", "")
 DEFAULT_BACKEND_ARGS = os.environ.get(
     "VIRTUALHOME_BACKEND_ARGS",
     "-windowed -screen-width 960 -screen-height 540",

@@ -39,9 +39,5 @@
     }
   ],
   "success_logic": "AND",
-  "target_description": "I need to tidy up the counter now. Please put the soap bottle in front of me on the shelf next to the window.",
-  "max_steps": 100,
-  "Evaluation_Type": "Conditional",
-  "Category": "Daily Household (Kitchen/Bedroom)",
-  "Level": "Level3 Hybrid"
+  "target_description": "I need to tidy up the counter now. Please put the soap bottle in front of me on the shelf next to the window."
 }
