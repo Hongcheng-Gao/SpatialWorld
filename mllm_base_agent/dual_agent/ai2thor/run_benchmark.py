@@ -45,6 +45,10 @@ _DEFAULT_BENCHMARK_OUTPUT_DIR = str(dual_agent_dir / "benchmark_outputs")
 _DEFAULT_OUTPUTS_COMPLETED_DIR = str(dual_agent_dir / "outputs_completed")
 _DEFAULT_DUAL_AGENT_CONFIG = str((Path(__file__).resolve().parents[3] / "configs" / "ai2thor" / "dual" / "config.yaml").resolve())
 _DEFAULT_DUAL_CSV_DIR = Path(project_root) / "experiments" / "csv" / "ai2thor" / "dual"
+os.environ.setdefault(
+    "AI2THOR_TASKS_ROOT",
+    str(Path(project_root) / "data" / "ai2thor" / "dual" / "tasks"),
+)
 
 from .config import load_config
 from scripts.ai2thor.run_benchmark import (  #        benchmark

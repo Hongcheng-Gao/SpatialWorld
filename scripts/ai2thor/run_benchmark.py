@@ -64,6 +64,23 @@ except ImportError:
 EVAL_LOCK = Lock()
 INFLIGHT_TASKS_LOCK = Lock()
 INFLIGHT_TASKS = set()
+REPO_ROOT = Path(__file__).resolve().parents[2]
+
+
+def _resolve_task_json(task_id: str) -> Path | None:
+    normalized = normalize_task_id(task_id)
+    candidates = []
+    env_root = os.environ.get("AI2THOR_TASKS_ROOT")
+    if env_root:
+        candidates.append(Path(env_root) / normalized / "task.json")
+    candidates.extend(
+        [
+            Path("tasks") / normalized / "task.json",
+            REPO_ROOT / "data" / "ai2thor" / "tasks" / normalized / "task.json",
+            REPO_ROOT / "data" / "ai2thor" / "dual" / "tasks" / normalized / "task.json",
+        ]
+    )
+    return next((path for path in candidates if path.exists()), None)
 
 
 def read_task_ids_from_csv(csv_path: str, only_null: bool = True) -> list:
@@ -695,9 +712,8 @@ def deduplicate_task_ids(task_ids: list) -> Tuple[list, list]:
 
 def load_task_action_count(task_id: str) -> Optional[int]:
     """Load golden action count from tasks/<task_id>/task.json."""
-    normalized = normalize_task_id(task_id)
-    task_json = Path("tasks") / normalized / "task.json"
-    if not task_json.exists():
+    task_json = _resolve_task_json(task_id)
+    if not task_json:
         return None
 
     try:
@@ -706,29 +722,17 @@ def load_task_action_count(task_id: str) -> Optional[int]:
 
         golden_actions = data.get("golden_actions")
         if isinstance(golden_actions, dict):
-            actions = golden_actions.get("actions")
-            if isinstance(actions, list):
-                counted = [
-                    a
-                    for a in actions
-                    if str(a).strip().upper() != "DONE"
-                ]
-                if counted:
-                    return len(counted)
             steps = golden_actions.get("steps")
             if isinstance(steps, int):
                 return steps
+            actions = golden_actions.get("actions")
+            if isinstance(actions, list):
+                return len([a for a in actions if str(a).strip()])
         elif isinstance(golden_actions, list):
-            return len(
-                [
-                    a
-                    for a in golden_actions
-                    if str(a).strip().upper() != "DONE"
-                ]
-            )
+            return len([a for a in golden_actions if str(a).strip()])
         elif isinstance(golden_actions, str):
             parts = [x.strip() for x in golden_actions.split(",") if x.strip()]
-            return len([x for x in parts if x.upper() != "DONE"])
+            return len(parts)
     except Exception as e:
         print(f"  ⚠️  Failed to load action count for {task_id}: {e}")
 
@@ -743,15 +747,14 @@ def load_task_metadata(task_id: str) -> Dict[str, Any]:
       - golden_action_count: int | None
       - golden_action_text: str | None
     """
-    normalized = normalize_task_id(task_id)
-    task_json = Path("tasks") / normalized / "task.json"
+    task_json = _resolve_task_json(task_id)
     info = {
         "instruction": None,
         "golden_action_count": None,
         "golden_action_text": None,
     }
 
-    if not task_json.exists():
+    if not task_json:
         return info
 
     try:
@@ -763,28 +766,22 @@ def load_task_metadata(task_id: str) -> Dict[str, Any]:
 
         actions_list = None
         if isinstance(golden_actions, dict):
+            steps = golden_actions.get("steps")
+            if isinstance(steps, int):
+                info["golden_action_count"] = steps
             actions = golden_actions.get("actions")
             if isinstance(actions, list):
                 actions_list = [str(a).strip() for a in actions if str(a).strip()]
-                non_done = [a for a in actions_list if a.upper() != "DONE"]
-                if non_done:
-                    info["golden_action_count"] = len(non_done)
             if info["golden_action_count"] is None:
-                steps = golden_actions.get("steps")
-                if isinstance(steps, int):
-                    info["golden_action_count"] = steps
+                info["golden_action_count"] = len(actions_list or [])
 
         elif isinstance(golden_actions, list):
             actions_list = [str(a).strip() for a in golden_actions if str(a).strip()]
-            info["golden_action_count"] = len([
-                a for a in actions_list if a.upper() != "DONE"
-            ])
+            info["golden_action_count"] = len(actions_list)
 
         elif isinstance(golden_actions, str):
             actions_list = [x.strip() for x in golden_actions.split(",") if x.strip()]
-            info["golden_action_count"] = len([
-                a for a in actions_list if a.upper() != "DONE"
-            ])
+            info["golden_action_count"] = len(actions_list)
 
         if actions_list:
             info["golden_action_text"] = " | ".join(actions_list)
