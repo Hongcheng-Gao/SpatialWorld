@@ -3,12 +3,10 @@
   "task_name": "Open the shower door, step inside, turn on the faucet",
   "instruction": "I'm going to take a shower—open the shower door, step inside, turn on the faucet",
   "golden_actions": {
-    "steps": 6,
+    "steps": 4,
     "actions": [
       "OpenObject(ShowerDoor)",
-      "MoveRight(0.25)",
-      "MoveAhead(1.0)",
-      "RotateLeft(90)",
+      "MoveAhead(Small)",
       "ToggleObjectOn(ShowerHead)",
       "Done"
     ]

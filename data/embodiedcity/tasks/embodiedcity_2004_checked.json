@@ -32,18 +32,11 @@
       "granularity": "Large"
     },
     {
-      "x": 5741.35,
-      "y": -3576.17,
-      "z": -1.69,
-      "action": "Yaw Right",
-      "granularity": "Medium"
-    },
-    {
       "x": 5745.63,
       "y": -3578.75,
       "z": -1.62,
       "action": "Forward",
-      "granularity": "Medium"
+      "granularity": "Small"
     },
     {
       "x": 5745.63,
@@ -53,5 +46,5 @@
       "granularity": "None"
     }
   ],
-  "golden_actions_count": 4
+  "golden_actions_count": 3
 }

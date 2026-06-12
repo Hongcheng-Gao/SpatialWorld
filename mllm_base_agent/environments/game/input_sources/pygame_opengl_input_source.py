@@ -193,7 +193,7 @@ class PygameOpenGLInputSource(GameInputSource):
                 if action.type == "key_press":
                     #              
                     if hasattr(self.game_module, 'execute_mapped_action'):
-                        action_result = self.game_module.execute_mapped_action(action.key)
+                        action_result = self._execute_mapped_action(action)
                     elif hasattr(self.game_module, 'get_action_mapping'):
                         #        ，       
                         try:
@@ -202,7 +202,7 @@ class PygameOpenGLInputSource(GameInputSource):
                             if mapping and mapping.method_name:
                                 method = getattr(self.game_module, mapping.method_name, None)
                                 if method and callable(method):
-                                    action_result = method()
+                                    action_result = self._call_game_method(method, action)
                                 else:
                                     action_result = False
                             else:
@@ -233,6 +233,42 @@ class PygameOpenGLInputSource(GameInputSource):
         except Exception as e:
             print(f"Failed to execute action: {e}")
             return False
+
+    def _get_action_granularity(self, action: Action) -> Optional[str]:
+        """Read small/medium/large movement granularity from action metadata."""
+        if not action.metadata:
+            return None
+
+        granularity = action.metadata.get("granularity")
+        if granularity is None and isinstance(action.metadata.get("json_data"), dict):
+            granularity = action.metadata["json_data"].get("granularity")
+
+        if granularity is None:
+            return None
+
+        value = str(granularity).strip().lower()
+        return value if value in {"small", "medium", "large"} else None
+
+    def _execute_mapped_action(self, action: Action) -> bool:
+        return self._call_game_method(
+            self.game_module.execute_mapped_action,
+            action,
+            include_key=True,
+        )
+
+    def _call_game_method(self, method, action: Action, include_key: bool = False) -> bool:
+        granularity = self._get_action_granularity(action)
+        args = [action.key] if include_key else []
+
+        if granularity is not None:
+            try:
+                import inspect
+                if "granularity" in inspect.signature(method).parameters:
+                    return method(*args, granularity=granularity)
+            except (TypeError, ValueError):
+                pass
+
+        return method(*args)
 
     def get_game_state(self) -> Optional[GameState]:
         """      """

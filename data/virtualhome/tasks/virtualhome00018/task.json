@@ -3,12 +3,11 @@
   "task_name": "Open the cabinet.",
   "instruction": "I'm looking for something. Help me open the cabinet.",
   "golden_actions": {
-    "steps": 5,
+    "steps": 3,
     "actions": [
-      "TurnRight(small)",
-      "WalkForward(medium)",
-      "TurnLeft(small)",
+      "WalkForward(Medium)",
       "Open(cabinet)",
+      "LookDown",
       "Done"
     ]
   },

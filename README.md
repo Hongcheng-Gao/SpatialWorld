@@ -8,7 +8,7 @@
 [![Paper](https://img.shields.io/badge/paper-arXiv-red)](https://arxiv.org/abs/2606.09669)
 [![Project Page](https://img.shields.io/badge/project-spatial--world.github.io-blue)](https://spatial-world.github.io/)
 
-**[Project Page](https://spatial-world.github.io/)** · **[Paper](https://arxiv.org/pdf/2606.09669)** · **[Data](https://github.com/Hongcheng-Gao/SpatialWorld/tree/main/data)**
+**[Project Page](https://spatial-world.github.io/)** | **[Paper](https://arxiv.org/pdf/2606.09669)** | **[Data](https://github.com/Hongcheng-Gao/SpatialWorld/tree/main/data)**
 
 </div>
 
@@ -16,7 +16,7 @@
 
 Spatial reasoning is a foundational capability for multimodal large language models (MLLMs) to perceive and operate within the physical world. However, existing benchmarks predominantly rely on passive evaluation (e.g., static VQA) or simulator-specific pipelines, failing to assess general interactive spatial understanding. We introduce **SpatialWorld**, a unified benchmark for evaluating interactive spatial understanding of multimodal agents in complex real-world tasks.
 
-Integrating eight heterogeneous simulation backends under a shared, simulator-agnostic protocol, SpatialWorld features **760 human-annotated tasks** across diverse domains (e.g., household routines, travel, social collaboration). Agents must solve tasks under vision-only partial observability, actively gathering egocentric visual evidence and expressing decisions via a unified, text-based action interface native to MLLMs. Evaluating 15 advanced agents reveals that robust spatial task solving remains challenging: **GPT-5** achieves an average TSR of only **17.4%**, while the leading open-source model, **Qwen-3.5**, reaches **14.1%**.
+Integrating eight heterogeneous simulation backends under a shared, simulator-agnostic protocol, SpatialWorld features **760 human-annotated tasks** across diverse domains (e.g., household routines, travel, social collaboration). Agents must solve tasks under vision-only partial observability, actively gathering egocentric visual evidence and expressing decisions via a unified, text-based action interface native to MLLMs. For reliable evaluation, each task includes a human-validated initial state, a reference trajectory, and a terminal-state verifier. Evaluating 15 advanced agents reveals that robust spatial task solving remains challenging: **GPT-5** achieves an average TSR of only **17.4%**, while the leading open-source model, **Qwen-3.5**, reaches **14.1%**.
 
 | 760 Tasks | 8 Backends | 6 Scenarios | 15 Models |
 | :---: | :---: | :---: | :---: |
@@ -24,7 +24,7 @@ Integrating eight heterogeneous simulation backends under a shared, simulator-ag
 
 ## Benchmark Overview
 
-SpatialWorld unifies diverse 3D backends under a standardized observation–action interface. Agents receive only a natural-language instruction and egocentric RGB observations, express decisions through a unified text-based action interface, and are evaluated with human-validated terminal-state verifiers.
+SpatialWorld unifies diverse 3D backends under a standardized observation-action interface. Agents receive only a natural-language instruction and egocentric RGB observations, express decisions through a unified text-based action interface, and are evaluated with human-validated terminal-state verifiers.
 
 <p align="center">
   <img src="assets/spatialworld_main.png" alt="SpatialWorld framework overview" width="900"><br>
@@ -44,22 +44,30 @@ SpatialWorld unifies diverse 3D backends under a standardized observation–acti
 | **Multi-ProcTHOR** | Coordinated multi-agent tasks in procedural scenes | 17 |
 | **3D Games** | Block 3D, Maze 3D, Snake, Rubik's Cube, etc. | 105 |
 
-**Complexity levels** (parallel, not hierarchical): **Navigation** — reach targets via exploration; **Interaction** — object-level state changes; **Hybrid** — long-horizon navigation plus multi-step manipulation.
+**Complexity levels** (parallel, not hierarchical): **Navigation** - reach targets via exploration; **Interaction** - object-level state changes; **Hybrid** - long-horizon navigation plus multi-step manipulation.
 
 ## Key Findings
 
-- **Far from reliable 3D task solving.** GPT-5 achieves only 14.4% Physical Overall TSR; Qwen-3.5-397B-A17B reaches 12.2%.
-- **Success ≠ efficiency.** Models with comparable TSR can differ substantially in step efficiency (SE).
-- **Domain-specific strengths.** GPT-5 and Qwen-3.5 tie in Work & Study (16.9%); GPT-5 leads Travel (6.8%); Gemini-3.1-Pro leads digital 3D games (39.0% TSR).
+- **Far from reliable 3D task solving.** Across the full benchmark, GPT-5 reaches only 17.4% average TSR, while the strongest open-source model, Qwen-3.5-397B-A17B, reaches 14.1%.
+- **Physical tasks remain especially hard.** GPT-5 achieves 14.4% Physical Overall TSR; Qwen-3.5-397B-A17B reaches 12.2%.
+- **Success is not efficiency.** Models with comparable TSR can differ substantially in step efficiency (SE), indicating redundant exploration and task-dependent shortcuts.
+- **Domain-specific strengths.** GPT-5 and Qwen-3.5-397B-A17B tie in Work & Study (16.9%); GPT-5 leads Travel (6.8%) and Social Collaboration (34.8%); Gemini-3.1-Pro leads digital 3D games (39.0% TSR).
 - **Vision-only closed-loop evaluation.** Agents actively explore under partial observability using only egocentric RGB and a text-based action interface.
 
 ## Experimental Results
 
 Full TSR / SE tables and task examples are on the **[project page](https://spatial-world.github.io/)**. Highlights below:
 
+| Model | Physical Overall TSR | Digital 3D Games TSR | Notable Strength |
+| --- | ---: | ---: | --- |
+| GPT-5 | **14.4** | 36.4 | Best physical overall; strongest Daily, Travel, and Social scores |
+| Qwen-3.5-397B-A17B | 12.2 | 26.0 | Strongest open-source overall; tied best Work & Study score |
+| Gemini-3.1-Pro | 9.2 | **39.0** | Best digital 3D games performance |
+| Kimi-K2.5 | 9.2 | 31.0 | Competitive social and game performance |
+
 <p align="center">
   <img src="assets/main_indoor_outdoor_radar_top5.png" alt="Indoor vs outdoor radar chart for top-5 models" width="900"><br>
-  <em>Indoor vs. Outdoor Performance — Top-5 Models</em>
+  <em>Indoor vs. Outdoor Performance - Top-5 Models</em>
 </p>
 
 <details>
@@ -152,31 +160,31 @@ executable to be configured as described below.
 
 ```text
 SpatialWorld/
-├── actions/                # Unified action space and parsers
-├── configs/                # Default configs, one per environment
-│   ├── ai2thor/dual/       # Default multi-agent AI2-THOR config
-│   ├── procthor/dual/      # Default multi-agent ProcTHOR config
-│   └── embodiedcity/       # EmbodiedCity runtime templates
-├── data/                   # Task definitions, JSON data, game levels, assets
-├── envs/                   # uv environment definitions and env wrappers
-├── evaluation/             # Evaluation metrics and verifiers
-├── experiments/
-│   ├── configs/            # Model-specific and historical configs
-│   └── csv/                # Experiment CSV files
-├── game/                   # Game environments and data generation scripts
-├── mllm_base_agent/        # Agent runner, LLM provider, prompts, env wrappers
-│   └── dual_agent/
-│       ├── ai2thor/        # Multi-agent AI2-THOR implementation
-│       └── procthor/       # Multi-agent ProcTHOR implementation
-├── scripts/                # Environment CLI entry points
-│   ├── ai2thor/            # `work/run_task.py` and `run_benchmark.py`
-│   ├── procthor/           # `work/run_task.py` and `run_benchmark.py`
-│   ├── carla/              # `work/run_task.py` and `run_benchmark.py`
-│   ├── virtualhome/        # `work/run_task.py` and `run_benchmark.py`
-│   ├── embodiedcity/       # `work/run_task.py`
-│   └── game/               # `run_benchmark.py`
-├── spatialworld/           # Package modules for shared runtime utilities
-└── tests/
+|-- actions/                # Unified action space and parsers
+|-- configs/                # Default configs, one per environment
+|   |-- ai2thor/dual/       # Default multi-agent AI2-THOR config
+|   |-- procthor/dual/      # Default multi-agent ProcTHOR config
+|   `-- embodiedcity/       # EmbodiedCity runtime templates
+|-- data/                   # Task definitions, JSON data, game levels, assets
+|-- envs/                   # uv environment definitions and env wrappers
+|-- evaluation/             # Evaluation metrics and verifiers
+|-- experiments/
+|   |-- configs/            # Model-specific and historical configs
+|   `-- csv/                # Experiment CSV files
+|-- game/                   # Game environments and data generation scripts
+|-- mllm_base_agent/        # Agent runner, LLM provider, prompts, env wrappers
+|   `-- dual_agent/
+|       |-- ai2thor/        # Multi-agent AI2-THOR implementation
+|       `-- procthor/       # Multi-agent ProcTHOR implementation
+|-- scripts/                # Environment CLI entry points
+|   |-- ai2thor/            # `work/run_task.py` and `run_benchmark.py`
+|   |-- procthor/           # `work/run_task.py` and `run_benchmark.py`
+|   |-- carla/              # `work/run_task.py` and `run_benchmark.py`
+|   |-- virtualhome/        # `work/run_task.py` and `run_benchmark.py`
+|   |-- embodiedcity/       # `work/run_task.py`
+|   `-- game/               # `run_benchmark.py`
+|-- spatialworld/           # Package modules for shared runtime utilities
+`-- tests/
 ```
 
 Configuration files are grouped by environment. Dual-agent default configs are
@@ -528,6 +536,10 @@ under the game runner's log/output directory.
 python -m scripts.game.run_benchmark
 ```
 
+The game runner calls the per-game evaluation scripts and then automatically
+runs `scripts/analyze_and_export.py`, producing `results_summary.csv` in the
+game output directory.
+
 ## Evaluation Protocol
 
 - Model actions use the unified action space from the paper: `Move`, `Rotate`,
@@ -535,7 +547,7 @@ python -m scripts.game.run_benchmark
   `EndTask`, and `Communicate`.
 - The action parser maps unified actions to simulator-native commands.
 - The step budget is `10 + 2n`, where `n` is the golden action count.
-- Multi-agent tasks (Multi-AI2THOR / Multi-ProcTHOR) use **per-agent** `10 + n`, where `n` is `golden_actions.steps` in each task JSON; the global cap is `2 × (10 + n)`.
+- Multi-agent tasks (Multi-AI2THOR / Multi-ProcTHOR) use **per-agent** `10 + n`, where `n` is `golden_actions.steps` in each task JSON; the global cap is `2 x (10 + n)`.
 - Model input uses 29 historical turns plus the current observation.
 - Prompts do not disclose the hidden max-step budget.
 - Metrics include Task Success Rate (TSR) and Step Efficiency (SE).

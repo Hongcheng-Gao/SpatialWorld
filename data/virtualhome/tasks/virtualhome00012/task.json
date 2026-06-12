@@ -3,13 +3,10 @@
   "task_name": "Turn on the faucet.",
   "instruction": "I want to wash my face. Help me turn on the faucet.",
   "golden_actions": {
-    "steps": 7,
+    "steps": 3,
     "actions": [
       "TurnLeft(small)",
-      "WalkForward(medium)",
-      "LookDown",
-      "WalkForward(small)",
-      "TurnLeft(small)",
+      "WalkForward(Medium)",
       "SwitchOn(faucet)",
       "Done"
     ]

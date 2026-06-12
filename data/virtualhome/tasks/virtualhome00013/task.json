@@ -3,12 +3,10 @@
   "task_name": "Turn off the lights in this room.",
   "instruction": "I've packed up and I'm ready to head out. Please help me turn off the ceiling light in this room—the switch is by the door.",
   "golden_actions": {
-    "steps": 6,
+    "steps": 3,
     "actions": [
-      "TurnLeft(small)",
-      "WalkForward(large)",
-      "TurnRight(normal)",
-      "LookDown",
+      "WalkForward(Large)",
+      "TurnLeft(normal)",
       "SwitchOff(lightswitch)",
       "Done"
     ]

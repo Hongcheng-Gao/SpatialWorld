@@ -253,17 +253,38 @@ class Maze3DGame:
 
     # ---        ---
 
-    def move_forward(self) -> bool:
-        new_x, new_y = self.px, self.py
-        if self.pDir == NORTH: new_y -= 1
-        elif self.pDir == SOUTH: new_y += 1
-        elif self.pDir == EAST: new_x += 1
-        elif self.pDir == WEST: new_x -= 1
+    def _granularity_to_steps(self, granularity=None) -> int:
+        """Convert prompt granularity to grid cells."""
+        if isinstance(granularity, int):
+            return max(1, min(granularity, 3))
 
-        if self.maze.get((new_x, new_y), WALL) == EMPTY or (new_x, new_y) == (self.exitx, self.exity):
-            self.px, self.py = new_x, new_y
-            return True
-        return False
+        value = str(granularity or "small").strip().lower()
+        return {"small": 1, "medium": 2, "large": 3}.get(value, 1)
+
+    def _move_along_direction(self, direction_map, granularity=None) -> bool:
+        """Move up to the requested number of cells, stopping before walls."""
+        dx, dy = direction_map[self.pDir]
+        moved = False
+
+        for _ in range(self._granularity_to_steps(granularity)):
+            new_x, new_y = self.px + dx, self.py + dy
+            if self.maze.get((new_x, new_y), WALL) == EMPTY or (new_x, new_y) == (self.exitx, self.exity):
+                self.px, self.py = new_x, new_y
+                moved = True
+                continue
+
+            break
+
+        if (self.px, self.py) == (self.exitx, self.exity):
+            self.game_won = True
+
+        return moved
+
+    def move_forward(self, granularity=None) -> bool:
+        return self._move_along_direction(
+            {NORTH:(0,-1), SOUTH:(0,1), EAST:(1,0), WEST:(-1,0)},
+            granularity,
+        )
 
     def turn_left(self):
         self.pDir = {NORTH: WEST, WEST: SOUTH, SOUTH: EAST, EAST: NORTH}[self.pDir]
@@ -271,23 +292,17 @@ class Maze3DGame:
     def turn_right(self):
         self.pDir = {NORTH: EAST, EAST: SOUTH, SOUTH: WEST, WEST: NORTH}[self.pDir]
 
-    def move_backward(self) -> bool:
-        new_x, new_y = self.px, self.py
-        if self.pDir == NORTH: new_y += 1
-        elif self.pDir == SOUTH: new_y -= 1
-        elif self.pDir == EAST: new_x -= 1
-        elif self.pDir == WEST: new_x += 1
+    def move_backward(self, granularity=None) -> bool:
+        return self._move_along_direction(
+            {NORTH:(0,1), SOUTH:(0,-1), EAST:(-1,0), WEST:(1,0)},
+            granularity,
+        )
 
-        if self.maze.get((new_x, new_y), WALL) == EMPTY or (new_x, new_y) == (self.exitx, self.exity):
-            self.px, self.py = new_x, new_y
-            return True
-        return False
-
-    def execute_mapped_action(self, key: str) -> bool:
-        if key == "w": return self.move_forward()
+    def execute_mapped_action(self, key: str, granularity=None) -> bool:
+        if key == "w": return self.move_forward(granularity)
         elif key == "a": self.turn_left(); return True
         elif key == "d": self.turn_right(); return True
-        elif key == "s": return self.move_backward()
+        elif key == "s": return self.move_backward(granularity)
         else: return False
 
     def get_action_mapping(self, key: str):

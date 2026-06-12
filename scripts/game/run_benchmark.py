@@ -1,173 +1,163 @@
 #!/usr/bin/env python3
-"""
-           
-       sokoban            ：
-  - maze              :    1-20
-  - block3d           :    1-20
-  - maze3d_pro        :    1-25
-  - rubik             :    1-20
-  - snake             :    20  （   ）
+"""Run all game benchmarks and export a combined CSV summary."""
 
-           <output-dir>/<game_name>/      
-        ，        --parallelism    
-"""
+from __future__ import annotations
 
-import sys
-import os
 import argparse
 import asyncio
-import datetime
+import datetime as dt
+import os
+import sys
 import time
-from typing import List, Dict, Any
+from typing import Any, Dict, List, Optional
 
-#           
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-# ──────────────────────────────────────────────────────────────────────────────
-#      
-# ──────────────────────────────────────────────────────────────────────────────
 GAMES = [
     {
-        "name":   "maze",
+        "name": "maze",
         "script": "maze_openai_evaluation.py",
-        "mode":   "level",       #     
+        "mode": "level",
         "levels": list(range(1, 21)),
     },
     {
-        "name":   "block3d",
+        "name": "block3d",
         "script": "block3d_openai_evaluation.py",
-        "mode":   "level",
+        "mode": "level",
         "levels": list(range(1, 21)),
     },
     {
-        "name":   "maze3d_pro",
+        "name": "maze3d_pro",
         "script": "maze3d_pro_openai_evaluation.py",
-        "mode":   "level",
+        "mode": "level",
         "levels": list(range(1, 26)),
     },
     {
-        "name":   "rubik",
+        "name": "rubik",
         "script": "rubik_openai_evaluation.py",
-        "mode":   "level",
+        "mode": "level",
         "levels": list(range(1, 21)),
     },
     {
-        "name":   "snake",
+        "name": "snake",
         "script": "snake_openai_evaluation.py",
-        "mode":   "run",         #      
-        "runs":   20,
+        "mode": "run",
+        "runs": 20,
     },
 ]
 
 
-# ──────────────────────────────────────────────────────────────────────────────
-#     
-# ──────────────────────────────────────────────────────────────────────────────
-def parse_arguments():
+def parse_arguments() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description='    MLLM         （  sokoban      ）',
+        description="Run MLLM game benchmarks and export results_summary.csv.",
         formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog="""
-  :
-  #             
-  python batch_evaluation_allgames.py --output-dir results/exp1
+        epilog=f"""
+Examples:
+  python -m scripts.game.run_benchmark --output-dir outputs/game_exp1
+  python -m scripts.game.run_benchmark --output-dir outputs/game_exp1 --model gpt-4o --parallelism 6
+  python -m scripts.game.run_benchmark --output-dir outputs/game_exp1 --games maze,rubik
+  python -m scripts.game.run_benchmark --output-dir outputs/game_exp1 \\
+      --model gpt-4o --api-base-url https://example.invalid/v1 --api-key $env:OPENAI_API_KEY
 
-  #         
-  python batch_evaluation_allgames.py --output-dir results/exp1 --model gpt-4o --parallelism 6
-
-  #         （    ）
-  python batch_evaluation_allgames.py --output-dir results/exp1 --games maze,rubik
-
-  #    API   
-  python batch_evaluation_allgames.py --output-dir results/exp1 \\
-      --model gpt-4o --api-base-url http. --api-key sk-xxx
-"""
-    )
-
-    parser.add_argument(
-        '--output-dir', type=str, default=None,
-        help='     （  : logs/allgames_<timestamp>）'
+Available games: {", ".join(g["name"] for g in GAMES)}
+""",
     )
     parser.add_argument(
-        '--parallelism', type=int, default=4,
-        help='          ，          （  : 4）'
+        "--output-dir",
+        type=str,
+        default=None,
+        help="Output directory. Default: logs/allgames_<timestamp>.",
     )
     parser.add_argument(
-        '--games', type=str, default=None,
-        help='       ，       （  :   ） '
-             f'  : {", ".join(g["name"] for g in GAMES)}'
+        "--parallelism",
+        type=int,
+        default=4,
+        help="Maximum concurrent game tasks. Default: 4.",
     )
-
-    #          
-    parser.add_argument('--max-steps', type=int, default=None,
-                        help='      （  :         ）')
-    parser.add_argument('--model', type=str, default=None,
-                        help='    （  :         ）')
-    parser.add_argument('--api-base-url', type=str, default=None,
-                        help='OpenAI API    URL（  :         ）')
-    parser.add_argument('--api-key', type=str, default=None,
-                        help='OpenAI API   （  :         ）')
-    parser.add_argument('--retry-times', type=int, default=None,
-                        help='API       （  :         ）')
-
+    parser.add_argument(
+        "--games",
+        type=str,
+        default=None,
+        help="Comma-separated game names to run.",
+    )
+    parser.add_argument(
+        "--max-steps",
+        type=int,
+        default=None,
+        help="Override per-game max steps.",
+    )
+    parser.add_argument(
+        "--model",
+        type=str,
+        default=None,
+        help="Override model name.",
+    )
+    parser.add_argument(
+        "--api-base-url",
+        type=str,
+        default=None,
+        help="Override OpenAI-compatible API base URL.",
+    )
+    parser.add_argument(
+        "--api-key",
+        type=str,
+        default=None,
+        help="Override API key. Prefer OPENAI_API_KEY in the environment.",
+    )
+    parser.add_argument(
+        "--retry-times",
+        type=int,
+        default=None,
+        help="Override API retry count.",
+    )
     return parser.parse_args()
 
 
-# ──────────────────────────────────────────────────────────────────────────────
-#     
-# ──────────────────────────────────────────────────────────────────────────────
-def _append_common_args(cmd: List[str], args: argparse.Namespace):
+def append_common_args(cmd: List[str], args: argparse.Namespace) -> None:
     if args.max_steps is not None:
-        cmd += ['--max-steps', str(args.max_steps)]
+        cmd += ["--max-steps", str(args.max_steps)]
     if args.model is not None:
-        cmd += ['--model', args.model]
+        cmd += ["--model", args.model]
     if args.api_base_url is not None:
-        cmd += ['--api-base-url', args.api_base_url]
+        cmd += ["--api-base-url", args.api_base_url]
     if args.api_key is not None:
-        cmd += ['--api-key', args.api_key]
+        cmd += ["--api-key", args.api_key]
     if args.retry_times is not None:
-        cmd += ['--retry-times', str(args.retry_times)]
+        cmd += ["--retry-times", str(args.retry_times)]
 
 
-def build_cmd_level(script_path: str, level: int, log_dir: str,
-                    args: argparse.Namespace) -> List[str]:
-    cmd = [sys.executable, script_path, '--level', str(level), '--log-dir', log_dir]
-    _append_common_args(cmd, args)
+def build_cmd_level(script_path: str, level: int, log_dir: str, args: argparse.Namespace) -> List[str]:
+    cmd = [sys.executable, script_path, "--level", str(level), "--log-dir", log_dir]
+    append_common_args(cmd, args)
     return cmd
 
 
-def build_cmd_run(script_path: str, log_dir: str,
-                  args: argparse.Namespace) -> List[str]:
-    cmd = [sys.executable, script_path, '--log-dir', log_dir]
-    _append_common_args(cmd, args)
+def build_cmd_run(script_path: str, log_dir: str, args: argparse.Namespace) -> List[str]:
+    cmd = [sys.executable, script_path, "--log-dir", log_dir]
+    append_common_args(cmd, args)
     return cmd
 
 
-# ──────────────────────────────────────────────────────────────────────────────
-# Resume   
-# ──────────────────────────────────────────────────────────────────────────────
 def is_task_completed(log_dir: str) -> bool:
-    """         ：log_dir     *_evaluation_summary_*.json          """
+    """A task is complete when it has written an evaluation summary JSON."""
     if not os.path.exists(log_dir):
         return False
-    for fname in os.listdir(log_dir):
-        if '_evaluation_summary_' in fname and fname.endswith('.json'):
-            return True
-    return False
+    return any(
+        "_evaluation_summary_" in name and name.endswith(".json")
+        for name in os.listdir(log_dir)
+    )
 
 
-# ──────────────────────────────────────────────────────────────────────────────
-#     
-# ──────────────────────────────────────────────────────────────────────────────
-async def run_task(sem: asyncio.Semaphore, cmd: List[str], label: str,
-                   log_dir: str) -> Dict[str, Any]:
-    """   semaphore           ，       """
+async def run_task(
+    sem: asyncio.Semaphore,
+    cmd: List[str],
+    label: str,
+    log_dir: str,
+) -> Dict[str, Any]:
     os.makedirs(log_dir, exist_ok=True)
 
     async with sem:
         start_time = time.time()
-        print(f"  [{label}]   ")
-
+        print(f"  [{label}] start")
         try:
             proc = await asyncio.create_subprocess_exec(
                 *cmd,
@@ -176,187 +166,205 @@ async def run_task(sem: asyncio.Semaphore, cmd: List[str], label: str,
             )
             stdout_bytes, stderr_bytes = await proc.communicate()
             duration = time.time() - start_time
-
-            status = "✅   " if proc.returncode == 0 else "❌   "
-            print(f"  [{label}] {status} |   : {duration:.1f}s |    : {proc.returncode}")
-
+            status = "OK" if proc.returncode == 0 else "FAIL"
+            print(f"  [{label}] {status} | duration: {duration:.1f}s | return code: {proc.returncode}")
             return {
-                'label':      label,
-                'returncode': proc.returncode,
-                'duration':   duration,
-                'stdout':     stdout_bytes.decode('utf-8', errors='replace'),
-                'stderr':     stderr_bytes.decode('utf-8', errors='replace'),
+                "label": label,
+                "returncode": proc.returncode,
+                "duration": duration,
+                "stdout": stdout_bytes.decode("utf-8", errors="replace"),
+                "stderr": stderr_bytes.decode("utf-8", errors="replace"),
             }
-
-        except Exception as e:
+        except Exception as exc:
             duration = time.time() - start_time
-            print(f"  [{label}] ❌   : {e}")
+            print(f"  [{label}] FAIL: {exc}")
             return {
-                'label':      label,
-                'returncode': -1,
-                'duration':   duration,
-                'stdout':     '',
-                'stderr':     str(e),
+                "label": label,
+                "returncode": -1,
+                "duration": duration,
+                "stdout": "",
+                "stderr": str(exc),
             }
 
 
-# ──────────────────────────────────────────────────────────────────────────────
-#    
-# ──────────────────────────────────────────────────────────────────────────────
-async def main():
-    args = parse_arguments()
-    scripts_dir = os.path.dirname(os.path.abspath(__file__))
+async def run_analyze_and_export(root_output_dir: str) -> int:
+    analyze_script = os.path.join(
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+        "analyze_and_export.py",
+    )
+    if not os.path.exists(analyze_script):
+        print(f"analyze_and_export.py not found: {analyze_script}")
+        return 1
 
-    #        
-    if args.output_dir:
-        root_output_dir = args.output_dir
-    else:
-        ts = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-        root_output_dir = os.path.join("logs", f"allgames_{ts}")
-    os.makedirs(root_output_dir, exist_ok=True)
-
-    #         
-    selected_names = None
-    if args.games:
-        selected_names = {g.strip() for g in args.games.split(',')}
-        invalid = selected_names - {g['name'] for g in GAMES}
-        if invalid:
-            print(f"❌       : {invalid}")
-            print(f"     : {', '.join(g['name'] for g in GAMES)}")
-            sys.exit(1)
-
-    games_to_run = [g for g in GAMES if selected_names is None or g['name'] in selected_names]
-
-    #     
-    print("=" * 60)
-    print("    MLLM     ")
-    print("=" * 60)
-    print(f"    :   {len(games_to_run)}")
-    print(f"   :     {args.parallelism}（  ，      ）")
-    print(f"     : {root_output_dir}")
-    if args.model:
-        print(f"  :       {args.model}")
-    if args.max_steps:
-        print(f"    :   {args.max_steps}")
     print()
-    for g in games_to_run:
-        if g['mode'] == 'level':
-            print(f"  {g['name']:<14}          {g['levels'][0]}-{g['levels'][-1]}    {len(g['levels'])}  ")
-        else:
-            print(f"  {g['name']:<14}          {g['runs']}  ")
-    print("=" * 60)
+    print("Running analyze_and_export.py ...")
+    print(f"  {sys.executable} {analyze_script} {root_output_dir}")
+    proc = await asyncio.create_subprocess_exec(
+        sys.executable,
+        analyze_script,
+        root_output_dir,
+    )
+    returncode = await proc.wait()
+    if returncode == 0:
+        print(f"CSV exported: {os.path.join(root_output_dir, 'results_summary.csv')}")
+    else:
+        print(f"analyze_and_export.py failed with return code {returncode}")
+    return returncode
 
-    #            ，          
-    sem = asyncio.Semaphore(args.parallelism)
-    all_tasks: List[Dict] = []          # {'game', 'label', 'log_dir', 'cmd'}
+
+def select_games(games_arg: Optional[str]) -> List[Dict[str, Any]]:
+    if not games_arg:
+        return GAMES
+
+    selected_names = {name.strip() for name in games_arg.split(",") if name.strip()}
+    valid_names = {game["name"] for game in GAMES}
+    invalid = selected_names - valid_names
+    if invalid:
+        raise SystemExit(
+            f"Invalid games: {', '.join(sorted(invalid))}. "
+            f"Available games: {', '.join(sorted(valid_names))}"
+        )
+    return [game for game in GAMES if game["name"] in selected_names]
+
+
+def build_tasks(games_to_run: List[Dict[str, Any]], scripts_dir: str, root_output_dir: str, args: argparse.Namespace) -> tuple[List[Dict[str, Any]], List[str]]:
+    all_tasks: List[Dict[str, Any]] = []
     skipped_games: List[str] = []
-    total_start = time.time()
 
     for game in games_to_run:
-        script_path = os.path.join(scripts_dir, game['script'])
+        script_path = os.path.join(scripts_dir, game["script"])
         if not os.path.exists(script_path):
-            print(f"[{game['name']}] ❌        : {script_path}，   ")
-            skipped_games.append(game['name'])
+            print(f"[{game['name']}] missing script: {script_path}; skipped")
+            skipped_games.append(game["name"])
             continue
 
-        game_output_dir = os.path.join(root_output_dir, game['name'])
+        game_output_dir = os.path.join(root_output_dir, game["name"])
         os.makedirs(game_output_dir, exist_ok=True)
 
-        if game['mode'] == 'level':
-            for lv in game['levels']:
-                log_dir = os.path.join(game_output_dir, f"level_{lv:02d}")
-                all_tasks.append({
-                    'game':    game['name'],
-                    'label':   f"{game['name']}/Level_{lv:02d}",
-                    'log_dir': log_dir,
-                    'cmd':     build_cmd_level(script_path, lv, log_dir, args),
-                })
+        if game["mode"] == "level":
+            for level in game["levels"]:
+                log_dir = os.path.join(game_output_dir, f"level_{level:02d}")
+                all_tasks.append(
+                    {
+                        "game": game["name"],
+                        "label": f"{game['name']}/level_{level:02d}",
+                        "log_dir": log_dir,
+                        "cmd": build_cmd_level(script_path, level, log_dir, args),
+                    }
+                )
         else:
-            for i in range(game['runs']):
-                log_dir = os.path.join(game_output_dir, f"run_{i+1:03d}")
-                all_tasks.append({
-                    'game':    game['name'],
-                    'label':   f"{game['name']}/run_{i+1:03d}",
-                    'log_dir': log_dir,
-                    'cmd':     build_cmd_run(script_path, log_dir, args),
-                })
+            for run_idx in range(game["runs"]):
+                log_dir = os.path.join(game_output_dir, f"run_{run_idx + 1:03d}")
+                all_tasks.append(
+                    {
+                        "game": game["name"],
+                        "label": f"{game['name']}/run_{run_idx + 1:03d}",
+                        "log_dir": log_dir,
+                        "cmd": build_cmd_run(script_path, log_dir, args),
+                    }
+                )
 
-    total_count = len(all_tasks)
+    return all_tasks, skipped_games
 
-    # Resume：         
-    pending_tasks = [t for t in all_tasks if not is_task_completed(t['log_dir'])]
-    skipped_count = total_count - len(pending_tasks)
-    if skipped_count > 0:
-        print(f"\n🔄 Resume   ：    {skipped_count}       ，  ；   {len(pending_tasks)}      ")
-        for t in all_tasks:
-            if is_task_completed(t['log_dir']):
-                print(f"    [   ，  ] {t['label']}")
+
+def print_plan(games_to_run: List[Dict[str, Any]], args: argparse.Namespace, root_output_dir: str) -> None:
+    print("=" * 60)
+    print("MLLM game benchmark")
+    print("=" * 60)
+    print(f"Games: {len(games_to_run)}")
+    print(f"Parallelism: {args.parallelism}")
+    print(f"Output dir: {root_output_dir}")
+    if args.model:
+        print(f"Model: {args.model}")
+    if args.max_steps:
+        print(f"Max steps: {args.max_steps}")
+    print()
+    for game in games_to_run:
+        if game["mode"] == "level":
+            print(f"  {game['name']:<14} levels {game['levels'][0]}-{game['levels'][-1]} ({len(game['levels'])})")
+        else:
+            print(f"  {game['name']:<14} runs {game['runs']}")
+    print("=" * 60)
+
+
+def count_previously_done(game: Dict[str, Any], root_output_dir: str, pending_tasks: List[Dict[str, Any]]) -> int:
+    pending_labels = {task["label"] for task in pending_tasks}
+    game_dir = os.path.join(root_output_dir, game["name"])
+    if game["mode"] == "level":
+        return sum(
+            1
+            for level in game["levels"]
+            if is_task_completed(os.path.join(game_dir, f"level_{level:02d}"))
+            and f"{game['name']}/level_{level:02d}" not in pending_labels
+        )
+    return sum(
+        1
+        for run_idx in range(game["runs"])
+        if is_task_completed(os.path.join(game_dir, f"run_{run_idx + 1:03d}"))
+        and f"{game['name']}/run_{run_idx + 1:03d}" not in pending_labels
+    )
+
+
+async def main() -> None:
+    args = parse_arguments()
+    scripts_dir = os.path.dirname(os.path.abspath(__file__))
+    root_output_dir = args.output_dir or os.path.join(
+        "logs",
+        f"allgames_{dt.datetime.now().strftime('%Y%m%d_%H%M%S')}",
+    )
+    os.makedirs(root_output_dir, exist_ok=True)
+
+    games_to_run = select_games(args.games)
+    print_plan(games_to_run, args, root_output_dir)
+
+    all_tasks, skipped_games = build_tasks(games_to_run, scripts_dir, root_output_dir, args)
+    pending_tasks = [task for task in all_tasks if not is_task_completed(task["log_dir"])]
+    skipped_count = len(all_tasks) - len(pending_tasks)
+
+    if skipped_count:
+        print(f"\nResume: skipped {skipped_count} completed tasks; pending {len(pending_tasks)}")
+        for task in all_tasks:
+            if is_task_completed(task["log_dir"]):
+                print(f"  [done] {task['label']}")
     else:
-        print(f"\n         ，  {total_count}    ，      （     : {args.parallelism}）")
+        print(f"\nScheduled {len(all_tasks)} tasks with parallelism {args.parallelism}.")
     print("=" * 60)
 
     if not pending_tasks:
-        print("✅         ，       ")
+        print("All tasks already completed.")
+        await run_analyze_and_export(root_output_dir)
         return
 
-    #         
-    coros = [run_task(sem, t['cmd'], t['label'], t['log_dir']) for t in pending_tasks]
-    all_results_flat = await asyncio.gather(*coros)
+    total_start = time.time()
+    sem = asyncio.Semaphore(args.parallelism)
+    results = await asyncio.gather(
+        *(run_task(sem, task["cmd"], task["label"], task["log_dir"]) for task in pending_tasks)
+    )
 
-    #        （            ）
-    game_results: Dict[str, List[Dict]] = {}
-    for task, result in zip(pending_tasks, all_results_flat):
-        game_results.setdefault(task['game'], []).append(result)
+    game_results: Dict[str, List[Dict[str, Any]]] = {}
+    for task, result in zip(pending_tasks, results):
+        game_results.setdefault(task["game"], []).append(result)
 
-    game_summaries: List[Dict] = []
-    for game in games_to_run:
-        if game['name'] in skipped_games:
-            game_summaries.append({
-                'name': game['name'], 'total': 0, 'ok': 0,
-                'fail': 0, 'skipped': True,
-            })
-            continue
-        results = game_results.get(game['name'], [])
-        ok   = sum(1 for r in results if r['returncode'] == 0)
-        fail = len(results) - ok
-        errors = [r['label'] for r in results if r['returncode'] != 0]
-        if errors:
-            print(f"[{game['name']}]     （        resume）: {errors}")
-
-        #                
-        if game['mode'] == 'level':
-            game_dir = os.path.join(root_output_dir, game['name'])
-            pre_done = sum(
-                1 for lv in game['levels']
-                if is_task_completed(os.path.join(game_dir, f"level_{lv:02d}"))
-                and not any(t['label'] == f"{game['name']}/Level_{lv:02d}" for t in pending_tasks)
-            )
-        else:
-            game_dir = os.path.join(root_output_dir, game['name'])
-            pre_done = sum(
-                1 for i in range(game['runs'])
-                if is_task_completed(os.path.join(game_dir, f"run_{i+1:03d}"))
-                and not any(t['label'] == f"{game['name']}/run_{i+1:03d}" for t in pending_tasks)
-            )
-
-        game_summaries.append({
-            'name': game['name'], 'total': len(results) + pre_done,
-            'ok': ok + pre_done, 'fail': fail, 'skipped': False,
-        })
-
-    total_duration = time.time() - total_start
-
-    print(f"\n{'='*60}")
-    print("          ")
+    print(f"\n{'=' * 60}")
+    print("Benchmark summary")
     print("=" * 60)
-    print(f"   :     {total_duration:.1f}s")
-    print(f"     : {root_output_dir}")
-    print()
-    print("    analyze_and_export.py       ：")
-    print()
-    analyze_script = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "analyze_and_export.py")
-    print(f"  #            &     ")
-    print(f"  python {analyze_script} {root_output_dir}")
+    for game in games_to_run:
+        if game["name"] in skipped_games:
+            print(f"{game['name']:<14} skipped; script missing")
+            continue
+
+        current_results = game_results.get(game["name"], [])
+        ok = sum(1 for result in current_results if result["returncode"] == 0)
+        fail = len(current_results) - ok
+        pre_done = count_previously_done(game, root_output_dir, pending_tasks)
+        print(f"{game['name']:<14} OK {ok + pre_done} | failed {fail}")
+        failed_labels = [result["label"] for result in current_results if result["returncode"] != 0]
+        if failed_labels:
+            print(f"  Failed tasks: {', '.join(failed_labels)}")
+
+    print(f"Duration: {time.time() - total_start:.1f}s")
+    print(f"Output dir: {root_output_dir}")
+    await run_analyze_and_export(root_output_dir)
     print("=" * 60)
 
 

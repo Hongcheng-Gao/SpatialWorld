@@ -3,13 +3,9 @@
   "task_name": "Turn on the TV and pick up a phone.",
   "instruction": "I want to have some fun, so please turn on the TV and pick up a phone.",
   "golden_actions": {
-    "steps": 8,
+    "steps": 3,
     "actions": [
-      "WalkForward(small)",
-      "LookDown",
-      "TurnRight(small)",
-      "WalkForward(small)",
-      "TurnLeft(small)",
+      "WalkForward(Small)",
       "Grab(cellphone)",
       "SwitchOn(tv)",
       "Done"

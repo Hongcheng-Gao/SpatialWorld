@@ -3,10 +3,8 @@
   "task_name": "Put a bread slice in the toaster and turn on the toaster.",
   "instruction": "I'm too hungry. Please pick up a bread slice from the toaster and turn on the toaster to cook another one.",
   "golden_actions": {
-    "steps": 4,
+    "steps": 2,
     "actions": [
-      "LookDown",
-      "WalkForward(small)",
       "Grab(breadslice)",
       "SwitchOn(toaster)",
       "Done"

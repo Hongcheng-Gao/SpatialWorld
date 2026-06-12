@@ -7,13 +7,10 @@
   "executor": "walker",
   "instruction": "Can you see the shop inside the red box? Walk over there. I'm a bit hungry.",
   "golden_actions": {
-    "steps": 6,
+    "steps": 3,
     "actions": [
-      "TurnRight(degrees=90)",
-      "TurnRight(degrees=30)",
-      "WalkForward(distance=10)",
-      "WalkForward(distance=10)",
-      "WalkForward(distance=10)",
+      "TurnRight(degrees=large)",
+      "WalkForward(distance=small)",
       "Done"
     ]
   },

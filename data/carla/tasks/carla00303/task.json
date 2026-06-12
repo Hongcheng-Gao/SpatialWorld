@@ -7,15 +7,14 @@
   "executor": "vehicle",
   "instruction": "Please turn left at the traffic light ahead and go straight until the next traffic light.",
   "golden_actions": {
-    "steps": 8,
+    "steps": 7,
     "actions": [
       "Stop",
       "Stop",
       "Stop",
-      "FollowLane(distance=10)",
       "TeleportTurnLeft",
-      "FollowLane(distance=10)",
-      "FollowLane(distance=10)",
+      "FollowLane(distance=large)",
+      "FollowLane(distance=large)",
       "Done"
     ]
   },

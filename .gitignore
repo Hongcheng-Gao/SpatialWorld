@@ -14,3 +14,9 @@ __pycache__/
 
 # EmbodiedCity generated images
 data/embodiedcity/Datasets/Imgs/
+
+# Local cleanup/archive and generated game GT scratch files
+used/
+experiments/game_min_steps/
+/maze_config.py
+/maze3d_pro_openai_evaluation.py

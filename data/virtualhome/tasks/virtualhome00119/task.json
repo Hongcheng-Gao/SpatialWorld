@@ -3,13 +3,9 @@
   "task_name": "Get a bottle of dish soap and turn on the faucet.",
   "instruction": "I want to clean the kitchen. Please get me a bottle of dish soap and then turn on the faucet.",
   "golden_actions": {
-    "steps": 8,
+    "steps": 3,
     "actions": [
-      "TurnLeft(small)",
-      "WalkForward(small)",
-      "WalkForward(small)",
-      "LookDown",
-      "TurnRight(normal)",
+      "WalkForward(Small)",
       "Grab(dishwashingliquid)",
       "SwitchOn(faucet)",
       "Done"

@@ -144,13 +144,13 @@ class PygameInputSource(GameInputSource):
             if self.is_headless and self.game_module:
                 #          
                 action_result = True
-                repeat = self._get_action_repeat(action)
+                repeat = 1 if self._action_uses_granularity(action) else self._get_action_repeat(action)
                 any_success = False
                 if action.type == "key_press":
                     for _ in range(repeat):
                         #              
                         if hasattr(self.game_module, 'execute_mapped_action'):
-                            action_result = self.game_module.execute_mapped_action(action.key)
+                            action_result = self._execute_mapped_action(action)
                         elif hasattr(self.game_module, 'get_action_mapping'):
                             #        ，       
                             try:
@@ -159,7 +159,7 @@ class PygameInputSource(GameInputSource):
                                 if mapping and mapping.method_name:
                                     method = getattr(self.game_module, mapping.method_name, None)
                                     if method and callable(method):
-                                        action_result = method()
+                                        action_result = self._call_game_method(method, action)
                                     else:
                                         action_result = False
                                 else:
@@ -220,6 +220,65 @@ class PygameInputSource(GameInputSource):
             repeat = 1
 
         return max(1, min(repeat, 10))
+
+    def _get_action_granularity(self, action: Action) -> Optional[str]:
+        """Read small/medium/large movement granularity from action metadata."""
+        if not action.metadata:
+            return None
+
+        granularity = action.metadata.get("granularity")
+        if granularity is None and isinstance(action.metadata.get("json_data"), dict):
+            granularity = action.metadata["json_data"].get("granularity")
+
+        if granularity is None:
+            return None
+
+        value = str(granularity).strip().lower()
+        return value if value in {"small", "medium", "large"} else None
+
+    def _method_accepts_granularity(self, method) -> bool:
+        try:
+            import inspect
+            return "granularity" in inspect.signature(method).parameters
+        except (TypeError, ValueError):
+            return False
+
+    def _action_uses_granularity(self, action: Action) -> bool:
+        """Granular movement already represents the full step, so do not repeat it."""
+        if self._get_action_granularity(action) is None or not self.game_module:
+            return False
+
+        if hasattr(self.game_module, 'execute_mapped_action'):
+            return self._method_accepts_granularity(self.game_module.execute_mapped_action)
+
+        if hasattr(self.game_module, 'get_action_mapping'):
+            try:
+                mapping = self.game_module.get_action_mapping(action.key)
+            except Exception:
+                return False
+
+            if mapping and getattr(mapping, "method_name", None):
+                method = getattr(self.game_module, mapping.method_name, None)
+                return bool(method and callable(method) and self._method_accepts_granularity(method))
+
+        return False
+
+    def _execute_mapped_action(self, action: Action) -> bool:
+        return self._call_game_method(
+            self.game_module.execute_mapped_action,
+            action,
+            include_key=True,
+        )
+
+    def _call_game_method(self, method, action: Action, include_key: bool = False) -> bool:
+        granularity = self._get_action_granularity(action)
+        args = [action.key] if include_key else []
+
+        if granularity is not None:
+            if self._method_accepts_granularity(method):
+                return method(*args, granularity=granularity)
+
+        return method(*args)
 
     def _game_has_finished(self) -> bool:
         """          ，           """

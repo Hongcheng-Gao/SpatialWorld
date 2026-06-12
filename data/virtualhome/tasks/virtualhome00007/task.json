@@ -3,14 +3,9 @@
   "task_name": "Find my phone and put it on the TV stand.",
   "instruction": "I can't find my phone. Could you help me look for it? Please put it on the TV stand when you find it.",
   "golden_actions": {
-    "steps": 8,
+    "steps": 2,
     "actions": [
-      "LookDown",
-      "WalkForward(medium)",
-      "TurnLeft(normal)",
       "Grab(cellphone)",
-      "TurnRight(normal)",
-      "TurnRight(normal)",
       "PutBack(cellphone, tvstand)",
       "Done"
     ]

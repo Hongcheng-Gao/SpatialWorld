@@ -3,15 +3,12 @@
   "task_name": "Turn on the coffee machine.",
   "instruction": "I'd like to drink coffee. Please turn on the coffee machine.",
   "golden_actions": {
-    "steps": 9,
+    "steps": 5,
     "actions": [
-      "TurnRight(normal)",
-      "TurnRight(normal)",
-      "TurnLeft(small)",
-      "WalkForward(medium)",
-      "WalkForward(small)",
       "LookDown",
-      "WalkForward(small)",
+      "TurnLeft(normal)",
+      "TurnLeft(normal)",
+      "WalkForward(Large)",
       "SwitchOn(coffeemaker)",
       "Done"
     ]

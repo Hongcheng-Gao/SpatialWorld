@@ -225,49 +225,52 @@ class Maze3DProGame:
 
     # ---        ---
 
-    def move_forward(self) -> bool:
-        """W:     """
-        dx, dy = 0, 0
-        move_map = {NORTH:(0,-1), SOUTH:(0,1), EAST:(1,0), WEST:(-1,0)}
-        dx, dy = move_map[self.pDir]
-        
-        nx, ny = self.px + dx, self.py + dy
+    def _granularity_to_steps(self, granularity=None) -> int:
+        """Convert prompt granularity to grid cells."""
+        if isinstance(granularity, int):
+            return max(1, min(granularity, 3))
+
+        value = str(granularity or "small").strip().lower()
+        return {"small": 1, "medium": 2, "large": 3}.get(value, 1)
+
+    def _move_along_direction(self, direction_map, granularity=None) -> bool:
+        """Move up to the requested number of cells, stopping before walls."""
+        dx, dy = direction_map[self.pDir]
         current_map = self.tower_data.get(self.pz, {})
-        target = current_map.get((nx, ny), WALL)
         current_exit = self.all_exits.get(self.pz)
+        moved = False
 
-        if current_exit and (nx, ny) == current_exit:
-            self.px, self.py = nx, ny
-            self.game_won = True
-            return True
-        
-        if target == EMPTY or target == STAIR:
-            self.px, self.py = nx, ny
-            return True
-            
-        return False
+        for _ in range(self._granularity_to_steps(granularity)):
+            nx, ny = self.px + dx, self.py + dy
+            target = current_map.get((nx, ny), WALL)
 
-    def move_backward(self) -> bool:
-        """S:     """
-        dx, dy = 0, 0
-        move_map = {NORTH:(0,1), SOUTH:(0,-1), EAST:(-1,0), WEST:(1,0)}
-        dx, dy = move_map[self.pDir]
-        
-        nx, ny = self.px + dx, self.py + dy
-        current_map = self.tower_data.get(self.pz, {})
-        target = current_map.get((nx, ny), WALL)
-        current_exit = self.all_exits.get(self.pz) 
+            if current_exit and (nx, ny) == current_exit:
+                self.px, self.py = nx, ny
+                self.game_won = True
+                return True
 
-        #             
-        if current_exit and (nx, ny) == current_exit:
-            self.px, self.py = nx, ny
-            self.game_won = True
-            return True
-        
-        if target == EMPTY or target == STAIR:
-            self.px, self.py = nx, ny
-            return True
-        return False
+            if target == EMPTY or target == STAIR:
+                self.px, self.py = nx, ny
+                moved = True
+                continue
+
+            break
+
+        return moved
+
+    def move_forward(self, granularity=None) -> bool:
+        """W: move forward 1/2/3 cells for small/medium/large."""
+        return self._move_along_direction(
+            {NORTH:(0,-1), SOUTH:(0,1), EAST:(1,0), WEST:(-1,0)},
+            granularity,
+        )
+
+    def move_backward(self, granularity=None) -> bool:
+        """S: move backward 1/2/3 cells for small/medium/large."""
+        return self._move_along_direction(
+            {NORTH:(0,1), SOUTH:(0,-1), EAST:(-1,0), WEST:(1,0)},
+            granularity,
+        )
 
     def turn_left(self):
         """A:   """
@@ -309,12 +312,12 @@ class Maze3DProGame:
                     return True
         return False
 
-    def execute_mapped_action(self, key: str) -> bool:
+    def execute_mapped_action(self, key: str, granularity=None) -> bool:
         """          """
         if not key: return False
         key = key.lower()
-        if key == "w": return self.move_forward()
-        elif key == "s": return self.move_backward()
+        if key == "w": return self.move_forward(granularity)
+        elif key == "s": return self.move_backward(granularity)
         elif key == "a": return self.turn_left()
         elif key == "d": return self.turn_right()
         elif key == "q": return self.climb_up()
