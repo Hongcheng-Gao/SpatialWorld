@@ -52,6 +52,7 @@ SpatialWorld unifies diverse 3D backends under a standardized observation-action
 - **Physical tasks remain especially hard.** GPT-5 achieves **14.4%** Physical Overall TSR, followed by Qwen-3.5-397B-A17B at **12.2%**.
 - **Success is not efficiency.** Models with comparable TSR can differ substantially in step efficiency (SE), indicating redundant exploration and task-dependent shortcuts.
 - **Domain-specific strengths.** GPT-5 leads Daily (**14.9%**), Travel (**6.8%**), and Social Collaboration (**34.8%**); Qwen-3.5-397B-A17B ties GPT-5 in Work & Study (**16.9%**) and leads physical entertainment; Gemini-3.1-Pro leads digital 3D games (**39.0%** TSR).
+- **Indoor vs. outdoor domain shift.** GPT-5 (**14.1%**) and Qwen-3.5-397B-A17B (**13.7%**) lead indoors; Gemini-3-Flash (**9.0%**) and GPT-5 (**8.3%**) lead outdoors.
 - **Vision-only closed-loop evaluation.** Agents actively explore under partial observability using only egocentric RGB and a text-based action interface.
 
 ## Experimental Results
@@ -66,8 +67,8 @@ Full TSR / SE tables and task examples are on the **[project page](https://spati
 | Kimi-K2.5 | 9.2 | 31.0 | Competitive social and game performance |
 
 <p align="center">
-  <img src="assets/main_indoor_outdoor_radar_top5.png" alt="Indoor vs outdoor radar chart for top-5 models" width="900"><br>
-  <em>Indoor vs. Outdoor Performance - Top-5 Models</em>
+  <img src="assets/main_indoor_outdoor_radar_top5.png" alt="Indoor and outdoor physical domains" width="900"><br>
+  <em>Indoor and outdoor physical domains — overall TSR with environment-level bars for the top-five models in each domain.</em>
 </p>
 
 <details>
