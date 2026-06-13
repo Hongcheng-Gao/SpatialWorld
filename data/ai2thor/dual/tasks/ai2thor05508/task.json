@@ -3,14 +3,7 @@
   "task_name": "Grab the pillow and clean the bed",
   "instruction": "It's such a lovely day; I feel like tidying up my bed. First I'll pick up my pillow, then give the whole bed a good clean—so I can sleep nice and sound tonight.",
   "golden_actions": {
-    "steps": 5,
-    "actions": [
-      "MoveAhead(1.0)",
-      "MoveRight(0.5)",
-      "PickupObject(Pillow)",
-      "CleanObject(Bed)",
-      "Done"
-    ]
+    "steps": 2
   },
   "scene": "FloorPlan304",
   "target_object_types": [

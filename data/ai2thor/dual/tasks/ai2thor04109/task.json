@@ -3,15 +3,7 @@
   "task_name": "Make bed and turn off TV",
   "instruction": "I'm getting ready for bed. Please make my bed and turn off the TV.",
   "golden_actions": {
-    "steps": 6,
-    "actions": [
-      "ToggleObjectOff(Television)",
-      "RotateLeft(90)",
-      "RotateLeft(90)",
-      "MoveAhead(1)",
-      "CleanObject(Bed)",
-      "Done"
-    ]
+    "steps": 3
   },
   "scene": "FloorPlan311",
   "target_object_types": [

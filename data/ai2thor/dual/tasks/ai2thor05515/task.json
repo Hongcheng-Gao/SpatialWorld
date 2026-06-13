@@ -3,15 +3,7 @@
   "task_name": "Pick up the phone and turn on the TV",
   "instruction": "I feel like taking a break; I'm going to pick up my phone from the desk and turn on the TV so I can really unwind",
   "golden_actions": {
-    "steps": 6,
-    "actions": [
-      "MoveAhead(0.5)",
-      "PickupObject(CellPhone)",
-      "RotateRight(90)",
-      "MoveAhead(1.0)",
-      "ToggleObjectOn(Television)",
-      "Done"
-    ]
+    "steps": 3
   },
   "scene": "FloorPlan307",
   "target_object_types": [

@@ -3,29 +3,7 @@
   "task_name": "Turn on toaster and coffee machine",
   "instruction": "I'm getting ready for breakfast. Please go to the kitchen, turn on the toaster, and turn on the coffee machine for me.",
   "golden_actions": {
-    "steps": 20,
-    "actions": [
-      "RotateLeft(90)",
-      "MoveAhead(0.5)",
-      "MoveAhead(0.25)",
-      "MoveLeft(1.0)",
-      "MoveAhead(1.0)",
-      "MoveAhead(1.0)",
-      "MoveAhead(0.5)",
-      "MoveAhead(0.25)",
-      "RotateLeft(90)",
-      "MoveRight(0.5)",
-      "MoveAhead(1.0)",
-      "MoveAhead(1.0)",
-      "ToggleObjectOn(CoffeeMachine)",
-      "RotateRight(90)",
-      "MoveRight(0.5)",
-      "MoveRight(0.25)",
-      "MoveAhead(0.5)",
-      "MoveAhead(0.25)",
-      "ToggleObjectOn(Toaster)",
-      "Done"
-    ]
+    "steps": 10
   },
   "scene_index": 157,
   "target_object_types": [

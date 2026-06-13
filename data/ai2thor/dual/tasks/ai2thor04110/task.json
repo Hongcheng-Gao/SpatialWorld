@@ -3,17 +3,7 @@
   "task_name": "Turn on phone and computer",
   "instruction": "I need to get ready to work, please turn on my phone and computer.",
   "golden_actions": {
-    "steps": 8,
-    "actions": [
-      "MoveRight(0.5)",
-      "MoveAhead(1)",
-      "MoveAhead(1)",
-      "RotateLeft(90)",
-      "MoveAhead(0.25)",
-      "ToggleObjectOn(Laptop)",
-      "ToggleObjectOn(CellPhone)",
-      "Done"
-    ]
+    "steps": 4
   },
   "scene": "FloorPlan310",
   "target_object_types": [

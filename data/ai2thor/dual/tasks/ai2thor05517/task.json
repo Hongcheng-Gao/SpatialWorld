@@ -3,14 +3,7 @@
   "task_name": "Straighten up the bed and then turn on the laptop.",
   "instruction": "I just woke up and I’m ready to get to work—you help me tidy the bed first, then use the laptop to start working and get it booted up.",
   "golden_actions": {
-    "steps": 5,
-    "actions": [
-      "CleanObject(Bed)",
-      "RotateRight(90)",
-      "MoveRight(1.0)",
-      "ToggleObjectOn(Laptop)",
-      "Done"
-    ]
+    "steps": 2
   },
   "scene": "FloorPlan308",
   "target_object_types": [

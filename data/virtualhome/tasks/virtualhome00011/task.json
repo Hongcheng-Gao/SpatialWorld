@@ -5,11 +5,11 @@
   "golden_actions": {
     "steps": 5,
     "actions": [
+      "WalkForward(medium)",
       "WalkForward(large)",
-      "TurnRight(small)",
-      "TurnRight(small)",
-      "WalkForward(small)",
-      "Grab(dishbowl)"
+      "TurnRight(normal)",
+      "Grab(dishbowl)",
+      "Done"
     ]
   },
   "scene": "2",

@@ -3,16 +3,7 @@
   "task_name": "Make the bed and turn off the lights",
   "instruction": "I'd like to take a nap. Could you tidy the bed and turn off the wall light for me? Thank you.",
   "golden_actions": {
-    "steps": 7,
-    "actions": [
-      "MoveAhead(0.5)",
-      "CleanObject(Bed)",
-      "RotateRight(90)",
-      "MoveAhead(1.0)",
-      "MoveAhead(0.5)",
-      "ToggleObjectOff(LightSwitch)",
-      "Done"
-    ]
+    "steps": 3
   },
   "scene": "FloorPlan304",
   "target_object_types": [

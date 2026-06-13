@@ -3,17 +3,7 @@
   "task_name": "Clean the bed and turn on the laptop",
   "instruction": "I need to tidy up, so please tidy up the bed by clearing any clutter and wiping it until it looks clean and then turn on the laptop and wait until you can tell it's powered on.",
   "golden_actions": {
-    "steps": 8,
-    "actions": [
-      "RotateRight(90)",
-      "RotateRight(90)",
-      "MoveLeft(1.0)",
-      "MoveAhead(1.0)",
-      "MoveAhead(0.5)",
-      "CleanObject(Bed)",
-      "ToggleObjectOn(Laptop)",
-      "Done"
-    ]
+    "steps": 4
   },
   "scene": "FloorPlan312",
   "target_object_types": [

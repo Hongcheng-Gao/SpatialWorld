@@ -3,21 +3,7 @@
   "task_name": "Dispose apple and get phone",
   "instruction": "Please help me throw the apple into the trash can and turn on my phone.",
   "golden_actions": {
-    "steps": 12,
-    "actions": [
-      "MoveAhead(0.25)",
-      "PickupObject(Apple)",
-      "MoveAhead(1.0)",
-      "MoveAhead(1.0)",
-      "MoveLeft(1.0)",
-      "MoveLeft(0.25)",
-      "MoveBack(0.25)",
-      "PutObject(GarbageCan)",
-      "RotateLeft(90)",
-      "RotateLeft(90)",
-      "ToggleObjectOn(CellPhone)",
-      "Done"
-    ]
+    "steps": 6
   },
   "scene": "FloorPlan30",
   "target_object_types": [

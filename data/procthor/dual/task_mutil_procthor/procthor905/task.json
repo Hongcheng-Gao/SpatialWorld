@@ -3,24 +3,7 @@
   "task_name": "Container Inspection",
   "instruction": "I want to check what's inside each of these. Please open both the box and the fridge.",
   "golden_actions": {
-    "steps": 15,
-    "actions": [
-      "LookDown",
-      "RotateLeft(90)",
-      "MoveAhead(0.5)",
-      "OpenObject(Box)",
-      "RotateLeft(90)",
-      "MoveAhead(1.0)",
-      "MoveAhead(1.0)",
-      "MoveAhead(1.0)",
-      "MoveAhead(1.0)",
-      "MoveAhead(1.0)",
-      "MoveAhead(1.0)",
-      "RotateLeft(90)",
-      "MoveAhead(1.0)",
-      "OpenObject(Fridge)",
-      "Done"
-    ]
+    "steps": 7
   },
   "scene_index": 110,
   "target_object_types": [

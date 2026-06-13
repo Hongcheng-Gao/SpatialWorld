@@ -3,15 +3,7 @@
   "task_name": "Pick up the soap bottle, turn on the faucet, and put it back on the side table",
   "instruction": "I want to wash my face—please pick up the soap bottle, turn on the faucet, and then put it back on the side table where it was.",
   "golden_actions": {
-    "steps": 6,
-    "actions": [
-      "PickupObject(SoapBottle)",
-      "MoveAhead(0.5)",
-      "ToggleObjectOn(Faucet)",
-      "RotateRight(90)",
-      "PutObject(SideTable)",
-      "Done"
-    ]
+    "steps": 3
   },
   "scene": "FloorPlan429",
   "target_object_types": [

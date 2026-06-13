@@ -3,20 +3,7 @@
   "task_name": "Turn on the computer and open the book",
   "instruction": "I want to get up and work, please turn on the computer and open the book",
   "golden_actions": {
-    "steps": 11,
-    "actions": [
-      "MoveRight(1.0)",
-      "MoveAhead(1.0)",
-      "MoveAhead(1.0)",
-      "MoveAhead(1.0)",
-      "RotateRight(90)",
-      "LookDown",
-      "ToggleObjectOn(Laptop)",
-      "MoveLeft(1.0)",
-      "MoveAhead(0.25)",
-      "OpenObject(Book)",
-      "Done"
-    ]
+    "steps": 5
   },
   "scene": "FloorPlan311",
   "target_object_types": [

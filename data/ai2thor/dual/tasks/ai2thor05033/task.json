@@ -3,16 +3,7 @@
   "task_name": "Make the mirror dirty and fill the mug with water",
   "instruction": "I'm preparing the scene, so please in the simulation, make the mirror dirty so its state changes to 'dirty' and then fill the mug with water until it shows it's filled, then keep it steady.",
   "golden_actions": {
-    "steps": 7,
-    "actions": [
-      "MoveRight(0.5)",
-      "MoveAhead(0.25)",
-      "DirtyObject(Mirror)",
-      "RotateRight(90)",
-      "MoveAhead(0.5)",
-      "FillObjectWithLiquid(Mug)",
-      "Done"
-    ]
+    "steps": 3
   },
   "scene": "FloorPlan315",
   "target_object_types": [

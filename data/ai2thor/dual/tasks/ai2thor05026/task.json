@@ -3,18 +3,7 @@
   "task_name": "Fill the mug with coffee and clean the bed",
   "instruction": "I'm doing some chores, so please put the laptop on the desk, then tidy up the bed and wiping it until it looks clean.",
   "golden_actions": {
-    "steps": 9,
-    "actions": [
-      "MoveAhead(0.5)",
-      "RotateRight(90)",
-      "MoveAhead(0.5)",
-      "FillObjectWithLiquid(Mug,coffee)",
-      "RotateRight(90)",
-      "MoveAhead(1.0)",
-      "MoveAhead(0.5)",
-      "CleanObject(Bed)",
-      "Done"
-    ]
+    "steps": 4
   },
   "scene": "FloorPlan313",
   "target_object_types": [

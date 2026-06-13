@@ -27,50 +27,43 @@
     {
       "x": 6961.27,
       "y": -3853.05,
-      "z": -11.01,
+      "z": -10.5,
       "action": "Up",
       "granularity": "Large"
     },
     {
-      "x": 6961.27,
+      "x": 6968.27,
       "y": -3853.05,
-      "z": -20.96,
+      "z": -14.0,
+      "action": "Forward",
+      "granularity": "Medium"
+    },
+    {
+      "x": 6974.27,
+      "y": -3850.5,
+      "z": -17.5,
+      "action": "Forward",
+      "granularity": "Medium"
+    },
+    {
+      "x": 6977.27,
+      "y": -3848.5,
+      "z": -19.5,
       "action": "Up",
-      "granularity": "Large"
+      "granularity": "Medium"
     },
     {
-      "x": 6971.27,
-      "y": -3853.06,
-      "z": -20.93,
-      "action": "Forward",
-      "granularity": "Large"
-    },
-    {
-      "x": 6981.27,
-      "y": -3853.06,
-      "z": -20.92,
-      "action": "Forward",
-      "granularity": "Large"
-    },
-    {
-      "x": 6981.27,
-      "y": -3848.06,
-      "z": -20.88,
+      "x": 6980.27,
+      "y": -3845.5,
+      "z": -19.5,
       "action": "Right",
       "granularity": "Medium"
     },
     {
       "x": 6981.27,
       "y": -3843.06,
-      "z": -20.83,
-      "action": "Right",
-      "granularity": "Medium"
-    },
-    {
-      "x": 6981.27,
-      "y": -3843.06,
-      "z": -15.8,
-      "action": "Down",
+      "z": -17.0,
+      "action": "Forward",
       "granularity": "Medium"
     },
     {
@@ -81,5 +74,5 @@
       "granularity": "None"
     }
   ],
-  "golden_actions_count": 8
+  "golden_actions_count": 7
 }

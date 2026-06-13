@@ -3,16 +3,7 @@
   "task_name": "Switch on the TV and laptop",
   "instruction": "I'd like to work and watch TV at the same time. Could you please help me turn on the laptop and then the TV?",
   "golden_actions": {
-    "steps": 7,
-    "actions": [
-      "ToggleObjectOn(Laptop)",
-      "RotateRight(180)",
-      "MoveAhead(1.0)",
-      "MoveAhead(1.0)",
-      "MoveAhead(0.5)",
-      "ToggleObjectOn(Television)",
-      "Done"
-    ]
+    "steps": 3
   },
   "scene": "FloorPlan219",
   "target_object_types": [

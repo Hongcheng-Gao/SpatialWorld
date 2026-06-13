@@ -16,7 +16,7 @@
 
 Spatial reasoning is a foundational capability for multimodal large language models (MLLMs) to perceive and operate within the physical world. However, existing benchmarks predominantly rely on passive evaluation (e.g., static VQA) or simulator-specific pipelines, failing to assess general interactive spatial understanding. We introduce **SpatialWorld**, a unified benchmark for evaluating interactive spatial understanding of multimodal agents in complex real-world tasks.
 
-Integrating eight heterogeneous simulation backends under a shared, simulator-agnostic protocol, SpatialWorld features **760 human-annotated tasks** across diverse domains (e.g., household routines, travel, social collaboration). Agents must solve tasks under vision-only partial observability, actively gathering egocentric visual evidence and expressing decisions via a unified, text-based action interface native to MLLMs. For reliable evaluation, each task includes a human-validated initial state, a reference trajectory, and a terminal-state verifier. Evaluating 15 advanced agents reveals that robust spatial task solving remains challenging: **GPT-5** achieves an average TSR of only **17.4%**, while the leading open-source model, **Qwen-3.5**, reaches **14.1%**.
+Integrating eight heterogeneous simulation backends under a shared, simulator-agnostic protocol, SpatialWorld features **760 human-annotated tasks** across diverse domains (e.g., household routines, travel, social collaboration). Agents must solve tasks under vision-only partial observability, actively gathering egocentric visual evidence and expressing decisions via a unified, text-based action interface native to MLLMs. For reliable evaluation, each task includes a human-validated initial state, a reference trajectory, and a terminal-state verifier. Evaluating 15 advanced agents reveals that robust spatial task solving remains challenging: **GPT-5** achieves an average TSR of only **17.4%**, while the leading open-source model, **Qwen-3.5-397B-A17B**, reaches **14.1%**.
 
 | 760 Tasks | 8 Backends | 6 Scenarios | 15 Models |
 | :---: | :---: | :---: | :---: |
@@ -48,10 +48,10 @@ SpatialWorld unifies diverse 3D backends under a standardized observation-action
 
 ## Key Findings
 
-- **Far from reliable 3D task solving.** Across the full benchmark, GPT-5 reaches only 17.4% average TSR, while the strongest open-source model, Qwen-3.5-397B-A17B, reaches 14.1%.
-- **Physical tasks remain especially hard.** GPT-5 achieves 14.4% Physical Overall TSR; Qwen-3.5-397B-A17B reaches 12.2%.
+- **Far from reliable 3D task solving.** Across the full benchmark, GPT-5 reaches only **17.4%** average TSR, while the strongest open-source model, Qwen-3.5-397B-A17B, reaches **14.1%**.
+- **Physical tasks remain especially hard.** GPT-5 achieves **14.4%** Physical Overall TSR, followed by Qwen-3.5-397B-A17B at **12.2%**.
 - **Success is not efficiency.** Models with comparable TSR can differ substantially in step efficiency (SE), indicating redundant exploration and task-dependent shortcuts.
-- **Domain-specific strengths.** GPT-5 and Qwen-3.5-397B-A17B tie in Work & Study (16.9%); GPT-5 leads Travel (6.8%) and Social Collaboration (34.8%); Gemini-3.1-Pro leads digital 3D games (39.0% TSR).
+- **Domain-specific strengths.** GPT-5 leads Daily (**14.9%**), Travel (**6.8%**), and Social Collaboration (**34.8%**); Qwen-3.5-397B-A17B ties GPT-5 in Work & Study (**16.9%**) and leads physical entertainment; Gemini-3.1-Pro leads digital 3D games (**39.0%** TSR).
 - **Vision-only closed-loop evaluation.** Agents actively explore under partial observability using only egocentric RGB and a text-based action interface.
 
 ## Experimental Results
@@ -60,8 +60,8 @@ Full TSR / SE tables and task examples are on the **[project page](https://spati
 
 | Model | Physical Overall TSR | Digital 3D Games TSR | Notable Strength |
 | --- | ---: | ---: | --- |
-| GPT-5 | **14.4** | 36.4 | Best physical overall; strongest Daily, Travel, and Social scores |
-| Qwen-3.5-397B-A17B | 12.2 | 26.0 | Strongest open-source overall; tied best Work & Study score |
+| GPT-5 | **14.4** | 36.4 | Best Daily, Travel, and Social Collaboration scores |
+| Qwen-3.5-397B-A17B | 12.2 | 26.0 | Ties GPT-5 in Work & Study; leads physical entertainment |
 | Gemini-3.1-Pro | 9.2 | **39.0** | Best digital 3D games performance |
 | Kimi-K2.5 | 9.2 | 31.0 | Competitive social and game performance |
 
@@ -546,10 +546,9 @@ game output directory.
   `Tilt`, `ChangePosture`, `Pick`, `Place`, `ChangeState`, `Manipulate`,
   `EndTask`, and `Communicate`.
 - The action parser maps unified actions to simulator-native commands.
-- The step budget is `10 + 2n`, where `n` is the golden action count.
-- Multi-agent tasks (Multi-AI2THOR / Multi-ProcTHOR) use **per-agent** `10 + n`, where `n` is `golden_actions.steps` in each task JSON; the global cap is `2 x (10 + n)`.
-- Model input uses 29 historical turns plus the current observation.
-- Prompts do not disclose the hidden max-step budget.
+- The step budget for each task is dynamically determined as **2g + 10**, where **g** is the golden action count annotated by human annotators.
+- Main experiments use temperature **τ = 1.0** and retain the latest **w = 30** turns of interaction as context.
+- Each model is prompted with the egocentric RGB screenshot and a natural-language task description at every step; no privileged state information is provided.
 - Metrics include Task Success Rate (TSR) and Step Efficiency (SE).
 - Evaluation uses terminal-state verification rather than trajectory matching.
 

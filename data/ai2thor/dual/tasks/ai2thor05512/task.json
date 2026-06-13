@@ -3,18 +3,7 @@
   "task_name": "Tidy up the bed and put the book on it.",
   "instruction": "I'd like to read the book on my desk before bed. Please tidy up the bed first, then bring the book and place it on the bed for me.",
   "golden_actions": {
-    "steps": 9,
-    "actions": [
-      "MoveLeft(1.0)",
-      "MoveLeft(1.0)",
-      "MoveAhead(1.0)",
-      "PickupObject(Book)",
-      "MoveBack(0.5)",
-      "MoveRight(1.0)",
-      "CleanObject(Bed)",
-      "PutObject(Bed)",
-      "Done"
-    ]
+    "steps": 4
   },
   "scene": "FloorPlan305",
   "target_object_types": [

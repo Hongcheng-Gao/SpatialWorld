@@ -3,27 +3,7 @@
   "task_name": "Swap potato and lettuce",
   "instruction": "Please put the potato in the refrigerator, and then take the lettuce out of the refrigerator and put it on the counter.Remember to close the fridge.",
   "golden_actions": {
-    "steps": 18,
-    "actions": [
-      "RotateLeft(90)",
-      "MoveLeft(0.5)",
-      "MoveAhead(0.5)",
-      "PickupObject(Potato)",
-      "RotateRight(90)",
-      "MoveAhead(1)",
-      "MoveRight(1)",
-      "MoveRight(0.5)",
-      "OpenObject(Fridge)",
-      "PutObject(Fridge)",
-      "PickupObject(Lettuce)",
-      "CloseObject(Fridge)",
-      "RotateLeft(90)",
-      "MoveAhead(1)",
-      "MoveLeft(1)",
-      "MoveAhead(0.5)",
-      "PutObject(CounterTop)",
-      "Done"
-    ]
+    "steps": 9
   },
   "scene": "FloorPlan22",
   "target_object_types": [

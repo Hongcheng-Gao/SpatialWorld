@@ -3,14 +3,7 @@
   "task_name": "Clean the pot and slice the tomato",
   "instruction": "The pot looks a bit dusty, so clean the pot and slice the tomato for the soup.",
   "golden_actions": {
-    "steps": 5,
-    "actions": [
-      "CleanObject(Pot)",
-      "RotateRight(90)",
-      "MoveAhead(1.0)",
-      "SliceObject(Tomato)",
-      "Done"
-    ]
+    "steps": 2
   },
   "scene": "FloorPlan15",
   "target_object_types": [

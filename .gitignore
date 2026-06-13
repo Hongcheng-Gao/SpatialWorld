@@ -20,3 +20,5 @@ used/
 experiments/game_min_steps/
 /maze_config.py
 /maze3d_pro_openai_evaluation.py
+main/
+SpatialWorld_NeurIPS_2026 (1)/

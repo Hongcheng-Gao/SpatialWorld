@@ -3,16 +3,7 @@
   "task_name": "Please water the potted plant on the table and then turn off the wall light",
   "instruction": "I'm getting ready to head out—please water the potted plant on the table and then turn off the wall light.",
   "golden_actions": {
-    "steps": 7,
-    "actions": [
-      "FillObjectWithLiquid(HousePlant, water)",
-      "MoveBack(0.75)",
-      "MoveRight(1.0)",
-      "MoveRight(0.75)",
-      "RotateRight(90)",
-      "ToggleObjectOff(LightSwitch)",
-      "Done"
-    ]
+    "steps": 3
   },
   "scene": "FloorPlan202",
   "target_object_types": [
