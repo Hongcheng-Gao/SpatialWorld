@@ -18,9 +18,9 @@ Spatial reasoning is a foundational capability for multimodal large language mod
 
 Integrating eight heterogeneous simulation backends under a shared, simulator-agnostic protocol, SpatialWorld features **760 human-annotated tasks** across diverse domains (e.g., household routines, travel, social collaboration). Agents must solve tasks under vision-only partial observability, actively gathering egocentric visual evidence and expressing decisions via a unified, text-based action interface native to MLLMs. For reliable evaluation, each task includes a human-validated initial state, a reference trajectory, and a terminal-state verifier. Evaluating 15 advanced agents reveals that robust spatial task solving remains challenging: **GPT-5** achieves an average TSR of only **17.4%**, while the leading open-source model, **Qwen-3.5-397B-A17B**, reaches **14.1%**.
 
-| 760 Tasks | 8 Backends | 6 Scenarios | 15 Models |
+| 760 Tasks | 8 Backends | 5 Categories | 15 Models |
 | :---: | :---: | :---: | :---: |
-| Human-annotated | Simulation environments | Task categories | Evaluated MLLM agents |
+| Human-annotated | Simulation environments | Around all daily life| Evaluated MLLM agents |
 
 ## Benchmark Overview
 
